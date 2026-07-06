@@ -1,0 +1,422 @@
+{
+  "document": {
+    "type": "github_profile_readme",
+    "owner": "Éverson Filipe",
+    "language": "en+pt-BR",
+    "footer": "© 2025 ÉVERSON FILIPE."
+  },
+  "viewsCounter": {
+    "badge": "https://views-counter.vercel.app/badge?pageId=eversonfilipe%2FViews-Counter",
+    "alt": "Views Counter"
+  },
+  "header": {
+    "typingSvg": {
+      "link": "https://git.io/typing-svg",
+      "src": "https://readme-typing-svg.herokuapp.com",
+      "params": {
+        "font": "Fira Code",
+        "weight": 600,
+        "size": 30,
+        "duration": 5000,
+        "pause": 150,
+        "color": "0077B5",
+        "center": true,
+        "vCenter": true,
+        "width": 435
+      },
+      "lines": [
+        "Technical Implementation",
+        "Software Implementation",
+        "Implementation Eng",
+        "REST API Testing",
+        "Agile Methodologies",
+        "Data Integrity",
+        "Postman",
+        "Technical Troubleshooting",
+        "Business Systems",
+        "ERPs Configuration",
+        "Generative AI",
+        "LLMs",
+        "Technical Documentation",
+        "Working for results",
+        "💻 LET'S IMPACT TOGETHER!"
+      ],
+      "alt": "Imagem ilustrativa, mostrando um breve carrossel de caracteres e keywords relevantes para o perfil de Everson Filipe (Éverson Filipe), um profissional de tecnologia e Ciência da Computação focado na entrega de resultados, Engenharia de Dados e Implantação Técnica das Operações de Produtos Tecnológicos."
+    },
+    "tagline": "Bridging the gap between business requirements and scalable software execution through rigorous data validation and process automation."
+  },
+  "socials": [
+    {
+      "name": "LinkedIn",
+      "link": "https://www.linkedin.com/in/eversonfilipe-agile-products-ai/",
+      "badge": {
+        "label": "LinkedIn",
+        "color": "0077B5",
+        "style": "for-the-badge",
+        "logo": "linkedin",
+        "logoColor": "white",
+        "alt": "LinkedIn"
+      }
+    },
+    {
+      "name": "Instagram",
+      "link": "https://www.instagram.com/eversonfilipemr/",
+      "badge": {
+        "label": "Instagram",
+        "color": "E4405F",
+        "style": "for-the-badge",
+        "logo": "instagram",
+        "logoColor": "white",
+        "alt": "Instagram"
+      }
+    },
+    {
+      "name": "Medium",
+      "link": "https://eversonfilipe.medium.com/",
+      "badge": {
+        "label": "Medium",
+        "color": "12100E",
+        "style": "for-the-badge",
+        "logo": "medium",
+        "logoColor": "white",
+        "alt": "Medium"
+      }
+    }
+  ],
+  "techStack": [
+    { "label": "Python", "color": "3776AB", "style": "for-the-badge", "logo": "python", "logoColor": "white", "alt": "Python" },
+    { "label": "openpyxl", "color": "217346", "style": "for-the-badge", "logo": "python", "logoColor": "white", "alt": "openpyxl" },
+    { "label": "Django", "color": "092E20", "style": "for-the-badge", "logo": "django", "logoColor": "white", "alt": "Django" },
+    { "label": "Jupyter", "color": "F37626", "style": "for-the-badge", "logo": "jupyter", "logoColor": "white", "alt": "Jupyter Notebook" },
+    { "label": "Amazon_S3", "color": "569A31", "style": "for-the-badge", "logo": "amazons3", "logoColor": "white", "alt": "Amazon S3" },
+    { "label": "AWS_IAM", "color": "DD344C", "style": "for-the-badge", "logo": "amazonaws", "logoColor": "white", "alt": "AWS IAM" },
+    { "label": "AWS_Step_Functions", "color": "D9A741", "style": "for-the-badge", "logo": "amazonaws", "logoColor": "white", "alt": "AWS Step Functions" },
+    { "label": "Amazon_Athena", "color": "8C4FFF", "style": "for-the-badge", "logo": "amazonaws", "logoColor": "white", "alt": "Amazon Athena" },
+    { "label": "Jira", "color": "0052CC", "style": "for-the-badge", "logo": "jira", "logoColor": "white", "alt": "Jira" },
+    { "label": "ClickUp", "color": "7B68EE", "style": "for-the-badge", "logo": "clickup", "logoColor": "white", "alt": "ClickUp" },
+    { "label": "Bitbucket", "color": "0052CC", "style": "for-the-badge", "logo": "bitbucket", "logoColor": "white", "alt": "Bitbucket" }
+  ],
+  "summary": {
+    "anchor": "sumario",
+    "groups": [
+      {
+        "group": "Profile",
+        "items": [
+          {
+            "label": "About Me",
+            "anchor": "about-me",
+            "children": [
+              { "label": "Who Éverson Filipe is", "anchor": "who-everson-filipe-is" },
+              { "label": "My Standards Are", "anchor": "my-standards-are" },
+              { "label": "My Results and Metrics", "anchor": "my-results-and-metrics" }
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Professional Experience",
+        "items": [
+          {
+            "label": "Professional Trajectory",
+            "anchor": "professional-trajectory",
+            "children": [
+              { "label": "Technical Implementation Intern @ Kartado", "anchor": "kartado", "date": "09/2025-In Progress" },
+              { "label": "Agile Product Manager Learner @ Daus", "anchor": "daus", "date": "12/2024-06/2025" }
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Portfolio",
+        "items": [
+          { "label": "Main Projects", "anchor": "main-projects" }
+        ]
+      },
+      {
+        "group": "Academic Background",
+        "items": [
+          {
+            "label": "Education",
+            "anchor": "education",
+            "children": [
+              { "label": "Bachelor's Degree in Computer Science", "anchor": "graduacao-ciencia-computacao-unifavipwyden", "date": "02/2024-In Progress" },
+              { "label": "Mentorship Program in Artificial Intelligence", "anchor": "mentoria-labai-institutojoule-ia2025", "date": "08/2025-09/2025" }
+            ]
+          },
+          {
+            "label": "Courses",
+            "anchor": "courses",
+            "children": [
+              { "label": "Postman: Do Zero ao Avançado + Testes Automatizados", "anchor": "curso-postman-zeroaoavancado", "date": "12/2025" },
+              { "label": "Application Programming Interface: API and Web Services", "anchor": "curso-applicationprogramminginterfaces-api", "date": "12/2025" },
+              { "label": "Lab.AI: Preparing the Next Generation for the Future of Work", "anchor": "curso-labai-mentoria2025", "date": "09/2025" },
+              { "label": "SkillsBuild - Customer Engagement: Problem Solving and Process Controls", "anchor": "curso-skillsbuild-customerengagement", "date": "07/2025" },
+              { "label": "EF SET English Certificate 69/100 (C1 Advanced)", "anchor": "curso-efset-2025", "date": "02/2025" }
+            ]
+          },
+          {
+            "label": "Certifications",
+            "anchor": "certifications"
+          }
+        ]
+      },
+      {
+        "group": "Community & Impact",
+        "items": [
+          {
+            "label": "Volunteering",
+            "anchor": "volunteering",
+            "children": [
+              { "label": "Co-Organizer @ GDG Barueri", "anchor": "co-organizer-gdgbarueri", "date": "08/2025-In Progress" },
+              { "label": "Ambassador & Facilitator @ Politize!", "anchor": "ambassador-facilitator-politize!", "date": "05/2025-In Progress" },
+              { "label": "OGT & Marketing Comittee @ AIESEC no Mackenzie", "anchor": "aiesecmackenzie-volunteer", "date": "03/2025-08/2025" },
+              { "label": "Soft Skills Instructor @ Vai Na Web", "anchor": "vainaweb-volunteering", "date": "01/2025" }
+            ]
+          },
+          {
+            "label": "Hackathons",
+            "anchor": "hackathons",
+            "children": [
+              { "label": "Hackathon HAVK – Hacking the Desert", "anchor": "hackathon-havk-hacking-the-desert", "date": "07/2025" },
+              { "label": "VOX ASTRA Hackathon", "anchor": "vox-astra-hackathon", "date": "05/2025" },
+              { "label": "2025 Hackatopia Hackathon", "anchor": "2025-hackatopia-hackathon", "date": "04/2025" },
+              { "label": "Hackathon Fenearte", "anchor": "hackathon-fenearte", "date": "02/2025" },
+              { "label": "Ideathon AC", "anchor": "ideathon-ac", "date": "02/2025" },
+              { "label": "Hackathon Impulso Regional", "anchor": "hackathon-impulso-regional", "date": "12/2024" },
+              { "label": "Hackathon Luminahub", "anchor": "hackathon-luminahub", "date": "12/2024" },
+              { "label": "Hackathon Data Flow", "anchor": "hackathon-dataflow", "date": "08/2024" },
+              { "label": "Ideathon - Caruaru Campus Party Day", "anchor": "ideathon-caruaru-campusparty-day", "date": "08/2024" },
+              { "label": "Olímpiadas Jovens de Impacto", "anchor": "olimpiadas-jovens-impacto", "date": "11/2021" }
+            ]
+          },
+          {
+            "label": "Events",
+            "anchor": "events",
+            "children": [
+              { "label": "FLISoL 2026", "anchor": "flisol-palmares-2026", "role": "SPEAKER", "date": "04/2026" },
+              { "label": "ExpoTech 2025.2", "anchor": "expotech-2025-2", "role": "EXHIBITOR", "date": "12/2025" },
+              { "label": "Festival Agile Trends 2025", "anchor": "festival-agile-trends-2025", "role": "LISTENER", "date": "11/2025" },
+              { "label": "ExpoTech 2025.1", "anchor": "expotech-2025-1", "role": "EXHIBITOR", "date": "06/2025" },
+              { "label": "BRICS Youth", "anchor": "brics-youth-2025", "role": "LISTENER", "date": "05/2025" },
+              { "label": "As Tendências Para as Novas Gerações de Profissionais @ Recife Front-End Community", "anchor": "as-tendencias-para-novasgeracoes-2025-1", "role": "SPEAKER", "date": "02/2025" },
+              { "label": "ExpoTech 2024.2", "anchor": "expotech-2024-2", "role": "EXHIBITOR", "date": "11/2024" },
+              { "label": "Campus Party NE 2024", "anchor": "campus-party-nordeste-2024", "role": "LISTENER", "date": "9/2024" }
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Achievements & Recognition",
+        "items": [
+          {
+            "label": "Achievements & Recognition",
+            "anchor": "achievements-recognition",
+            "children": [
+              { "label": "Nomination for Kartado Monthly Agility Award", "anchor": "award-kartado-agility-2026", "date": "04/2026" },
+              { "label": "Accepted Mentee in Aspire Leaders 2025.2 Cohort 5", "anchor": "accepted-mentee-alp-2025-2", "date": "10/2025" }
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Repository Overview",
+        "items": [
+          { "label": "GitHub Analytics", "anchor": "github-analytics" },
+          { "label": "Tags", "anchor": "tags" }
+        ]
+      }
+    ]
+  },
+  "aboutMe": {
+    "anchor": "about-me",
+    "whoIAm": {
+      "anchor": "who-everson-filipe-is",
+      "text": "As an Implementation Analyst specializing in Implementation Engineering and AI-driven Automation, I transform complex business requirements into **scalable, reliable workflows and software configurations for B2B clients.** Working directly with cloud-based ERP systems and SaaS platforms, I configure solutions using Python, Django Admin, JSONLogic, and AWS (EC2, S3, IAM, Step Functions), ensuring integrations with REST APIs and cloud BI services such as Amazon Athena."
+    },
+    "myStandardsAre": {
+      "anchor": "my-standards-are",
+      "intro": "**My work is grounded in data integrity and workflow standardization.**\nOperating within Agile frameworks, I have delivered more than 528 validated technical work items tracked in ClickUp and successfully implemented over 18 operational units, contributing 32% of my team's technical output during my first months.",
+      "bullets": [
+        "Cloud and Infrastructure: Active management of identities and policies via AWS IAM, provisioning and access to EC2 instances via AWS CLI, and administration of storage in S3 buckets.",
+        "Backend Logic: Intensive use of Python, Django Admin, and JSONLogic to configure standardized operational units.",
+        "Technical Mentoring: Leadership in technological onboarding for programs such as GROWUP and SOFTEX, accelerating the integration of new talent into production environments."
+      ]
+    },
+    "myResultsAndMetrics": {
+      "anchor": "my-results-and-metrics",
+      "text": "Beyond technical delivery, I was nominated for Kartado's Agility Award for resolving API and JSONLogic issues that safeguarded platform uptime for the B2B clients and operational units under my responsibility. This recognition reflects my commitment to high-reliability engineering, my ability to solve complex systemic problems under pressure, and my focus on delivering agile technical solutions for both internal teams and customers."
+    }
+  },
+  "currentStatus": [
+    "I'm currently working on **KARTADO**",
+    "I'm currently learning **UML/Deepening OOP**",
+    "I'm looking to collaborate on **LLM ACADEMIC PROJECTS**"
+  ],
+  "professionalTrajectory": {
+    "anchor": "professional-trajectory",
+    "experiences": [
+      {
+        "anchor": "kartado",
+        "role": "Technical Implementation Intern",
+        "company": "Kartado",
+        "date": "09/2025-In Progress",
+        "badges": [
+          { "label": "Postman", "color": "FF6C37", "style": "for-the-badge", "logo": "postman", "logoColor": "white", "alt": "Postman" },
+          { "label": "Python", "color": "3776AB", "style": "for-the-badge", "logo": "python", "logoColor": "white", "alt": "Python" },
+          { "label": "Django", "color": "092E20", "style": "for-the-badge", "logo": "django", "logoColor": "white", "alt": "Django Admin" },
+          { "label": "Amazon_AWS", "color": "FF9900", "style": "for-the-badge", "logo": "amazonaws", "logoColor": "white", "alt": "AWS" },
+          { "label": "Microsoft_Excel", "color": "217346", "style": "for-the-badge", "logo": "microsoft-excel", "logoColor": "white" }
+        ],
+        "images": [
+          { "src": "assets\\kartado-experience\\kartado_internship_metrics.png", "width": 200, "height": 145, "alt": "Gráfico do ClickUp da Kartado. Mostrando os 32,11% de contribuição de Éverson ao time." },
+          { "src": "assets\\kartado-experience\\kartado_onboarding_kit.png", "width": 300, "height": 150, "alt": "Imagem de unboxing de kit de OnBoarding da Kartado. Com camisas, canecas, um caderno/agenda, etc." },
+          { "src": "assets\\kartado-experience\\nominee_monthly_agility_award.png", "width": 330, "height": 150, "alt": "image" }
+        ],
+        "bullets": {
+          "en": [
+            "Developed Python ETL automation scripts integrated with Django ORM, replacing manual data transformation and loading workflows.",
+            "Built notebook-based Python scripts for JSON metadata extraction, schema validation, and proactive detection of structural inconsistencies in exported datasets.",
+            "Corrected GIS maps, adjusted Shapefiles, and validated spatial geometries to support highway concession system parameterization.",
+            "Maintained REST API/JWT integration documentation and Pytest validation scripts for Django modules.",
+            "Leveraged AWS IAM, Amazon EC2, Amazon ECS (Docker), AWS Step Functions, ODBC, and Amazon Athena across infrastructure, secure access, data integration, and analytics workflows in client environments.",
+            "Automated the generation of parameterization spreadsheets using Python, Pandas, and openpyxl, reducing manual effort in implementation workflows.",
+            "Nominated for the company's Monthly Agility Award (April 2026). 🏆"
+          ],
+          "pt": [
+            "Configurou regras em JSONLogic para formulários dinâmicos (visibilidade de campos, validação condicional e exportação de planilhas) em mais de 20 ambientes de clientes por meio do Django Admin, garantindo integridade dos dados e consistência funcional.",
+            "Desenvolveu scripts de automação ETL em Python integrados ao Django ORM, substituindo fluxos manuais de transformação e carregamento de dados.",
+            "Desenvolveu scripts em notebooks Python para extração de metadados JSON, validação de esquemas e detecção proativa de inconsistências estruturais em conjuntos de dados exportados.",
+            "Corrigiu mapas GIS, ajustou arquivos Shapefile e validou geometrias espaciais para apoiar a parametrização de sistemas de concessões rodoviárias.",
+            "Manteve a documentação de integrações REST API/JWT e scripts de validação com Pytest para módulos Django.",
+            "Utilizou AWS IAM, Amazon EC2, Amazon ECS (Docker), AWS Step Functions, ODBC e Amazon Athena em atividades de infraestrutura, acesso seguro, integração de dados e fluxos de análise em ambientes de clientes.",
+            "Automatizou a geração de planilhas de parametrização utilizando Python, Pandas e openpyxl, reduzindo o esforço manual nos fluxos de trabalho de implantação.",
+            "Indicado ao Prêmio Mensal de Agilidade da empresa (abril de 2026). 🏆"
+          ]
+        }
+      },
+      {
+        "anchor": "daus",
+        "role": "Agile Product Manager Learner",
+        "company": "Daus",
+        "date": "12/2024-06/2025",
+        "badges": [
+          { "label": "Jira", "color": "0052CC", "style": "for-the-badge", "logo": "Jira", "logoColor": "white", "alt": "Jira" },
+          { "label": "Figma", "color": "F24E1E", "style": "for-the-badge", "logo": "figma", "logoColor": "white", "alt": "Figma" },
+          { "label": "Miro", "color": "050038", "style": "for-the-badge", "logo": "Miro", "logoColor": "white", "alt": "Miro" },
+          { "label": "confluence", "color": "%23172BF4.svg", "style": "for-the-badge", "logo": "confluence", "logoColor": "white", "alt": "Confluence" }
+        ],
+        "bullets": {
+          "en": [
+            "Applied Scrum, Kanban, and Lean Thinking frameworks to drive product discovery and requirements analysis across internal and multi-client portfolio projects in a software house environment.",
+            "Documented product insights, user flows, and functional requirements across the Atlassian ecosystem (Jira, Confluence) and FigJam.",
+            "Mentored two intern cohorts across structured onboarding programs in Agile Product Management workflows and MVP-delivery."
+          ],
+          "pt": [
+            "Aplicou os frameworks Scrum, Kanban e Lean Thinking para conduzir atividades de Product Discovery e análise de requisitos em projetos internos e em um portfólio de múltiplos clientes em um ambiente de software house.",
+            "Documentou insights de produto, fluxos de usuários e requisitos funcionais utilizando o ecossistema Atlassian (Jira e Confluence) e o FigJam.",
+            "Mentorou duas turmas de estagiários em programas estruturados de onboarding, capacitando-os em fluxos de trabalho de Gestão Ágil de Produtos e entrega de MVPs."
+          ]
+        }
+      }
+    ]
+  },
+  "mainProjects": {
+    "anchor": "main-projects",
+    "status": "Under construction.",
+    "items": []
+  },
+  "education": {
+    "anchor": "education",
+    "items": [
+      {
+        "anchor": "graduacao-ciencia-computacao-unifavipwyden",
+        "title": "Computer Science",
+        "institution": "UniFavip Wyden",
+        "type": "Bachelor's Degree",
+        "date": "02/2024-In Progress"
+      },
+      {
+        "anchor": "mentoria-labai-institutojoule-ia2025",
+        "title": "LAB.AI",
+        "institution": "Instituto Joule",
+        "type": "Mentorship Program",
+        "date": "08/2025-09/2025"
+      }
+    ]
+  },
+  "courses": {
+    "anchor": "courses",
+    "items": [
+      { "anchor": "curso-postman-zeroaoavancado", "title": "Postman: Do Zero ao Avançado + Testes Automatizados", "provider": "Udemy", "date": "12/2025" },
+      { "anchor": "curso-applicationprogramminginterfaces-api", "title": "Application Programming Interface: API and Web Services", "provider": "Udemy", "date": "12/2025" },
+      { "anchor": "curso-labai-mentoria2025", "title": "Lab.AI: Preparing the Next Generation for the Future of Work", "provider": "Instituto Joule", "date": "09/2025" },
+      { "anchor": "curso-skillsbuild-customerengagement", "title": "SkillsBuild - Customer Engagement: Problem Solving and Process Controls", "provider": "IBM", "date": "07/2025" },
+      { "anchor": "curso-efset-2025", "title": "EF SET English Certificate 69/100 (C1 Advanced)", "provider": "EF SET", "date": "02/2025" }
+    ]
+  },
+  "certifications": {
+    "anchor": "certifications",
+    "status": "Under construction.",
+    "items": []
+  },
+  "volunteering": {
+    "anchor": "volunteering",
+    "items": [
+      { "anchor": "co-organizer-gdgbarueri", "role": "Co-organizer", "organization": "Google Developers Group (GDG Barueri)", "date": "08/2025-In Progress" },
+      { "anchor": "ambassador-facilitator-politize!", "role": "Ambassador & Facilitator", "organization": "Politize! (Politize! Caruaru)", "date": "05/2025-In Progress" },
+      { "anchor": "aiesecmackenzie-volunteer", "role": "OGT & Marketing Comittee Member", "organization": "AIESEC (AIESEC no Mackenzie)", "date": "03/2025-08/2025" },
+      { "anchor": "vainaweb-volunteering", "role": "Soft Skills Instructor", "organization": "Vai Na Web", "date": "01/2025" }
+    ]
+  },
+  "hackathons": {
+    "anchor": "hackathons",
+    "items": [
+      { "anchor": "hackathon-havk-hacking-the-desert", "name": "Hackathon HAVK – Hacking the Desert", "organizer": "HAVK", "date": "07/2025" },
+      { "anchor": "vox-astra-hackathon", "name": "VOX ASTRA Hackathon", "organizer": "EQ Hacks", "date": "05/2025" },
+      { "anchor": "2025-hackatopia-hackathon", "name": "2025 Hackatopia Hackathon", "organizer": "YPStem", "date": "04/2025" },
+      { "anchor": "hackathon-fenearte", "name": "Hackathon Fenearte", "organizer": "Porto Digital", "date": "02/2025" },
+      { "anchor": "ideathon-ac", "name": "Ideathon AC", "organizer": "Porto Digital", "date": "02/2025" },
+      { "anchor": "hackathon-impulso-regional", "name": "Hackathon Impulso Regional", "organizer": "ENAP", "date": "12/2024" },
+      { "anchor": "hackathon-luminahub", "name": "Hackathon Luminahub", "organizer": "Luminahub", "date": "12/2024" },
+      { "anchor": "hackathon-dataflow", "name": "Hackathon Data Flow", "organizer": "Porto Digital", "date": "08/2024" },
+      { "anchor": "ideathon-caruaru-campusparty-day", "name": "Ideathon - Caruaru Campus Party Day", "organizer": "Porto Digital", "date": "08/2024" },
+      { "anchor": "olimpiadas-jovens-impacto", "name": "Olímpiadas Jovens de Impacto", "organizer": "SEBRAE & Instituto Verda", "date": "11/2021" }
+    ]
+  },
+  "events": {
+    "anchor": "events",
+    "items": [
+      { "anchor": "flisol-palmares-2026", "name": "FLISoL 2026", "venue": "IFPE/Palmares", "type": "Festival", "role": "SPEAKER", "date": "04/2026" },
+      { "anchor": "expotech-2025-2", "name": "ExpoTech 2025.2", "venue": "UniFavip Wyden/Auditorium", "type": "Fair/Exhibition", "role": "EXHIBITOR", "date": "12/2025" },
+      { "anchor": "festival-agile-trends-2025", "name": "Festival Agile Trends 2025", "venue": "Agile Trends/Remote", "type": "Festival", "role": "LISTENER", "date": "11/2025" },
+      { "anchor": "expotech-2025-1", "name": "ExpoTech 2025.1", "venue": "UniFavip Wyden/Auditorium", "type": "Fair/Exhibition", "role": "EXHIBITOR", "date": "06/2025" },
+      { "anchor": "brics-youth-2025", "name": "BRICS Youth", "venue": "BRICS/Remote", "type": "Summit/Forum", "role": "LISTENER", "date": "05/2025" },
+      { "anchor": "as-tendencias-para-novasgeracoes-2025-1", "name": "As Tendências Para as Novas Gerações de Profissionais", "venue": "Recife Front-End Community/Remote", "type": "Talk/Meetup", "role": "SPEAKER", "date": "02/2025" },
+      { "anchor": "expotech-2024-2", "name": "ExpoTech 2024.2", "venue": "UniFavip Wyden/Auditorium", "type": "Fair/Exhibition", "role": "EXHIBITOR", "date": "11/2024" },
+      { "anchor": "campus-party-nordeste-2024", "name": "Campus Party NE 2024", "venue": "Campus Party/São Lourenço da Mata", "type": "Conference", "role": "LISTENER", "date": "9/2024" }
+    ]
+  },
+  "achievementsAndRecognition": {
+    "anchor": "achievements-recognition",
+    "items": [
+      { "anchor": "award-kartado-agility-2026", "title": "Nomination for Kartado Monthly Agility Award", "issuer": "Kartado", "date": "04/2026" },
+      { "anchor": "accepted-mentee-alp-2025-2", "title": "Accepted Mentee in Aspire Leaders 2025.2 Cohort 5", "issuer": "Aspire Institute", "date": "10/2025" }
+    ]
+  },
+  "githubAnalytics": {
+    "anchor": "github-analytics",
+    "cards": [
+      "http://github-profile-summary-cards.vercel.app/api/cards/stats?username=eversonfilipe&theme=dracula",
+      "http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=eversonfilipe&hide=Html&theme=dracula",
+      "http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=eversonfilipe&theme=dracula",
+      "http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=eversonfilipe&theme=dracula",
+      "https://github-readme-streak-stats.herokuapp.com/?user=eversonfilipe&theme=dracula&hide_border=true&date_format=M%20j%5B%2C%20Y%5D&background=1A1B27&stroke=35AFA3&ring=BF91F3&fire=BF91F3&currStreakNum=BF91F3&sideNums=BF91F3&currStreakLabel=BF91F3&sideLabels=BF91F3&dates=35AFA3"
+    ]
+  },
+  "tags": {
+    "anchor": "tags",
+    "items": [
+      "Technical Implementation Specialist", "Systems Analyst", "Implementation Engineer", "Product Operations", "Data Engineering", "Product Ops", "SQL Optimization", "RESTful APIs", "Python Developer", "Django Admin", "JSONLogic", "Systems Integration", "API Integration", "Technical Onboarding", "Software Implementation", "Systems Parametrization", "Data Manipulation", "PostgreSQL", "MongoDB", "NoSQL", "Technical Troubleshooting", "Functional Testing", "Technical Documentation", "Software Lifecycle", "Agile Methodologies", "SCRUM", "Kanban", "Lean Thinking", "Product Discovery", "Stakeholder Management", "Requirements Engineering", "Product Roadmap", "MVP Development", "Decision Intelligence", "Strategic Alignment", "Data-Driven Strategy", "Operational Excellence", "Data Governance", "ETL Processes", "Data Pipelines", "API Design", "Postman", "Jira", "Confluence", "ClickUp", "Trello", "FigJam", "Miro", "AWS EC2", "Cloud Infrastructure", "Bash Scripting", "Linux", "Version Control", "Git", "VS Code", "Software Architecture", "Technical Writing", "Process Mapping", "Scalable Infrastructure", "Business Analysis", "Product Requirements Document", "PRD", "User Stories", "Backlog Refinement", "Sprint Planning", "Software Development Life Cycle", "SDLC", "UAT", "User Acceptance Testing", "Level 2 Technical Support", "SaaS Strategy", "B2B SaaS", "B2C SaaS", "GovTech", "AI-powered MVP", "Generative AI", "Decision Support Systems", "Analytics Engineering", "Data Analysis", "Information Architecture", "Aspire Leaders Fellow", "Global Leadership", "Harvard Business School affiliate", "Mentorship", "Team Onboarding", "Cross-functional Leadership", "Remote Collaboration", "Social Impact Projects", "Technical Project Management", "Agile Transformation", "Change Management", "Process Automation", "Digital Transformation", "Workflow Optimization", "Data Integrity", "Logical Validation", "Scripting", "Backend Development", "Web Services", "JWT", "REST API Documentation", "Spreadsheet Modeling", "Advanced Excel", "Business Intelligence", "BI", "Customer Engagement", "Problem Solving", "Process Controls", "Decision Intelligence Specialist", "Data Product Management", "Product Strategy", "Software Deployment", "Solutions Engineer", "Associate Product Manager", "Technical Success Engineer", "Customer Onboarding Specialist", "Integration Engineer", "Systems Engineer", "Technical Analyst", "Database Administration", "Schema Design", "Performance Tuning", "API Testing", "Automated Testing", "Product Governance", "Resource Management", "KPI Tracking", "Performance Metrics", "National Infrastructure", "Technical Lead", "Professional Services Consultant", "Systems Deployment", "Deployment Automation", "Middleware", "Technical Consultant", "Product Lifecycle", "Lean Product Development", "User Flow Documentation", "Knowledge Base Management", "Technical Curriculum Design", "Project Tracking", "Agile Workflows", "Technical Support Engineer", "Solution Delivery", "Enterprise Software", "Cloud Computing", "Database Management", "Query Optimization", "Data Validation", "Technical Traceability", "Infrastructure Management", "Technical Readiness", "Product Operations Analyst", "Data Operations", "Business Operations", "Operational Agility", "Technical Strategy", "Solution Architecture", "Software Engineering", "Python Scripting", "Django Framework", "RESTful Services", "Web Development", "Full Stack Development", "Technical Problem Solving", "Root Cause Analysis", "Documentation Specialist", "Agile Coach", "Product Owner", "Project Coordination", "Technical Liaison", "Strategic Leadership", "Technical Excellence", "Data Quality", "Master Data Management", "Technical Auditing", "Change Control", "Systems Monitoring", "Product Discovery Specialist", "User-Centered Design", "Agile Delivery", "Continuous Improvement", "Innovation Management", "Tech Stack Optimization", "Resource Optimization", "Implementation Analyst", "Data Science Fundamentals", "Machine Learning", "AI Strategy", "Technical Brand Management", "Growth Hacking", "Stakeholder Engagement", "Cross-functional Communication", "Professional Services", "Implementation Methodology", "Technical Maturity", "Scalable Solutions", "Emerging Technologies", "Data Engineering Associate", "Product Ops Specialist", "Agile Operations", "Tech Stack Alignment", "Infrastructure as Code", "API Management", "Technical Product Management", "BPMN", "Workflow Design", "Systems Analysis", "ITIL", "CI/CD", "N2 Support", "XML", "Webhook", "System Configuration via JSONLogic, XML and Python", "Customer Experience (CX)", "Squad Mentorship", "Project Delivery for Tier-1 Clients"
+    ]
+  }
+}

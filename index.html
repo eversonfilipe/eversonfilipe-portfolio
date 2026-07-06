@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Everson Filipe - Implementation Engineer and AI Engineering professional. Specializing in integrations, workflows, and data integrity for B2B SaaS environments." name="description"/>
+  <meta content="Everson Filipe" name="author"/>
+  <meta content="Everson Filipe - Implementation Engineer" property="og:title"/>
+  <meta content="Bridging the gap between business requirements and scalable software execution through rigorous data validation and process automation." property="og:description"/>
+  <meta content="website" property="og:type"/>
+  <title>
+   Everson Filipe - Implementation Engineer
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400&amp;display=swap" rel="stylesheet"/>
+  <link href="assets/css/tokens.css" rel="stylesheet"/>
+  <link href="assets/css/base.css" rel="stylesheet"/>
+  <link href="assets/css/components.css" rel="stylesheet"/>
+  <link href="assets/css/layout.css" rel="stylesheet"/>
+  <link rel="icon" type="image/png" href="assets/images/profile.png"/>
+ </head>
+ <body>
+  <a class="skip-link" data-i18n="nav.skip" href="#main">
+   Skip to main content
+  </a>
+  <!-- Navigation -->
+  <nav aria-label="Main navigation" class="nav" id="main-nav" role="navigation">
+   <a aria-label="Everson Filipe - home" class="nav-logo" href="#hero">
+    <img alt="Everson Filipe" class="nav-avatar" src="assets/images/profile.png"/>
+   </a>
+   <ul class="nav-links" id="nav-links" role="list">
+    <li>
+     <a class="nav-link" data-i18n="nav.about" href="#about">
+      About
+     </a>
+    </li>
+    <li>
+     <a class="nav-link" data-i18n="nav.experience" href="#experience">
+      Experience
+     </a>
+    </li>
+    <li>
+     <a class="nav-link" data-i18n="nav.education" href="#education">
+      Education
+     </a>
+    </li>
+    <li>
+     <a class="nav-link" data-i18n="nav.projects" href="#projects">
+      Projects
+     </a>
+    </li>
+    <li>
+     <a class="nav-link" data-i18n="nav.certifications" href="#certifications">
+      Certifications
+     </a>
+    </li>
+    <li>
+     <a class="nav-link" data-i18n="nav.community" href="#community">
+      Community
+     </a>
+    </li>
+   </ul>
+   <!-- Nav utilities: lang + a11y -->
+   <div style="display:flex; align-items:center; gap:var(--space-3);">
+    <!-- Language switcher -->
+    <div aria-label="Language selection" class="lang-switcher" role="group">
+     <button aria-label="Switch to English" aria-pressed="true" class="lang-btn active" data-lang="en">
+      EN
+     </button>
+     <button aria-label="Mudar para Portugues" aria-pressed="false" class="lang-btn" data-lang="pt">
+      PT
+     </button>
+     <button aria-label="Cambiar a Espanol" aria-pressed="false" class="lang-btn" data-lang="es">
+      ES
+     </button>
+    </div>
+    <!-- Accessibility trigger -->
+    <button aria-expanded="false" aria-label="Accessibility settings" class="a11y-trigger" id="a11y-trigger">
+     <svg aria-hidden="true" viewbox="0 0 24 24">
+      <circle cx="12" cy="4" r="1.5">
+      </circle>
+      <path d="M9 9h6M12 9v6M9 21l3-6 3 6">
+      </path>
+      <path d="M7 11c-1.5.5-3 1.5-4 3">
+      </path>
+      <path d="M17 11c1.5.5 3 1.5 4 3">
+      </path>
+     </svg>
+    </button>
+   </div>
+   <button aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation menu" class="nav-toggle" id="nav-toggle">
+    <span>
+    </span>
+    <span>
+    </span>
+    <span>
+    </span>
+   </button>
+  </nav>
+  <!-- Accessibility Panel -->
+  <aside aria-label="Accessibility options" aria-modal="false" class="a11y-panel" id="a11y-panel" role="dialog">
+   <p class="a11y-panel-title" data-i18n="a11y.panel.title">
+    Accessibility
+   </p>
+   <!-- Font size -->
+   <div class="a11y-row">
+    <div class="a11y-row-label">
+     <span data-i18n="a11y.fontsize.label">
+      Font size
+     </span>
+     <small data-i18n="a11y.fontsize.hint">
+      Normal / Large / Extra large
+     </small>
+    </div>
+    <div aria-label="Font size controls" class="font-size-controls" role="group">
+     <button aria-label="Normal font size" aria-pressed="true" class="font-size-btn active" data-size="normal" style="font-size:13px;">
+      A
+     </button>
+     <button aria-label="Large font size" aria-pressed="false" class="font-size-btn" data-size="large" style="font-size:16px;">
+      A
+     </button>
+     <button aria-label="Extra large font size" aria-pressed="false" class="font-size-btn" data-size="xlarge" style="font-size:19px;">
+      A
+     </button>
+    </div>
+   </div>
+   <!-- Reduce motion -->
+   <div class="a11y-row">
+    <div class="a11y-row-label">
+     <span data-i18n="a11y.motion.label">
+      Reduce motion
+     </span>
+     <small data-i18n="a11y.motion.hint">
+      Disables animations
+     </small>
+    </div>
+    <label aria-label="Toggle reduce motion" class="a11y-toggle">
+     <input id="a11y-motion-toggle" role="switch" type="checkbox"/>
+     <span aria-hidden="true" class="a11y-toggle-track">
+     </span>
+    </label>
+   </div>
+  </aside>
+  <main id="main">
+   <!-- ── HERO ─────────────────────────────────────── -->
+   <section aria-label="Introduction" id="hero">
+    <canvas aria-hidden="true" id="hero-canvas">
+    </canvas>
+    <div class="container">
+     <div class="hero-content">
+      <p class="hero-overline" data-i18n="hero.overline">
+       Implementation Engineer &middot; AI Engineering
+      </p>
+      <h1 class="hero-name">
+       <strong>
+        Everson
+       </strong>
+       Filipe
+      </h1>
+      <p class="hero-title" data-i18n="hero.title">
+       Technical Implementation &middot; Integrations &middot; Data Integrity
+      </p>
+      <p class="hero-tagline" data-i18n="hero.tagline">
+       Bridging the gap between business requirements and scalable software execution through rigorous data validation and process automation.
+      </p>
+      <div class="hero-actions">
+       <a class="btn btn-outline" data-i18n="hero.cta.work" href="#experience" id="hero-cta-work">
+        View experience
+       </a>
+      </div>
+      <div aria-label="Social profiles" class="hero-socials" role="list">
+       <a aria-label="GitHub profile" class="social-link" data-i18n-aria="social.github" href="https://github.com/eversonfilipe" rel="noopener noreferrer" role="listitem" target="_blank">
+        <svg aria-hidden="true" viewbox="0 0 24 24">
+         <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12">
+         </path>
+        </svg>
+        GitHub
+       </a>
+       <a aria-label="LinkedIn profile" class="social-link" data-i18n-aria="social.linkedin" href="https://www.linkedin.com/in/eversonfilipe-agile-products-ai/" rel="noopener noreferrer" role="listitem" target="_blank">
+        <svg aria-hidden="true" viewbox="0 0 24 24">
+         <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z">
+         </path>
+        </svg>
+        LinkedIn
+       </a>
+       <a aria-label="Medium profile" class="social-link" data-i18n-aria="social.medium" href="https://eversonfilipe.medium.com/" rel="noopener noreferrer" role="listitem" target="_blank">
+        <svg aria-hidden="true" viewbox="0 0 24 24">
+         <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z">
+         </path>
+        </svg>
+        Medium
+       </a>
+       <a aria-label="Email address" class="social-link" data-i18n-aria="social.email" href="mailto:eversonfilipe124@gmail.com" role="listitem">
+        <svg aria-hidden="true" viewbox="0 0 24 24">
+         <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z">
+         </path>
+        </svg>
+        Email
+       </a>
+      </div>
+     </div>
+    </div>
+    <div aria-hidden="true" class="hero-scroll-indicator">
+     <div class="scroll-line">
+     </div>
+     <span data-i18n="hero.scroll">
+      scroll
+     </span>
+    </div>
+   </section>
+   <!-- ── ABOUT ─────────────────────────────────────── -->
+   <section aria-labelledby="about-heading" class="section" id="about">
+    <div class="container">
+     <header class="section-header reveal">
+      <p class="overline" data-i18n="about.overline">
+       About
+      </p>
+      <h2 class="section-title" data-i18n="about.heading" id="about-heading">
+       Who Everson Filipe is
+      </h2>
+     </header>
+     <div class="about-grid">
+      <div class="reveal reveal-delay-1" id="about-text-container">
+      </div>
+      <div class="reveal reveal-delay-2" id="about-details-container">
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- ── EXPERIENCE ─────────────────────────────────── -->
+   <section aria-labelledby="experience-heading" class="section section--deep" id="experience">
+    <div class="container">
+     <header class="section-header reveal">
+      <p class="overline" data-i18n="exp.overline">
+       Professional Trajectory
+      </p>
+      <h2 class="section-title" data-i18n="exp.heading" id="experience-heading">
+       Where I have worked
+      </h2>
+     </header>
+     <div aria-label="Filter technologies" class="exp-filter-bar reveal reveal-delay-1" id="exp-filter-bar" role="group">
+     </div>
+     <div class="timeline" id="exp-timeline" role="list">
+     </div>
+    </div>
+   </section>
+   <!-- ── EDUCATION ──────────────────────────────────── -->
+   <section aria-labelledby="education-heading" class="section" id="education">
+    <div class="container">
+     <header class="section-header reveal">
+      <p class="overline" data-i18n="edu.overline">
+       Academic Background
+      </p>
+      <h2 class="section-title" data-i18n="edu.heading" id="education-heading">
+       Education
+      </h2>
+     </header>
+     <div aria-label="Degrees and programs" class="education-grid reveal reveal-delay-1" id="education-list" role="list">
+     </div>
+     <div style="margin-top:var(--space-16);">
+      <p class="overline reveal" data-i18n="edu.courses.label" style="margin-bottom:var(--space-8);">
+       Courses
+      </p>
+      <div aria-label="Filter courses" class="filter-bar reveal" id="course-filter-bar" role="group">
+      </div>
+      <div aria-label="Completed courses" class="courses-list reveal reveal-delay-1" id="courses-list" role="list">
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- ── PROJECTS ───────────────────────────────────── -->
+   <section aria-labelledby="projects-heading" class="section" id="projects">
+    <div class="container">
+     <header class="section-header reveal">
+      <p class="overline" data-i18n="projects.overline">
+       Hands-on
+      </p>
+      <h2 class="section-title" data-i18n="projects.heading" id="projects-heading">
+       Selected Projects
+      </h2>
+     </header>
+     <div class="projects-grid reveal reveal-delay-1" id="projects-list">
+     </div>
+    </div>
+   </section>
+   <!-- ── CERTIFICATIONS ─────────────────────────────── -->
+   <section aria-labelledby="certs-heading" class="section section--deep" id="certifications">
+    <div class="container">
+     <header class="section-header reveal">
+      <p class="overline" data-i18n="certs.overline">
+       Validation
+      </p>
+      <h2 class="section-title" data-i18n="certs.heading" id="certs-heading">
+       Certifications
+      </h2>
+     </header>
+     <div class="education-grid reveal reveal-delay-1" id="certs-list">
+     </div>
+    </div>
+   </section>
+   <!-- ── COMMUNITY & IMPACT ─────────────────────────── -->
+   <section aria-labelledby="community-heading" class="section section--deep" id="community">
+    <div class="container">
+     <header class="section-header reveal">
+      <p class="overline" data-i18n="community.overline">
+       Community &amp; Impact
+      </p>
+      <h2 class="section-title" data-i18n="community.heading" id="community-heading">
+       Beyond the code
+      </h2>
+     </header>
+     <!-- Voluntariado -->
+     <div style="margin-bottom:var(--space-16);">
+      <p class="overline reveal" data-i18n="community.volunteering" style="margin-bottom:var(--space-8);">
+       Volunteering
+      </p>
+      <div aria-label="Volunteering activities" class="volunteer-grid" id="volunteer-list" role="list">
+      </div>
+     </div>
+     <!-- Hackathons -->
+     <div style="margin-bottom:var(--space-16);">
+      <p class="overline reveal" data-i18n="community.hackathons" style="margin-bottom:var(--space-8);">
+       Hackathons
+      </p>
+      <div aria-label="Hackathon participations" class="hackathon-list reveal reveal-delay-1" id="hackathons-list" role="list">
+      </div>
+     </div>
+     <!-- Eventos -->
+     <div style="margin-bottom:var(--space-16);">
+      <p class="overline reveal" data-i18n="community.events" style="margin-bottom:var(--space-8);">
+       Events
+      </p>
+      <div aria-label="Filter events" class="filter-bar reveal" id="event-filter-bar" role="group">
+      </div>
+      <div aria-label="Events participated" class="events-grid reveal reveal-delay-1" id="events-list" role="list">
+      </div>
+     </div>
+     <!-- Reconhecimentos -->
+     <div>
+      <p class="overline reveal" data-i18n="community.achievements" style="margin-bottom:var(--space-8);">
+       Achievements &amp; Recognition
+      </p>
+      <div aria-label="Achievements and recognition" id="achievements-list" role="list" style="display:flex;flex-direction:column;gap:var(--space-4);">
+      </div>
+     </div>
+    </div>
+   </section>
+  </main>
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+   <div class="container">
+    <div class="footer-inner">
+     <p class="footer-copy">
+      &copy; 2025 Everson Filipe. Built with purpose.
+     </p>
+     <nav aria-label="Footer navigation" class="footer-links">
+      <a aria-label="GitHub profile" class="social-link" data-i18n-aria="social.github" href="https://github.com/eversonfilipe" rel="noopener noreferrer" target="_blank">
+       <svg aria-hidden="true" viewbox="0 0 24 24">
+        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12">
+        </path>
+       </svg>
+      </a>
+      <a aria-label="LinkedIn profile" class="social-link" data-i18n-aria="social.linkedin" href="https://www.linkedin.com/in/eversonfilipe-agile-products-ai/" rel="noopener noreferrer" target="_blank">
+       <svg aria-hidden="true" viewbox="0 0 24 24">
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z">
+        </path>
+       </svg>
+      </a>
+      <a aria-label="Medium profile" class="social-link" data-i18n-aria="social.medium" href="https://eversonfilipe.medium.com/" rel="noopener noreferrer" target="_blank">
+       <svg aria-hidden="true" viewbox="0 0 24 24">
+        <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z">
+        </path>
+       </svg>
+      </a>
+      <a aria-label="Email contact" class="social-link" data-i18n-aria="social.email" href="mailto:eversonfilipe124@gmail.com">
+       <svg aria-hidden="true" viewbox="0 0 24 24">
+        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z">
+        </path>
+       </svg>
+      </a>
+     </nav>
+    </div>
+   </div>
+  </footer>
+  <!-- JS: i18n e a11y primeiro, depois logica principal -->
+  <!-- UX Validator - dev only -->
+  <!-- CV Editor Modal -->
+  <script>
+   if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+      const s = document.createElement('script');
+      s.src = 'assets/js/ux-validator.js';
+      document.head.appendChild(s);
+    }
+  </script>
+  <!-- A11y & Lang Panel -->
+  <aside aria-label="Accessibility settings" class="a11y-panel" id="a11y-panel">
+   <div class="a11y-panel-title" data-i18n="a11y.panel.title">
+    Acessibilidade &amp; Idioma
+   </div>
+   <!-- Idioma -->
+   <div class="a11y-row">
+    <div class="a11y-row-label">
+     <span data-i18n="a11y.lang.label">
+      Idioma
+     </span>
+    </div>
+    <div aria-label="Language" class="lang-switcher" role="group">
+     <button class="lang-btn active" data-lang="en">
+      EN
+     </button>
+     <button class="lang-btn" data-lang="pt">
+      PT
+     </button>
+     <button class="lang-btn" data-lang="es">
+      ES
+     </button>
+    </div>
+   </div>
+   <!-- Font Size -->
+   <div class="a11y-row">
+    <div class="a11y-row-label">
+     <span data-i18n="a11y.fontsize.label">
+      Tamanho da fonte
+     </span>
+     <small data-i18n="a11y.fontsize.hint">
+      Normal / Grande / Extra grande
+     </small>
+    </div>
+    <div class="font-size-controls" role="group">
+     <button aria-label="Normal" class="font-size-btn active" data-size="normal">
+      A
+     </button>
+     <button aria-label="Large" class="font-size-btn" data-size="large">
+      A+
+     </button>
+     <button aria-label="Extra Large" class="font-size-btn" data-size="xlarge">
+      A++
+     </button>
+    </div>
+   </div>
+   <!-- Motion -->
+   <div class="a11y-row">
+    <div class="a11y-row-label">
+     <span data-i18n="a11y.motion.label">
+      Reduzir anima&ccedil;&otilde;es
+     </span>
+     <small data-i18n="a11y.motion.hint">
+      Desativa anima&ccedil;&otilde;es
+     </small>
+    </div>
+    <label class="a11y-toggle">
+     <input id="a11y-motion-toggle" type="checkbox"/>
+     <span class="a11y-toggle-track">
+     </span>
+    </label>
+   </div>
+  </aside>
+  <div aria-hidden="true" aria-label="Image viewer" class="lightbox" id="lightbox-modal" role="dialog">
+   <button aria-label="Close image viewer" class="lightbox-close" id="lightbox-close">
+    &times;
+   </button>
+   <button aria-label="Previous image" class="lightbox-arrow prev" id="lightbox-prev">
+    &lt;
+   </button>
+   <div class="lightbox-content">
+    <img alt="" id="lightbox-img" src=""/>
+    <div class="lightbox-caption" id="lightbox-caption">
+    </div>
+   </div>
+   <button aria-label="Next image" class="lightbox-arrow next" id="lightbox-next">
+    &gt;
+   </button>
+  </div>
+  <script defer="" src="assets/js/i18n.js">
+  </script>
+  <script defer="" src="assets/js/a11y.js">
+  </script>
+  <script defer="" src="assets/js/lines.js">
+  </script>
+  <script defer="" src="assets/js/cv_data.js">
+  </script>
+  <script defer="" src="assets/js/renderer.js">
+  </script>
+  <script defer="" src="assets/js/filters.js">
+  </script>
+  <script defer="" src="assets/js/carousel.js">
+  </script>
+  <script defer="" src="assets/js/main.js">
+  </script>
+ </body>
+</html>

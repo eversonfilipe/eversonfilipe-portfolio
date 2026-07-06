@@ -1,0 +1,95 @@
+/**
+ * filters.js - Lógica global de filtragem para Experiência, Cursos e Eventos.
+ * Adaptado para renderização dinâmica e mudanças de idioma.
+ */
+(function initFiltersModule() {
+  'use strict';
+
+  function applyFilters() {
+    // 1. Experience
+    const expActive = document.querySelector('#exp-filter-bar .filter-btn.active');
+    if (expActive) {
+      const val = expActive.getAttribute('data-filter');
+      document.querySelectorAll('.timeline-item').forEach(item => {
+        if (val === 'all') {
+          item.style.display = 'grid';
+        } else {
+          const tags = Array.from(item.querySelectorAll('.tech-tag')).map(t => t.textContent.trim());
+          item.style.display = tags.includes(val) ? 'grid' : 'none';
+        }
+      });
+    }
+
+    // 2. Courses
+    const courseActive = document.querySelector('#course-filter-bar .filter-btn.active');
+    if (courseActive) {
+      const val = courseActive.getAttribute('data-filter');
+      document.querySelectorAll('.course-card').forEach(row => {
+        if (val === 'all') {
+          row.style.display = 'flex';
+        } else {
+          row.style.display = (row.getAttribute('data-type') === val) ? 'flex' : 'none';
+        }
+      });
+    }
+
+    // 3. Events
+    const eventActive = document.querySelector('#event-filter-bar .filter-btn.active');
+    if (eventActive) {
+      const val = eventActive.getAttribute('data-filter');
+      document.querySelectorAll('.event-card').forEach(card => {
+        if (val === 'all') {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = (card.getAttribute('data-type') === val) ? 'flex' : 'none';
+        }
+      });
+    }
+  }
+
+  function initFilters() {
+    const expBar = document.getElementById('exp-filter-bar');
+    if (expBar) {
+      const btns = expBar.querySelectorAll('.filter-btn');
+      btns.forEach(btn => {
+        btn.onclick = () => {
+          btns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          applyFilters();
+        };
+      });
+    }
+
+    const courseBar = document.getElementById('course-filter-bar');
+    if (courseBar) {
+      const btns = courseBar.querySelectorAll('.filter-btn');
+      btns.forEach(btn => {
+        btn.onclick = () => {
+          btns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          applyFilters();
+        };
+      });
+    }
+
+    const eventBar = document.getElementById('event-filter-bar');
+    if (eventBar) {
+      const btns = eventBar.querySelectorAll('.filter-btn');
+      btns.forEach(btn => {
+        btn.onclick = () => {
+          btns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          applyFilters();
+        };
+      });
+    }
+  }
+
+  window.initFilters = initFilters;
+  window.applyFilters = applyFilters;
+
+  document.addEventListener('DOMContentLoaded', () => {
+    initFilters();
+    applyFilters();
+  });
+})();
