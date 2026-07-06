@@ -13,19 +13,19 @@
       "current": "Currently working at <strong>Kartado</strong> &middot; Deepening OOP and UML &middot; Bachelor's in Computer Science at UniFavip Wyden",
       "stats": [
         {
-          "number": "528",
+          "number": "800",
           "suffix": "+",
-          "label": "Validated work items"
+          "label": "Tasks delivered"
         },
         {
-          "number": "18",
+          "number": "42",
           "suffix": "+",
-          "label": "Operational units"
+          "label": "B2B clients attended"
         },
         {
           "number": "32",
           "suffix": "%",
-          "label": "Team output contribution"
+          "label": "Team output contribution in the firsts months"
         },
         {
           "number": "10",
@@ -114,7 +114,8 @@
           "Miro",
           "Scrum",
           "Kanban"
-        ]
+        ],
+        "logo": "assets/images/daus_software_house_logo.jpg"
       }
     ],
     "education": [
@@ -124,14 +125,15 @@
         "degree": "Artificial Intelligence Mentorship Program",
         "institution": "Offered by LAB.AI, Instituto Joule",
         "date": "Aug 2025 – Sep 2025",
-        "logo": "assets/images/aspire-institute-logo-large-updated-2048x695.webp"
+        "logo": "assets/images/instituto_joule_logo.jpg"
       },
       {
         "id": "graduacao-ciencia-computacao-unifavipwyden",
         "type": "Bachelor's Degree",
         "degree": "Computer Science",
         "institution": "UniFavip Wyden",
-        "date": "Feb 2024 – In Progress"
+        "date": "Feb 2024 – In Progress",
+        "logo": "assets/images/unifavip_logo.jpg"
       }
     ],
     "courses": [
@@ -141,36 +143,39 @@
         "name": "Postman: From Zero to Advanced + Automated Testing",
         "provider": "Udemy",
         "date": "Dec 2025",
-        "credentialUrl": "https://www.udemy.com/certificate/UC-xxxxx/"
+        "credentialUrl": "https://www.udemy.com/certificate/UC-12234f7a-0178-4a06-b809-864522caa58c/"
       },
       {
         "id": "curso-applicationprogramminginterfaces-api",
         "type": "api",
         "name": "Application Programming Interface: API and Web Services",
-        "provider": "Solyd Offensive Security",
+        "provider": "Udemy",
         "date": "Dec 2025",
-        "credentialUrl": "https://solyd.com.br/"
+        "credentialUrl": "https://www.udemy.com/certificate/UC-9eff9f3e-ab9e-4e05-86e2-181eddd6e921/"
       },
       {
         "id": "curso-labai-mentoria2025",
         "type": "ai",
         "name": "Lab.AI: Preparing the Next Generation for the Future of Work",
-        "provider": "LAB.AI",
-        "date": "Sep 2025"
+        "provider": "Instituto Joule",
+        "date": "Sep 2025",
+        "credentialUrl": "https://academy.institutojoule.org/certificado/?cert_hash=6710237ef0505f06"
       },
       {
         "id": "curso-skillsbuild-customerengagement",
         "type": "softskills",
         "name": "SkillsBuild - Customer Engagement: Problem Solving and Process Controls",
         "provider": "IBM",
-        "date": "Aug 2025"
+        "date": "Aug 2025",
+        "credentialUrl": "https://www.credly.com/badges/a9ac260f-4415-43d0-a2e2-479478acbddd/linked_in_profile"
       },
       {
         "id": "curso-efset-2025",
         "type": "languages",
         "name": "EF SET English Certificate 69/100 (C1 Advanced)",
         "provider": "EF Education First",
-        "date": "Mar 2025"
+        "date": "Mar 2025",
+        "credentialUrl": "https://cert.efset.org/en/88BaNL"
       }
     ],
     "projects": [],
@@ -181,25 +186,28 @@
         "role": "Co-organizer",
         "org": "Google Developers Group (GDG Barueri)",
         "date": "Aug 2025 - Present",
-        "logo": "assets/images/aspire-institute-logo-large-updated-2048x695.webp"
+        "logo": "assets/images/google_developers_group_barueri_logo.jpg"
       },
       {
         "id": "ambassador-facilitator-politize",
         "role": "Ambassador & Facilitator",
         "org": "Politize! (Politize! Caruaru)",
-        "date": "May 2025 - Present"
+        "date": "May 2025 - Present",
+        "logo": "assets/images/politize__logo.jpg"
       },
       {
         "id": "aiesecmackenzie-volunteer",
         "role": "OGT & Marketing Committee Member",
         "org": "AIESEC (AIESEC no Mackenzie)",
-        "date": "Mar 2025 - Aug 2025"
+        "date": "Mar 2025 - Aug 2025",
+        "logo": "assets/images/1754110.webp"
       },
       {
         "id": "vainaweb-volunteering",
         "role": "Soft Skills Instructor",
         "org": "Vai Na Web",
-        "date": "Jan 2025"
+        "date": "Jan 2025",
+        "logo": "assets/images/vai_na_web.jpg"
       }
     ],
     "hackathons": [
@@ -272,7 +280,7 @@
         "role": "Speaker",
         "meta": "IFPE/Palmares",
         "date": "Apr 2026",
-        "logo": "assets/images/aspire-institute-logo-large-updated-2048x695.webp"
+        "logo": "assets/images/photo_flisol_logo.webp"
       },
       {
         "id": "expotech-2025-2",
@@ -280,7 +288,8 @@
         "name": "ExpoTech 2025.2",
         "role": "Exhibitor",
         "meta": "UniFavip Wyden",
-        "date": "Dec 2025"
+        "date": "Dec 2025",
+        "logo": "assets/images/unifavip_logo.jpg"
       },
       {
         "id": "festival-agile-trends-2025",
@@ -288,7 +297,8 @@
         "name": "Festival Agile Trends 2025",
         "role": "Listener",
         "meta": "Remote",
-        "date": "Nov 2025"
+        "date": "Nov 2025",
+        "logo": "assets/images/agile_trends_logo.jpg"
       },
       {
         "id": "expotech-2025-1",
@@ -296,7 +306,8 @@
         "name": "ExpoTech 2025.1",
         "role": "Exhibitor",
         "meta": "UniFavip Wyden",
-        "date": "Jun 2025"
+        "date": "Jun 2025",
+        "logo": "assets/images/unifavip_logo.jpg"
       },
       {
         "id": "brics-youth-2025",
@@ -304,7 +315,8 @@
         "name": "BRICS Youth",
         "role": "Listener",
         "meta": "Remote",
-        "date": "May 2025"
+        "date": "May 2025",
+        "logo": "assets/images/brics_youth_alliance_2025.jpg"
       },
       {
         "id": "as-tendencias-para-novasgeracoes-2025-1",
@@ -312,7 +324,8 @@
         "name": "Trends for New Generations of Professionals",
         "role": "Speaker",
         "meta": "Recife Front-End Community",
-        "date": "Feb 2025"
+        "date": "Feb 2025",
+        "logo": "assets/images/recife_front_end_community_logo.jpg"
       },
       {
         "id": "expotech-2024-2",
@@ -320,23 +333,26 @@
         "name": "ExpoTech 2024.2",
         "role": "Exhibitor",
         "meta": "UniFavip Wyden",
-        "date": "Nov 2024"
+        "date": "Nov 2024",
+        "logo": "assets/images/unifavip_logo.jpg"
       },
       {
         "id": "campus-party-nordeste-2024",
         "type": "listener",
         "name": "Campus Party NE 2024",
         "role": "Listener",
-        "meta": "Remote",
-        "date": "Aug 2024"
+        "meta": "Sao Lourenco da Mata",
+        "date": "Aug 2024",
+        "logo": "assets/images/campusparty_ltd_logo.jpg"
       },
       {
         "id": "ideathon-caruaru-campusparty-day-event",
         "type": "listener",
         "name": "Caruaru Campus Party Day",
         "role": "Listener",
-        "meta": "Sao Lourenco da Mata",
-        "date": "Sep 2024"
+        "meta": "Caruaru",
+        "date": "Sep 2024",
+        "logo": "assets/images/campusparty_ltd_logo.jpg"
       }
     ],
     "achievements": [
@@ -367,19 +383,19 @@
       "current": "Atualmente na <strong>Kartado</strong> &middot; Aprofundando OOP e UML &middot; Bacharelando em Ciencia da Computacao na UniFavip Wyden",
       "stats": [
         {
-          "number": "528",
+          "number": "800",
           "suffix": "+",
-          "label": "Itens de trabalho validados"
+          "label": "Tarefas entregues"
         },
         {
-          "number": "18",
+          "number": "42",
           "suffix": "+",
-          "label": "Unidades operacionais"
+          "label": "Clientes B2B atendidos"
         },
         {
           "number": "32",
           "suffix": "%",
-          "label": "Contribuição ao output do time"
+          "label": "Contribuição ao output do time nos primeiros meses"
         },
         {
           "number": "10",
@@ -468,7 +484,8 @@
           "Miro",
           "Scrum",
           "Kanban"
-        ]
+        ],
+        "logo": "assets/images/daus_software_house_logo.jpg"
       }
     ],
     "education": [
@@ -478,14 +495,15 @@
         "degree": "Programa de Mentoria em Inteligência Artificial",
         "institution": "Oferecido pela LAB.AI, do Instituto Joule",
         "date": "Ago 2025 – Set 2025",
-        "logo": "assets/images/aspire-institute-logo-large-updated-2048x695.webp"
+        "logo": "assets/images/instituto_joule_logo.jpg"
       },
       {
         "id": "graduacao-ciencia-computacao-unifavipwyden",
         "type": "Bacharelado",
         "degree": "Ciência da Computação",
         "institution": "UniFavip Wyden",
-        "date": "Fev 2024 – Em curso"
+        "date": "Fev 2024 – Em curso",
+        "logo": "assets/images/unifavip_logo.jpg"
       }
     ],
     "courses": [
@@ -495,36 +513,39 @@
         "name": "Postman: Do Zero ao Avançado + Testes Automatizados",
         "provider": "Udemy",
         "date": "Dez 2025",
-        "credentialUrl": "https://www.udemy.com/certificate/UC-xxxxx/"
+        "credentialUrl": "https://www.udemy.com/certificate/UC-12234f7a-0178-4a06-b809-864522caa58c/"
       },
       {
         "id": "curso-applicationprogramminginterfaces-api",
         "type": "api",
         "name": "Interface de Programação de Aplicação: APIs e Web Services",
-        "provider": "Solyd Offensive Security",
+        "provider": "Udemy",
         "date": "Dez 2025",
-        "credentialUrl": "https://solyd.com.br/"
+        "credentialUrl": "https://www.udemy.com/certificate/UC-9eff9f3e-ab9e-4e05-86e2-181eddd6e921/"
       },
       {
         "id": "curso-labai-mentoria2025",
         "type": "ai",
         "name": "Lab.AI: Preparando a Próxima Geração para o Futuro do Trabalho",
-        "provider": "LAB.AI",
-        "date": "Set 2025"
+        "provider": "Instituto Joule",
+        "date": "Set 2025",
+        "credentialUrl": "https://academy.institutojoule.org/certificado/?cert_hash=6710237ef0505f06"
       },
       {
         "id": "curso-skillsbuild-customerengagement",
         "type": "softskills",
         "name": "SkillsBuild - Engajamento do Cliente: Resolução de Problemas e Controles de Processos",
         "provider": "IBM",
-        "date": "Ago 2025"
+        "date": "Ago 2025",
+        "credentialUrl": "https://www.credly.com/badges/a9ac260f-4415-43d0-a2e2-479478acbddd/linked_in_profile"
       },
       {
         "id": "curso-efset-2025",
         "type": "languages",
         "name": "Certificado de Inglês EF SET 69/100 (C1 Avançado)",
         "provider": "EF Education First",
-        "date": "Mar 2025"
+        "date": "Mar 2025",
+        "credentialUrl": "https://cert.efset.org/en/88BaNL"
       }
     ],
     "projects": [],
@@ -535,25 +556,28 @@
         "role": "Coorganizador",
         "org": "Google Developers Group (GDG Barueri)",
         "date": "Ago 2025 - Atual",
-        "logo": "assets/images/aspire-institute-logo-large-updated-2048x695.webp"
+        "logo": "assets/images/google_developers_group_barueri_logo.jpg"
       },
       {
         "id": "ambassador-facilitator-politize",
         "role": "Embaixador e Facilitador",
         "org": "Politize! (Politize! Caruaru)",
-        "date": "Mai 2025 - Atual"
+        "date": "Mai 2025 - Atual",
+        "logo": "assets/images/politize__logo.jpg"
       },
       {
         "id": "aiesecmackenzie-volunteer",
         "role": "Membro do Comitê de OGT e Marketing",
         "org": "AIESEC (AIESEC no Mackenzie)",
-        "date": "Mar 2025 - Ago 2025"
+        "date": "Mar 2025 - Ago 2025",
+        "logo": "assets/images/1754110.webp"
       },
       {
         "id": "vainaweb-volunteering",
         "role": "Instrutor de Soft Skills",
         "org": "Vai Na Web",
-        "date": "Jan 2025"
+        "date": "Jan 2025",
+        "logo": "assets/images/vai_na_web.jpg"
       }
     ],
     "hackathons": [
@@ -626,7 +650,7 @@
         "role": "Palestrante",
         "meta": "IFPE/Palmares",
         "date": "Abr 2026",
-        "logo": "assets/images/aspire-institute-logo-large-updated-2048x695.webp"
+        "logo": "assets/images/photo_flisol_logo.webp"
       },
       {
         "id": "expotech-2025-2",
@@ -634,7 +658,8 @@
         "name": "ExpoTech 2025.2",
         "role": "Expositor",
         "meta": "UniFavip Wyden",
-        "date": "Dez 2025"
+        "date": "Dez 2025",
+        "logo": "assets/images/unifavip_logo.jpg"
       },
       {
         "id": "festival-agile-trends-2025",
@@ -642,7 +667,8 @@
         "name": "Festival Agile Trends 2025",
         "role": "Participante",
         "meta": "Remoto",
-        "date": "Nov 2025"
+        "date": "Nov 2025",
+        "logo": "assets/images/agile_trends_logo.jpg"
       },
       {
         "id": "expotech-2025-1",
@@ -650,7 +676,8 @@
         "name": "ExpoTech 2025.1",
         "role": "Expositor",
         "meta": "UniFavip Wyden",
-        "date": "Jun 2025"
+        "date": "Jun 2025",
+        "logo": "assets/images/unifavip_logo.jpg"
       },
       {
         "id": "brics-youth-2025",
@@ -658,7 +685,8 @@
         "name": "BRICS Youth",
         "role": "Participante",
         "meta": "Remoto",
-        "date": "Mai 2025"
+        "date": "Mai 2025",
+        "logo": "assets/images/brics_youth_alliance_2025.jpg"
       },
       {
         "id": "as-tendencias-para-novasgeracoes-2025-1",
@@ -666,7 +694,8 @@
         "name": "As Tendências para as Novas Gerações de Profissionais",
         "role": "Palestrante",
         "meta": "Recife Front-End Community",
-        "date": "Fev 2025"
+        "date": "Fev 2025",
+        "logo": "assets/images/recife_front_end_community_logo.jpg"
       },
       {
         "id": "expotech-2024-2",
@@ -674,23 +703,26 @@
         "name": "ExpoTech 2024.2",
         "role": "Expositor",
         "meta": "UniFavip Wyden",
-        "date": "Nov 2024"
+        "date": "Nov 2024",
+        "logo": "assets/images/unifavip_logo.jpg"
       },
       {
         "id": "campus-party-nordeste-2024",
         "type": "listener",
         "name": "Campus Party NE 2024",
         "role": "Participante",
-        "meta": "Remoto",
-        "date": "Ago 2024"
+        "meta": "Sao Lourenco da Mata",
+        "date": "Ago 2024",
+        "logo": "assets/images/campusparty_ltd_logo.jpg"
       },
       {
         "id": "ideathon-caruaru-campusparty-day-event",
         "type": "listener",
         "name": "Caruaru Campus Party Day",
         "role": "Participante",
-        "meta": "Sao Lourenco da Mata",
-        "date": "Set 2024"
+        "meta": "Caruaru",
+        "date": "Set 2024",
+        "logo": "assets/images/campusparty_ltd_logo.jpg"
       }
     ],
     "achievements": [
@@ -721,19 +753,19 @@
       "current": "Actualmente en <strong>Kartado</strong> &middot; Profundizando OOP y UML &middot; Licenciatura en Ciencias de la Computacion en UniFavip Wyden",
       "stats": [
         {
-          "number": "528",
+          "number": "800",
           "suffix": "+",
-          "label": "Ítems de trabajo validados"
+          "label": "Tareas entregadas"
         },
         {
-          "number": "18",
+          "number": "42",
           "suffix": "+",
-          "label": "Unidades operacionales"
+          "label": "Clientes B2B atendidos"
         },
         {
           "number": "32",
           "suffix": "%",
-          "label": "Contribución al output del equipo"
+          "label": "Contribución al output del equipo en los primeros meses"
         },
         {
           "number": "10",
@@ -822,24 +854,26 @@
           "Miro",
           "Scrum",
           "Kanban"
-        ]
+        ],
+        "logo": "assets/images/daus_software_house_logo.jpg"
       }
     ],
     "education": [
       {
         "id": "mentoria-labai-institutojoule-ia2025",
-        "type": "Programa de Mentoria",
-        "degree": "Programa de Mentoria em Inteligência Artificial",
-        "institution": "Oferecido pela LAB.AI, do Instituto Joule",
+        "type": "Programa de Mentoría",
+        "degree": "Programa de Mentoría en Inteligencia Artificial",
+        "institution": "Ofrecido por LAB.AI, del Instituto Joule",
         "date": "Ago 2025 – Sep 2025",
-        "logo": "assets/images/aspire-institute-logo-large-updated-2048x695.webp"
+        "logo": "assets/images/instituto_joule_logo.jpg"
       },
       {
         "id": "graduacao-ciencia-computacao-unifavipwyden",
         "type": "Licenciatura",
-        "degree": "Ciência da Computação",
+        "degree": "Ciencias de la Computación",
         "institution": "UniFavip Wyden",
-        "date": "Feb 2024 – En curso"
+        "date": "Feb 2024 – En curso",
+        "logo": "assets/images/unifavip_logo.jpg"
       }
     ],
     "courses": [
@@ -849,36 +883,39 @@
         "name": "Postman: De Cero a Avanzado + Pruebas Automatizadas",
         "provider": "Udemy",
         "date": "Dic 2025",
-        "credentialUrl": "https://www.udemy.com/certificate/UC-xxxxx/"
+        "credentialUrl": "https://www.udemy.com/certificate/UC-12234f7a-0178-4a06-b809-864522caa58c/"
       },
       {
         "id": "curso-applicationprogramminginterfaces-api",
         "type": "api",
         "name": "Interfaz de Programación de Aplicaciones: APIs y Servicios Web",
-        "provider": "Solyd Offensive Security",
+        "provider": "Udemy",
         "date": "Dic 2025",
-        "credentialUrl": "https://solyd.com.br/"
+        "credentialUrl": "https://www.udemy.com/certificate/UC-9eff9f3e-ab9e-4e05-86e2-181eddd6e921/"
       },
       {
         "id": "curso-labai-mentoria2025",
         "type": "ai",
         "name": "Lab.AI: Preparando la Próxima Generación para el Futuro del Trabajo",
-        "provider": "LAB.AI",
-        "date": "Sep 2025"
+        "provider": "Instituto Joule",
+        "date": "Sep 2025",
+        "credentialUrl": "https://academy.institutojoule.org/certificado/?cert_hash=6710237ef0505f06"
       },
       {
         "id": "curso-skillsbuild-customerengagement",
         "type": "softskills",
         "name": "SkillsBuild - Compromiso con el Cliente: Resolución de Problemas y Controles de Procesos",
         "provider": "IBM",
-        "date": "Ago 2025"
+        "date": "Ago 2025",
+        "credentialUrl": "https://www.credly.com/badges/a9ac260f-4415-43d0-a2e2-479478acbddd/linked_in_profile"
       },
       {
         "id": "curso-efset-2025",
         "type": "languages",
         "name": "Certificado de Inglés EF SET 69/100 (C1 Avanzado)",
         "provider": "EF Education First",
-        "date": "Mar 2025"
+        "date": "Mar 2025",
+        "credentialUrl": "https://cert.efset.org/en/88BaNL"
       }
     ],
     "projects": [],
@@ -889,25 +926,28 @@
         "role": "Coorganizador",
         "org": "Google Developers Group (GDG Barueri)",
         "date": "Ago 2025 - Actual",
-        "logo": "assets/images/aspire-institute-logo-large-updated-2048x695.webp"
+        "logo": "assets/images/google_developers_group_barueri_logo.jpg"
       },
       {
         "id": "ambassador-facilitator-politize",
         "role": "Embajador y Facilitador",
         "org": "Politize! (Politize! Caruaru)",
-        "date": "May 2025 - Actual"
+        "date": "May 2025 - Actual",
+        "logo": "assets/images/politize__logo.jpg"
       },
       {
         "id": "aiesecmackenzie-volunteer",
         "role": "Miembro del Comité de OGT y Marketing",
         "org": "AIESEC (AIESEC en Mackenzie)",
-        "date": "Mar 2025 - Ago 2025"
+        "date": "Mar 2025 - Ago 2025",
+        "logo": "assets/images/1754110.webp"
       },
       {
         "id": "vainaweb-volunteering",
         "role": "Instructor de Habilidades Blandas (Soft Skills)",
         "org": "Vai Na Web",
-        "date": "Ene 2025"
+        "date": "Ene 2025",
+        "logo": "assets/images/vai_na_web.jpg"
       }
     ],
     "hackathons": [
@@ -980,7 +1020,7 @@
         "role": "Ponente",
         "meta": "IFPE/Palmares",
         "date": "Abr 2026",
-        "logo": "assets/images/aspire-institute-logo-large-updated-2048x695.webp"
+        "logo": "assets/images/photo_flisol_logo.webp"
       },
       {
         "id": "expotech-2025-2",
@@ -988,7 +1028,8 @@
         "name": "ExpoTech 2025.2",
         "role": "Expositor",
         "meta": "UniFavip Wyden",
-        "date": "Dic 2025"
+        "date": "Dic 2025",
+        "logo": "assets/images/unifavip_logo.jpg"
       },
       {
         "id": "festival-agile-trends-2025",
@@ -996,7 +1037,8 @@
         "name": "Festival Agile Trends 2025",
         "role": "Asistente",
         "meta": "Remoto",
-        "date": "Nov 2025"
+        "date": "Nov 2025",
+        "logo": "assets/images/agile_trends_logo.jpg"
       },
       {
         "id": "expotech-2025-1",
@@ -1004,7 +1046,8 @@
         "name": "ExpoTech 2025.1",
         "role": "Expositor",
         "meta": "UniFavip Wyden",
-        "date": "Jun 2025"
+        "date": "Jun 2025",
+        "logo": "assets/images/unifavip_logo.jpg"
       },
       {
         "id": "brics-youth-2025",
@@ -1012,7 +1055,8 @@
         "name": "BRICS Youth",
         "role": "Asistente",
         "meta": "Remoto",
-        "date": "May 2025"
+        "date": "May 2025",
+        "logo": "assets/images/brics_youth_alliance_2025.jpg"
       },
       {
         "id": "as-tendencias-para-novasgeracoes-2025-1",
@@ -1020,7 +1064,8 @@
         "name": "Tendencias para las Nuevas Generaciones de Profesionales",
         "role": "Ponente",
         "meta": "Recife Front-End Community",
-        "date": "Feb 2025"
+        "date": "Feb 2025",
+        "logo": "assets/images/recife_front_end_community_logo.jpg"
       },
       {
         "id": "expotech-2024-2",
@@ -1028,36 +1073,39 @@
         "name": "ExpoTech 2024.2",
         "role": "Expositor",
         "meta": "UniFavip Wyden",
-        "date": "Nov 2024"
+        "date": "Nov 2024",
+        "logo": "assets/images/unifavip_logo.jpg"
       },
       {
         "id": "campus-party-nordeste-2024",
         "type": "listener",
         "name": "Campus Party NE 2024",
         "role": "Asistente",
-        "meta": "Remoto",
-        "date": "Ago 2024"
+        "meta": "Sao Lourenco da Mata",
+        "date": "Ago 2024",
+        "logo": "assets/images/campusparty_ltd_logo.jpg"
       },
       {
         "id": "ideathon-caruaru-campusparty-day-event",
         "type": "listener",
         "name": "Caruaru Campus Party Day",
         "role": "Asistente",
-        "meta": "Sao Lourenco da Mata",
-        "date": "Sep 2024"
+        "meta": "Caruaru",
+        "date": "Sep 2024",
+        "logo": "assets/images/campusparty_ltd_logo.jpg"
       }
     ],
     "achievements": [
       {
         "id": "award-kartado-agility-2026",
-        "title": "Nomeação ao Prêmio Mensal de Agilidade Kartado",
+        "title": "Nominación al Premio Mensual de Agilidad Kartado",
         "issuer": "Kartado",
         "logo": "assets/images/Simbolo_Kartado_Footer.svg",
         "date": "Abr 2026"
       },
       {
         "id": "accepted-mentee-alp-2025-2",
-        "title": "Mentorado Aceito - Aspire Leaders 2025.2 Cohort 5",
+        "title": "Mentee Aceptado - Aspire Leaders 2025.2 Cohort 5",
         "issuer": "Aspire Institute",
         "logo": "assets/images/aspire-institute-logo-large-updated-2048x695.webp",
         "date": "Oct 2025"
