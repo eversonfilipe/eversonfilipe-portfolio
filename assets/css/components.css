@@ -464,6 +464,8 @@
     top: 64px;
     left: 0;
     right: 0;
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
     background: var(--color-bg-overlay);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -1114,13 +1116,18 @@
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
+    transition: none !important; /* disable transitions on mobile to prevent delays */
   }
+  
+  /* High-specificity selectors to override hover/focus-within hidden state on mobile */
+  .nav-links li .nav-dropdown.open-mobile,
+  .nav-dropdown.open-mobile {
+    display: block !important;
+  }
+  
   .nav-links li:hover .nav-dropdown,
   .nav-links li:focus-within .nav-dropdown {
     display: none !important;
-  }
-  .nav-dropdown.open-mobile {
-    display: block !important;
   }
 }
 
@@ -1144,8 +1151,8 @@
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    width: 38px !important;
-    height: 38px !important;
+    width: 44px !important; /* Larger touch target for better usability (WCAG AA) */
+    height: 44px !important;
     flex-shrink: 0 !important;
     background: transparent !important;
     border: none !important;
@@ -1155,9 +1162,18 @@
     cursor: pointer !important;
     transition: transform var(--duration-fast) var(--ease-out), color var(--duration-fast) !important;
     padding: 0 !important;
+    outline: none !important; /* Remove blue outline square when clicked */
+    box-shadow: none !important;
   }
-  .nav-mobile-toggle:hover,
+  .nav-mobile-toggle:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
   .nav-mobile-toggle:focus-visible {
+    outline: 2px solid var(--color-accent-electric) !important;
+    outline-offset: 2px !important;
+  }
+  .nav-mobile-toggle:hover {
     color: var(--color-text-primary) !important;
   }
   .nav-mobile-toggle[aria-expanded="true"] {
