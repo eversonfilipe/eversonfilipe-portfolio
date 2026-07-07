@@ -404,16 +404,50 @@
     }
   }
 
+  function getEndDateValue(dateStr) {
+    if (!dateStr) return 0;
+    const parts = dateStr.split(/[–\-]/);
+    const endPart = (parts[1] || parts[0]).trim();
+    if (/present|presente|atual|current/i.test(endPart)) {
+      return 999912;
+    }
+    const monthMap = {
+      jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6, jul: 7, aug: 8, sep: 9, oct: 10, nov: 11, dec: 12,
+      fev: 2, abr: 4, mai: 5, ago: 8, set: 9, out: 10, dez: 12,
+      ene: 1, dic: 12
+    };
+    const yearMatch = endPart.match(/\d{4}/);
+    const year = yearMatch ? parseInt(yearMatch[0], 10) : 2000;
+    let month = 1;
+    const words = endPart.toLowerCase().match(/[a-z]+/g);
+    if (words) {
+      for (const w of words) {
+        const prefix = w.substring(0, 3);
+        if (monthMap[prefix]) {
+          month = monthMap[prefix];
+          break;
+        }
+      }
+    }
+    return year * 100 + month;
+  }
+
   function renderDropdowns(data, lang) {
     // 1. Experience nav dropdown
     const expDropdown = document.getElementById('nav-dropdown-experience');
     if (expDropdown) {
       let expDropdownHtml = '';
-      data.experience.forEach(job => {
+      const sortedExperience = [...data.experience].sort((a, b) => {
+        return getEndDateValue(b.date) - getEndDateValue(a.date);
+      });
+
+      sortedExperience.forEach(job => {
+        const isCurrent = /present|presente|atual/i.test(job.date);
+        const titleOpacity = isCurrent ? '' : ' style="opacity: 0.55;"';
         expDropdownHtml += `
           <li role="none">
             <a href="#${job.id}" class="nav-dropdown-link" role="menuitem">
-              <span class="nav-dropdown-role">${job.role}</span>
+              <span class="nav-dropdown-role"${titleOpacity}>${job.role}</span>
               <span class="nav-dropdown-company">${job.company}</span>
             </a>
           </li>
