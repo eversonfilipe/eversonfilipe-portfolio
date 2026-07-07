@@ -70,17 +70,36 @@
   window.initScrollReveal = initScrollReveal;
   initScrollReveal();
 
-  // ── Smooth scroll para âncoras ────────────────────
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
-      const href = anchor.getAttribute('href');
-      if (href === '#') return;
-      const target = document.querySelector(href);
-      if (!target) return;
-      e.preventDefault();
-      const navH = nav ? nav.offsetHeight : 0;
-      const top  = target.getBoundingClientRect().top + window.scrollY - navH - 16;
-      window.scrollTo({ top, behavior: 'smooth' });
+  // ── Smooth scroll para âncoras (Event Delegation) ──
+  document.addEventListener('click', (e) => {
+    const anchor = e.target.closest('a[href^="#"]');
+    if (!anchor) return;
+    const href = anchor.getAttribute('href');
+    if (href === '#' || href === '') return;
+    const target = document.querySelector(href);
+    if (!target) return;
+    e.preventDefault();
+    const navH = nav ? nav.offsetHeight : 0;
+    const top  = target.getBoundingClientRect().top + window.scrollY - navH - 16;
+    window.scrollTo({ top, behavior: 'smooth' });
+  });
+
+  // Handle dropdown aria-expanded accessibility
+  const dropdownItems = document.querySelectorAll('.nav-item-dropdown');
+  dropdownItems.forEach(item => {
+    const trigger = item.querySelector('.nav-link');
+    if (!trigger) return;
+    
+    const showMenu = () => trigger.setAttribute('aria-expanded', 'true');
+    const hideMenu = () => trigger.setAttribute('aria-expanded', 'false');
+    
+    item.addEventListener('mouseenter', showMenu);
+    item.addEventListener('mouseleave', hideMenu);
+    item.addEventListener('focusin', showMenu);
+    item.addEventListener('focusout', (e) => {
+      if (!item.contains(e.relatedTarget)) {
+        hideMenu();
+      }
     });
   });
 

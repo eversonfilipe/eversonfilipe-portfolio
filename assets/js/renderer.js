@@ -404,6 +404,93 @@
     }
   }
 
+  function renderDropdowns(data, lang) {
+    // 1. Experience nav dropdown
+    const expDropdown = document.getElementById('nav-dropdown-experience');
+    if (expDropdown) {
+      let expDropdownHtml = '';
+      data.experience.forEach(job => {
+        expDropdownHtml += `
+          <li role="none">
+            <a href="#${job.id}" class="nav-dropdown-link" role="menuitem">
+              <span class="nav-dropdown-role">${job.role}</span>
+              <span class="nav-dropdown-company">${job.company}</span>
+            </a>
+          </li>
+        `;
+      });
+      expDropdown.innerHTML = expDropdownHtml;
+    }
+
+    // 2. Education nav dropdown
+    const eduDropdown = document.getElementById('nav-dropdown-education');
+    if (eduDropdown) {
+      eduDropdown.innerHTML = `
+        <li role="none">
+          <a href="#education" class="nav-dropdown-link" role="menuitem">
+            <span class="nav-dropdown-role">${window.i18n && window.i18n.t ? window.i18n.t('edu.overline', lang) : 'Education'}</span>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#courses-list" class="nav-dropdown-link" role="menuitem">
+            <span class="nav-dropdown-role">${window.i18n && window.i18n.t ? window.i18n.t('edu.courses.label', lang) : 'Courses'}</span>
+          </a>
+        </li>
+      `;
+    }
+
+    // 3. Projects nav dropdown
+    const projDropdown = document.getElementById('nav-dropdown-projects');
+    if (projDropdown) {
+      projDropdown.innerHTML = `
+        <li role="none">
+          <a href="#projects" class="nav-dropdown-link" role="menuitem">
+            <span class="nav-dropdown-role">${window.i18n && window.i18n.t ? window.i18n.t('projects.placeholder.label', lang) : 'Under Construction'}</span>
+          </a>
+        </li>
+      `;
+    }
+
+    // 4. Certifications nav dropdown
+    const certsDropdown = document.getElementById('nav-dropdown-certifications');
+    if (certsDropdown) {
+      certsDropdown.innerHTML = `
+        <li role="none">
+          <a href="#certifications" class="nav-dropdown-link" role="menuitem">
+            <span class="nav-dropdown-role">${window.i18n && window.i18n.t ? window.i18n.t('certs.placeholder.label', lang) : 'Under Construction'}</span>
+          </a>
+        </li>
+      `;
+    }
+
+    // 5. Community nav dropdown
+    const commDropdown = document.getElementById('nav-dropdown-community');
+    if (commDropdown) {
+      commDropdown.innerHTML = `
+        <li role="none">
+          <a href="#volunteer-list" class="nav-dropdown-link" role="menuitem">
+            <span class="nav-dropdown-role">${window.i18n && window.i18n.t ? window.i18n.t('community.volunteering', lang) : 'Volunteering'}</span>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#hackathons-list" class="nav-dropdown-link" role="menuitem">
+            <span class="nav-dropdown-role">${window.i18n && window.i18n.t ? window.i18n.t('community.hackathons', lang) : 'Hackathons'}</span>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#events-list" class="nav-dropdown-link" role="menuitem">
+            <span class="nav-dropdown-role">${window.i18n && window.i18n.t ? window.i18n.t('community.events', lang) : 'Events'}</span>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#achievements-list" class="nav-dropdown-link" role="menuitem">
+            <span class="nav-dropdown-role">${window.i18n && window.i18n.t ? window.i18n.t('community.achievements', lang) : 'Achievements'}</span>
+          </a>
+        </li>
+      `;
+    }
+  }
+
   function renderCV(lang) {
     const data = window.CV_DATA[lang] || window.CV_DATA.en;
     if (!data) return;
@@ -428,6 +515,7 @@
     renderCertifications(data);
     renderCommunity(data);
     renderFooter(data);
+    renderDropdowns(data, lang);
 
     // Rebind active filters and layout bindings
     if (window.initFilters) window.initFilters();
