@@ -123,6 +123,28 @@
         `;
       }
 
+      let achievementsHtml = '';
+      if (job.specificAchievements && job.specificAchievements.length > 0) {
+        const achLabel = window.i18n && window.i18n.t ? window.i18n.t('exp.achievements.label', lang) : 'Specific Achievements';
+        let itemsHtml = '';
+        job.specificAchievements.forEach(ach => {
+          itemsHtml += `
+            <li class="specific-achievement-item">
+              <span class="specific-achievement-tag">${ach.tag}</span>
+              <span class="specific-achievement-desc">${ach.description}</span>
+            </li>
+          `;
+        });
+        achievementsHtml = `
+          <div class="specific-achievements-box">
+            <span class="specific-achievements-label">${achLabel}</span>
+            <ul class="specific-achievements-list">
+              ${itemsHtml}
+            </ul>
+          </div>
+        `;
+      }
+
       html += `
         <article class="timeline-item reveal reveal-delay-${delay}" id="${job.id}" role="listitem">
           <div style="display: flex; align-items: flex-start; gap: var(--space-4);">
@@ -135,6 +157,7 @@
                 <span class="timeline-company">${job.company}</span>
                 <span class="timeline-date">${job.date}</span>
               </div>
+              ${achievementsHtml}
               <div class="timeline-body-box">
                 <ul aria-label="Responsibilities at ${job.company}" class="timeline-bullets" style="margin-top: 0;">
                   ${bulletsHtml}
