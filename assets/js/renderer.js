@@ -70,7 +70,7 @@
     }
   }
 
-  function renderExperience(data) {
+  function renderExperience(data, lang) {
     const container = document.getElementById('exp-timeline');
     if (!container) return;
     
@@ -125,7 +125,8 @@
 
       let achievementsHtml = '';
       if (job.specificAchievements && job.specificAchievements.length > 0) {
-        const achLabel = window.i18n && window.i18n.t ? window.i18n.t('exp.achievements.label', lang) : 'Specific Achievements';
+        const currentLang = lang || (window.i18n && window.i18n.getCurrentLang ? window.i18n.getCurrentLang() : 'en');
+        const achLabel = window.i18n && window.i18n.t ? window.i18n.t('exp.achievements.label', currentLang) : 'Specific Achievements';
         let itemsHtml = '';
         job.specificAchievements.forEach(ach => {
           itemsHtml += `
@@ -566,7 +567,7 @@
     }
 
     renderAbout(data);
-    renderExperience(data);
+    renderExperience(data, lang);
     renderEducation(data);
     renderProjects(data);
     renderCertifications(data);
