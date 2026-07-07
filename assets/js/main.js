@@ -95,6 +95,9 @@
     const toggle = e.target.closest('.nav-mobile-toggle');
     if (!toggle) return;
     
+    e.preventDefault();
+    e.stopPropagation();
+    
     const parent = toggle.closest('.nav-item-dropdown');
     if (!parent) return;
     
