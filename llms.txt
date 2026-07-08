@@ -13,13 +13,13 @@ Everson Filipe is an Implementation Engineer & AI Automation Analyst. He special
 
 ## LANGUAGE: EN
 
-# >Everson> Filipe
+# Everson Filipe
 Technical Implementation · Integrations · Data Integrity | Bridging the gap between business requirements and scalable software execution through rigorous data validation and process automation.
 
 ## About
-As an Implementation Analyst specializing in Implementation Engineering and AI-driven Automation, I transform complex business requirements into scalable, >reliable workflows and software configurations for B2B clients.>
+As an Implementation Analyst specializing in Implementation Engineering and AI-driven Automation, I transform complex business requirements into scalable, reliable workflows and software configurations for B2B clients.
 Working directly with cloud-based ERP systems and SaaS platforms, I configure solutions using Python, Django Admin, JSONLogic, and AWS, ensuring integrations with REST APIs and cloud BI services such as Amazon Athena.
-My work is grounded in >data integrity and workflow standardization.> Operating within Agile frameworks, I mentor new engineers, lead technical onboarding, and contribute directly to production environments from day one.
+My work is grounded in data integrity and workflow standardization. Operating within Agile frameworks, I mentor new engineers, lead technical onboarding, and contribute directly to production environments from day one.
 
 ### Core Stack
 Python, Django Admin, JSONLogic, REST API, AWS IAM, Amazon S3, EC2, Step Functions, Amazon Athena, Postman, Pytest, openpyxl, Pandas, Jira, ClickUp
@@ -97,13 +97,13 @@ Conquistas/Achievements:
 
 ## LANGUAGE: PT
 
-# >Everson> Filipe
+# Everson Filipe
 Implantação Técnica · Integrações · Integridade de Dados | Unindo requisitos de negócio à execução escalável de software por meio de validação de dados e automação de processos.
 
 ## About
-Como Analista de Implantacao especializado em Engenharia de Implantacao e Automacao orientada por IA, transformo requisitos complexos de negocio em >fluxos de trabalho escalaveis e configuracoes de software confiaveis para clientes B2B.>
+Como Analista de Implantacao especializado em Engenharia de Implantacao e Automacao orientada por IA, transformo requisitos complexos de negocio em fluxos de trabalho escalaveis e configuracoes de software confiaveis para clientes B2B.
 Trabalhando diretamente com ERPs em nuvem e plataformas SaaS, configuro solucoes usando Python, Django Admin, JSONLogic e AWS, garantindo integracoes com REST APIs e servicos de BI como o Amazon Athena.
-Meu trabalho e fundamentado em >integridade de dados e padronizacao de fluxos.> Opero dentro de frameworks Ageis, mentoro novos engenheiros e contribuo diretamente em ambientes de producao desde o primeiro dia.
+Meu trabalho e fundamentado em integridade de dados e padronizacao de fluxos. Opero dentro de frameworks Ageis, mentoro novos engenheiros e contribuo diretamente em ambientes de producao desde o primeiro dia.
 
 ### Core Stack
 Python, Django Admin, JSONLogic, REST API, AWS IAM, Amazon S3, EC2, Step Functions, Amazon Athena, Postman, Pytest, openpyxl, Pandas, Jira, ClickUp
@@ -181,13 +181,13 @@ Conquistas/Achievements:
 
 ## LANGUAGE: ES
 
-# >Everson> Filipe
+# Everson Filipe
 Implementación Técnica · Integraciones · Integridad de Datos | Conectando requisitos de negocio con ejecución escalable de software a través de validación rigurosa de datos y automatización de procesos.
 
 ## About
-Como Analista de Implementacion especializado en Ingenieria de Implementacion y Automatizacion con IA, transformo requisitos complejos en >flujos de trabajo escalables y configuraciones de software confiables para clientes B2B.>
+Como Analista de Implementacion especializado en Ingenieria de Implementacion y Automatizacion con IA, transformo requisitos complejos en flujos de trabajo escalables y configuraciones de software confiables para clientes B2B.
 Trabajando con ERPs en la nube y plataformas SaaS, configuro soluciones con Python, Django Admin, JSONLogic y AWS, asegurando integraciones con REST APIs y servicios de BI como Amazon Athena.
-Mi trabajo se basa en la >integridad de datos y estandarizacion de flujos.> Opero dentro de marcos Agiles, mentoreo a nuevos ingenieros y contribuyo directamente en entornos de produccion desde el primer dia.
+Mi trabajo se basa en la integridad de datos y estandarizacion de flujos. Opero dentro de marcos Agiles, mentoreo a nuevos ingenieros y contribuyo directamente en entornos de produccion desde el primer dia.
 
 ### Core Stack
 Python, Django Admin, JSONLogic, REST API, AWS IAM, Amazon S3, EC2, Step Functions, Amazon Athena, Postman, Pytest, openpyxl, Pandas, Jira, ClickUp
