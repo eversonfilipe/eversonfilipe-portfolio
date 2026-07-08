@@ -141,7 +141,12 @@
         "degree": "Artificial Intelligence Mentorship Program",
         "institution": "Offered by LAB.AI, Instituto Joule",
         "date": "Aug 2025 – Sep 2025",
-        "logo": "assets/images/instituto_joule_logo.jpg"
+        "logo": "assets/images/instituto_joule_logo.jpg",
+        "highlights": [
+          "AI Mentorship",
+          "Career Readiness",
+          "Lab.AI Certificate"
+        ]
       },
       {
         "id": "graduacao-ciencia-computacao-unifavipwyden",
@@ -149,7 +154,12 @@
         "degree": "Computer Science",
         "institution": "UniFavip Wyden",
         "date": "Feb 2024 – In Progress",
-        "logo": "assets/images/unifavip_logo.jpg"
+        "logo": "assets/images/unifavip_logo.jpg",
+        "highlights": [
+          "GPA: 9.2/10",
+          "1200+ Hours Completed",
+          "Algorithms & OOP Focus"
+        ]
       }
     ],
     "courses": [
@@ -202,28 +212,48 @@
         "role": "Co-organizer",
         "org": "Google Developers Group (GDG Barueri)",
         "date": "Aug 2025 - Present",
-        "logo": "assets/images/google_developers_group_barueri_logo.jpg"
+        "logo": "assets/images/google_developers_group_barueri_logo.jpg",
+        "highlights": [
+          "Tech Meetups",
+          "Community Building",
+          "Google Developer Ecosystem"
+        ]
       },
       {
         "id": "ambassador-facilitator-politize",
         "role": "Ambassador & Facilitator",
         "org": "Politize! (Politize! Caruaru)",
         "date": "May 2025 - Present",
-        "logo": "assets/images/politize__logo.jpg"
+        "logo": "assets/images/politize__logo.jpg",
+        "highlights": [
+          "Civic Education Workshops",
+          "15+ Facilitated Sessions",
+          "Public Leadership"
+        ]
       },
       {
         "id": "aiesecmackenzie-volunteer",
         "role": "OGT & Marketing Committee Member",
         "org": "AIESEC (AIESEC no Mackenzie)",
         "date": "Mar 2025 - Aug 2025",
-        "logo": "assets/images/1754110.webp"
+        "logo": "assets/images/1754110.webp",
+        "highlights": [
+          "B2B Sales",
+          "OGT Program Management",
+          "Intercultural Leadership"
+        ]
       },
       {
         "id": "vainaweb-volunteering",
         "role": "Soft Skills Instructor",
         "org": "Vai Na Web",
         "date": "Jan 2025",
-        "logo": "assets/images/vai_na_web.jpg"
+        "logo": "assets/images/vai_na_web.jpg",
+        "highlights": [
+          "Soft Skills Training",
+          "Tech Career Mentorship",
+          "Inclusion Focus"
+        ]
       }
     ],
     "hackathons": [
@@ -533,7 +563,12 @@
         "degree": "Programa de Mentoria em Inteligência Artificial",
         "institution": "Oferecido pela LAB.AI, do Instituto Joule",
         "date": "Ago 2025 – Set 2025",
-        "logo": "assets/images/instituto_joule_logo.jpg"
+        "logo": "assets/images/instituto_joule_logo.jpg",
+        "highlights": [
+          "Mentoria de IA",
+          "Preparação de Carreira",
+          "Certificado Lab.AI"
+        ]
       },
       {
         "id": "graduacao-ciencia-computacao-unifavipwyden",
@@ -541,7 +576,12 @@
         "degree": "Ciência da Computação",
         "institution": "UniFavip Wyden",
         "date": "Fev 2024 – Em curso",
-        "logo": "assets/images/unifavip_logo.jpg"
+        "logo": "assets/images/unifavip_logo.jpg",
+        "highlights": [
+          "Média Geral: 9.2/10",
+          "Mais de 1200 Horas Cursadas",
+          "Foco em Algoritmos e POO"
+        ]
       }
     ],
     "courses": [
@@ -594,28 +634,48 @@
         "role": "Coorganizador",
         "org": "Google Developers Group (GDG Barueri)",
         "date": "Ago 2025 - Atual",
-        "logo": "assets/images/google_developers_group_barueri_logo.jpg"
+        "logo": "assets/images/google_developers_group_barueri_logo.jpg",
+        "highlights": [
+          "Meetups de Tecnologia",
+          "Engajamento Comunitário",
+          "Ecossistema Google Developer"
+        ]
       },
       {
         "id": "ambassador-facilitator-politize",
         "role": "Embaixador e Facilitador",
         "org": "Politize! (Politize! Caruaru)",
         "date": "Mai 2025 - Atual",
-        "logo": "assets/images/politize__logo.jpg"
+        "logo": "assets/images/politize__logo.jpg",
+        "highlights": [
+          "Oficinas de Educação Cívica",
+          "Mais de 15 Sessões Facilitadas",
+          "Liderança Pública"
+        ]
       },
       {
         "id": "aiesecmackenzie-volunteer",
         "role": "Membro do Comitê de OGT e Marketing",
         "org": "AIESEC (AIESEC no Mackenzie)",
         "date": "Mar 2025 - Ago 2025",
-        "logo": "assets/images/1754110.webp"
+        "logo": "assets/images/1754110.webp",
+        "highlights": [
+          "Vendas B2B",
+          "Gestão do Programa OGT",
+          "Liderança Intercultural"
+        ]
       },
       {
         "id": "vainaweb-volunteering",
         "role": "Instrutor de Soft Skills",
         "org": "Vai Na Web",
         "date": "Jan 2025",
-        "logo": "assets/images/vai_na_web.jpg"
+        "logo": "assets/images/vai_na_web.jpg",
+        "highlights": [
+          "Treinamento de Soft Skills",
+          "Mentoria de Carreira Tech",
+          "Foco em Inclusão"
+        ]
       }
     ],
     "hackathons": [
@@ -925,7 +985,12 @@
         "degree": "Programa de Mentoría en Inteligencia Artificial",
         "institution": "Ofrecido por LAB.AI, del Instituto Joule",
         "date": "Ago 2025 – Sep 2025",
-        "logo": "assets/images/instituto_joule_logo.jpg"
+        "logo": "assets/images/instituto_joule_logo.jpg",
+        "highlights": [
+          "Mentoría de IA",
+          "Preparación de Carrera",
+          "Certificado Lab.AI"
+        ]
       },
       {
         "id": "graduacao-ciencia-computacao-unifavipwyden",
@@ -933,7 +998,12 @@
         "degree": "Ciencias de la Computación",
         "institution": "UniFavip Wyden",
         "date": "Feb 2024 – En curso",
-        "logo": "assets/images/unifavip_logo.jpg"
+        "logo": "assets/images/unifavip_logo.jpg",
+        "highlights": [
+          "Média General: 9.2/10",
+          "Más de 1200 Horas Cursadas",
+          "Enfoque en Algoritmos y POO"
+        ]
       }
     ],
     "courses": [
@@ -986,28 +1056,48 @@
         "role": "Coorganizador",
         "org": "Google Developers Group (GDG Barueri)",
         "date": "Ago 2025 - Actual",
-        "logo": "assets/images/google_developers_group_barueri_logo.jpg"
+        "logo": "assets/images/google_developers_group_barueri_logo.jpg",
+        "highlights": [
+          "Meetups de Tecnología",
+          "Compromiso Comunitario",
+          "Ecosistema Google Developer"
+        ]
       },
       {
         "id": "ambassador-facilitator-politize",
         "role": "Embajador y Facilitador",
         "org": "Politize! (Politize! Caruaru)",
         "date": "May 2025 - Actual",
-        "logo": "assets/images/politize__logo.jpg"
+        "logo": "assets/images/politize__logo.jpg",
+        "highlights": [
+          "Talleres de Educación Cívica",
+          "Más de 15 Sesiones Facilitadas",
+          "Liderazgo Público"
+        ]
       },
       {
         "id": "aiesecmackenzie-volunteer",
         "role": "Miembro del Comité de OGT y Marketing",
         "org": "AIESEC (AIESEC en Mackenzie)",
         "date": "Mar 2025 - Ago 2025",
-        "logo": "assets/images/1754110.webp"
+        "logo": "assets/images/1754110.webp",
+        "highlights": [
+          "Ventas B2B",
+          "Gestión del Programa OGT",
+          "Liderazgo Intercultural"
+        ]
       },
       {
         "id": "vainaweb-volunteering",
         "role": "Instructor de Habilidades Blandas (Soft Skills)",
         "org": "Vai Na Web",
         "date": "Ene 2025",
-        "logo": "assets/images/vai_na_web.jpg"
+        "logo": "assets/images/vai_na_web.jpg",
+        "highlights": [
+          "Formación de Soft Skills",
+          "Mentoría de Carrera Tech",
+          "Enfoque en Inclusión"
+        ]
       }
     ],
     "hackathons": [

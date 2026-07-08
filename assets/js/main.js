@@ -139,4 +139,27 @@
     }
   });
 
+  // Handle education/volunteering highlights toggles
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.edu-vol-toggle-btn');
+    if (!btn) return;
+    
+    const targetId = btn.getAttribute('data-target');
+    const container = document.getElementById(targetId);
+    if (!container) return;
+    
+    const isHidden = container.style.display === 'none';
+    if (isHidden) {
+      container.style.display = 'flex';
+      btn.textContent = 'x';
+      btn.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    } else {
+      container.style.display = 'none';
+      btn.textContent = '+';
+      btn.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
 })();

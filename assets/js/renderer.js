@@ -197,11 +197,19 @@
 
     let html = '';
     data.education.forEach((edu) => {
+      const highlightsHtml = (edu.highlights && edu.highlights.length > 0) ? `
+        <button class="edu-vol-toggle-btn" aria-label="Toggle details" aria-expanded="false" data-target="edu-hl-${edu.id}">+</button>
+        <div class="edu-vol-highlights-container" id="edu-hl-${edu.id}" style="display: none;">
+          ${edu.highlights.map(hl => `<span class="highlight-tag">${hl}</span>`).join('')}
+        </div>
+      ` : '';
+
       const contentHtml = `
         <p class="education-card-type">${edu.type}</p>
         <h3 class="education-card-title">${edu.degree}</h3>
         <p class="education-card-institution">${edu.institution}</p>
         <p class="education-card-date">${edu.date}</p>
+        ${highlightsHtml}
       `;
       
       html += `
@@ -343,10 +351,18 @@
     if (volContainer) {
       let volHtml = '';
       data.volunteering.forEach((vol) => {
+        const highlightsHtml = (vol.highlights && vol.highlights.length > 0) ? `
+          <button class="edu-vol-toggle-btn" aria-label="Toggle details" aria-expanded="false" data-target="vol-hl-${vol.id}">+</button>
+          <div class="edu-vol-highlights-container" id="vol-hl-${vol.id}" style="display: none;">
+            ${vol.highlights.map(hl => `<span class="highlight-tag">${hl}</span>`).join('')}
+          </div>
+        ` : '';
+
         const contentHtml = `
           <p class="volunteer-card-role">${vol.role}</p>
           <p class="volunteer-card-org">${vol.org}</p>
           <p class="volunteer-card-date">${vol.date}</p>
+          ${highlightsHtml}
         `;
         volHtml += `
           <article class="volunteer-card reveal" id="${vol.id}" role="listitem">
