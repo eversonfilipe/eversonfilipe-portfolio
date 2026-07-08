@@ -1398,12 +1398,17 @@
 /* ── Education & Volunteering Drawer Box ── */
 .edu-vol-highlights-container {
   margin-top: var(--space-3);
-  max-height: 80px;
+  max-height: 120px;
   overflow-y: auto;
-  padding-right: var(--space-2);
+  padding: var(--space-3) var(--space-4);
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
+  border: 1px solid rgba(182, 204, 215, 0.15);
+  border-radius: var(--radius-md);
+  background: rgba(182, 204, 215, 0.02);
+  width: 100%;
+  box-sizing: border-box;
 }
 .edu-vol-highlights-container::-webkit-scrollbar {
   width: 4px;
