@@ -1517,7 +1517,8 @@
   display: none;
 }
 
-.courses-slider-track.grid-view {
+.courses-slider-track.grid-view,
+.volunteering-slider-track.grid-view {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: var(--space-4);

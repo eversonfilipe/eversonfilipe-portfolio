@@ -590,22 +590,30 @@
         `;
       });
 
-      volContainer.innerHTML = `
-        <div class="slider-wrapper">
-          <div class="volunteering-slider-track" id="volunteering-slider-track" role="list">
+      if (data.volunteering.length <= 6) {
+        volContainer.innerHTML = `
+          <div class="volunteering-slider-track grid-view" id="volunteering-slider-track" role="list">
             ${volCardsHtml}
           </div>
-          <div class="slider-controls">
-            <button class="slider-arrow-btn prev-vol-btn" aria-label="Scroll left">
-              <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" /></svg>
-            </button>
-            <button class="slider-arrow-btn next-vol-btn" aria-label="Scroll right">
-              <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" /></svg>
-            </button>
+        `;
+      } else {
+        volContainer.innerHTML = `
+          <div class="slider-wrapper">
+            <div class="volunteering-slider-track" id="volunteering-slider-track" role="list">
+              ${volCardsHtml}
+            </div>
+            <div class="slider-controls">
+              <button class="slider-arrow-btn prev-vol-btn" aria-label="Scroll left">
+                <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" /></svg>
+              </button>
+              <button class="slider-arrow-btn next-vol-btn" aria-label="Scroll right">
+                <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" /></svg>
+              </button>
+            </div>
           </div>
-        </div>
-      `;
-      setupSlider('volunteering-slider-track', '.prev-vol-btn', '.next-vol-btn', 6);
+        `;
+        setupSlider('volunteering-slider-track', '.prev-vol-btn', '.next-vol-btn', 6);
+      }
     }
 
     // Hackathons
