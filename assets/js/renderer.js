@@ -470,6 +470,80 @@
       `;
       setupSlider('courses-slider-track', '.prev-btn', '.next-btn', 3);
     }
+
+    // Render Publications sub-section
+    const publicationsContainer = document.getElementById('publications-list');
+    if (publicationsContainer && data.publications) {
+      // Sort publications by date descending
+      data.publications.sort((a, b) => getEndDateValue(b.date) - getEndDateValue(a.date));
+
+      const activePubFilter = document.querySelector('#publication-filter-bar .filter-btn.active')?.getAttribute('data-filter') || 'all';
+      const isPubFiltering = activePubFilter !== 'all';
+
+      let pubCardsHtml = '';
+      data.publications.forEach((pub) => {
+        pubCardsHtml += `
+          <div class="course-card" data-type="${pub.type}" id="${pub.id}" role="listitem">
+            <div class="card-layout-with-logo">
+              <div class="card-logo-container">
+                ${pub.url ? `
+                  <a href="${pub.url}" target="_blank" rel="noopener noreferrer" aria-label="View publication" style="color: var(--color-accent-mist); display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; transition: color var(--duration-fast);">
+                    <svg style="width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2;" viewBox="0 0 24 24">
+                      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                  </a>
+                ` : `
+                  <div style="color: rgba(182, 204, 215, 0.4); display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                    <svg style="width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2;" viewBox="0 0 24 24">
+                      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                  </div>
+                `}
+              </div>
+              <div class="card-logo-content">
+                <h3 class="achievement-title" style="margin-bottom: 2px;">${pub.name}</h3>
+                <p class="achievement-issuer">${pub.institution}</p>
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-top: 2px; gap: var(--space-2);">
+                  <p class="achievement-date"><span>${pub.date}</span></p>
+                  ${pub.url ? `
+                    <a href="${pub.url}" target="_blank" rel="noopener noreferrer" class="credential-btn" style="margin-top: 0;">
+                      <span data-i18n="publication.view.btn">View</span>
+                    </a>
+                  ` : ''}
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      if (isPubFiltering) {
+        publicationsContainer.innerHTML = `
+          <div class="courses-slider-track grid-view" id="publications-slider-track" role="list">
+            ${pubCardsHtml}
+          </div>
+        `;
+      } else {
+        publicationsContainer.innerHTML = `
+          <div class="slider-wrapper">
+            <div class="courses-slider-track" id="publications-slider-track" role="list">
+              ${pubCardsHtml}
+            </div>
+            <div class="slider-controls">
+              <button class="slider-arrow-btn prev-pub-btn" aria-label="Scroll left">
+                <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" /></svg>
+              </button>
+              <button class="slider-arrow-btn next-pub-btn" aria-label="Scroll right">
+                <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" /></svg>
+              </button>
+            </div>
+          </div>
+        `;
+        setupSlider('publications-slider-track', '.prev-pub-btn', '.next-pub-btn', 3);
+      }
+    }
   }
 
   function renderProjects(data) {
@@ -887,7 +961,7 @@
 
     // Re-translate raw static elements within dynamic sections
     if (window.i18n && window.i18n.t) {
-      document.querySelectorAll('#projects-list [data-i18n], #certs-list [data-i18n], .evidence-carousel [data-i18n], #courses-list [data-i18n]').forEach(el => {
+      document.querySelectorAll('#projects-list [data-i18n], #certs-list [data-i18n], .evidence-carousel [data-i18n], #courses-list [data-i18n], #publications-list [data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         el.textContent = window.i18n.t(key, lang);
       });
