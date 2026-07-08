@@ -25,7 +25,7 @@ My work is grounded in data integrity and workflow standardization. Operating wi
 Python, Django Admin, JSONLogic, REST API, AWS IAM, Amazon S3, EC2, Step Functions, Amazon Athena, Postman, Pytest, openpyxl, Pandas, Jira, ClickUp
 
 ## Experience
-### Technical Implementation Intern at Kartado (Sep 2025 – Present)
+### Technical Implementation Intern at Kartado (Sep 2025 - Present)
 - Configured JSONLogic rules for dynamic forms across 42+ client environments via Django Admin, ensuring data integrity and functional consistency.
 - Developed Python ETL automation scripts integrated with Django ORM, replacing manual data transformation and loading workflows.
 - Built notebook-based Python scripts for JSON metadata extraction, schema validation, and proactive detection of structural inconsistencies in exported datasets.
@@ -37,7 +37,7 @@ Conquistas/Achievements:
   * [Optimization] Reduced parameterization analysis time by 40% with Python schema validation scripts.
   * [Quality] Ensured zero production syntax failures across 20+ B2B concession parameterization spreadsheets.
 
-### Agile Product Manager Learner at Daus (Dec 2024 – Jun 2025)
+### Agile Product Manager Learner at Daus (Dec 2024 - Jun 2025)
 - Applied Scrum, Kanban, and Lean Thinking frameworks to drive product discovery and requirements analysis across internal and multi-client portfolio projects.
 - Documented product insights, user flows, and functional requirements across the Atlassian ecosystem (Jira, Confluence) and FigJam.
 - Mentored two intern cohorts across structured onboarding programs in Agile Product Management workflows and MVP delivery.
@@ -45,10 +45,10 @@ Conquistas/Achievements:
   * [Mentorship] Successfully onboarded and mentored 2 intern cohorts in Agile framework practices and MVP delivery.
 
 ## Education
-### Artificial Intelligence Mentorship Program - Offered by LAB.AI, Instituto Joule (Aug 2025 – Sep 2025) [Mentorship Program]
+### Artificial Intelligence Mentorship Program - Offered by LAB.AI, Instituto Joule (Aug 2025 - Sep 2025) [Mentorship Program]
   Highlights: AI Mentorship, Career Readiness, Lab.AI Certificate
 
-### Computer Science - UniFavip Wyden (Feb 2024 – In Progress) [Bachelor's Degree]
+### Computer Science - UniFavip Wyden (Feb 2024 - In Progress) [Bachelor's Degree]
   Highlights: GPA: 9.2/10, 1200+ Hours Completed, Algorithms & OOP Focus
 
 ## Courses
@@ -109,7 +109,7 @@ Meu trabalho e fundamentado em integridade de dados e padronizacao de fluxos. Op
 Python, Django Admin, JSONLogic, REST API, AWS IAM, Amazon S3, EC2, Step Functions, Amazon Athena, Postman, Pytest, openpyxl, Pandas, Jira, ClickUp
 
 ## Experience
-### Estagiario de Implantacao Tecnica at Kartado (Set 2025 – Presente)
+### Estagiario de Implantacao Tecnica at Kartado (Set 2025 - Presente)
 - Configurou regras em JSONLogic para formularios dinamicos em mais de 42 ambientes de clientes via Django Admin, garantindo integridade dos dados e consistencia funcional.
 - Desenvolveu scripts de automacao ETL em Python integrados ao Django ORM, substituindo fluxos manuais de transformacao e carregamento de dados.
 - Criou scripts em notebooks Python para extracao de metadados JSON, validacao de esquemas e deteccao proativa de inconsistencias estruturais em datasets exportados.
@@ -121,7 +121,7 @@ Conquistas/Achievements:
   * [Otimização] Reduziu o tempo de análise de parametrização em 40% com scripts Python de validação de esquemas.
   * [Qualidade] Garantia de zero falhas de sintaxe em produção em mais de 20 planilhas de concessionárias B2B.
 
-### Aprendiz em Gestao Agil de Produtos at Daus (Dez 2024 – Jun 2025)
+### Aprendiz em Gestao Agil de Produtos at Daus (Dez 2024 - Jun 2025)
 - Aplicou Scrum, Kanban e Lean Thinking para conduzir Product Discovery e analise de requisitos em projetos internos e de multiplos clientes.
 - Documentou insights de produto, fluxos de usuarios e requisitos funcionais no ecossistema Atlassian (Jira, Confluence) e FigJam.
 - Mentorou duas turmas de estagiarios em programas de onboarding em Gestao Agil de Produtos e entrega de MVPs.
@@ -129,10 +129,10 @@ Conquistas/Achievements:
   * [Mentoria] Sucesso no onboarding e mentoria de 2 turmas de estagiários em práticas de frameworks Ágeis e entrega de MVPs.
 
 ## Education
-### Programa de Mentoria em Inteligência Artificial - Oferecido pela LAB.AI, do Instituto Joule (Ago 2025 – Set 2025) [Programa de Mentoria]
+### Programa de Mentoria em Inteligência Artificial - Oferecido pela LAB.AI, do Instituto Joule (Ago 2025 - Set 2025) [Programa de Mentoria]
   Highlights: Mentoria de IA, Preparação de Carreira, Certificado Lab.AI
 
-### Ciência da Computação - UniFavip Wyden (Fev 2024 – Em curso) [Bacharelado]
+### Ciência da Computação - UniFavip Wyden (Fev 2024 - Em curso) [Bacharelado]
   Highlights: Média Geral: 9.2/10, Mais de 1200 Horas Cursadas, Foco em Algoritmos e POO
 
 ## Courses
@@ -193,7 +193,7 @@ Mi trabajo se basa en la integridad de datos y estandarizacion de flujos. Opero 
 Python, Django Admin, JSONLogic, REST API, AWS IAM, Amazon S3, EC2, Step Functions, Amazon Athena, Postman, Pytest, openpyxl, Pandas, Jira, ClickUp
 
 ## Experience
-### Pasante de Implementacion Tecnica at Kartado (Sep 2025 – Presente)
+### Pasante de Implementacion Tecnica at Kartado (Sep 2025 - Presente)
 - Configuro reglas JSONLogic para formularios dinamicos en mas de 42 entornos de clientes via Django Admin, asegurando integridad de datos y consistencia funcional.
 - Desarrollo scripts ETL en Python integrados con Django ORM, reemplazando flujos manuales de transformacion y carga de datos.
 - Construyo scripts en notebooks Python para extraccion de metadatos JSON, validacion de esquemas y deteccion proactiva de inconsistencias estructurales.
@@ -205,7 +205,7 @@ Conquistas/Achievements:
   * [Optimización] Redujo el tiempo de análisis de parametrización en un 40% con scripts Python de validación de esquemas.
   * [Calidad] Garantizó cero fallas de sintaxis en producción en más de 20 hojas de concesionarias B2B.
 
-### Aprendiz en Gestion Agil de Productos at Daus (Dic 2024 – Jun 2025)
+### Aprendiz en Gestion Agil de Productos at Daus (Dic 2024 - Jun 2025)
 - Aplico Scrum, Kanban y Lean Thinking para Product Discovery y analisis de requisitos en proyectos internos y de multiples clientes.
 - Documento insights de producto, flujos de usuarios y requisitos funcionales en el ecosistema Atlassian (Jira, Confluence) y FigJam.
 - Mentoreo dos cohortes de pasantes en programas de onboarding en Gestion Agil de Productos y entrega de MVPs.
@@ -213,10 +213,10 @@ Conquistas/Achievements:
   * [Mentoría] Éxito en el onboarding y tutoría de 2 cohortes de pasantes en prácticas de frameworks Ágiles y entrega de MVPs.
 
 ## Education
-### Programa de Mentoría en Inteligencia Artificial - Ofrecido por LAB.AI, del Instituto Joule (Ago 2025 – Sep 2025) [Programa de Mentoría]
+### Programa de Mentoría en Inteligencia Artificial - Ofrecido por LAB.AI, del Instituto Joule (Ago 2025 - Sep 2025) [Programa de Mentoría]
   Highlights: Mentoría de IA, Preparación de Carrera, Certificado Lab.AI
 
-### Ciencias de la Computación - UniFavip Wyden (Feb 2024 – En curso) [Licenciatura]
+### Ciencias de la Computación - UniFavip Wyden (Feb 2024 - En curso) [Licenciatura]
   Highlights: Média General: 9.2/10, Más de 1200 Horas Cursadas, Enfoque en Algoritmos y POO
 
 ## Courses
