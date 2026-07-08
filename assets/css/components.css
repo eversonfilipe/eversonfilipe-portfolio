@@ -1498,6 +1498,20 @@
   scrollbar-width: none;
 }
 
+.courses-slider-track:not(.grid-view) .course-card,
+.volunteering-slider-track .volunteer-card {
+  flex: 0 0 380px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .courses-slider-track:not(.grid-view) .course-card,
+  .volunteering-slider-track .volunteer-card {
+    flex: 0 0 280px;
+  }
+}
+
 .courses-slider-track::-webkit-scrollbar,
 .volunteering-slider-track::-webkit-scrollbar {
   display: none;
