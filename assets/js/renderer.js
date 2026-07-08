@@ -834,6 +834,33 @@
 
     renderHero(data);
     window.renderCV = renderCV;
+
+    // Dynamic SEO / Meta updates on language switch
+    if (window.i18n && window.i18n.t) {
+      document.title = window.i18n.t('meta.title', lang);
+      
+      let metaDesc = document.querySelector('meta[name="description"]');
+      if (!metaDesc) {
+        metaDesc = document.createElement('meta');
+        metaDesc.name = 'description';
+        document.head.appendChild(metaDesc);
+      }
+      metaDesc.content = window.i18n.t('meta.description', lang);
+      
+      let metaKeywords = document.querySelector('meta[name="keywords"]');
+      if (!metaKeywords) {
+        metaKeywords = document.createElement('meta');
+        metaKeywords.name = 'keywords';
+        document.head.appendChild(metaKeywords);
+      }
+      metaKeywords.content = window.i18n.t('meta.keywords', lang);
+      
+      let ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) ogTitle.content = window.i18n.t('meta.title', lang);
+      
+      let ogDesc = document.querySelector('meta[property="og:description"]');
+      if (ogDesc) ogDesc.content = window.i18n.t('meta.description', lang);
+    }
     renderAbout(data);
     renderExperience(data, lang);
     renderEducation(data);
