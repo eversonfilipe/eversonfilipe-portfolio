@@ -55,7 +55,12 @@
         btn.onclick = () => {
           btns.forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
-          applyFilters();
+          const lang = (window.i18n && window.i18n.getCurrentLang) ? window.i18n.getCurrentLang() : 'en';
+          if (window.renderCV) {
+            window.renderCV(lang);
+          } else {
+            applyFilters();
+          }
         };
       });
     }
@@ -67,7 +72,12 @@
         btn.onclick = () => {
           btns.forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
-          applyFilters();
+          const lang = (window.i18n && window.i18n.getCurrentLang) ? window.i18n.getCurrentLang() : 'en';
+          if (window.renderCV) {
+            window.renderCV(lang);
+          } else {
+            applyFilters();
+          }
         };
       });
     }
@@ -79,7 +89,12 @@
         btn.onclick = () => {
           btns.forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
-          applyFilters();
+          const lang = (window.i18n && window.i18n.getCurrentLang) ? window.i18n.getCurrentLang() : 'en';
+          if (window.renderCV) {
+            window.renderCV(lang);
+          } else {
+            applyFilters();
+          }
         };
       });
     }

@@ -132,6 +132,56 @@
             "description": "Successfully onboarded and mentored 2 intern cohorts in Agile framework practices and MVP delivery."
           }
         ]
+      },
+      {
+        "id": "freelance-dev",
+        "role": "Freelance Web Developer",
+        "company": "Self-employed",
+        "date": "Jun 2024 – Nov 2024",
+        "bullets": [
+          "Developed responsive landing pages and portfolios for regional businesses using HTML, CSS, and Javascript.",
+          "Integrated simple serverless contact forms and automated email notifications."
+        ],
+        "tags": [
+          "Javascript",
+          "Python"
+        ],
+        "specificAchievements": [
+          {
+            "tag": "Delivery",
+            "description": "Successfully completed 5 client projects within schedule and budget."
+          }
+        ]
+      },
+      {
+        "id": "tech-support",
+        "role": "Technical Support Assistant",
+        "company": "TI Solutions",
+        "date": "Jan 2024 – May 2024",
+        "bullets": [
+          "Provided tier-1 troubleshooting for internal software platforms and resolved database configuration issues.",
+          "Maintained documentation for system parameterization processes."
+        ],
+        "tags": [
+          "Jira",
+          "SQL"
+        ],
+        "specificAchievements": []
+      },
+      {
+        "id": "intern-ops",
+        "role": "Operations Intern",
+        "company": "LogiTech",
+        "date": "Jul 2023 – Dec 2023",
+        "bullets": [
+          "Assisted in daily system audit procedures and log verification to ensure data consistency.",
+          "Automated operational report formatting using Excel macros and Python scripts."
+        ],
+        "tags": [
+          "Python",
+          "Excel"
+        ],
+        "specificAchievements": []
       }
     ],
     "education": [
@@ -254,6 +304,42 @@
           "Tech Career Mentorship",
           "Inclusion Focus"
         ]
+      },
+      {
+        "id": "youth-volunteer-br",
+        "role": "Youth Ambassador",
+        "org": "Global Youth Network",
+        "date": "Jul 2023 - Dec 2023",
+        "logo": "assets/images/google_developers_group_barueri_logo.jpg",
+        "highlights": [
+          "Global Networking",
+          "Youth Leadership",
+          "SDG Focus"
+        ]
+      },
+      {
+        "id": "tech-tutor-local",
+        "role": "Python Tutor",
+        "org": "Coders Solidarios",
+        "date": "Jan 2023 - Jun 2023",
+        "logo": "assets/images/google_developers_group_barueri_logo.jpg",
+        "highlights": [
+          "Python Teaching",
+          "Algorithms Intro",
+          "Community Tutor"
+        ]
+      },
+      {
+        "id": "community-mod-disc",
+        "role": "Community Moderator",
+        "org": "Devs Caruaru",
+        "date": "Jun 2022 - Dec 2022",
+        "logo": "assets/images/google_developers_group_barueri_logo.jpg",
+        "highlights": [
+          "Discord Moderation",
+          "Event Coordination",
+          "Dev Support"
+        ]
       }
     ],
     "hackathons": [
@@ -316,6 +402,24 @@
         "name": "Olimpíadas Jovens de Impacto (Youth Impact Olympics)",
         "meta": "SEBRAE & Instituto Verda",
         "date": "Nov 2021"
+      },
+      {
+        "id": "hackathon-nasa-2021",
+        "name": "NASA Space Apps Challenge",
+        "meta": "NASA",
+        "date": "Oct 2021"
+      },
+      {
+        "id": "hackathon-sebrae-2021",
+        "name": "Hackathon Startup SEBRAE",
+        "meta": "SEBRAE",
+        "date": "Sep 2021"
+      },
+      {
+        "id": "hackathon-hack-caruaru-2020",
+        "name": "HackCaruaru 2020",
+        "meta": "Caruaru Digital",
+        "date": "Nov 2020"
       }
     ],
     "events": [
@@ -399,6 +503,42 @@
         "meta": "Caruaru",
         "date": "Sep 2024",
         "logo": "assets/images/campusparty_ltd_logo.jpg"
+      },
+      {
+        "id": "tdc-recife-2024",
+        "type": "listener",
+        "name": "The Developer's Conference",
+        "role": "Listener",
+        "meta": "Recife",
+        "date": "Oct 2024",
+        "logo": "assets/images/recife_front_end_community_logo.jpg"
+      },
+      {
+        "id": "semana-ti-2024",
+        "type": "speaker",
+        "name": "IT Week UniFavip",
+        "role": "Speaker",
+        "meta": "Caruaru",
+        "date": "May 2024",
+        "logo": "assets/images/unifavip_logo.jpg"
+      },
+      {
+        "id": "gdg-devfest-2023",
+        "type": "listener",
+        "name": "GDG DevFest NE",
+        "role": "Listener",
+        "meta": "Recife",
+        "date": "Dec 2023",
+        "logo": "assets/images/google_developers_group_barueri_logo.jpg"
+      },
+      {
+        "id": "workshop-docker-2023",
+        "type": "speaker",
+        "name": "Docker Hands-on Workshop",
+        "role": "Speaker",
+        "meta": "UniFavip",
+        "date": "Sep 2023",
+        "logo": "assets/images/unifavip_logo.jpg"
       }
     ],
     "achievements": [
@@ -554,6 +694,56 @@
             "description": "Sucesso no onboarding e mentoria de 2 turmas de estagiários em práticas de frameworks Ágeis e entrega de MVPs."
           }
         ]
+      },
+      {
+        "id": "freelance-dev",
+        "role": "Desenvolvedor Web Freelancer",
+        "company": "Autônomo",
+        "date": "Jun 2024 – Nov 2024",
+        "bullets": [
+          "Desenvolveu landing pages e portfólios responsivos para empresas locais usando HTML, CSS e Javascript.",
+          "Integrou formulários serverless de contato simples e notificações automatizadas por email."
+        ],
+        "tags": [
+          "Javascript",
+          "Python"
+        ],
+        "specificAchievements": [
+          {
+            "tag": "Entrega",
+            "description": "Concluiu com sucesso 5 projetos de clientes dentro do prazo e orçamento."
+          }
+        ]
+      },
+      {
+        "id": "tech-support",
+        "role": "Assistente de Suporte Técnico",
+        "company": "TI Solutions",
+        "date": "Jan 2024 – Mai 2024",
+        "bullets": [
+          "Forneceu suporte tier-1 para plataformas de software internas e resolveu problemas de configuração de banco de dados.",
+          "Manteve documentação para processos de parametrização de sistemas."
+        ],
+        "tags": [
+          "Jira",
+          "SQL"
+        ],
+        "specificAchievements": []
+      },
+      {
+        "id": "intern-ops",
+        "role": "Estagiário de Operações",
+        "company": "LogiTech",
+        "date": "Jul 2023 – Dez 2023",
+        "bullets": [
+          "Auxiliou nos procedimentos diários de auditoria de sistemas e verificação de logs para garantir consistência de dados.",
+          "Automatizou a formatação de relatórios operacionais usando macros Excel e scripts Python."
+        ],
+        "tags": [
+          "Python",
+          "Excel"
+        ],
+        "specificAchievements": []
       }
     ],
     "education": [
@@ -676,6 +866,42 @@
           "Mentoria de Carreira Tech",
           "Foco em Inclusão"
         ]
+      },
+      {
+        "id": "youth-volunteer-br",
+        "role": "Embaixador da Juventude",
+        "org": "Global Youth Network",
+        "date": "Jul 2023 - Dez 2023",
+        "logo": "assets/images/google_developers_group_barueri_logo.jpg",
+        "highlights": [
+          "Networking Global",
+          "Liderança Jovem",
+          "Foco em ODS"
+        ]
+      },
+      {
+        "id": "tech-tutor-local",
+        "role": "Tutor de Python",
+        "org": "Coders Solidários",
+        "date": "Jan 2023 - Jun 2023",
+        "logo": "assets/images/google_developers_group_barueri_logo.jpg",
+        "highlights": [
+          "Ensino de Python",
+          "Introdução a Algoritmos",
+          "Tutor Comunitário"
+        ]
+      },
+      {
+        "id": "community-mod-disc",
+        "role": "Moderador de Comunidade",
+        "org": "Devs Caruaru",
+        "date": "Jun 2022 - Dez 2022",
+        "logo": "assets/images/google_developers_group_barueri_logo.jpg",
+        "highlights": [
+          "Moderação Discord",
+          "Coordenação Eventos",
+          "Apoio a Devs"
+        ]
       }
     ],
     "hackathons": [
@@ -738,6 +964,24 @@
         "name": "Olimpíadas Jovens de Impacto",
         "meta": "SEBRAE & Instituto Verda",
         "date": "Nov 2021"
+      },
+      {
+        "id": "hackathon-nasa-2021",
+        "name": "NASA Space Apps Challenge",
+        "meta": "NASA",
+        "date": "Out 2021"
+      },
+      {
+        "id": "hackathon-sebrae-2021",
+        "name": "Hackathon Startup SEBRAE",
+        "meta": "SEBRAE",
+        "date": "Set 2021"
+      },
+      {
+        "id": "hackathon-hack-caruaru-2020",
+        "name": "HackCaruaru 2020",
+        "meta": "Caruaru Digital",
+        "date": "Nov 2020"
       }
     ],
     "events": [
@@ -821,6 +1065,42 @@
         "meta": "Caruaru",
         "date": "Set 2024",
         "logo": "assets/images/campusparty_ltd_logo.jpg"
+      },
+      {
+        "id": "tdc-recife-2024",
+        "type": "listener",
+        "name": "The Developer's Conference",
+        "role": "Participante",
+        "meta": "Recife",
+        "date": "Out 2024",
+        "logo": "assets/images/recife_front_end_community_logo.jpg"
+      },
+      {
+        "id": "semana-ti-2024",
+        "type": "speaker",
+        "name": "Semana de TI UniFavip",
+        "role": "Palestrante",
+        "meta": "Caruaru",
+        "date": "Mai 2024",
+        "logo": "assets/images/unifavip_logo.jpg"
+      },
+      {
+        "id": "gdg-devfest-2023",
+        "type": "listener",
+        "name": "GDG DevFest NE",
+        "role": "Participante",
+        "meta": "Recife",
+        "date": "Dez 2023",
+        "logo": "assets/images/google_developers_group_barueri_logo.jpg"
+      },
+      {
+        "id": "workshop-docker-2023",
+        "type": "speaker",
+        "name": "Workshop Prático de Docker",
+        "role": "Palestrante",
+        "meta": "UniFavip",
+        "date": "Set 2023",
+        "logo": "assets/images/unifavip_logo.jpg"
       }
     ],
     "achievements": [
@@ -976,6 +1256,56 @@
             "description": "Éxito en el onboarding y tutoría de 2 cohortes de pasantes en prácticas de frameworks Ágiles y entrega de MVPs."
           }
         ]
+      },
+      {
+        "id": "freelance-dev",
+        "role": "Desarrollador Web Freelance",
+        "company": "Autónomo",
+        "date": "Jun 2024 – Nov 2024",
+        "bullets": [
+          "Desarrolló páginas de destino y portafolios responsivos para empresas locales usando HTML, CSS y Javascript.",
+          "Integró formularios serverless de contacto simples y notificaciones automatizadas por correo electrónico."
+        ],
+        "tags": [
+          "Javascript",
+          "Python"
+        ],
+        "specificAchievements": [
+          {
+            "tag": "Entrega",
+            "description": "Completó con éxito 5 proyectos de clientes dentro del plazo y presupuesto."
+          }
+        ]
+      },
+      {
+        "id": "tech-support",
+        "role": "Asistente de Soporte Técnico",
+        "company": "TI Solutions",
+        "date": "Ene 2024 – May 2024",
+        "bullets": [
+          "Brindó soporte técnico de nivel 1 para plataformas internas y resolvió problemas de configuración de bases de datos.",
+          "Mantuvo documentación para procesos de parametrización de sistemas."
+        ],
+        "tags": [
+          "Jira",
+          "SQL"
+        ],
+        "specificAchievements": []
+      },
+      {
+        "id": "intern-ops",
+        "role": "Pasante de Operaciones",
+        "company": "LogiTech",
+        "date": "Jul 2023 – Dic 2023",
+        "bullets": [
+          "Asistió en los procedimientos diarios de auditoría de sistemas y verificación de logs para garantizar consistencia de datos.",
+          "Automatizó la edición de informes operativos usando macros Excel y scripts Python."
+        ],
+        "tags": [
+          "Python",
+          "Excel"
+        ],
+        "specificAchievements": []
       }
     ],
     "education": [
@@ -1098,6 +1428,42 @@
           "Mentoría de Carrera Tech",
           "Enfoque en Inclusión"
         ]
+      },
+      {
+        "id": "youth-volunteer-br",
+        "role": "Embajador de la Juventud",
+        "org": "Global Youth Network",
+        "date": "Jul 2023 - Dic 2023",
+        "logo": "assets/images/google_developers_group_barueri_logo.jpg",
+        "highlights": [
+          "Networking Global",
+          "Liderazgo Joven",
+          "Enfoque en ODS"
+        ]
+      },
+      {
+        "id": "tech-tutor-local",
+        "role": "Tutor de Python",
+        "org": "Coders Solidarios",
+        "date": "Ene 2023 - Jun 2023",
+        "logo": "assets/images/google_developers_group_barueri_logo.jpg",
+        "highlights": [
+          "Enseñanza de Python",
+          "Intro a Algoritmos",
+          "Tutor Comunitario"
+        ]
+      },
+      {
+        "id": "community-mod-disc",
+        "role": "Moderador de Comunidad",
+        "org": "Devs Caruaru",
+        "date": "Jun 2022 - Dic 2022",
+        "logo": "assets/images/google_developers_group_barueri_logo.jpg",
+        "highlights": [
+          "Moderación Discord",
+          "Coordinación Eventos",
+          "Apoyo a Devs"
+        ]
       }
     ],
     "hackathons": [
@@ -1160,6 +1526,24 @@
         "name": "Olimpíadas Jóvenes de Impacto",
         "meta": "SEBRAE & Instituto Verda",
         "date": "Nov 2021"
+      },
+      {
+        "id": "hackathon-nasa-2021",
+        "name": "NASA Space Apps Challenge",
+        "meta": "NASA",
+        "date": "Oct 2021"
+      },
+      {
+        "id": "hackathon-sebrae-2021",
+        "name": "Hackathon Startup SEBRAE",
+        "meta": "SEBRAE",
+        "date": "Sep 2021"
+      },
+      {
+        "id": "hackathon-hack-caruaru-2020",
+        "name": "HackCaruaru 2020",
+        "meta": "Caruaru Digital",
+        "date": "Nov 2020"
       }
     ],
     "events": [
@@ -1243,6 +1627,42 @@
         "meta": "Caruaru",
         "date": "Sep 2024",
         "logo": "assets/images/campusparty_ltd_logo.jpg"
+      },
+      {
+        "id": "tdc-recife-2024",
+        "type": "listener",
+        "name": "The Developer's Conference",
+        "role": "Asistente",
+        "meta": "Recife",
+        "date": "Oct 2024",
+        "logo": "assets/images/recife_front_end_community_logo.jpg"
+      },
+      {
+        "id": "semana-ti-2024",
+        "type": "speaker",
+        "name": "Semana de TI UniFavip",
+        "role": "Ponente",
+        "meta": "Caruaru",
+        "date": "May 2024",
+        "logo": "assets/images/unifavip_logo.jpg"
+      },
+      {
+        "id": "gdg-devfest-2023",
+        "type": "listener",
+        "name": "GDG DevFest NE",
+        "role": "Asistente",
+        "meta": "Recife",
+        "date": "Dic 2023",
+        "logo": "assets/images/google_developers_group_barueri_logo.jpg"
+      },
+      {
+        "id": "workshop-docker-2023",
+        "type": "speaker",
+        "name": "Taller de Docker Práctico",
+        "role": "Ponente",
+        "meta": "UniFavip",
+        "date": "Sep 2023",
+        "logo": "assets/images/unifavip_logo.jpg"
       }
     ],
     "achievements": [

@@ -5,6 +5,164 @@
 (function CVRenderer() {
   'use strict';
 
+  // Section expansion states
+  const sectionStates = {
+    experience: false,
+    hackathons: false,
+    events: false
+  };
+
+  // Helper to parse experience and items dates to sorting key (e.g. "Dec 2025" -> 202512)
+  function getEndDateValue(dateStr) {
+    if (!dateStr) return 0;
+    const clean = dateStr.replace(/–/g, '-');
+    const parts = clean.split('-');
+    const endPart = (parts.length > 1 ? parts[1] : parts[0]).trim().toLowerCase();
+    
+    if (endPart.includes('present') || endPart.includes('atual') || endPart.includes('progress') || endPart.includes('curso') || endPart.includes('presente')) {
+      return Infinity; // Currently active
+    }
+    
+    const months = {
+      jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6, jul: 7, aug: 8, sep: 9, oct: 10, nov: 11, dec: 12,
+      ene: 1, abr: 4, mai: 5, set: 9, dic: 12, dez: 12, out: 10, ago: 8
+    };
+    
+    const words = endPart.split(/\s+/);
+    let year = 0;
+    let month = 0;
+    
+    words.forEach(w => {
+      const y = parseInt(w, 10);
+      if (y > 1000 && y < 3000) {
+        year = y;
+      } else {
+        const prefix = w.substring(0, 3);
+        if (months[prefix]) {
+          month = months[prefix];
+        }
+      }
+    });
+    
+    return year * 100 + month;
+  }
+
+  // Helper to apply Expand/Minimize limits to a list section
+  function applySectionLimits(containerId, limit, activeFilter, isExpanded) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    
+    let items = [];
+    if (containerId === 'exp-timeline') {
+      items = container.querySelectorAll('.timeline-item');
+    } else if (containerId === 'hackathons-list') {
+      items = container.querySelectorAll('.hackathon-item');
+    } else if (containerId === 'events-list') {
+      items = container.querySelectorAll('.event-card');
+    }
+    
+    const hasFilter = activeFilter && activeFilter !== 'all';
+    const toggleContainerId = containerId + '-toggle-container';
+    let toggleContainer = document.getElementById(toggleContainerId);
+    
+    if (!toggleContainer && items.length > 0) {
+      toggleContainer = document.createElement('div');
+      toggleContainer.className = 'section-toggle-container';
+      toggleContainer.id = toggleContainerId;
+      
+      const btn = document.createElement('button');
+      btn.className = 'section-toggle-btn';
+      btn.setAttribute('data-section', containerId === 'exp-timeline' ? 'experience' : (containerId === 'hackathons-list' ? 'hackathons' : 'events'));
+      toggleContainer.appendChild(btn);
+    }
+    
+    if (items.length <= limit || hasFilter) {
+      items.forEach(item => item.classList.remove('hidden-collapsed'));
+      if (toggleContainer) toggleContainer.remove();
+    } else {
+      items.forEach((item, idx) => {
+        if (idx >= limit && !isExpanded) {
+          item.classList.add('hidden-collapsed');
+        } else {
+          item.classList.remove('hidden-collapsed');
+        }
+      });
+      
+      const btn = toggleContainer.querySelector('.section-toggle-btn');
+      if (btn) {
+        const lang = (window.i18n && window.i18n.getCurrentLang) ? window.i18n.getCurrentLang() : 'en';
+        if (isExpanded) {
+          btn.textContent = (window.i18n && window.i18n.t) ? window.i18n.t('btn.minimize', lang) : 'Minimize';
+          btn.classList.add('expanded');
+        } else {
+          btn.textContent = (window.i18n && window.i18n.t) ? window.i18n.t('btn.expand', lang) : 'Expand';
+          btn.classList.remove('expanded');
+        }
+      }
+      
+      container.appendChild(toggleContainer);
+    }
+  }
+
+  // Globally expose expand experience function for section link redirect
+  window.expandExperienceSection = function() {
+    sectionStates.experience = true;
+    const activeExp = document.querySelector('#exp-filter-bar .filter-btn.active')?.getAttribute('data-filter') || 'all';
+    applySectionLimits('exp-timeline', 4, activeExp, true);
+  };
+
+  // Helper to setup horizontal slider arrow behaviors on desktop
+  function setupSlider(trackId, leftBtnSelector, rightBtnSelector, limit) {
+    const track = document.getElementById(trackId);
+    if (!track) return;
+    
+    const wrapper = track.closest('.slider-wrapper');
+    if (!wrapper) return;
+    
+    const leftBtn = wrapper.querySelector(leftBtnSelector);
+    const rightBtn = wrapper.querySelector(rightBtnSelector);
+    const controls = wrapper.querySelector('.slider-controls');
+    
+    const cards = track.children;
+    if (cards.length <= limit) {
+      if (controls) controls.style.display = 'none';
+      return;
+    }
+    
+    if (controls) controls.style.display = 'flex';
+    
+    const updateArrows = () => {
+      const scrollLeft = track.scrollLeft;
+      const maxScroll = track.scrollWidth - track.clientWidth;
+      
+      const isAtStart = scrollLeft <= 5;
+      const isAtEnd = scrollLeft >= maxScroll - 5;
+      
+      if (leftBtn) leftBtn.style.display = isAtStart ? 'none' : 'inline-flex';
+      if (rightBtn) rightBtn.style.display = isAtEnd ? 'none' : 'inline-flex';
+    };
+    
+    track.removeEventListener('scroll', updateArrows);
+    track.addEventListener('scroll', updateArrows);
+    
+    if (rightBtn) {
+      rightBtn.onclick = () => {
+        const cardWidth = cards[0] ? cards[0].offsetWidth : 300;
+        track.scrollBy({ left: cardWidth + 16, behavior: 'smooth' });
+      };
+    }
+    
+    if (leftBtn) {
+      leftBtn.onclick = () => {
+        const cardWidth = cards[0] ? cards[0].offsetWidth : 300;
+        track.scrollBy({ left: -(cardWidth + 16), behavior: 'smooth' });
+      };
+    }
+    
+    setTimeout(updateArrows, 100);
+  }
+
+
   function renderFilters(filtersData, containerId, activeFilter, lang) {
     const container = document.getElementById(containerId);
     if (!container) return;
@@ -16,6 +174,10 @@
       html += `<button class="filter-btn ${isActive}" data-filter="${item.id}">${label}</button>\n`;
     });
     container.innerHTML = html;
+    
+    // Apply Experience limits/expansion logic
+    const activeExp = document.querySelector('#exp-filter-bar .filter-btn.active')?.getAttribute('data-filter') || 'all';
+    applySectionLimits('exp-timeline', 4, activeExp, sectionStates.experience);
   }
 
   function renderHero(data) {
@@ -88,6 +250,9 @@
     const container = document.getElementById('exp-timeline');
     if (!container) return;
     
+    // Auto-organize experience: present/active first, then most recent end date descending
+    data.experience.sort((a, b) => getEndDateValue(b.date) - getEndDateValue(a.date));
+
     let html = '';
     data.experience.forEach((job, idx) => {
       const delay = idx + 1;
@@ -189,6 +354,10 @@
     });
 
     container.innerHTML = html;
+    
+    // Apply Experience limits/expansion logic
+    const activeExp = document.querySelector('#exp-filter-bar .filter-btn.active')?.getAttribute('data-filter') || 'all';
+    applySectionLimits('exp-timeline', 4, activeExp, sectionStates.experience);
   }
 
   function renderEducation(data) {
@@ -232,9 +401,15 @@
     const coursesContainer = document.getElementById('courses-list');
     if (!coursesContainer) return;
 
-    let coursesHtml = '';
+    // Cursos devem se auto-organizar, onde o mais recente é o primeiro
+    data.courses.sort((a, b) => getEndDateValue(b.date) - getEndDateValue(a.date));
+
+    const activeCourseFilter = document.querySelector('#course-filter-bar .filter-btn.active')?.getAttribute('data-filter') || 'all';
+    const isFiltering = activeCourseFilter !== 'all';
+
+    let coursesCardsHtml = '';
     data.courses.forEach((course) => {
-      coursesHtml += `
+      coursesCardsHtml += `
         <div class="course-card" data-type="${course.type}" id="${course.id}" role="listitem">
           <div class="card-layout-with-logo">
             <div class="card-logo-container">
@@ -270,7 +445,31 @@
         </div>
       `;
     });
-    coursesContainer.innerHTML = coursesHtml;
+
+    if (isFiltering) {
+      coursesContainer.innerHTML = `
+        <div class="courses-slider-track grid-view" id="courses-slider-track" role="list">
+          ${coursesCardsHtml}
+        </div>
+      `;
+    } else {
+      coursesContainer.innerHTML = `
+        <div class="slider-wrapper">
+          <div class="courses-slider-track" id="courses-slider-track" role="list">
+            ${coursesCardsHtml}
+          </div>
+          <div class="slider-controls">
+            <button class="slider-arrow-btn prev-btn" aria-label="Scroll left">
+              <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" /></svg>
+            </button>
+            <button class="slider-arrow-btn next-btn" aria-label="Scroll right">
+              <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" /></svg>
+            </button>
+          </div>
+        </div>
+      `;
+      setupSlider('courses-slider-track', '.prev-btn', '.next-btn', 3);
+    }
   }
 
   function renderProjects(data) {
@@ -310,6 +509,10 @@
       `;
     });
     container.innerHTML = html;
+    
+    // Apply Experience limits/expansion logic
+    const activeExp = document.querySelector('#exp-filter-bar .filter-btn.active')?.getAttribute('data-filter') || 'all';
+    applySectionLimits('exp-timeline', 4, activeExp, sectionStates.experience);
   }
 
   function renderCertifications(data) {
@@ -343,13 +546,20 @@
       `;
     });
     container.innerHTML = html;
+    
+    // Apply Experience limits/expansion logic
+    const activeExp = document.querySelector('#exp-filter-bar .filter-btn.active')?.getAttribute('data-filter') || 'all';
+    applySectionLimits('exp-timeline', 4, activeExp, sectionStates.experience);
   }
 
   function renderCommunity(data) {
     // Volunteering
     const volContainer = document.getElementById('volunteer-list');
     if (volContainer) {
-      let volHtml = '';
+      // Voluntariados devem se autoorganizar seguindo o mais recente, e o que está atualmente ativo
+      data.volunteering.sort((a, b) => getEndDateValue(b.date) - getEndDateValue(a.date));
+
+      let volCardsHtml = '';
       data.volunteering.forEach((vol) => {
         const highlightsHtml = (vol.highlights && vol.highlights.length > 0) ? `
           <button class="edu-vol-toggle-btn" aria-label="Toggle details" aria-expanded="false" data-target="vol-hl-${vol.id}">+</button>
@@ -364,7 +574,7 @@
           <p class="volunteer-card-date">${vol.date}</p>
           ${highlightsHtml}
         `;
-        volHtml += `
+        volCardsHtml += `
           <article class="volunteer-card reveal" id="${vol.id}" role="listitem">
             ${vol.logo ? `
               <div class="card-layout-with-logo">
@@ -379,12 +589,31 @@
           </article>
         `;
       });
-      volContainer.innerHTML = volHtml;
+
+      volContainer.innerHTML = `
+        <div class="slider-wrapper">
+          <div class="volunteering-slider-track" id="volunteering-slider-track" role="list">
+            ${volCardsHtml}
+          </div>
+          <div class="slider-controls">
+            <button class="slider-arrow-btn prev-vol-btn" aria-label="Scroll left">
+              <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" /></svg>
+            </button>
+            <button class="slider-arrow-btn next-vol-btn" aria-label="Scroll right">
+              <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" /></svg>
+            </button>
+          </div>
+        </div>
+      `;
+      setupSlider('volunteering-slider-track', '.prev-vol-btn', '.next-vol-btn', 6);
     }
 
     // Hackathons
     const hackContainer = document.getElementById('hackathons-list');
     if (hackContainer) {
+      // Auto-organizar pela mais recente concluída, onde a mais antiga fica no final
+      data.hackathons.sort((a, b) => getEndDateValue(b.date) - getEndDateValue(a.date));
+
       let hackHtml = '';
       data.hackathons.forEach((hack) => {
         hackHtml += `
@@ -395,6 +624,7 @@
         `;
       });
       hackContainer.innerHTML = hackHtml;
+      applySectionLimits('hackathons-list', 12, 'all', sectionStates.hackathons);
     }
 
     // Events
@@ -597,6 +827,7 @@
     }
 
     renderHero(data);
+    window.renderCV = renderCV;
     renderAbout(data);
     renderExperience(data, lang);
     renderEducation(data);
@@ -620,6 +851,53 @@
       });
     }
   }
+
+  // Handle Expand/Minimize button clicks
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.section-toggle-btn');
+    if (!btn) return;
+    
+    const section = btn.getAttribute('data-section');
+    if (section === 'experience') {
+      sectionStates.experience = !sectionStates.experience;
+      const activeExp = document.querySelector('#exp-filter-bar .filter-btn.active')?.getAttribute('data-filter') || 'all';
+      applySectionLimits('exp-timeline', 4, activeExp, sectionStates.experience);
+      
+      if (!sectionStates.experience) {
+        const timeline = document.getElementById('experience');
+        if (timeline) {
+          const navH = document.getElementById('main-nav')?.offsetHeight || 0;
+          const top = timeline.getBoundingClientRect().top + window.scrollY - navH - 16;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      }
+    } else if (section === 'hackathons') {
+      sectionStates.hackathons = !sectionStates.hackathons;
+      applySectionLimits('hackathons-list', 12, 'all', sectionStates.hackathons);
+      
+      if (!sectionStates.hackathons) {
+        const timeline = document.getElementById('community');
+        if (timeline) {
+          const navH = document.getElementById('main-nav')?.offsetHeight || 0;
+          const top = timeline.getBoundingClientRect().top + window.scrollY - navH - 16;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      }
+    } else if (section === 'events') {
+      sectionStates.events = !sectionStates.events;
+      const activeEvent = document.querySelector('#event-filter-bar .filter-btn.active')?.getAttribute('data-filter') || 'all';
+      applySectionLimits('events-list', 12, activeEvent, sectionStates.events);
+      
+      if (!sectionStates.events) {
+        const timeline = document.getElementById('community');
+        if (timeline) {
+          const navH = document.getElementById('main-nav')?.offsetHeight || 0;
+          const top = timeline.getBoundingClientRect().top + window.scrollY - navH - 16;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      }
+    }
+  });
 
   document.addEventListener('DOMContentLoaded', () => {
     const initialLang = (window.i18n && window.i18n.getCurrentLang) ? window.i18n.getCurrentLang() : 'en';

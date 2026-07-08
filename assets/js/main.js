@@ -85,6 +85,14 @@
     if (href === '#' || href === '') return;
     const target = document.querySelector(href);
     if (!target) return;
+    
+    // Auto-expand experience if target is a hidden item
+    if (target.classList.contains('hidden-collapsed') && target.closest('#exp-timeline')) {
+      if (window.expandExperienceSection) {
+        window.expandExperienceSection();
+      }
+    }
+    
     e.preventDefault();
     const navH = nav ? nav.offsetHeight : 0;
     const top  = target.getBoundingClientRect().top + window.scrollY - navH - 16;

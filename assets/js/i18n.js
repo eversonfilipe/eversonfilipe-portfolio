@@ -64,6 +64,8 @@
       'filter.event.exhibitor': 'Exhibitor',
       'filter.event.listener': 'Listener',
       'course.credential.btn': 'Show Credential',
+      'btn.expand': 'Expand',
+      'btn.minimize': 'Minimize',
     },
     pt: {
       'nav.about': 'Sobre',
@@ -121,6 +123,8 @@
       'filter.event.exhibitor': 'Expositor',
       'filter.event.listener': 'Participante',
       'course.credential.btn': 'Exibir credencial',
+      'btn.expand': 'Expandir',
+      'btn.minimize': 'Minimizar',
     },
     es: {
       'nav.about': 'Acerca',
@@ -178,6 +182,8 @@
       'filter.event.exhibitor': 'Expositor',
       'filter.event.listener': 'Asistente',
       'course.credential.btn': 'Mostrar credencial',
+      'btn.expand': 'Expandir',
+      'btn.minimize': 'Minimizar',
     },
   };
 
