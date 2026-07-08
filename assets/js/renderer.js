@@ -364,6 +364,9 @@
     const container = document.getElementById('education-list');
     if (!container) return;
 
+    // Sort education: In Progress or most recent first
+    data.education.sort((a, b) => getEndDateValue(b.date) - getEndDateValue(a.date));
+
     let html = '';
     data.education.forEach((edu) => {
       const highlightsHtml = (edu.highlights && edu.highlights.length > 0) ? `

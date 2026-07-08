@@ -45,11 +45,11 @@ Conquistas/Achievements:
   * [Mentorship] Successfully onboarded and mentored 2 intern cohorts in Agile framework practices and MVP delivery.
 
 ## Education
-### Artificial Intelligence Mentorship Program - Offered by LAB.AI, Instituto Joule (Aug 2025 - Sep 2025) [Mentorship Program]
-  Highlights: AI Mentorship, Career Readiness, Lab.AI Certificate
-
 ### Computer Science - UniFavip Wyden (Feb 2024 - In Progress) [Bachelor's Degree]
   Highlights: GPA: 9.2/10, 1200+ Hours Completed, Algorithms & OOP Focus
+
+### Artificial Intelligence Mentorship Program - Offered by LAB.AI, Instituto Joule (Aug 2025 - Sep 2025) [Mentorship Program]
+  Highlights: AI Mentorship, Career Readiness, Lab.AI Certificate
 
 ## Courses
 - Postman: From Zero to Advanced + Automated Testing (Udemy, Dec 2025)
@@ -57,6 +57,10 @@ Conquistas/Achievements:
 - Lab.AI: Preparing the Next Generation for the Future of Work (Instituto Joule, Sep 2025)
 - SkillsBuild - Customer Engagement: Problem Solving and Process Controls (IBM, Aug 2025)
 - EF SET English Certificate 69/100 (C1 Advanced) (EF Education First, Mar 2025)
+
+## Publications
+- Scaling B2B Configurations with JSONLogic Rules (Medium, Feb 2026)
+- Optimizing Intern Onboarding via Structured Agile Mentorship (LinkedIn, Jan 2026)
 
 ## Volunteering
 ### Co-organizer at Google Developers Group (GDG Barueri) (Aug 2025 - Present)
@@ -129,11 +133,11 @@ Conquistas/Achievements:
   * [Mentoria] Sucesso no onboarding e mentoria de 2 turmas de estagiários em práticas de frameworks Ágeis e entrega de MVPs.
 
 ## Education
-### Programa de Mentoria em Inteligência Artificial - Oferecido pela LAB.AI, do Instituto Joule (Ago 2025 - Set 2025) [Programa de Mentoria]
-  Highlights: Mentoria de IA, Preparação de Carreira, Certificado Lab.AI
-
 ### Ciência da Computação - UniFavip Wyden (Fev 2024 - Em curso) [Bacharelado]
   Highlights: Média Geral: 9.2/10, Mais de 1200 Horas Cursadas, Foco em Algoritmos e POO
+
+### Programa de Mentoria em Inteligência Artificial - Oferecido pela LAB.AI, do Instituto Joule (Ago 2025 - Set 2025) [Programa de Mentoria]
+  Highlights: Mentoria de IA, Preparação de Carreira, Certificado Lab.AI
 
 ## Courses
 - Postman: Do Zero ao Avançado + Testes Automatizados (Udemy, Dez 2025)
@@ -141,6 +145,10 @@ Conquistas/Achievements:
 - Lab.AI: Preparando a Próxima Geração para o Futuro do Trabalho (Instituto Joule, Set 2025)
 - SkillsBuild - Engajamento do Cliente: Resolução de Problemas e Controles de Processos (IBM, Ago 2025)
 - Certificado de Inglês EF SET 69/100 (C1 Avançado) (EF Education First, Mar 2025)
+
+## Publications
+- Escalando Configurações B2B com Regras JSONLogic (Medium, Fev 2026)
+- Otimizando Onboarding de Estagiários via Mentoria Ágil Estruturada (LinkedIn, Jan 2026)
 
 ## Volunteering
 ### Coorganizador at Google Developers Group (GDG Barueri) (Ago 2025 - Atual)
@@ -213,11 +221,11 @@ Conquistas/Achievements:
   * [Mentoría] Éxito en el onboarding y tutoría de 2 cohortes de pasantes en prácticas de frameworks Ágiles y entrega de MVPs.
 
 ## Education
-### Programa de Mentoría en Inteligencia Artificial - Ofrecido por LAB.AI, del Instituto Joule (Ago 2025 - Sep 2025) [Programa de Mentoría]
-  Highlights: Mentoría de IA, Preparación de Carrera, Certificado Lab.AI
-
 ### Ciencias de la Computación - UniFavip Wyden (Feb 2024 - En curso) [Licenciatura]
   Highlights: Média General: 9.2/10, Más de 1200 Horas Cursadas, Enfoque en Algoritmos y POO
+
+### Programa de Mentoría en Inteligencia Artificial - Ofrecido por LAB.AI, del Instituto Joule (Ago 2025 - Sep 2025) [Programa de Mentoría]
+  Highlights: Mentoría de IA, Preparación de Carrera, Certificado Lab.AI
 
 ## Courses
 - Postman: De Cero a Avanzado + Pruebas Automatizadas (Udemy, Dic 2025)
@@ -225,6 +233,10 @@ Conquistas/Achievements:
 - Lab.AI: Preparando la Próxima Generación para el Futuro del Trabajo (Instituto Joule, Sep 2025)
 - SkillsBuild - Compromiso con el Cliente: Resolución de Problemas y Controles de Procesos (IBM, Ago 2025)
 - Certificado de Inglés EF SET 69/100 (C1 Avanzado) (EF Education First, Mar 2025)
+
+## Publications
+- Escalando Configuraciones B2B con Reglas JSONLogic (Medium, Feb 2026)
+- Optimización del Onboarding de Pasantes a través de Mentoría Ágil (LinkedIn, Ene 2026)
 
 ## Volunteering
 ### Coorganizador at Google Developers Group (GDG Barueri) (Ago 2025 - Actual)
