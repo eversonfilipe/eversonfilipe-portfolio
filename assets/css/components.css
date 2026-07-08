@@ -1572,3 +1572,8 @@
     padding-bottom: 0;
   }
 }
+
+/* ── Volunteering Grid Display Override for Slider ── */
+.volunteer-grid.slider-active {
+  display: block !important;
+}

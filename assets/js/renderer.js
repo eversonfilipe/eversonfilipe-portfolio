@@ -591,12 +591,10 @@
       });
 
       if (data.volunteering.length <= 6) {
-        volContainer.innerHTML = `
-          <div class="volunteering-slider-track grid-view" id="volunteering-slider-track" role="list">
-            ${volCardsHtml}
-          </div>
-        `;
+        volContainer.classList.remove('slider-active');
+        volContainer.innerHTML = volCardsHtml;
       } else {
+        volContainer.classList.add('slider-active');
         volContainer.innerHTML = `
           <div class="slider-wrapper">
             <div class="volunteering-slider-track" id="volunteering-slider-track" role="list">
