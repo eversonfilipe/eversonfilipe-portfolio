@@ -58,7 +58,7 @@
         "company": "Kartado",
         "date": "Sep 2025 – Present",
         "bullets": [
-          "Configured JSONLogic rules for dynamic forms across 20+ client environments via Django Admin, ensuring data integrity and functional consistency.",
+          "Configured JSONLogic rules for dynamic forms across 42+ client environments via Django Admin, ensuring data integrity and functional consistency.",
           "Developed Python ETL automation scripts integrated with Django ORM, replacing manual data transformation and loading workflows.",
           "Built notebook-based Python scripts for JSON metadata extraction, schema validation, and proactive detection of structural inconsistencies in exported datasets.",
           "Corrected GIS maps, adjusted Shapefiles, and validated spatial geometries to support highway concession system parameterization.",
@@ -389,6 +389,12 @@
     ],
     "footer": {
       "copy": "&copy; 2025 Everson Filipe. Last updated: July 2026."
+    },
+    "hero": {
+      "overline": "Junior Implementation Engineer · Aspiring AI Engineer",
+      "name": "<strong>Everson</strong> Filipe",
+      "title": "Technical Implementation · Integrations · Data Integrity",
+      "tagline": "Bridging the gap between business requirements and scalable software execution through rigorous data validation and process automation."
     }
   },
   "pt": {
@@ -444,7 +450,7 @@
         "company": "Kartado",
         "date": "Set 2025 – Presente",
         "bullets": [
-          "Configurou regras em JSONLogic para formularios dinamicos em mais de 20 ambientes de clientes via Django Admin, garantindo integridade dos dados e consistencia funcional.",
+          "Configurou regras em JSONLogic para formularios dinamicos em mais de 42 ambientes de clientes via Django Admin, garantindo integridade dos dados e consistencia funcional.",
           "Desenvolveu scripts de automacao ETL em Python integrados ao Django ORM, substituindo fluxos manuais de transformacao e carregamento de dados.",
           "Criou scripts em notebooks Python para extracao de metadados JSON, validacao de esquemas e deteccao proativa de inconsistencias estruturais em datasets exportados.",
           "Corrigiu mapas GIS, ajustou Shapefiles e validou geometrias espaciais para apoiar a parametrizacao de sistemas de concessoes rodoviarias.",
@@ -775,6 +781,12 @@
     ],
     "footer": {
       "copy": "&copy; 2025 Everson Filipe. Última atualização: Julho de 2026."
+    },
+    "hero": {
+      "overline": "Engenheiro de Implantação Júnior · Aspirante a AI Engineer",
+      "name": "<strong>Everson</strong> Filipe",
+      "title": "Implantação Técnica · Integrações · Integridade de Dados",
+      "tagline": "Unindo requisitos de negócio à execução escalável de software por meio de validação de dados e automação de processos."
     }
   },
   "es": {
@@ -830,7 +842,7 @@
         "company": "Kartado",
         "date": "Sep 2025 – Presente",
         "bullets": [
-          "Configuro reglas JSONLogic para formularios dinamicos en mas de 20 entornos de clientes via Django Admin, asegurando integridad de datos y consistencia funcional.",
+          "Configuro reglas JSONLogic para formularios dinamicos en mas de 42 entornos de clientes via Django Admin, asegurando integridad de datos y consistencia funcional.",
           "Desarrollo scripts ETL en Python integrados con Django ORM, reemplazando flujos manuales de transformacion y carga de datos.",
           "Construyo scripts en notebooks Python para extraccion de metadatos JSON, validacion de esquemas y deteccion proactiva de inconsistencias estructurales.",
           "Corrigio mapas GIS, ajusto Shapefiles y valido geometrias espaciales para parametrizacion de sistemas de concesiones viales.",
@@ -1161,6 +1173,12 @@
     ],
     "footer": {
       "copy": "&copy; 2025 Everson Filipe. Última actualización: Julio de 2026."
+    },
+    "hero": {
+      "overline": "Ingeniero de Implementación Junior · Aspirante a AI Engineer",
+      "name": "<strong>Everson</strong> Filipe",
+      "title": "Implementación Técnica · Integraciones · Integridad de Datos",
+      "tagline": "Conectando requisitos de negocio con ejecución escalable de software a través de validación rigurosa de datos y automatización de procesos."
     }
   },
   "filters": {

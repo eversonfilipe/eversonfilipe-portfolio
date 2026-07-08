@@ -18,6 +18,20 @@
     container.innerHTML = html;
   }
 
+  function renderHero(data) {
+    const overline = document.getElementById('hero-overline');
+    const name = document.getElementById('hero-name');
+    const title = document.getElementById('hero-title');
+    const tagline = document.getElementById('hero-tagline');
+
+    if (data.hero) {
+      if (overline) overline.innerHTML = data.hero.overline || '';
+      if (name) name.innerHTML = data.hero.name || '';
+      if (title) title.innerHTML = data.hero.title || '';
+      if (tagline) tagline.innerHTML = data.hero.tagline || '';
+    }
+  }
+
   function renderAbout(data) {
     const container = document.getElementById('about-text-container');
     if (!container) return;
@@ -566,6 +580,7 @@
       renderFilters(filters.events, 'event-filter-bar', activeEvent, lang);
     }
 
+    renderHero(data);
     renderAbout(data);
     renderExperience(data, lang);
     renderEducation(data);
