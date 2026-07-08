@@ -425,7 +425,25 @@
       "name": "<strong>Everson</strong> Filipe",
       "title": "Technical Implementation · Integrations · Data Integrity",
       "tagline": "Bridging the gap between business requirements and scalable software execution through rigorous data validation and process automation."
-    }
+    },
+    "publications": [
+      {
+        "id": "pub-jsonlogic-b2b",
+        "type": "technical",
+        "name": "Scaling B2B Configurations with JSONLogic Rules",
+        "institution": "Medium",
+        "date": "Feb 2026",
+        "url": "https://eversonfilipe.medium.com/"
+      },
+      {
+        "id": "pub-agile-intern-onboarding",
+        "type": "agile",
+        "name": "Optimizing Intern Onboarding via Structured Agile Mentorship",
+        "institution": "LinkedIn",
+        "date": "Jan 2026",
+        "url": "https://www.linkedin.com/"
+      }
+    ]
   },
   "pt": {
     "about": {
@@ -847,7 +865,25 @@
       "name": "<strong>Everson</strong> Filipe",
       "title": "Implantação Técnica · Integrações · Integridade de Dados",
       "tagline": "Unindo requisitos de negócio à execução escalável de software por meio de validação de dados e automação de processos."
-    }
+    },
+    "publications": [
+      {
+        "id": "pub-jsonlogic-b2b",
+        "type": "technical",
+        "name": "Escalando Configurações B2B com Regras JSONLogic",
+        "institution": "Medium",
+        "date": "Fev 2026",
+        "url": "https://eversonfilipe.medium.com/"
+      },
+      {
+        "id": "pub-agile-intern-onboarding",
+        "type": "agile",
+        "name": "Otimizando Onboarding de Estagiários via Mentoria Ágil Estruturada",
+        "institution": "LinkedIn",
+        "date": "Jan 2026",
+        "url": "https://www.linkedin.com/"
+      }
+    ]
   },
   "es": {
     "about": {
@@ -1269,7 +1305,25 @@
       "name": "<strong>Everson</strong> Filipe",
       "title": "Implementación Técnica · Integraciones · Integridad de Datos",
       "tagline": "Conectando requisitos de negocio con ejecución escalable de software a través de validación rigurosa de datos y automatización de procesos."
-    }
+    },
+    "publications": [
+      {
+        "id": "pub-jsonlogic-b2b",
+        "type": "technical",
+        "name": "Escalando Configuraciones B2B con Reglas JSONLogic",
+        "institution": "Medium",
+        "date": "Feb 2026",
+        "url": "https://eversonfilipe.medium.com/"
+      },
+      {
+        "id": "pub-agile-intern-onboarding",
+        "type": "agile",
+        "name": "Optimización del Onboarding de Pasantes a través de Mentoría Ágil",
+        "institution": "LinkedIn",
+        "date": "Ene 2026",
+        "url": "https://www.linkedin.com/"
+      }
+    ]
   },
   "filters": {
     "experience": [
@@ -1403,6 +1457,32 @@
           "en": "Listener",
           "pt": "Participante",
           "es": "Participante"
+        }
+      }
+    ],
+    "publications": [
+      {
+        "id": "all",
+        "label": {
+          "en": "All",
+          "pt": "Todos",
+          "es": "Todos"
+        }
+      },
+      {
+        "id": "technical",
+        "label": {
+          "en": "Technical",
+          "pt": "Técnicos",
+          "es": "Técnicos"
+        }
+      },
+      {
+        "id": "agile",
+        "label": {
+          "en": "Agile & Product",
+          "pt": "Ágil e Produto",
+          "es": "Ágil y Producto"
         }
       }
     ]

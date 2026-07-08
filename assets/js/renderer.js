@@ -760,6 +760,11 @@
             <span class="nav-dropdown-role">${window.i18n && window.i18n.t ? window.i18n.t('edu.courses.label', lang) : 'Courses'}</span>
           </a>
         </li>
+        <li role="none">
+          <a href="#publications-list" class="nav-dropdown-link" role="menuitem">
+            <span class="nav-dropdown-role">${window.i18n && window.i18n.t ? window.i18n.t('edu.publications.label', lang) : 'Publications'}</span>
+          </a>
+        </li>
       `;
     }
 
@@ -823,6 +828,7 @@
     const activeExp = document.querySelector('#exp-filter-bar .filter-btn.active')?.getAttribute('data-filter') || 'all';
     const activeCourse = document.querySelector('#course-filter-bar .filter-btn.active')?.getAttribute('data-filter') || 'all';
     const activeEvent = document.querySelector('#event-filter-bar .filter-btn.active')?.getAttribute('data-filter') || 'all';
+    const activePub = document.querySelector('#publication-filter-bar .filter-btn.active')?.getAttribute('data-filter') || 'all';
 
     // Render filter bars dynamically
     const filters = window.CV_DATA.filters;
@@ -830,6 +836,9 @@
       renderFilters(filters.experience, 'exp-filter-bar', activeExp, lang);
       renderFilters(filters.courses, 'course-filter-bar', activeCourse, lang);
       renderFilters(filters.events, 'event-filter-bar', activeEvent, lang);
+      if (filters.publications) {
+        renderFilters(filters.publications, 'publication-filter-bar', activePub, lang);
+      }
     }
 
     renderHero(data);

@@ -24,7 +24,20 @@
     const courseActive = document.querySelector('#course-filter-bar .filter-btn.active');
     if (courseActive) {
       const val = courseActive.getAttribute('data-filter');
-      document.querySelectorAll('.course-card').forEach(row => {
+      document.querySelectorAll('#courses-list .course-card').forEach(row => {
+        if (val === 'all') {
+          row.style.display = 'flex';
+        } else {
+          row.style.display = (row.getAttribute('data-type') === val) ? 'flex' : 'none';
+        }
+      });
+    }
+
+    // 4. Publications
+    const pubActive = document.querySelector('#publication-filter-bar .filter-btn.active');
+    if (pubActive) {
+      const val = pubActive.getAttribute('data-filter');
+      document.querySelectorAll('#publications-list .course-card').forEach(row => {
         if (val === 'all') {
           row.style.display = 'flex';
         } else {
@@ -85,6 +98,23 @@
     const eventBar = document.getElementById('event-filter-bar');
     if (eventBar) {
       const btns = eventBar.querySelectorAll('.filter-btn');
+      btns.forEach(btn => {
+        btn.onclick = () => {
+          btns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const lang = (window.i18n && window.i18n.getCurrentLang) ? window.i18n.getCurrentLang() : 'en';
+          if (window.renderCV) {
+            window.renderCV(lang);
+          } else {
+            applyFilters();
+          }
+        };
+      });
+    }
+
+    const pubBar = document.getElementById('publication-filter-bar');
+    if (pubBar) {
+      const btns = pubBar.querySelectorAll('.filter-btn');
       btns.forEach(btn => {
         btn.onclick = () => {
           btns.forEach(b => b.classList.remove('active'));
