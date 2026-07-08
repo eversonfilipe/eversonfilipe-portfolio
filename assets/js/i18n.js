@@ -99,8 +99,6 @@
       'edu.overline': 'Formacao Academica',
       'edu.heading': 'Educacao',
       'edu.courses.label': 'Cursos',
-      'edu.publications.label': 'Artículos y Publicaciones',
-      'publication.view.btn': 'Visualizar',
       'edu.publications.label': 'Artigos e Produções',
       'publication.view.btn': 'Visualizar',
       'community.overline': 'Comunidade e Impacto',
