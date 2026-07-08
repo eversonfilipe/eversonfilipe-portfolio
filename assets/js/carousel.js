@@ -110,6 +110,14 @@
       lightboxImg.alt = imgData.alt;
       lightboxCaption.textContent = imgData.caption || imgData.alt;
 
+      if (activeImages.length <= 1) {
+        if (lightboxPrev) lightboxPrev.style.display = 'none';
+        if (lightboxNext) lightboxNext.style.display = 'none';
+      } else {
+        if (lightboxPrev) lightboxPrev.style.display = 'flex';
+        if (lightboxNext) lightboxNext.style.display = 'flex';
+      }
+
       lightbox.classList.add('open');
       lightbox.setAttribute('aria-hidden', 'false');
       setTimeout(() => lightboxClose.focus(), 50);
@@ -157,7 +165,9 @@
         } else if (e.key === 'ArrowLeft') {
           navigateLightbox(-1);
         } else if (e.key === 'Tab') {
-          const focusables = Array.from(lightbox.querySelectorAll('button'));
+          const focusables = Array.from(lightbox.querySelectorAll('button'))
+            .filter(el => window.getComputedStyle(el).display !== 'none');
+          if (focusables.length === 0) return;
           const first = focusables[0];
           const last = focusables[focusables.length - 1];
 

@@ -45,7 +45,7 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-accent-electric);
+  outline: 2px solid var(--color-accent-electric-text);
   outline-offset: 3px;
   border-radius: var(--radius-sm);
 }
