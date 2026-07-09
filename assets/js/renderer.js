@@ -897,6 +897,30 @@
     }
   }
 
+  function updateSectionCounters(data, lang) {
+    const expCounter = document.getElementById('exp-total-counter');
+    const courseCounter = document.getElementById('course-total-counter');
+    const pubCounter = document.getElementById('publication-total-counter');
+    const eventCounter = document.getElementById('event-total-counter');
+
+    if (expCounter && data.experience && window.i18n && window.i18n.t) {
+      const text = window.i18n.t('exp.total.count', lang).replace('__count__', data.experience.length);
+      expCounter.textContent = text;
+    }
+    if (courseCounter && data.courses && window.i18n && window.i18n.t) {
+      const text = window.i18n.t('edu.courses.total.count', lang).replace('__count__', data.courses.length);
+      courseCounter.textContent = text;
+    }
+    if (pubCounter && data.publications && window.i18n && window.i18n.t) {
+      const text = window.i18n.t('edu.publications.total.count', lang).replace('__count__', data.publications.length);
+      pubCounter.textContent = text;
+    }
+    if (eventCounter && data.events && window.i18n && window.i18n.t) {
+      const text = window.i18n.t('community.events.total.count', lang).replace('__count__', data.events.length);
+      eventCounter.textContent = text;
+    }
+  }
+
   function renderCV(lang) {
     const data = window.CV_DATA[lang] || window.CV_DATA.en;
     if (!data) return;
@@ -955,6 +979,7 @@
     renderCommunity(data);
     renderFooter(data);
     renderDropdowns(data, lang);
+    updateSectionCounters(data, lang);
 
     // Rebind active filters and layout bindings
     if (window.initFilters) window.initFilters();

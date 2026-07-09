@@ -71,6 +71,10 @@
       'meta.title': 'Everson Filipe | Implementation Engineer, DevOps & AI Professional',
       'meta.description': 'Implementation Engineer & AI Automation Analyst specializing in Python, JSONLogic, AWS integrations, and B2B SaaS configurations. View my portfolio.',
       'meta.keywords': 'implementation engineer, devops, AI automation, python, django, jsonlogic, aws integration, b2b saas, software configuration, everson filipe',
+      'exp.total.count': 'Total experiences: __count__',
+      'edu.courses.total.count': 'Total courses: __count__',
+      'edu.publications.total.count': 'Total publications: __count__',
+      'community.events.total.count': 'Total events: __count__',
     },
     pt: {
       'nav.about': 'Sobre',
@@ -138,6 +142,10 @@
       'meta.title': 'Everson Filipe | Engenheiro de Implantação, DevOps & IA',
       'meta.description': 'Engenheiro de Implantação e Analista de Automação de IA especializado em Python, JSONLogic, integrações AWS e configurações SaaS B2B. Conheça meu portfólio.',
       'meta.keywords': 'engenharia de implantacao, devops, automacao ia, python, django admin, jsonlogic, integracoes aws, saas b2b, everson filipe',
+      'exp.total.count': 'Experiências totais: __count__',
+      'edu.courses.total.count': 'Cursos totais: __count__',
+      'edu.publications.total.count': 'Produções totais: __count__',
+      'community.events.total.count': 'Eventos totais: __count__',
     },
     es: {
       'nav.about': 'Acerca',
@@ -202,6 +210,10 @@
       'meta.title': 'Everson Filipe | Ingeniero de Implantación, DevOps & IA',
       'meta.description': 'Ingeniero de Implantación y Analista de Automatización de IA especializado en Python, JSONLogic, integraciones AWS y configuraciones SaaS B2B. Vea mi portafolio.',
       'meta.keywords': 'ingenieria de implantacion, devops, automatizacion ia, python, django admin, jsonlogic, integraciones aws, saas b2b, everson filipe',
+      'exp.total.count': 'Experiencias totales: __count__',
+      'edu.courses.total.count': 'Cursos totales: __count__',
+      'edu.publications.total.count': 'Producciones totales: __count__',
+      'community.events.total.count': 'Eventos totales: __count__',
     },
   };
 

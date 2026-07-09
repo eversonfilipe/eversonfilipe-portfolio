@@ -1137,6 +1137,42 @@
   margin-bottom: var(--space-8);
 }
 
+/* ── Filter Counter Tag & Header ────────────────── */
+.filter-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+  width: 100%;
+}
+
+.filter-section-header .exp-filter-bar,
+.filter-section-header .filter-bar {
+  margin-bottom: 0 !important;
+  flex-grow: 1;
+}
+
+.total-counter-tag {
+  font-family: var(--font-primary);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-accent-mist);
+  background: rgba(182, 204, 215, 0.05);
+  border: 1px solid rgba(182, 204, 215, 0.18);
+  border-radius: var(--radius-full);
+  padding: var(--space-1) var(--space-3);
+  pointer-events: none;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  font-weight: var(--font-weight-emphasis);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+
 /* ── Navigation Dropdowns ──────────────────────── */
 .nav-links li {
   position: relative;
