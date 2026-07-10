@@ -2015,7 +2015,7 @@
   background: var(--color-bg-deep);
   border: 1px solid rgba(182, 204, 215, 0.13);
   border-radius: var(--radius-md);
-  padding: var(--space-4) var(--space-5);
+  padding: var(--space-5) var(--space-6);
   overflow: hidden;
   position: relative;
   transition: max-height var(--duration-slow) var(--ease-in-out);
@@ -2089,6 +2089,64 @@
 
 .project-desc-inner li {
   margin-bottom: var(--space-1);
+}
+
+.project-desc-inner h3,
+.project-desc-inner h4,
+.project-desc-inner h5 {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-emphasis);
+  color: var(--color-text-primary);
+  margin: var(--space-4) 0 var(--space-2);
+  line-height: var(--leading-tight);
+}
+
+.project-desc-inner h3 { font-size: var(--text-base); }
+.project-desc-inner h4 { font-size: var(--text-sm); }
+.project-desc-inner h5 { font-size: var(--text-xs); }
+
+.project-desc-inner blockquote {
+  border-left: 3px solid var(--color-accent-electric-text);
+  background: rgba(182, 204, 215, 0.04);
+  padding: var(--space-2) var(--space-4);
+  margin: var(--space-3) 0;
+  font-style: italic;
+  color: var(--color-accent-mist);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.project-desc-inner pre {
+  background: rgba(15, 23, 30, 0.6);
+  border: 1px solid rgba(182, 204, 215, 0.1);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3) var(--space-4);
+  margin: var(--space-3) 0;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  line-height: var(--leading-relaxed);
+  color: #c7d2fe;
+}
+
+.project-desc-inner code {
+  font-family: var(--font-mono);
+  font-size: 85%;
+  background: rgba(182, 204, 215, 0.08);
+  padding: 2px 5px;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-primary);
+}
+
+.project-desc-inner pre code {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  color: inherit;
+  font-size: inherit;
+}
+
+.project-desc-inner .text-center {
+  text-align: center;
 }
 
 /* Description toggle button (matches section-toggle-btn style) */
