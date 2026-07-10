@@ -34,11 +34,11 @@
           }
         ],
         "skills": [
-          "Python",
+          { "name": "Python", "icon": "assets/images/python_icon.svg" },
           "Django Admin",
           "JSONLogic",
           "REST API",
-          "AWS IAM",
+          { "name": "AWS IAM", "icon": "assets/images/aws_icon.svg" },
           "Amazon S3",
           "EC2",
           "Step Functions",
@@ -487,11 +487,11 @@
           }
         ],
         "skills": [
-          "Python",
+          { "name": "Python", "icon": "assets/images/python_icon.svg" },
           "Django Admin",
           "JSONLogic",
           "REST API",
-          "AWS IAM",
+          { "name": "AWS IAM", "icon": "assets/images/aws_icon.svg" },
           "Amazon S3",
           "EC2",
           "Step Functions",
@@ -940,11 +940,11 @@
           }
         ],
         "skills": [
-          "Python",
+          { "name": "Python", "icon": "assets/images/python_icon.svg" },
           "Django Admin",
           "JSONLogic",
           "REST API",
-          "AWS IAM",
+          { "name": "AWS IAM", "icon": "assets/images/aws_icon.svg" },
           "Amazon S3",
           "EC2",
           "Step Functions",

@@ -232,15 +232,27 @@
           </p>
           <div aria-label="Core technology stack" class="about-tech-stack" role="list">
         `;
-        data.about.skills.forEach(skill => {
-          skillsHtml += `
-            <span class="tech-tag" role="listitem">
-              ${skill}
-            </span>
-          `;
-        });
-        skillsHtml += '</div>';
-      }
+          data.about.skills.forEach(skill => {
+            const isObj = skill && typeof skill === 'object' && skill.name;
+            const skillName = isObj ? skill.name : skill;
+            const iconPath = isObj ? skill.icon : null;
+            
+            let iconHtml = '';
+            if (iconPath) {
+              iconHtml = `
+                <img class="tech-tag-icon" src="${iconPath}" alt="" aria-hidden="true" loading="lazy"/>
+              `;
+            }
+            
+            skillsHtml += `
+              <span class="tech-tag" role="listitem">
+                ${iconHtml}
+                <span>${skillName}</span>
+              </span>
+            `;
+          });
+          skillsHtml += '</div>';
+        }
 
       detailsContainer.innerHTML = statsHtml + skillsHtml;
     }
