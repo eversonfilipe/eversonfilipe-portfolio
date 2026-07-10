@@ -16,6 +16,16 @@ if not exist .git\hooks (
   mkdir .git\hooks
 )
 
+echo Installing Git pre-commit hook...
+copy hooks\pre-commit .git\hooks\pre-commit > nul
+
+if %ERRORLEVEL% NEQ 0 (
+  echo ❌ Failed to copy pre-commit hook. Check permissions.
+  echo.
+  pause
+  exit /b 1
+)
+
 echo Installing Git pre-push hook...
 copy hooks\pre-push .git\hooks\pre-push > nul
 
@@ -27,8 +37,9 @@ if %ERRORLEVEL% NEQ 0 (
 )
 
 echo.
-echo ✅ Git pre-push hook installed successfully!
-echo The hook will automatically validate JS syntax and run the static builder
-echo before every "git push" command.
+echo ✅ Git Hooks installed successfully!
+echo - The "pre-commit" hook will automatically validate JS syntax, rebuild
+echo   static blocks, and stage index.html/llms.txt before every "git commit".
+echo - The "pre-push" hook will double check consistency before code upload.
 echo.
 pause

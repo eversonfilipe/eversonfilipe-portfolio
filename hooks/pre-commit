@@ -1,0 +1,37 @@
+#!/bin/sh
+echo "=== GitOps Pre-Commit Validation ==="
+
+# 1. Check syntax of Javascript files
+echo "Checking JS syntax..."
+node --check assets/js/renderer.js
+if [ $? -ne 0 ]; then
+  echo "❌ JS Syntax Error in renderer.js! Commit aborted."
+  exit 1
+fi
+
+node --check assets/js/cv_data.js
+if [ $? -ne 0 ]; then
+  echo "❌ JS Syntax Error in cv_data.js! Commit aborted."
+  exit 1
+fi
+
+node --check assets/js/i18n.js
+if [ $? -ne 0 ]; then
+  echo "❌ JS Syntax Error in i18n.js! Commit aborted."
+  exit 1
+fi
+
+# 2. Re-compile static blocks locally
+echo "Running static builder (build_static.py)..."
+python build_static.py
+if [ $? -ne 0 ]; then
+  echo "❌ Static Re-compilation Failed! Commit aborted."
+  exit 1
+fi
+
+# 3. Add generated changes to current commit
+echo "Staging compiled files (index.html, llms.txt)..."
+git add index.html llms.txt
+
+echo "✅ Pre-Commit Validation & Sync Successful."
+exit 0
