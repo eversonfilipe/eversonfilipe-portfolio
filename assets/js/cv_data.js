@@ -204,7 +204,20 @@
         "credentialUrl": "https://cert.efset.org/en/88BaNL"
       }
     ],
-    "projects": [],
+    "projects": [
+      {
+        "id": "project-onboarding-pipeline",
+        "title": "AI Automation — B2B Onboarding Pipeline",
+        "status": "completed",
+        "date": "Mar 2025 - Aug 2025",
+        "category": "AI Engineering",
+        "images": [],
+        "linkedTo": ["kartado"],
+        "stack": ["Python", "JSONLogic", "AWS Step Functions", "Amazon S3", "Django Admin", "Postman", "Pytest"],
+        "descriptionHtml": "<p>Designed and implemented an <strong>automated B2B client onboarding pipeline</strong> integrated with Kartado's SaaS ERP platform. The system reduced average configuration time per client from 3 days to under 4 hours.</p><p>Key components: <em>JSONLogic-driven rule engine</em> for dynamic configuration resolution, AWS Step Functions orchestration, S3 document storage, and Django Admin UI for operations team control.</p><ul><li>Processed 42+ B2B clients through the automated flow</li><li>Achieved 32% team output contribution within first months</li><li>Zero production incidents in 6 months of operation</li></ul>",
+        "repoUrl": ""
+      }
+    ],
     "certifications": [],
     "volunteering": [
       {
@@ -644,7 +657,20 @@
         "credentialUrl": "https://cert.efset.org/en/88BaNL"
       }
     ],
-    "projects": [],
+    "projects": [
+      {
+        "id": "project-onboarding-pipeline",
+        "title": "Automacao com IA - Pipeline de Onboarding B2B",
+        "status": "completed",
+        "date": "Mar 2025 - Ago 2025",
+        "category": "Engenharia de IA",
+        "images": [],
+        "linkedTo": ["kartado"],
+        "stack": ["Python", "JSONLogic", "AWS Step Functions", "Amazon S3", "Django Admin", "Postman", "Pytest"],
+        "descriptionHtml": "<p>Projetei e implementei um <strong>pipeline automatizado de onboarding B2B</strong> integrado ao ERP SaaS da Kartado. O sistema reduziu o tempo medio de configuracao por cliente de 3 dias para menos de 4 horas.</p><p>Componentes-chave: <em>motor de regras baseado em JSONLogic</em> para resolucao dinamica de configuracoes, orquestracao via AWS Step Functions, armazenamento de documentos no S3 e UI de controle via Django Admin para a equipe de operacoes.</p><ul><li>Mais de 42 clientes B2B processados pelo fluxo automatizado</li><li>Contribuicao de 32% no output da equipe nos primeiros meses</li><li>Zero incidentes em producao em 6 meses de operacao</li></ul>",
+        "repoUrl": ""
+      }
+    ],
     "certifications": [],
     "volunteering": [
       {
@@ -1084,7 +1110,20 @@
         "credentialUrl": "https://cert.efset.org/en/88BaNL"
       }
     ],
-    "projects": [],
+    "projects": [
+      {
+        "id": "project-onboarding-pipeline",
+        "title": "Automatizacion con IA - Pipeline de Onboarding B2B",
+        "status": "completed",
+        "date": "Mar 2025 - Ago 2025",
+        "category": "Ingenieria de IA",
+        "images": [],
+        "linkedTo": ["kartado"],
+        "stack": ["Python", "JSONLogic", "AWS Step Functions", "Amazon S3", "Django Admin", "Postman", "Pytest"],
+        "descriptionHtml": "<p>Disene e implemente un <strong>pipeline automatizado de onboarding B2B</strong> integrado con el ERP SaaS de Kartado. El sistema redujo el tiempo promedio de configuracion por cliente de 3 dias a menos de 4 horas.</p><p>Componentes clave: <em>motor de reglas basado en JSONLogic</em> para resolucion dinamica de configuraciones, orquestacion con AWS Step Functions, almacenamiento de documentos en S3 y UI de control via Django Admin para el equipo de operaciones.</p><ul><li>Mas de 42 clientes B2B procesados por el flujo automatizado</li><li>Contribucion del 32% en el output del equipo en los primeros meses</li><li>Cero incidentes en produccion en 6 meses de operacion</li></ul>",
+        "repoUrl": ""
+      }
+    ],
     "certifications": [],
     "volunteering": [
       {

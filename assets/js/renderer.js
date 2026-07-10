@@ -549,11 +549,64 @@
     }
   }
 
-  function renderProjects(data) {
+  function renderProjects(data, lang) {
     const container = document.getElementById('projects-list');
     if (!container) return;
 
-    if (!data.projects || data.projects.length === 0) {
+    const currentLang = lang || ((window.i18n && window.i18n.getCurrentLang) ? window.i18n.getCurrentLang() : 'en');
+    const t = (key) => (window.i18n && window.i18n.t) ? window.i18n.t(key, currentLang) : key;
+
+    // --- Collect all stack tags across all projects for filter bar ---
+    const allProjects = data.projects || [];
+
+    // Sort: in-progress first (Infinity), then most recent end date
+    const sorted = [...allProjects].sort((a, b) => getEndDateValue(b.date) - getEndDateValue(a.date));
+
+    // Build set of stack tags for filter bar
+    const stackTagSet = new Set();
+    sorted.forEach(p => (p.stack || []).forEach(s => stackTagSet.add(s)));
+
+    // Render filter bar
+    const filterBar = document.getElementById('project-filter-bar');
+    let activeFilter = 'all';
+    if (filterBar) {
+      activeFilter = filterBar.querySelector('.filter-btn.active')?.getAttribute('data-filter') || 'all';
+      let filterHtml = `<button class="filter-btn${activeFilter === 'all' ? ' active' : ''}" data-filter="all">${t('filter.all')}</button>`;
+      stackTagSet.forEach(tag => {
+        filterHtml += `<button class="filter-btn${activeFilter === tag ? ' active' : ''}" data-filter="${tag}">${tag}</button>`;
+      });
+      filterBar.innerHTML = filterHtml;
+      // Bind filter buttons for projects
+      filterBar.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const selectedFilter = btn.getAttribute('data-filter');
+          container.querySelectorAll('.project-card').forEach(card => {
+            if (selectedFilter === 'all') {
+              card.style.display = '';
+            } else {
+              const cardTags = card.getAttribute('data-stack-tags') || '';
+              card.style.display = cardTags.split(',').includes(selectedFilter) ? '' : 'none';
+            }
+          });
+          // Recalculate slider controls based on visible children count
+          const visible = Array.from(container.querySelectorAll('.project-card')).filter(c => c.style.display !== 'none');
+          const controls = document.getElementById('projects-slider-controls');
+          if (controls) {
+            if (visible.length <= 2) {
+              controls.style.display = 'none';
+            } else {
+              controls.style.display = 'flex';
+              container.dispatchEvent(new Event('scroll'));
+            }
+          }
+        });
+      });
+    }
+
+    // --- Render placeholder if no projects ---
+    if (sorted.length === 0) {
       container.innerHTML = `
         <div class="placeholder-state reveal reveal-delay-1">
           <div class="placeholder-icon">
@@ -561,36 +614,257 @@
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
             </svg>
           </div>
-          <p class="placeholder-label" data-i18n="projects.placeholder.label">Under Construction</p>
-          <p class="placeholder-hint" data-i18n="projects.placeholder.hint">Project case studies are currently being curated and will be published soon.</p>
+          <p class="placeholder-label" data-i18n="projects.placeholder.label">${t('projects.placeholder.label')}</p>
+          <p class="placeholder-hint" data-i18n="projects.placeholder.hint">${t('projects.placeholder.hint')}</p>
         </div>
       `;
       return;
     }
 
+    // --- Helper: resolve a linkedTo ID to a label + optional icon src ---
+    function resolveLinkedItem(id) {
+      const allData = window.CV_DATA;
+      // Search all languages for matching id
+      const langs = ['en', 'pt', 'es'];
+      for (const l of langs) {
+        const d = allData[l];
+        if (!d) continue;
+        // experience
+        const exp = (d.experience || []).find(e => e.id === id);
+        if (exp) return { label: exp.company || exp.role, icon: exp.logo || null, href: `#experience` };
+        // volunteering
+        const vol = (d.volunteering || []).find(v => v.id === id);
+        if (vol) return { label: vol.org || vol.role, icon: vol.logo || null, href: `#community` };
+        // education
+        const edu = (d.education || []).find(e => e.id === id);
+        if (edu) return { label: edu.institution || edu.degree, icon: edu.logo || null, href: `#education` };
+        // hackathons
+        const hack = (d.hackathons || []).find(h => h.id === id);
+        if (hack) return { label: hack.name, icon: null, href: `#community` };
+        // events
+        const ev = (d.events || []).find(e => e.id === id);
+        if (ev) return { label: ev.name, icon: null, href: `#community` };
+        // courses
+        const course = (d.courses || []).find(c => c.id === id);
+        if (course) return { label: course.name, icon: course.logo || null, href: `#education` };
+      }
+      return { label: id, icon: null, href: '#' };
+    }
+
+    // --- Build HTML for all project cards ---
     let html = '';
-    data.projects.forEach((project) => {
-      let tagsHtml = '';
-      project.tags.forEach(t => {
-        tagsHtml += `<span class="tech-tag" role="listitem">${t}</span>`;
-      });
+    sorted.forEach((project, pIdx) => {
+      const images = project.images || [];
+      const stack = project.stack || [];
+      const linkedTo = project.linkedTo || [];
+      const statusKey = project.status === 'in-progress' ? 'projects.status.inprogress' : 'projects.status.completed';
+      const statusClass = project.status === 'in-progress' ? 'inprogress' : 'completed';
+      const stackTagsAttr = stack.join(',');
+      const hasDesc = !!project.descriptionHtml;
+      const hasRepo = !!project.repoUrl;
+
+      // --- Carousel HTML ---
+      let carouselHtml;
+      if (images.length === 0) {
+        carouselHtml = `
+          <div class="project-card-carousel">
+            <div class="project-carousel-placeholder">
+              <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <polyline points="21 15 16 10 5 21"/>
+              </svg>
+            </div>
+          </div>`;
+      } else if (images.length === 1) {
+        carouselHtml = `
+          <div class="project-card-carousel">
+            <div class="project-carousel-viewport">
+              <div class="project-carousel-track">
+                <button class="project-carousel-slide" aria-label="${images[0].caption || project.title}" type="button"
+                  data-lightbox-src="${images[0].src}" data-lightbox-caption="${images[0].caption || project.title}">
+                  <img class="project-carousel-img" src="${images[0].src}" alt="${images[0].caption || project.title}" loading="lazy"/>
+                </button>
+              </div>
+            </div>
+          </div>`;
+      } else {
+        let slidesHtml = '';
+        let dotsHtml = '';
+        images.forEach((img, idx) => {
+          slidesHtml += `
+            <button class="project-carousel-slide" aria-label="${img.caption || project.title}" type="button"
+              data-lightbox-src="${img.src}" data-lightbox-caption="${img.caption || project.title}">
+              <img class="project-carousel-img" src="${img.src}" alt="${img.caption || project.title}" loading="lazy"/>
+            </button>`;
+          dotsHtml += `<button class="project-carousel-dot${idx === 0 ? ' active' : ''}" aria-label="Go to image ${idx + 1}" data-idx="${idx}" type="button"></button>`;
+        });
+        carouselHtml = `
+          <div class="project-card-carousel">
+            <button class="project-carousel-arrow prev" aria-label="Previous image" type="button">&#8249;</button>
+            <div class="project-carousel-viewport">
+              <div class="project-carousel-track">${slidesHtml}</div>
+            </div>
+            <button class="project-carousel-arrow next" aria-label="Next image" type="button">&#8250;</button>
+            <div class="project-carousel-dots">${dotsHtml}</div>
+          </div>`;
+      }
+
+      // --- Linked-to HTML ---
+      let linkedHtml = '';
+      if (linkedTo.length > 0) {
+        let tagsHtml = '';
+        linkedTo.forEach(id => {
+          const resolved = resolveLinkedItem(id);
+          const iconHtml = resolved.icon
+            ? `<img class="project-linked-icon" src="${resolved.icon}" alt="" aria-hidden="true" loading="lazy"/>`
+            : '';
+          tagsHtml += `
+            <a class="project-linked-tag" href="${resolved.href}" aria-label="Linked to ${resolved.label}">
+              ${iconHtml}
+              ${resolved.label}
+            </a>`;
+        });
+        linkedHtml = `
+          <hr class="project-section-divider" aria-hidden="true"/>
+          <div class="project-linked-section">
+            <span class="project-linked-label">${t('projects.linked.label')}</span>
+            <div class="project-linked-tags">${tagsHtml}</div>
+          </div>`;
+      }
+
+      // --- Stack HTML ---
+      let stackHtml = '';
+      if (stack.length > 0) {
+        let stackTagsHtml = '';
+        stack.forEach(s => {
+          stackTagsHtml += `<span class="tech-tag" role="listitem">${s}</span>`;
+        });
+        stackHtml = `
+          <hr class="project-section-divider" aria-hidden="true"/>
+          <div class="project-stack-section">
+            <span class="project-stack-label">${t('projects.stack.label')}</span>
+            <div class="project-stack-track" role="list">${stackTagsHtml}</div>
+          </div>`;
+      }
+
+      // --- Description HTML ---
+      let descHtml = '';
+      if (hasDesc) {
+        const toggleId = `project-desc-toggle-${pIdx}`;
+        const descId = `project-desc-box-${pIdx}`;
+        descHtml = `
+          <hr class="project-section-divider" aria-hidden="true"/>
+          <div class="project-desc-section">
+            <button class="project-desc-toggle" id="${toggleId}" aria-expanded="false" aria-controls="${descId}" type="button">
+              <svg class="project-desc-toggle-icon" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+              ${t('projects.desc.expand')}
+            </button>
+            <div class="project-desc-box" id="${descId}" aria-expanded="false">
+              <div class="project-desc-inner">${project.descriptionHtml}</div>
+            </div>
+          </div>`;
+      }
+
+      // --- Repo link HTML ---
+      let repoHtml = '';
+      if (hasRepo) {
+        repoHtml = `
+          <a class="project-repo-link" href="${project.repoUrl}" target="_blank" rel="noopener noreferrer" aria-label="${t('projects.repo.link')} — ${project.title}">
+            <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+            </svg>
+            ${t('projects.repo.link')}
+          </a>`;
+      }
+
       html += `
-        <article class="card" id="${project.id}">
-          <p class="card-label">${project.category}</p>
-          <h3 class="card-title">${project.title}</h3>
-          <p class="card-body">${project.description}</p>
-          <div class="card-footer" role="list">
-            ${tagsHtml}
+        <article class="project-card reveal" id="${project.id}" role="listitem"
+          data-stack-tags="${stackTagsAttr}">
+          ${carouselHtml}
+          <div class="project-card-body">
+            <p class="project-card-overline">${project.category || ''}</p>
+            <div class="project-card-title-row">
+              <h3 class="project-card-title">${project.title}</h3>
+              <span class="project-status-badge project-status-badge--${statusClass}">${t(statusKey)}</span>
+            </div>
+            <p class="project-card-date">${project.date || ''}</p>
+            ${linkedHtml}
+            ${stackHtml}
+            ${descHtml}
+            ${hasRepo ? `<hr class="project-section-divider" aria-hidden="true"/><div>${repoHtml}</div>` : ''}
           </div>
-        </article>
-      `;
+        </article>`;
     });
+
     container.innerHTML = html;
-    
-    // Apply Experience limits/expansion logic
-    const activeExp = document.querySelector('#exp-filter-bar .filter-btn.active')?.getAttribute('data-filter') || 'all';
-    applySectionLimits('exp-timeline', 4, activeExp, sectionStates.experience);
+
+    // --- Setup per-card carousels ---
+    container.querySelectorAll('.project-card').forEach(card => {
+      const track = card.querySelector('.project-carousel-track');
+      if (!track) return;
+      const slides = track.querySelectorAll('.project-carousel-slide');
+      if (slides.length <= 1) return;
+
+      let currentIdx = 0;
+      const dots = card.querySelectorAll('.project-carousel-dot');
+      const prevBtn = card.querySelector('.project-carousel-arrow.prev');
+      const nextBtn = card.querySelector('.project-carousel-arrow.next');
+
+      function goTo(idx) {
+        currentIdx = (idx + slides.length) % slides.length;
+        track.style.transform = `translateX(-${currentIdx * 100}%)`;
+        dots.forEach((d, i) => d.classList.toggle('active', i === currentIdx));
+      }
+
+      if (prevBtn) prevBtn.addEventListener('click', (e) => { e.stopPropagation(); goTo(currentIdx - 1); });
+      if (nextBtn) nextBtn.addEventListener('click', (e) => { e.stopPropagation(); goTo(currentIdx + 1); });
+      dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+      // Slides click → open lightbox
+      slides.forEach(slide => {
+        slide.addEventListener('click', () => {
+          const src = slide.getAttribute('data-lightbox-src');
+          const caption = slide.getAttribute('data-lightbox-caption');
+          if (src && window.openLightbox) window.openLightbox(src, caption);
+        });
+      });
+    });
+
+    // --- Setup description toggle per card ---
+    container.querySelectorAll('.project-desc-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const descBox = document.getElementById(btn.getAttribute('aria-controls'));
+        if (!descBox) return;
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        descBox.classList.toggle('expanded', !expanded);
+        const label = !expanded ? t('projects.desc.minimize') : t('projects.desc.expand');
+        // Update only text node, preserving the SVG icon
+        const textNode = [...btn.childNodes].find(n => n.nodeType === 3 && n.textContent.trim());
+        if (textNode) textNode.textContent = ` ${label}`;
+      });
+    });
+
+    // Apply current filter initially
+    if (activeFilter && activeFilter !== 'all') {
+      container.querySelectorAll('.project-card').forEach(card => {
+        const cardTags = card.getAttribute('data-stack-tags') || '';
+        card.style.display = cardTags.split(',').includes(activeFilter) ? '' : 'none';
+      });
+      const visible = Array.from(container.querySelectorAll('.project-card')).filter(c => c.style.display !== 'none');
+      const controls = document.getElementById('projects-slider-controls');
+      if (controls && visible.length <= 2) {
+        controls.style.display = 'none';
+      }
+    }
+
+    // --- Setup horizontal slider (desktop arrows) ---
+    setupSlider('projects-list', '#projects-prev', '#projects-next', 2);
   }
+
 
   function renderCertifications(data) {
     const container = document.getElementById('certs-list');
@@ -848,13 +1122,24 @@
     // 3. Projects nav dropdown
     const projDropdown = document.getElementById('nav-dropdown-projects');
     if (projDropdown) {
-      projDropdown.innerHTML = `
-        <li role="none">
-          <a href="#projects" class="nav-dropdown-link" role="menuitem">
-            <span class="nav-dropdown-role">${window.i18n && window.i18n.t ? window.i18n.t('projects.placeholder.label', lang) : 'Under Construction'}</span>
-          </a>
-        </li>
-      `;
+      const projectsList = (window.CV_DATA[lang] || window.CV_DATA.en).projects || [];
+      if (projectsList.length > 0) {
+        projDropdown.innerHTML = projectsList.map(p => `
+          <li role="none">
+            <a href="#${p.id}" class="nav-dropdown-link" role="menuitem">
+              <span class="nav-dropdown-role">${p.title}</span>
+            </a>
+          </li>
+        `).join('');
+      } else {
+        projDropdown.innerHTML = `
+          <li role="none">
+            <a href="#projects" class="nav-dropdown-link" role="menuitem">
+              <span class="nav-dropdown-role">${window.i18n && window.i18n.t ? window.i18n.t('projects.heading', lang) : 'Main Projects'}</span>
+            </a>
+          </li>
+        `;
+      }
     }
 
     // 4. Certifications nav dropdown
@@ -902,6 +1187,7 @@
     const courseCounter = document.getElementById('course-total-counter');
     const pubCounter = document.getElementById('publication-total-counter');
     const eventCounter = document.getElementById('event-total-counter');
+    const projCounter = document.getElementById('project-total-counter');
 
     if (expCounter && data.experience && window.i18n && window.i18n.t) {
       const text = window.i18n.t('exp.total.count', lang).replace('__count__', data.experience.length);
@@ -918,6 +1204,16 @@
     if (eventCounter && data.events && window.i18n && window.i18n.t) {
       const text = window.i18n.t('community.events.total.count', lang).replace('__count__', data.events.length);
       eventCounter.textContent = text;
+    }
+    if (projCounter && data.projects && window.i18n && window.i18n.t) {
+      const count = data.projects.length;
+      if (count > 0) {
+        const text = window.i18n.t('projects.total.count', lang).replace('__count__', count);
+        projCounter.textContent = text;
+        projCounter.style.display = '';
+      } else {
+        projCounter.style.display = 'none';
+      }
     }
   }
 
@@ -974,7 +1270,7 @@
     renderAbout(data);
     renderExperience(data, lang);
     renderEducation(data);
-    renderProjects(data);
+    renderProjects(data, lang);
     renderCertifications(data);
     renderCommunity(data);
     renderFooter(data);

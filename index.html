@@ -619,20 +619,45 @@ Conquistas/Achievements:
     </div>
    </section>
    <!-- ── PROJECTS ───────────────────────────────────── -->
-   <section aria-labelledby="projects-heading" class="section" id="projects">
+   <section aria-labelledby="projects-heading" class="section section--deep" id="projects">
     <div class="container">
      <header class="section-header reveal">
       <p class="overline" data-i18n="projects.overline">
        Hands-on
       </p>
       <h2 class="section-title" data-i18n="projects.heading" id="projects-heading">
-       Selected Projects
+       Main Projects
       </h2>
      </header>
-     <div class="projects-grid reveal reveal-delay-1" id="projects-list">
+     <!-- Filter bar + total counter -->
+     <div class="filter-section-header reveal">
+      <div aria-label="Filter projects by technology" class="filter-bar project-filter-bar" id="project-filter-bar" role="group">
+      </div>
+      <div aria-live="polite" class="total-counter-tag" id="project-total-counter" role="status">
+      </div>
+     </div>
+     <!-- Horizontal slider of project cards -->
+     <div class="slider-wrapper">
+      <div aria-label="Main projects" class="projects-slider-track reveal reveal-delay-1" id="projects-list" role="list">
+      </div>
+      <div class="slider-controls" id="projects-slider-controls">
+       <button aria-label="Previous project" class="slider-arrow-btn" id="projects-prev">
+        <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24">
+         <polyline points="15 18 9 12 15 6">
+         </polyline>
+        </svg>
+       </button>
+       <button aria-label="Next project" class="slider-arrow-btn" id="projects-next">
+        <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24">
+         <polyline points="9 18 15 12 9 6">
+         </polyline>
+        </svg>
+       </button>
+      </div>
      </div>
     </div>
    </section>
+
    <!-- ── CERTIFICATIONS ─────────────────────────────── -->
    <section aria-labelledby="certs-heading" class="section section--deep" id="certifications">
     <div class="container">
