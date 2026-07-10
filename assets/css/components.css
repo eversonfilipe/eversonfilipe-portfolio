@@ -118,6 +118,10 @@
   color: var(--color-text-primary);
 }
 
+.nav-link[href="#projects"] {
+  font-weight: var(--font-weight-emphasis) !important;
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;

@@ -1180,13 +1180,47 @@
     if (projDropdown) {
       const projectsList = (window.CV_DATA[lang] || window.CV_DATA.en).projects || [];
       if (projectsList.length > 0) {
-        projDropdown.innerHTML = projectsList.map(p => `
-          <li role="none">
-            <a href="#${p.id}" class="nav-dropdown-link" role="menuitem">
-              <span class="nav-dropdown-role">${p.title}</span>
-            </a>
-          </li>
-        `).join('');
+        // Resolve fallbacks dynamically and sort chronologically (recent first)
+        const enriched = projectsList.map(p => {
+          const id = p.id;
+          const getFallbackField = (field, defaultVal) => {
+            if (p[field] !== undefined && p[field] !== null && (typeof p[field] !== 'string' || p[field].trim() !== '')) {
+              return p[field];
+            }
+            const langs = ['en', 'pt', 'es'];
+            for (const l of langs) {
+              const otherData = window.CV_DATA[l];
+              if (otherData && otherData.projects) {
+                const otherProj = otherData.projects.find(op => op.id === id);
+                if (otherProj && otherProj[field] !== undefined && otherProj[field] !== null && (typeof otherProj[field] !== 'string' || otherProj[field].trim() !== '')) {
+                  return otherProj[field];
+                }
+              }
+            }
+            return defaultVal;
+          };
+
+          return {
+            id: p.id,
+            title: getFallbackField('title', p.title),
+            status: getFallbackField('status', 'completed'),
+            date: getFallbackField('date', '')
+          };
+        });
+
+        const sortedProjects = [...enriched].sort((a, b) => getEndDateValue(b.date) - getEndDateValue(a.date));
+
+        projDropdown.innerHTML = sortedProjects.map(p => {
+          const isCompleted = p.status === 'completed';
+          const titleOpacity = isCompleted ? ' style="opacity: 0.55;"' : '';
+          return `
+            <li role="none">
+              <a href="#${p.id}" class="nav-dropdown-link" role="menuitem">
+                <span class="nav-dropdown-role"${titleOpacity}>${p.title}</span>
+              </a>
+            </li>
+          `;
+        }).join('');
       } else {
         projDropdown.innerHTML = `
           <li role="none">
