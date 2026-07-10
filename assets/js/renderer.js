@@ -654,14 +654,38 @@
     // --- Build HTML for all project cards ---
     let html = '';
     sorted.forEach((project, pIdx) => {
-      const images = project.images || [];
-      const stack = project.stack || [];
-      const linkedTo = project.linkedTo || [];
-      const statusKey = project.status === 'in-progress' ? 'projects.status.inprogress' : 'projects.status.completed';
-      const statusClass = project.status === 'in-progress' ? 'inprogress' : 'completed';
+      // Dynamic fallback for fields in case of multilingual data entry omissions
+      const id = project.id;
+      const getFallbackField = (field, defaultVal) => {
+        if (project[field] !== undefined && project[field] !== null && (typeof project[field] !== 'string' || project[field].trim() !== '')) {
+          return project[field];
+        }
+        const langs = ['en', 'pt', 'es'];
+        for (const l of langs) {
+          const otherData = window.CV_DATA[l];
+          if (otherData && otherData.projects) {
+            const otherProj = otherData.projects.find(p => p.id === id);
+            if (otherProj && otherProj[field] !== undefined && otherProj[field] !== null && (typeof otherProj[field] !== 'string' || otherProj[field].trim() !== '')) {
+              return otherProj[field];
+            }
+          }
+        }
+        return defaultVal;
+      };
+
+      const images = getFallbackField('images', []);
+      const stack = getFallbackField('stack', []);
+      const linkedTo = getFallbackField('linkedTo', []);
+      const repoUrl = getFallbackField('repoUrl', '');
+      const status = getFallbackField('status', 'completed');
+      const category = getFallbackField('category', '');
+      const date = getFallbackField('date', '');
+
+      const statusKey = status === 'in-progress' ? 'projects.status.inprogress' : 'projects.status.completed';
+      const statusClass = status === 'in-progress' ? 'inprogress' : 'completed';
       const stackTagsAttr = stack.join(',');
       const hasDesc = !!project.descriptionHtml;
-      const hasRepo = !!project.repoUrl;
+      const hasRepo = !!repoUrl;
 
       // --- Carousel HTML ---
       let carouselHtml;
@@ -714,7 +738,7 @@
       let linkedHtml = '';
       if (linkedTo.length > 0) {
         let tagsHtml = '';
-        linkedTo.forEach(id => {
+        linkedTo.slice(0, 3).forEach(id => {
           const resolved = resolveLinkedItem(id);
           const iconHtml = resolved.icon
             ? `<img class="project-linked-icon" src="${resolved.icon}" alt="" aria-hidden="true" loading="lazy"/>`
@@ -772,7 +796,7 @@
       let repoHtml = '';
       if (hasRepo) {
         repoHtml = `
-          <a class="project-repo-link" href="${project.repoUrl}" target="_blank" rel="noopener noreferrer" aria-label="${t('projects.repo.link')} — ${project.title}">
+          <a class="project-repo-link" href="${repoUrl}" target="_blank" rel="noopener noreferrer" aria-label="${t('projects.repo.link')} — ${project.title}">
             <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
               <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
             </svg>
@@ -785,12 +809,12 @@
           data-stack-tags="${stackTagsAttr}">
           ${carouselHtml}
           <div class="project-card-body">
-            <p class="project-card-overline">${project.category || ''}</p>
+            <p class="project-card-overline">${category}</p>
             <div class="project-card-title-row">
               <h3 class="project-card-title">${project.title}</h3>
               <span class="project-status-badge project-status-badge--${statusClass}">${t(statusKey)}</span>
             </div>
-            <p class="project-card-date">${project.date || ''}</p>
+            <p class="project-card-date">${date}</p>
             ${linkedHtml}
             ${stackHtml}
             ${descHtml}
