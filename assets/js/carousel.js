@@ -126,8 +126,13 @@
     function closeLightbox() {
       lightbox.classList.remove('open');
       lightbox.setAttribute('aria-hidden', 'true');
-      const triggeringSlide = slides[lightboxIndex];
-      if (triggeringSlide) triggeringSlide.focus();
+      if (window.lightboxCloseTrigger) {
+        window.lightboxCloseTrigger.focus();
+        window.lightboxCloseTrigger = null;
+      } else {
+        const triggeringSlide = slides[lightboxIndex];
+        if (triggeringSlide) triggeringSlide.focus();
+      }
     }
 
     function navigateLightbox(dir) {
@@ -183,6 +188,32 @@
       carouselListenersBound = true;
     }
   }
+
+  window.openLightboxImage = function(src, caption) {
+    const lightbox = document.getElementById('lightbox-modal');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const lightboxPrev = document.getElementById('lightbox-prev');
+    const lightboxNext = document.getElementById('lightbox-next');
+
+    if (!lightbox || !lightboxImg) return;
+
+    lightboxImg.src = src;
+    lightboxImg.alt = caption || 'Project Image';
+    if (lightboxCaption) lightboxCaption.textContent = caption || '';
+
+    if (lightboxPrev) lightboxPrev.style.display = 'none';
+    if (lightboxNext) lightboxNext.style.display = 'none';
+
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    setTimeout(() => {
+      if (lightboxClose) lightboxClose.focus();
+    }, 50);
+
+    window.lightboxCloseTrigger = document.activeElement;
+  };
 
   window.initCarousel = initCarousel;
 

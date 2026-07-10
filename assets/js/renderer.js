@@ -828,7 +828,7 @@
         slide.addEventListener('click', () => {
           const src = slide.getAttribute('data-lightbox-src');
           const caption = slide.getAttribute('data-lightbox-caption');
-          if (src && window.openLightbox) window.openLightbox(src, caption);
+          if (src && window.openLightboxImage) window.openLightboxImage(src, caption);
         });
       });
     });
