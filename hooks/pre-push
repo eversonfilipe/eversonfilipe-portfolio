@@ -1,0 +1,40 @@
+#!/bin/sh
+echo "=== GitOps Pre-Push Validation ==="
+
+# 1. Check syntax of Javascript files
+echo "Checking JS syntax..."
+node --check assets/js/renderer.js
+if [ $? -ne 0 ]; then
+  echo "❌ JS Syntax Error in renderer.js! Push aborted."
+  exit 1
+fi
+
+node --check assets/js/cv_data.js
+if [ $? -ne 0 ]; then
+  echo "❌ JS Syntax Error in cv_data.js! Push aborted."
+  exit 1
+fi
+
+node --check assets/js/i18n.js
+if [ $? -ne 0 ]; then
+  echo "❌ JS Syntax Error in i18n.js! Push aborted."
+  exit 1
+fi
+
+# 2. Re-compile static blocks locally
+echo "Running static builder (build_static.py)..."
+python build_static.py
+if [ $? -ne 0 ]; then
+  echo "❌ Static Re-compilation Failed! Push aborted."
+  exit 1
+fi
+
+# 3. Double check canonical/dashes conformity
+echo "Checking noscript dashes conformity..."
+grep -E "–|—" index.html | grep noscript
+if [ $? -eq 0 ]; then
+  echo "⚠️ Warning: Found en-dashes or em-dashes in index.html noscript block."
+fi
+
+echo "✅ Pre-Push Validation Successful. Proceeding to push..."
+exit 0

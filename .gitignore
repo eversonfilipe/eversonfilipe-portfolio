@@ -23,3 +23,13 @@ package-lock.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Python scripts and local compilation tools
+build_static.py
+*.py
+*.pyc
+__pycache__/
+
+# Agent metadata and credentials (not for deployment)
+.agents/
+.gemini/
