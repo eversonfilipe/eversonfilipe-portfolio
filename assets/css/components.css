@@ -1784,6 +1784,11 @@
   transform: translateY(-50%) scale(1.1);
 }
 
+.project-carousel-arrow:focus-visible {
+  outline: 2px solid var(--color-accent-electric-text);
+  outline-offset: 2px;
+}
+
 .project-carousel-arrow.prev { left: var(--space-2); }
 .project-carousel-arrow.next { right: var(--space-2); }
 
@@ -1807,6 +1812,22 @@
   padding: 0;
   cursor: pointer;
   transition: background var(--duration-fast) var(--ease-out), transform var(--duration-fast) var(--ease-out);
+  position: relative;
+}
+
+.project-carousel-dot::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+}
+
+.project-carousel-dot:focus-visible {
+  outline: 2px solid var(--color-accent-electric-text);
+  outline-offset: 3px;
 }
 
 .project-carousel-dot.active {
@@ -1932,6 +1953,11 @@
   border-color: rgba(35, 61, 255, 0.45);
   color: var(--color-text-primary);
   background: rgba(35, 61, 255, 0.08);
+}
+
+.project-linked-tag:focus-visible {
+  outline: 2px solid var(--color-accent-electric-text);
+  outline-offset: 2px;
 }
 
 .project-linked-icon {
