@@ -861,6 +861,38 @@
       }
     }
 
+    // --- Dynamic JSON-LD Structured Data for Projects (SEO & LLMO) ---
+    let existingJsonLd = document.getElementById('jsonld-projects');
+    if (existingJsonLd) {
+      existingJsonLd.remove();
+    }
+
+    if (sorted.length > 0) {
+      const projectsSchema = {
+        "@context": "https://schema.org",
+        "@graph": sorted.map(proj => ({
+          "@type": "SoftwareSourceCode",
+          "@id": `https://eversonfilipe.github.io/eversonfilipe-portfolio/#${proj.id}`,
+          "name": proj.title,
+          "description": proj.descriptionHtml.replace(/<[^>]*>/g, '').trim(),
+          "programmingLanguage": proj.stack || [],
+          "codeRepository": proj.repoUrl || "",
+          "author": {
+            "@type": "Person",
+            "name": "Everson Filipe",
+            "url": "https://eversonfilipe.github.io/eversonfilipe-portfolio/"
+          },
+          "creativeWorkStatus": proj.status === 'in-progress' ? 'http://schema.org/ActiveActionStatus' : 'http://schema.org/CompletedActionStatus'
+        }))
+      };
+
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.id = 'jsonld-projects';
+      script.textContent = JSON.stringify(projectsSchema);
+      document.head.appendChild(script);
+    }
+
     // --- Setup horizontal slider (desktop arrows) ---
     setupSlider('projects-list', '#projects-prev', '#projects-next', 2);
   }

@@ -24,6 +24,14 @@ My work is grounded in data integrity and workflow standardization. Operating wi
 ### Core Stack
 Python, Django Admin, JSONLogic, REST API, AWS IAM, Amazon S3, EC2, Step Functions, Amazon Athena, Postman, Pytest, openpyxl, Pandas, Jira, ClickUp
 
+## Main Projects
+### AI Automation - B2B Onboarding Pipeline (Mar 2025 - Aug 2025) [Completed]
+  Category: AI Engineering
+  Stack: Python, JSONLogic, AWS Step Functions, Amazon S3, Django Admin, Postman, Pytest
+  Linked to: kartado
+  Description:
+  Designed and implemented an automated B2B client onboarding pipeline integrated with Kartado's SaaS ERP platform. The system reduced average configuration time per client from 3 days to under 4 hours.Key components: JSONLogic-driven rule engine for dynamic configuration resolution, AWS Step Functions orchestration, S3 document storage, and Django Admin UI for operations team control.Processed 42+ B2B clients through the automated flowAchieved 32% team output contribution within first monthsZero production incidents in 6 months of operation
+
 ## Experience
 ### Technical Implementation Intern at Kartado (Sep 2025 - Present)
 - Configured JSONLogic rules for dynamic forms across 42+ client environments via Django Admin, ensuring data integrity and functional consistency.
@@ -112,6 +120,14 @@ Meu trabalho e fundamentado em integridade de dados e padronizacao de fluxos. Op
 ### Core Stack
 Python, Django Admin, JSONLogic, REST API, AWS IAM, Amazon S3, EC2, Step Functions, Amazon Athena, Postman, Pytest, openpyxl, Pandas, Jira, ClickUp
 
+## Main Projects
+### Automacao com IA - Pipeline de Onboarding B2B (Mar 2025 - Ago 2025) [Completed]
+  Category: Engenharia de IA
+  Stack: Python, JSONLogic, AWS Step Functions, Amazon S3, Django Admin, Postman, Pytest
+  Linked to: kartado
+  Description:
+  Projetei e implementei um pipeline automatizado de onboarding B2B integrado ao ERP SaaS da Kartado. O sistema reduziu o tempo medio de configuracao por cliente de 3 dias para menos de 4 horas.Componentes-chave: motor de regras baseado em JSONLogic para resolucao dinamica de configuracoes, orquestracao via AWS Step Functions, armazenamento de documentos no S3 e UI de controle via Django Admin para a equipe de operacoes.Mais de 42 clientes B2B processados pelo fluxo automatizadoContribuicao de 32% no output da equipe nos primeiros mesesZero incidentes em producao em 6 meses de operacao
+
 ## Experience
 ### Estagiario de Implantacao Tecnica at Kartado (Set 2025 - Presente)
 - Configurou regras em JSONLogic para formularios dinamicos em mais de 42 ambientes de clientes via Django Admin, garantindo integridade dos dados e consistencia funcional.
@@ -199,6 +215,14 @@ Mi trabajo se basa en la integridad de datos y estandarizacion de flujos. Opero 
 
 ### Core Stack
 Python, Django Admin, JSONLogic, REST API, AWS IAM, Amazon S3, EC2, Step Functions, Amazon Athena, Postman, Pytest, openpyxl, Pandas, Jira, ClickUp
+
+## Main Projects
+### Automatizacion con IA - Pipeline de Onboarding B2B (Mar 2025 - Ago 2025) [Completed]
+  Category: Ingenieria de IA
+  Stack: Python, JSONLogic, AWS Step Functions, Amazon S3, Django Admin, Postman, Pytest
+  Linked to: kartado
+  Description:
+  Disene e implemente un pipeline automatizado de onboarding B2B integrado con el ERP SaaS de Kartado. El sistema redujo el tiempo promedio de configuracion por cliente de 3 dias a menos de 4 horas.Componentes clave: motor de reglas basado en JSONLogic para resolucion dinamica de configuraciones, orquestacion con AWS Step Functions, almacenamiento de documentos en S3 y UI de control via Django Admin para el equipo de operaciones.Mas de 42 clientes B2B procesados por el flujo automatizadoContribucion del 32% en el output del equipo en los primeros mesesCero incidentes en produccion en 6 meses de operacion
 
 ## Experience
 ### Pasante de Implementacion Tecnica at Kartado (Sep 2025 - Presente)
