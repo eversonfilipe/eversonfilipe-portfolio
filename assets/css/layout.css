@@ -70,10 +70,66 @@
   pointer-events: none;
 }
 
+.hero-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding-top: 100px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 992px) {
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: var(--space-12);
+    align-items: center;
+    padding-top: 80px;
+  }
+}
+
+.hero-profile-wrapper {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  flex-shrink: 0;
+  opacity: 0;
+  animation: fadeUp var(--duration-slow) var(--ease-out) 0.3s forwards;
+}
+
+@media (min-width: 992px) {
+  .hero-profile-wrapper {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+.hero-profile-backdrop {
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--color-accent-electric);
+  background-color: var(--color-accent-electric-dim);
+  z-index: 1;
+}
+
+.hero-profile-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid var(--color-accent-mist);
+  z-index: 2;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+
 .hero-content {
   position: relative;
   z-index: 10;
-  padding-top: 80px; /* nav height */
   width: 100%;
 }
 
