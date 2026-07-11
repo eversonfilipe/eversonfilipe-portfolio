@@ -2,12 +2,12 @@
 Implantação Técnica · Integrações · Integridade de Dados | Unindo requisitos de negócio à execução escalável de software por meio de validação de dados e automação de processos.
 
 ## About
-Como Analista de Implantacao especializado em Engenharia de Implantacao e Automacao orientada por IA, transformo requisitos complexos de negocio em fluxos de trabalho escalaveis e configuracoes de software confiaveis para clientes B2B.
-Trabalhando diretamente com ERPs em nuvem e plataformas SaaS, configuro solucoes usando Python, Django Admin, JSONLogic e AWS, garantindo integracoes com REST APIs e servicos de BI como o Amazon Athena.
-Meu trabalho e fundamentado em integridade de dados e padronizacao de fluxos. Opero dentro de frameworks Ageis, mentoro novos engenheiros e contribuo diretamente em ambientes de producao desde o primeiro dia.
+Como Analista de Implantação especializado em Engenharia de Implantação e Automação orientada por IA, transformo requisitos de negócio complexos em fluxos de trabalho escaláveis, confiáveis e configurações de software para clientes B2B.
+Atuando diretamente com sistemas ERP em nuvem e plataformas SaaS, configuro soluções utilizando Python, Django Admin, JSONLogic e AWS, garantindo integrações com APIs REST e serviços de BI em nuvem, como o Amazon Athena.
+Meu trabalho é fundamentado em integridade de dados e padronização de fluxos de trabalho. Em ambientes Ágeis, realizo a mentoria de novos profissionais, conduzo onboardings técnicos e contribuo diretamente para ambientes de produção desde o primeiro dia.
 
 ### Core Stack
-Python, Django Admin, JSONLogic, REST API, AWS IAM, Amazon S3, EC2, Step Functions, Amazon Athena, Postman, Pytest, openpyxl, Pandas, Jira, ClickUp
+Python, Django Admin, JSONLogic, REST API, AWS IAM, Amazon S3, EC2, Step Functions, Postman, openpyxl, Pandas, Jira, ClickUp
 
 ## Main Projects
 ### Automacao com IA - Pipeline de Onboarding B2B (Mar 2025 - Ago 2025) [Completed]
@@ -19,31 +19,31 @@ Python, Django Admin, JSONLogic, REST API, AWS IAM, Amazon S3, EC2, Step Functio
   Projetei e implementei um pipeline automatizado de onboarding B2B integrado ao ERP SaaS da Kartado. O sistema reduziu o tempo medio de configuracao por cliente de 3 dias para menos de 4 horas.Componentes-chave: motor de regras baseado em JSONLogic para resolucao dinamica de configuracoes, orquestracao via AWS Step Functions, armazenamento de documentos no S3 e UI de controle via Django Admin para a equipe de operacoes.Mais de 42 clientes B2B processados pelo fluxo automatizadoContribuicao de 32% no output da equipe nos primeiros mesesZero incidentes em producao em 6 meses de operacao
 
 ## Experience
-### Estagiario de Implantacao Tecnica at Kartado (Set 2025 - Presente)
-- Configurou regras em JSONLogic para formularios dinamicos em mais de 42 ambientes de clientes via Django Admin, garantindo integridade dos dados e consistencia funcional.
-- Desenvolveu scripts de automacao ETL em Python integrados ao Django ORM, substituindo fluxos manuais de transformacao e carregamento de dados.
-- Criou scripts em notebooks Python para extracao de metadados JSON, validacao de esquemas e deteccao proativa de inconsistencias estruturais em datasets exportados.
-- Corrigiu mapas GIS, ajustou Shapefiles e validou geometrias espaciais para apoiar a parametrizacao de sistemas de concessoes rodoviarias.
-- Manteve documentacao de integracoes REST API e JWT com scripts de validacao Pytest para modulos Django.
-- Utilizou AWS IAM, EC2, ECS (Docker), Step Functions, ODBC e Amazon Athena em infraestrutura, acesso seguro, integracao de dados e fluxos de analise.
-- Automatizou a geracao de planilhas de parametrizacao com Python, Pandas e openpyxl, reduzindo o esforco manual nos fluxos de implantacao.
+### Estagiário em Implantação Técnica at Kartado (Set 2025 - Presente)
+- Configurei regras em JSONLogic para formulários dinâmicos em mais de 42 ambientes de clientes, utilizando Django Admin para garantir integridade dos dados e consistência funcional.
+- Desenvolvi scripts de automação ETL em Python integrados ao Django ORM, substituindo processos manuais de transformação e carregamento de dados.
+- Desenvolvi scripts em Python (Jupyter Notebook) para extração de metadados JSON, validação de esquemas e detecção proativa de inconsistências estruturais em conjuntos de dados exportados.
+- Corrigi mapas GIS, ajustei arquivos Shapefile e validei geometrias espaciais para apoiar a parametrização de sistemas de concessionárias de rodovias.
+- Mantive a documentação de integrações REST API e JWT, além de scripts de validação com Pytest para módulos Django.
+- Utilizei AWS IAM, EC2, ECS (Docker), Step Functions, ODBC e Amazon Athena em fluxos de infraestrutura, controle de acesso, integração de dados e análises.
+- Automatizei a geração de planilhas de parametrização utilizando Python, Pandas e openpyxl, reduzindo o esforço manual nos processos de implantação.
 Conquistas/Achievements:
-  * [Otimização] Reduziu o tempo de análise de parametrização em 40% com scripts Python de validação de esquemas.
-  * [Qualidade] Garantia de zero falhas de sintaxe em produção em mais de 20 planilhas de concessionárias B2B.
+  * [Reconhecimento] Indicado ao Prêmio Agilidade do Mês da empresa em abril de 2026 pelo desempenho em Implantação Técnica.
+  * [Entrega] Contribuiu para que a equipe alcançasse 99,48% de entregas de implantação no prazo, mantendo 100% de pontualidade nas próprias entregas durante o primeiro semestre de 2026.
 
-### Aprendiz em Gestao Agil de Produtos at Daus (Dez 2024 - Jun 2025)
-- Aplicou Scrum, Kanban e Lean Thinking para conduzir Product Discovery e analise de requisitos em projetos internos e de multiplos clientes.
-- Documentou insights de produto, fluxos de usuarios e requisitos funcionais no ecossistema Atlassian (Jira, Confluence) e FigJam.
-- Mentorou duas turmas de estagiarios em programas de onboarding em Gestao Agil de Produtos e entrega de MVPs.
+### Aprendiz em Gestão Ágil de Produtos at Daus (Dez 2024 - Jun 2025)
+- Apliquei Scrum, Kanban e Lean Thinking para conduzir discovery de produtos e levantamento de requisitos em projetos internos e de múltiplos clientes.
+- Documentei insights de produto, fluxos de usuários e requisitos funcionais utilizando o ecossistema Atlassian (Jira e Confluence) e FigJam.
+- Mentorei dois cohorts simultâneos durante programas estruturados de onboarding em Gestão Ágil de Produtos e desenvolvimento de MVPs.
 Conquistas/Achievements:
-  * [Mentoria] Sucesso no onboarding e mentoria de 2 turmas de estagiários em práticas de frameworks Ágeis e entrega de MVPs.
+  * [Mentoria] Mentorei dois cohorts simultâneos, incluindo estagiários do programa SOFTEX e uma turma do Porto Digital/Embarque Digital.
 
 ## Education
-### Ciência da Computação - UniFavip Wyden (Fev 2024 - Em curso) [Bacharelado]
-  Highlights: Média Geral: 9.2/10, Mais de 1200 Horas Cursadas, Foco em Algoritmos e POO
+### Ciência da Computação - UniFavip Wyden (Fev 2024 - Presente) [Bacharelado]
+  Highlights: Participação ativa em feiras de apresentação de projetos extensionistas com empresas convidadas, como expositor., Capacitação em cursos extracurriculares, eventos de tecnologia e palestras oferecidas pela instituição., Selecionado para mobilidade remota em espanhol em 2024.2, em parceria com Universidad Siglo 21 para produção de projetos para competições envolvendo ODS.
 
 ### Programa de Mentoria em Inteligência Artificial - Oferecido pela LAB.AI, do Instituto Joule (Ago 2025 - Set 2025) [Programa de Mentoria]
-  Highlights: Mentoria de IA, Preparação de Carreira, Certificado Lab.AI
+  Highlights: Selecionado para mentorias individuais e coletivas direcionadas á tecnologia através do programa Lab.AI - Laboratório de Mentes, oferecido pelo Instituto Joule em parceria com o Instituto Localiza., Laboratórios hand-on de projetos de tecnologia e impacto social otimizados por ferramentas de Inteligência Artificial., Palestras, mentorias e dinâmicas individuais ou coletivas com profissionais voluntários da área.
 
 ## Courses
 - Postman: Do Zero ao Avançado + Testes Automatizados (Udemy, Dez 2025)
@@ -53,21 +53,31 @@ Conquistas/Achievements:
 - Certificado de Inglês EF SET 69/100 (C1 Avançado) (EF Education First, Mar 2025)
 
 ## Publications
-- Escalando Configurações B2B com Regras JSONLogic (Medium, Fev 2026)
-- Otimizando Onboarding de Estagiários via Mentoria Ágil Estruturada (LinkedIn, Jan 2026)
+- From Chaos to Clarity (Medium, Out 2025)
+- The Fallacy of “Plural MVP” in GovTech: Why Unrelenting Focus is the Only Real Metric of Success. (Medium, Jul 2025)
+- Communication and its Paradigms (Medium, Abr 2025)
+- Product Optimization: Too much UI can break your UX (Medium, Mar 2025)
+- From Problem to Solution: A Framework for Building Value-Driven Products (Medium, Fev 2025)
+- Design your thinking: the art of being (Medium, Jan 2025)
+- Using AI for the Customer Experience Management (Medium, Dez 2024)
+- Development of the Creative Economy in Northeastern Brazil (Medium, Dez 2024)
+- Alive Architecture: Redefining How We Build a Sustainable Future (Medium, Dez 2024)
+- Some trends do not stay as trends: the world is a fractal (Medium, Nov 2024)
+- Fishes and cars: UX’s study objects (Medium, Nov 2024)
+- Gestão Ágil Simplificada (LinkedIn, Out 2024)
 
 ## Volunteering
-### Coorganizador at Google Developers Group (GDG Barueri) (Ago 2025 - Atual)
-  Highlights: Meetups de Tecnologia, Engajamento Comunitário, Ecossistema Google Developer
+### Coorganizador at Google Developers Group (GDG Barueri) (Ago 2025 - Presente)
+  Highlights: Coorganizou eventos voltados para Tecnologia, Inteligência Artificial (IA) e Inovação no Google Developers Group (GDG) Barueri.
 
-### Embaixador e Facilitador at Politize! (Politize! Caruaru) (Mai 2025 - Atual)
-  Highlights: Oficinas de Educação Cívica, Mais de 15 Sessões Facilitadas, Liderança Pública
+### Embaixador e Facilitador at Politize! (Politize! Caruaru) (Mai 2025 - Presente)
+  Highlights: Criou e coorganizou workshops sobre tecnologia, política e direitos civis aplicados à sociedade na Politize! Caruaru, além de contribuir para projetos internos.
 
 ### Membro do Comitê de OGT e Marketing at AIESEC (AIESEC no Mackenzie) (Mar 2025 - Ago 2025)
-  Highlights: Vendas B2B, Gestão do Programa OGT, Liderança Intercultural
+  Highlights: Atuou como membro da equipe de Outgoing Global Talent (OGT) da AIESEC Mackenzie e foi selecionado como Líder de Marketing do comitê., Desenvolveu materiais de marketing e conduziu reuniões com líderes de equipe, incluindo a colaboração com comitês da AIESEC de outros países, como Jalandhar, na Índia.
 
 ### Instrutor de Soft Skills at Vai Na Web (Jan 2025)
-  Highlights: Treinamento de Soft Skills, Mentoria de Carreira Tech, Foco em Inclusão
+  Highlights: Ministrou uma palestra sobre soft skills na Vai na Web, em janeiro de 2025, demonstrando sua aplicação prática na resolução de problemas de Tecnologia da Informação., Abordou como a empatia fortalece a compreensão das necessidades de clientes e usuários, favorecendo o pensamento sistêmico e a busca por soluções mais eficazes.
 
 ## Hackathons
 - Hackathon HAVK - Hacking the Desert (HAVK, Jul 2025)
@@ -89,6 +99,6 @@ Conquistas/Achievements:
 - BRICS Youth - Role: Participante (Remoto, Mai 2025)
 - As Tendências para as Novas Gerações de Profissionais - Role: Palestrante (Recife Front-End Community, Fev 2025)
 - ExpoTech 2024.2 - Role: Expositor (UniFavip Wyden, Nov 2024)
-- Campus Party NE 2024 - Role: Participante (Sao Lourenco da Mata, Ago 2024)
-- Caruaru Campus Party Day - Role: Participante (Caruaru, Set 2024)
+- Campus Party NE 2024 - Role: Participante (Sao Lourenco da Mata, Set 2024)
+- Caruaru Campus Party Day - Role: Participante (Caruaru, Ago 2024)
 

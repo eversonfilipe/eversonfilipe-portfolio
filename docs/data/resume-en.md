@@ -7,7 +7,7 @@ Working directly with cloud-based ERP systems and SaaS platforms, I configure so
 My work is grounded in data integrity and workflow standardization. Operating within Agile frameworks, I mentor new engineers, lead technical onboarding, and contribute directly to production environments from day one.
 
 ### Core Stack
-Python, Django Admin, JSONLogic, REST API, AWS IAM, Amazon S3, EC2, Step Functions, Amazon Athena, Postman, Pytest, openpyxl, Pandas, Jira, ClickUp
+Python, Django Admin, JSONLogic, REST API, AWS IAM, Amazon S3, EC2, Step Functions, Postman, openpyxl, Pandas, Jira, ClickUp
 
 ## Main Projects
 ### AI Automation - B2B Onboarding Pipeline (Mar 2025 - Aug 2025) [Completed]
@@ -25,25 +25,25 @@ Python, Django Admin, JSONLogic, REST API, AWS IAM, Amazon S3, EC2, Step Functio
 - Built notebook-based Python scripts for JSON metadata extraction, schema validation, and proactive detection of structural inconsistencies in exported datasets.
 - Corrected GIS maps, adjusted Shapefiles, and validated spatial geometries to support highway concession system parameterization.
 - Maintained REST API and JWT integration documentation alongside Pytest validation scripts for Django modules.
-- Leveraged AWS IAM, EC2, ECS (Docker), Step Functions, ODBC, and Amazon Athena across infrastructure, secure access, data integration, and analytics workflows.
+- Leveraged AWS IAM, Amazon EC2, Amazon ECS (Docker), AWS Step Functions, ODBC, and Amazon Athena across infrastructure, secure access, data integration, and analytics workflows in client environments.
 - Automated parameterization spreadsheet generation using Python, Pandas, and openpyxl, reducing manual effort in implementation workflows.
 Conquistas/Achievements:
-  * [Optimization] Reduced parameterization analysis time by 40% with Python schema validation scripts.
-  * [Quality] Ensured zero production syntax failures across 20+ B2B concession parameterization spreadsheets.
+  * [Recognition] Nominated for the company's Monthly Agility Award in April 2026 for technical implementation performance and bugs fixes.
+  * [Delivery] Helped achieve 99.48% on-time implementation delivery while maintaining a 100% personal on-time completion rate throughout H1 2026.
 
-### Agile Product Manager Learner at Daus (Dec 2024 - Jun 2025)
-- Applied Scrum, Kanban, and Lean Thinking frameworks to drive product discovery and requirements analysis across internal and multi-client portfolio projects.
+### Agile Product Management Learner at Daus (Dec 2024 - Jun 2025)
+- Applied Scrum, Kanban, and Lean Thinking frameworks to drive product discovery and requirements analysis across internal and multi-client portfolio projects in a software house environment.
 - Documented product insights, user flows, and functional requirements across the Atlassian ecosystem (Jira, Confluence) and FigJam.
-- Mentored two intern cohorts across structured onboarding programs in Agile Product Management workflows and MVP delivery.
+- Mentored two intern cohorts across structured onboarding programs in Agile Product Management workflows and MVP-delivery.
 Conquistas/Achievements:
-  * [Mentorship] Successfully onboarded and mentored 2 intern cohorts in Agile framework practices and MVP delivery.
+  * [Mentorship] Mentored two concurrent cohorts, including SOFTEX interns and a Porto Digital/Embarque Digital student class.
 
 ## Education
-### Computer Science - UniFavip Wyden (Feb 2024 - In Progress) [Bachelor's Degree]
-  Highlights: GPA: 9.2/10, 1200+ Hours Completed, Algorithms & OOP Focus
+### Computer Science - UniFavip Wyden (Feb 2024 - Present) [Bachelor's Degree]
+  Highlights: Active participation as an exhibitor at extension project fairs showcasing university projects to invited companies., Professional development through extracurricular courses, technology events, and lectures offered by the institution., Selected for a remote academic mobility program conducted in Spanish during the 2024.2 semester, in partnership with Universidad Siglo 21, to develop projects for competitions focused on the United Nations Sustainable Development Goals (SDGs).
 
 ### Artificial Intelligence Mentorship Program - Offered by LAB.AI, Instituto Joule (Aug 2025 - Sep 2025) [Mentorship Program]
-  Highlights: AI Mentorship, Career Readiness, Lab.AI Certificate
+  Highlights: Selected to participate in individual and group technology-focused mentoring through the Lab.AI - Laboratório de Mentes program, offered by Instituto Joule in partnership with Instituto Localiza., Hands-on laboratories focused on technology and social impact projects enhanced by Artificial Intelligence tools., Lectures, mentorship sessions, and individual and group activities led by volunteer professionals from the technology industry.
 
 ## Courses
 - Postman: From Zero to Advanced + Automated Testing (Udemy, Dec 2025)
@@ -53,21 +53,31 @@ Conquistas/Achievements:
 - EF SET English Certificate 69/100 (C1 Advanced) (EF Education First, Mar 2025)
 
 ## Publications
-- Scaling B2B Configurations with JSONLogic Rules (Medium, Feb 2026)
-- Optimizing Intern Onboarding via Structured Agile Mentorship (LinkedIn, Jan 2026)
+- From Chaos to Clarity (Medium, Oct 2025)
+- The Fallacy of “Plural MVP” in GovTech: Why Unrelenting Focus is the Only Real Metric of Success. (Medium, Jul 2025)
+- Communication and its Paradigms (Medium, Apr 2025)
+- Product Optimization: Too much UI can break your UX (Medium, Mar 2025)
+- From Problem to Solution: A Framework for Building Value-Driven Products (Medium, Feb 2025)
+- Design your thinking: the art of being (Medium, Jan 2025)
+- Using AI for the Customer Experience Management (Medium, Dec 2024)
+- Development of the Creative Economy in Northeastern Brazil (Medium, Dec 2024)
+- Alive Architecture: Redefining How We Build a Sustainable Future (Medium, Dec 2024)
+- Some trends do not stay as trends: the world is a fractal (Medium, Nov 2024)
+- Fishes and cars: UX’s study objects (Medium, Nov 2024)
+- Gestão Ágil Simplificada (LinkedIn, Oct 2024)
 
 ## Volunteering
 ### Co-organizer at Google Developers Group (GDG Barueri) (Aug 2025 - Present)
-  Highlights: Tech Meetups, Community Building, Google Developer Ecosystem
+  Highlights: Co-organized events focused on Technology, Artificial Intelligence (AI), and Innovation at Google Developers Group Barueri.
 
 ### Ambassador & Facilitator at Politize! (Politize! Caruaru) (May 2025 - Present)
-  Highlights: Civic Education Workshops, 15+ Facilitated Sessions, Public Leadership
+  Highlights: reated and co-organized workshops on technology, politics, and civic rights applied to society at Politize! Caruaru, while also contributing to internal projects.
 
 ### OGT & Marketing Committee Member at AIESEC (AIESEC no Mackenzie) (Mar 2025 - Aug 2025)
-  Highlights: B2B Sales, OGT Program Management, Intercultural Leadership
+  Highlights: Served as a member of the Outgoing Global Talent (OGT) team at AIESEC Mackenzie and was selected as the committee's Marketing Lead., Designed marketing materials and facilitated meetings with team leaders, including collaboration with AIESEC committees from other countries, such as Jalandhar, India.
 
 ### Soft Skills Instructor at Vai Na Web (Jan 2025)
-  Highlights: Soft Skills Training, Tech Career Mentorship, Inclusion Focus
+  Highlights: Delivered a soft skills lecture at Vai na Web in January 2025, demonstrating their practical application in Information Technology problem-solving., Highlighted how empathy strengthens the understanding of client and user needs, fostering systems thinking and enabling more effective solutions.
 
 ## Hackathons
 - Hackathon HAVK - Hacking the Desert (HAVK, Jul 2025)
@@ -89,6 +99,6 @@ Conquistas/Achievements:
 - BRICS Youth - Role: Listener (Remote, May 2025)
 - Trends for New Generations of Professionals - Role: Speaker (Recife Front-End Community, Feb 2025)
 - ExpoTech 2024.2 - Role: Exhibitor (UniFavip Wyden, Nov 2024)
-- Campus Party NE 2024 - Role: Listener (Sao Lourenco da Mata, Aug 2024)
-- Caruaru Campus Party Day - Role: Listener (Caruaru, Sep 2024)
+- Campus Party NE 2024 - Role: Listener (Sao Lourenco da Mata, Sep 2024)
+- Caruaru Campus Party Day - Role: Listener (Caruaru, Aug 2024)
 

@@ -40,5 +40,6 @@ Detailed professional backgrounds, projects, publications, education, and volunt
 
 Articles and essays sharing insights on parameterization, automation engineering, and career metrics.
 
-- [Scaling B2B Configurations with JSONLogic](https://eversonfilipe.medium.com/scaling-b2b-configurations-with-jsonlogic-rules-0155bca73e72): Case study on implementing rule-based engine parameters at scale.
-- [Optimizing Intern Onboarding via Structured Mentorship](https://www.linkedin.com/pulse/optimizing-intern-onboarding-via-structured-agile-everson-filipe-syltf/): Methodology and results of structured PM mentorship frameworks.
+- [The Fallacy of Plural MVP in GovTech](https://medium.com/design-bootcamp/the-fallacy-of-plural-mvp-in-govtech-why-unrelenting-focus-is-the-only-real-metric-of-success-64329bbfe4ec?sharedUserId=eversonfilipe): Analysis on why unrelenting focus is the core metric of success for GovTech MVPs.
+- [From Problem to Solution: Value-Driven Products](https://eversonfilipe.medium.com/from-problem-to-solution-a-framework-for-building-value-driven-products-c6e5d564d111?sharedUserId=eversonfilipe): Product discovery framework focusing on problem definition and value execution.
+- [Gestão Ágil Simplificada (PT)](https://www.linkedin.com/pulse/gest%C3%A3o-%C3%A1gil-simplificada-%C3%A9verson-filipe-zgdoe): Simplified methodologies for agile team operations and project management.
