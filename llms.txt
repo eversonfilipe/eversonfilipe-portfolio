@@ -1,6 +1,6 @@
 # Everson Filipe
 
-> Everson Filipe is an Implementation Engineer and AI Automation Analyst specializing in B2B onboarding pipelines, Python ETL automation, JSONLogic configuration, and cloud SaaS integrations.
+> Everson Filipe is an Implementation Analyst and AI Automation Developer specializing in scaling B2B onboarding pipelines and robust data integrations. Key highlights include building a JSONLogic-driven dynamic form and rule engine for 42+ B2B clients at Kartado (reducing client setup time from 3 days to under 4 hours), automating Python ETL workflows to replace manual spreadsheet processes (achieving 32% contribution to team output), and developing Python validation notebooks that reduced parameterization analysis times by 40% with zero production syntax failures.
 
 This website provides an interactive multi-language developer portfolio. Below is a curated index of resources and structured resume files optimized for LLMs, AI agents, and search engines.
 

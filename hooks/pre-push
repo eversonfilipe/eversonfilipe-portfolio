@@ -36,5 +36,16 @@ if [ $? -eq 0 ]; then
   echo "⚠️ Warning: Found en-dashes or em-dashes in index.html noscript block."
 fi
 
+# 4. Check data consistency between cv_data.js and static files
+echo "Checking data consistency between cv_data.js and static files..."
+UNSTAGED_DIFF=$(git status --porcelain docs/data/resume-en.md docs/data/resume-pt.md docs/data/resume-es.md llms.txt index.html)
+if [ ! -z "$UNSTAGED_DIFF" ]; then
+  echo "❌ Error: Compiled static files are not in sync with cv_data.js!"
+  echo "The following files have uncommitted compilation changes after running build_static.py:"
+  echo "$UNSTAGED_DIFF"
+  echo "Please stage and commit all static updates (git add & git commit) before pushing."
+  exit 1
+fi
+
 echo "✅ Pre-Push Validation Successful. Proceeding to push..."
 exit 0
