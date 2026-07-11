@@ -1,6 +1,6 @@
 # Everson Filipe
 
-> Everson Filipe is an Implementation Analyst and AI Automation Developer specializing in scaling B2B onboarding pipelines and robust data integrations. Key highlights include building a JSONLogic-driven dynamic form and rule engine for 42+ B2B clients at Kartado (reducing client setup time from 3 days to under 4 hours), automating Python ETL workflows to replace manual spreadsheet processes (achieving 32% contribution to team output), and developing Python validation notebooks that reduced parameterization analysis times by 40% with zero production syntax failures.
+> Everson Filipe is an Implementation Engineer and AI Automation Developer specialized in B2B SaaS onboarding pipelines, Python ETL workflows, and AWS cloud orchestration. Key technical milestones at Kartado include designing a JSONLogic rule engine for dynamic forms across 42+ highway concession environments (reducing client parameters setup from 3 days to <4 hours), building Python-Django automation scripts replacing legacy spreadsheet processes (driving 32% team output capacity), and developing custom dataset schema validation notebooks that reduced parameterization analysis times by 40% with zero production syntax incidents. Proficient in Python, Django Admin, JSONLogic, AWS (Step Functions, Athena, S3, IAM, EC2), REST APIs/JWT, GIS spatial maps, and Agile Scrum methodologies.
 
 This website provides an interactive multi-language developer portfolio. Below is a curated index of resources and structured resume files optimized for LLMs, AI agents, and search engines.
 
@@ -11,7 +11,7 @@ This website provides an interactive multi-language developer portfolio. Below i
 - [Medium Blog](https://eversonfilipe.medium.com/): Articles on technical implementation, scaling SaaS configs, and JSONLogic.
 - [Email Address](mailto:eversonfilipe124@gmail.com): Direct contact for project opportunities.
 
-## Resumes & Data (Markdown)
+## Resumes & Core Data (Markdown)
 
 Detailed professional backgrounds, projects, publications, education, and volunteering structured in plain Markdown for language models.
 
@@ -20,6 +20,9 @@ Detailed professional backgrounds, projects, publications, education, and volunt
 - [Spanish Resume (ES)](https://eversonfilipe.github.io/eversonfilipe-portfolio/docs/data/resume-es.md): Currículum completo, experiencia, proyectos y educación en español.
 - [Project Readme](https://github.com/eversonfilipe/eversonfilipe-portfolio/blob/main/README.md): Detailed information about this codebase's stack, design system, and GitOps workflows.
 
-## Optional
+## Technical Publications
 
-- [Design System Guide](https://github.com/eversonfilipe/eversonfilipe-portfolio/blob/main/docs/DESIGN_SYSTEM.md): Tokens, typography, layout rules, and premium glassmorphism patterns of this website.
+Articles and essays sharing insights on parameterization, automation engineering, and career metrics.
+
+- [Scaling B2B Configurations with JSONLogic](https://eversonfilipe.medium.com/scaling-b2b-configurations-with-jsonlogic-rules-0155bca73e72): Case study on implementing rule-based engine parameters at scale.
+- [Optimizing Intern Onboarding via Structured Mentorship](https://www.linkedin.com/pulse/optimizing-intern-onboarding-via-structured-agile-everson-filipe-syltf/): Methodology and results of structured PM mentorship frameworks.

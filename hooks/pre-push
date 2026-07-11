@@ -38,7 +38,7 @@ fi
 
 # 4. Check data consistency between cv_data.js and static files
 echo "Checking data consistency between cv_data.js and static files..."
-UNSTAGED_DIFF=$(git status --porcelain docs/data/resume-en.md docs/data/resume-pt.md docs/data/resume-es.md llms.txt index.html)
+UNSTAGED_DIFF=$(git status --porcelain docs/data/resume-en.md docs/data/resume-pt.md docs/data/resume-es.md assets/js/cv_data.js README.md llms.txt index.html)
 if [ ! -z "$UNSTAGED_DIFF" ]; then
   echo "❌ Error: Compiled static files are not in sync with cv_data.js!"
   echo "The following files have uncommitted compilation changes after running build_static.py:"
