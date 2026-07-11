@@ -35,7 +35,6 @@ Detailed professional backgrounds, projects, publications, education, and volunt
 - [English Resume (EN)](https://eversonfilipe.github.io/eversonfilipe-portfolio/docs/data/resume-en.md): Complete curriculum, experiences, projects, stack, and education in English.
 - [Portuguese Resume (PT)](https://eversonfilipe.github.io/eversonfilipe-portfolio/docs/data/resume-pt.md): Currículo completo, experiências, projetos e educação em português.
 - [Spanish Resume (ES)](https://eversonfilipe.github.io/eversonfilipe-portfolio/docs/data/resume-es.md): Currículum completo, experiencia, proyectos y educación en español.
-- [Project Readme](https://github.com/eversonfilipe/eversonfilipe-portfolio/blob/main/README.md): Detailed information about this codebase's stack, design system, and GitOps workflows.
 
 ## Technical Publications
 
