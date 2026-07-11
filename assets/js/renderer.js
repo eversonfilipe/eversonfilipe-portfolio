@@ -428,20 +428,30 @@
         <div class="course-card" data-type="${course.type}" id="${course.id}" role="listitem">
           <div class="card-layout-with-logo">
             <div class="card-logo-container">
-              ${course.credentialUrl ? `
-                <a href="${course.credentialUrl}" target="_blank" rel="noopener noreferrer" aria-label="Show Credential" style="color: var(--color-accent-mist); display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; transition: color var(--duration-fast);">
-                  <svg aria-hidden="true" style="width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2;" viewBox="0 0 24 24">
-                    <circle cx="12" cy="8" r="6"></circle>
-                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                  </svg>
-                </a>
+              ${course.logo ? `
+                ${course.credentialUrl ? `
+                  <a href="${course.credentialUrl}" target="_blank" rel="noopener noreferrer" aria-label="Show Credential" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                    <img src="${course.logo}" alt="${course.provider} logo" style="width: 100%; height: 100%; object-fit: contain; border-radius: var(--radius-sm);" loading="lazy"/>
+                  </a>
+                ` : `
+                  <img src="${course.logo}" alt="${course.provider} logo" style="width: 100%; height: 100%; object-fit: contain; border-radius: var(--radius-sm);" loading="lazy"/>
+                `}
               ` : `
-                <div style="color: rgba(182, 204, 215, 0.4); display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
-                  <svg aria-hidden="true" style="width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2;" viewBox="0 0 24 24">
-                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-                    <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path>
-                  </svg>
-                </div>
+                ${course.credentialUrl ? `
+                  <a href="${course.credentialUrl}" target="_blank" rel="noopener noreferrer" aria-label="Show Credential" style="color: var(--color-accent-mist); display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; transition: color var(--duration-fast);">
+                    <svg aria-hidden="true" style="width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2;" viewBox="0 0 24 24">
+                      <circle cx="12" cy="8" r="6"></circle>
+                      <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                    </svg>
+                  </a>
+                ` : `
+                  <div style="color: rgba(182, 204, 215, 0.4); display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                    <svg aria-hidden="true" style="width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2;" viewBox="0 0 24 24">
+                      <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                      <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path>
+                    </svg>
+                  </div>
+                `}
               `}
             </div>
             <div class="card-logo-content">
