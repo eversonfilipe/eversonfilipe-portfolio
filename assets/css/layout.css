@@ -139,37 +139,7 @@
   animation: fadeUp var(--duration-slow) var(--ease-out) 0.95s forwards;
 }
 
-.hero-scroll-indicator {
-  position: absolute;
-  bottom: var(--space-8);
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-2);
-  opacity: 0;
-  animation: fadeUp var(--duration-slow) var(--ease-out) 1.2s forwards;
-}
 
-.hero-scroll-indicator span {
-  font-size: var(--text-xs);
-  letter-spacing: var(--tracking-widest);
-  text-transform: uppercase;
-  color: var(--color-text-muted);
-}
-
-.scroll-line {
-  width: 1px;
-  height: 40px;
-  background: linear-gradient(
-    to bottom,
-    var(--color-accent-electric),
-    transparent
-  );
-  animation: scrollPulse 2s ease-in-out infinite;
-}
 
 /* ── Stats Row ───────────────────────────────────── */
 .stats-row {
