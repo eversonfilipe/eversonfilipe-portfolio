@@ -20,7 +20,7 @@
       'social.linkedin': 'LinkedIn profile',
       'social.medium': 'Medium profile',
       'social.email': 'Email address',      'hero.cta.work': 'View experience',
-      'hero.cta.projects': 'See main projects',
+      'hero.cta.projects': 'View main projects',
       'hero.cta.contact': 'Get in touch',
       'hero.scroll': 'scroll',
       'about.overline': 'About',
