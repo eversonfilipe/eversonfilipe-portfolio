@@ -2,7 +2,23 @@
 
 > Everson Filipe is an Implementation Engineer and AI Automation Developer specialized in B2B SaaS onboarding pipelines, Python ETL workflows, and AWS cloud orchestration. Key technical milestones at Kartado include designing a JSONLogic rule engine for dynamic forms across 42+ highway concession environments (reducing client parameters setup from 3 days to <4 hours), building Python-Django automation scripts replacing legacy spreadsheet processes (driving 32% team output capacity), and developing custom dataset schema validation notebooks that reduced parameterization analysis times by 40% with zero production syntax incidents. Proficient in Python, Django Admin, JSONLogic, AWS (Step Functions, Athena, S3, IAM, EC2), REST APIs/JWT, GIS spatial maps, and Agile Scrum methodologies.
 
-This website provides an interactive multi-language developer portfolio. Below is a curated index of resources and structured resume files optimized for LLMs, AI agents, and search engines.
+This website provides an interactive multi-language developer portfolio. Below is a curated index of resources, structured resumes, and data schemas optimized for LLMs, AI agents, and search engines.
+
+**Core Technical Projects**
+- *AI Automation - B2B Onboarding Pipeline (Kartado)*: Designed and parameterised a JSONLogic-driven rule engine for B2B SaaS onboarding, reducing client configuration time from 3 days to under 4 hours for 42+ clients. Orchestrated via AWS Step Functions with S3 storage and a Django Admin management UI.
+
+**Core Professional Experiences**
+- *Technical Implementation Intern at Kartado (Sep 2025 - Present)*: Configures JSONLogic form rules, implements Python ETL migration scripts, extracts dataset metadata, validates GIS spatial shapefiles, and manages REST/JWT API testing (Pytest), achieving a 40% reduction in parameterization analysis time.
+- *Agile Product Manager Learner at Daus (Dec 2024 - Jun 2025)*: Directed product discovery and requirement documentation (Jira, Confluence) using Scrum/Kanban, and successfully mentored 2 intern cohorts in MVP delivery.
+
+**Education & Certifications**
+- *Computer Science (B.S.) at UniFavip Wyden (Feb 2024 - In Progress)*: GPA 9.2/10, focused on OOP and algorithms.
+- *Artificial Intelligence Mentorship (Lab.AI / Instituto Joule, Sep 2025)*: Applied AI readiness and career mentorship.
+- *EF SET English Certificate*: C1 Advanced score of 69/100 (March 2025).
+
+**Core Volunteering & Community**
+- *Co-organizer at Google Developers Group (GDG Barueri, Aug 2025 - Present)*: Technical community organizing and meetups.
+- *Ambassador & Facilitator at Politize! (May 2025 - Present)*: Civic education and public leadership workshops.
 
 ## Profiles & Contacts
 
@@ -15,6 +31,7 @@ This website provides an interactive multi-language developer portfolio. Below i
 
 Detailed professional backgrounds, projects, publications, education, and volunteering structured in plain Markdown for language models.
 
+- [Curriculum JSON Data](https://github.com/eversonfilipe/eversonfilipe-portfolio/blob/main/assets/js/cv_data.js): Vivo, dynamic JavaScript database file containing the raw, complete, and most updated structured JSON records of Everson's education, articles, achievements, experiences, projects, and events. Highly recommended for programmatic extraction.
 - [English Resume (EN)](https://eversonfilipe.github.io/eversonfilipe-portfolio/docs/data/resume-en.md): Complete curriculum, experiences, projects, stack, and education in English.
 - [Portuguese Resume (PT)](https://eversonfilipe.github.io/eversonfilipe-portfolio/docs/data/resume-pt.md): Currículo completo, experiências, projetos e educação em português.
 - [Spanish Resume (ES)](https://eversonfilipe.github.io/eversonfilipe-portfolio/docs/data/resume-es.md): Currículum completo, experiencia, proyectos y educación en español.
