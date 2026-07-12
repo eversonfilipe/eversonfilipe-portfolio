@@ -2261,28 +2261,22 @@
 .timeline-bullet, 
 .education-card .highlight-tag,
 .volunteer-card .highlight-tag,
-.project-card .tech-tag,
-.project-card .project-linked-tag,
 .project-desc-inner,
 .project-desc-inner * {
   font-family: var(--font-secondary) !important;
   line-height: var(--leading-relaxed);
 }
 
-/* Ensure tag texts inside Education, Projects, and Volunteering are not all-uppercase (no caps lock) */
+/* Ensure tag texts inside Education and Volunteering are not all-uppercase (no caps lock) */
 .education-card .highlight-tag,
-.volunteer-card .highlight-tag,
-.project-card .tech-tag,
-.project-card .project-linked-tag {
+.volunteer-card .highlight-tag {
   text-transform: none !important;
   letter-spacing: normal !important;
 }
 
 /* Ensure font changes do not cause tags or text boxes to overflow their boundaries */
 .education-card .highlight-tag,
-.volunteer-card .highlight-tag,
-.project-card .tech-tag,
-.project-card .project-linked-tag {
+.volunteer-card .highlight-tag {
   display: inline-block;
   white-space: normal;
   word-wrap: break-word;
