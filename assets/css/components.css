@@ -1376,6 +1376,7 @@
     word-break: break-word !important;
   }
 }
+
 /* ── Specific Achievements (Timeline Mini Footer) ── */
 .specific-achievements-box {
   background: var(--color-bg-raised);
@@ -1388,6 +1389,7 @@
   flex-direction: column;
   gap: var(--space-2);
 }
+
 .specific-achievements-label {
   font-family: var(--font-primary);
   font-size: 10px;
@@ -1396,6 +1398,7 @@
   color: var(--color-text-muted);
   font-weight: var(--font-weight-emphasis);
 }
+
 .specific-achievements-list {
   list-style: none;
   padding: 0;
@@ -1404,14 +1407,17 @@
   flex-direction: column;
   gap: var(--space-2);
 }
+
 .specific-achievement-item {
   display: flex;
   align-items: flex-start;
   gap: var(--space-3);
   font-family: var(--font-primary);
 }
+
 .specific-achievement-tag {
-  background: var(--color-accent-electric-dim); /* Matches courses' show credential button */
+  background: var(--color-accent-electric-dim);
+  /* Matches courses' show credential button */
   color: var(--color-accent-electric-text);
   font-size: 9px;
   font-weight: var(--font-weight-emphasis);
@@ -1425,11 +1431,13 @@
   align-items: center;
   margin-top: 1px;
 }
+
 .specific-achievement-desc {
   font-size: var(--text-xs);
   line-height: var(--leading-relaxed);
   color: var(--color-text-primary);
-  font-weight: var(--font-weight-default); /* Thin Glacial Indifference */
+  font-weight: var(--font-weight-default);
+  /* Thin Glacial Indifference */
 }
 
 /* Ensure timeline alignment works on small viewports */
@@ -1439,6 +1447,7 @@
     align-items: flex-start;
     gap: var(--space-1);
   }
+
   .specific-achievement-tag {
     margin-top: 0;
   }
@@ -1459,16 +1468,20 @@
   width: 100%;
   box-sizing: border-box;
 }
+
 .edu-vol-highlights-container::-webkit-scrollbar {
   width: 4px;
 }
+
 .edu-vol-highlights-container::-webkit-scrollbar-track {
   background: transparent;
 }
+
 .edu-vol-highlights-container::-webkit-scrollbar-thumb {
   background: rgba(182, 204, 215, 0.2);
   border-radius: var(--radius-full);
 }
+
 .highlight-tag {
   display: inline-flex;
   align-items: center;
@@ -1483,10 +1496,12 @@
   border: 1px solid rgba(182, 204, 215, 0.12);
   transition: all var(--duration-fast);
 }
+
 .highlight-tag:hover {
   border-color: rgba(35, 61, 255, 0.4);
   color: var(--color-text-primary);
 }
+
 .edu-vol-toggle-btn {
   display: inline-flex;
   align-items: center;
@@ -1506,10 +1521,12 @@
   padding: 0;
   margin-top: var(--space-2);
 }
+
 .edu-vol-toggle-btn:hover {
   background: rgba(35, 61, 255, 0.25);
   transform: translateY(-1px);
 }
+
 .edu-vol-toggle-btn:focus-visible {
   outline: 2px solid var(--color-accent-electric-text);
   outline-offset: 2px;
@@ -1575,6 +1592,7 @@
 }
 
 @media (max-width: 480px) {
+
   .courses-slider-track:not(.grid-view) .course-card,
   .volunteering-slider-track .volunteer-card {
     flex: 0 0 280px;
@@ -1636,6 +1654,7 @@
   .slider-controls {
     display: none !important;
   }
+
   .courses-slider-track,
   .volunteering-slider-track {
     padding-bottom: 0;
@@ -1802,8 +1821,13 @@
   outline-offset: 2px;
 }
 
-.project-carousel-arrow.prev { left: var(--space-2); }
-.project-carousel-arrow.next { right: var(--space-2); }
+.project-carousel-arrow.prev {
+  left: var(--space-2);
+}
+
+.project-carousel-arrow.next {
+  right: var(--space-2);
+}
 
 /* Carousel dots */
 .project-carousel-dots {
@@ -2059,11 +2083,11 @@
   line-height: var(--leading-relaxed);
 }
 
-.project-desc-inner > *:first-child {
+.project-desc-inner>*:first-child {
   margin-top: 0 !important;
 }
 
-.project-desc-inner > *:last-child {
+.project-desc-inner>*:last-child {
   margin-bottom: 0 !important;
 }
 
@@ -2118,9 +2142,17 @@
   line-height: var(--leading-tight);
 }
 
-.project-desc-inner h3 { font-size: var(--text-base); }
-.project-desc-inner h4 { font-size: var(--text-sm); }
-.project-desc-inner h5 { font-size: var(--text-xs); }
+.project-desc-inner h3 {
+  font-size: var(--text-base);
+}
+
+.project-desc-inner h4 {
+  font-size: var(--text-sm);
+}
+
+.project-desc-inner h5 {
+  font-size: var(--text-xs);
+}
 
 .project-desc-inner blockquote {
   border-left: 3px solid var(--color-accent-electric-text);
@@ -2262,7 +2294,8 @@
 .education-card .highlight-tag,
 .volunteer-card .highlight-tag,
 .project-desc-inner,
-.project-desc-inner * {
+.project-desc-inner *,
+#about-text-container p:not(:last-child) {
   font-family: var(--font-secondary) !important;
   line-height: var(--leading-relaxed);
 }
@@ -2282,4 +2315,3 @@
   word-wrap: break-word;
   max-width: 100%;
 }
-
