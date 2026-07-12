@@ -2295,7 +2295,8 @@
 .volunteer-card .highlight-tag,
 .project-desc-inner,
 .project-desc-inner *,
-#about-text-container p:not(:last-child) {
+#about-text-container p:not(:last-child),
+.hero-tagline {
   font-family: var(--font-secondary) !important;
   line-height: var(--leading-relaxed);
 }
