@@ -25,8 +25,8 @@ yarn-debug.log*
 yarn-error.log*
 
 # Python scripts and local compilation tools
-build_static.py
 *.py
+!build_static.py
 *.pyc
 __pycache__/
 
