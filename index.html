@@ -20,12 +20,12 @@
     property="og:description" />
   <meta content="website" property="og:type" />
   <meta content="https://eversonfilipe-portfolio.netlify.app/" property="og:url" />
-  <meta content="https://eversonfilipe-portfolio.netlify.app/assets/images/profile.png"
-    property="og:image" />
+  <meta content="https://eversonfilipe-portfolio.netlify.app/assets/images/profile.png" property="og:image" />
   <meta content="Everson Filipe" property="og:site_name" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Everson Filipe | Implementation Engineer, DevOps &amp; AI" />
-  <meta name="twitter:description" content="Implementation Engineer &amp; AI Automation Analyst specializing in Python, JSONLogic, AWS and B2B SaaS configurations." />
+  <meta name="twitter:description"
+    content="Implementation Engineer &amp; AI Automation Analyst specializing in Python, JSONLogic, AWS and B2B SaaS configurations." />
   <meta name="twitter:image" content="https://eversonfilipe-portfolio.netlify.app/assets/images/profile.png" />
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
@@ -427,7 +427,11 @@ Conquistas/Achievements:
   <!-- Navigation -->
   <nav aria-label="Main navigation" class="nav" id="main-nav" role="navigation">
     <a aria-label="Everson Filipe - home" class="nav-logo" href="#hero">
-      <img alt="Everson Filipe" class="nav-avatar" src="assets/images/profile.png" />
+      <picture>
+        <source srcset="assets/images/profile.webp" type="image/webp" />
+        <img alt="Everson Filipe" class="nav-avatar" src="assets/images/profile.png"
+          width="40" height="40" loading="lazy" decoding="async" />
+      </picture>
     </a>
     <ul class="nav-links" id="nav-links" role="list">
       <li>
@@ -592,9 +596,13 @@ Conquistas/Achievements:
           <!-- Profile image wrapper (non-interactive, SEO and LLMO optimized) -->
           <div class="hero-profile-wrapper">
             <div class="hero-profile-backdrop"></div>
-            <img class="hero-profile-image" src="assets/images/profile.png"
-              alt="Everson Filipe - Professional portrait for Implementation Engineering and AI Automation"
-              title="Everson Filipe - Implementation Engineer & AI Automation Analyst" loading="eager" />
+            <picture>
+              <source srcset="assets/images/profile.webp" type="image/webp" />
+              <img class="hero-profile-image" src="assets/images/profile.png"
+                alt="Everson Filipe - Professional portrait for Implementation Engineering and AI Automation"
+                title="Everson Filipe - Implementation Engineer &amp; AI Automation Analyst"
+                width="320" height="320" loading="eager" decoding="sync" fetchpriority="high" />
+            </picture>
           </div>
           <div class="hero-content">
             <p class="hero-overline" id="hero-overline"></p>

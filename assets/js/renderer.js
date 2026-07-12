@@ -287,7 +287,10 @@
           const ariaPressed = sIdx === 0 ? 'true' : 'false';
           slidesHtml += `
             <div aria-label="${slide.alt}" class="evidence-slide ${isActive}" data-index="${sIdx}" data-caption="${slide.caption}" role="button" tabindex="0">
-              <img alt="${slide.alt}" class="evidence-thumb" src="${slide.src}"/>
+              <picture>
+                <source srcset="${slide.src.replace(/\.(png|jpg|jpeg)$/i, '.webp')}" type="image/webp" />
+                <img alt="${slide.alt}" class="evidence-thumb" src="${slide.src}" loading="lazy" decoding="async" />
+              </picture>
             </div>
           `;
           dotsHtml += `
