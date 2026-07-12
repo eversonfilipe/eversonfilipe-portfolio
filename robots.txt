@@ -1,4 +1,39 @@
+# robots.txt — Everson Filipe Portfolio
+# https://eversonfilipe-portfolio.netlify.app/
+
+# ── General crawlers ──────────────────────────────────────────────
 User-agent: *
 Allow: /
 
-Sitemap: https://eversonfilipe.github.io/eversonfilipe-portfolio/sitemap.xml
+# ── Google AI (Gemini training & indexing) ────────────────────────
+User-agent: Google-Extended
+Allow: /
+
+# ── OpenAI GPT crawler ────────────────────────────────────────────
+User-agent: GPTBot
+Allow: /
+
+# ── OpenAI ChatGPT real-time search ──────────────────────────────
+User-agent: ChatGPT-User
+Allow: /
+
+# ── Anthropic Claude crawler ──────────────────────────────────────
+User-agent: anthropic-ai
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+
+# ── Perplexity AI ─────────────────────────────────────────────────
+User-agent: PerplexityBot
+Allow: /
+
+# ── Common Crawl (training datasets) ─────────────────────────────
+User-agent: CCBot
+Allow: /
+
+# ── Meta AI ───────────────────────────────────────────────────────
+User-agent: FacebookBot
+Allow: /
+
+# ── Sitemap location ──────────────────────────────────────────────
+Sitemap: https://eversonfilipe-portfolio.netlify.app/sitemap.xml

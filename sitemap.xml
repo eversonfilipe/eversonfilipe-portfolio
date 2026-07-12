@@ -1,9 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+          http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <!-- Primary portfolio page -->
   <url>
-    <loc>https://eversonfilipe.github.io/eversonfilipe-portfolio/</loc>
-    <lastmod>2026-07-08</lastmod>
+    <loc>https://eversonfilipe-portfolio.netlify.app/</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <!-- LLM-friendly index -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/llms.txt</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- English resume (Markdown) -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/docs/data/resume-en.md</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Portuguese resume (Markdown) -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/docs/data/resume-pt.md</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Spanish resume (Markdown) -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/docs/data/resume-es.md</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
