@@ -133,6 +133,11 @@
                 "src": "assets/images/kartado_welcome.png",
                 "alt": "Kartado Welcome Kit",
                 "caption": "Welcome Kit received upon joining the Kartado team"
+              },
+              {
+                "src": "assets/images/chart_july_2026.png",
+                "alt": "H1 2026 team delivery (100% personal on-time)",
+                "caption": "H1 2026 team delivery (100% personal on-time)"
               }
             ]
           },
@@ -248,6 +253,15 @@
           "provider": "EF Education First",
           "date": "Mar 2025",
           "credentialUrl": "https://cert.efset.org/en/88BaNL"
+        },
+        {
+          "id": "curso-competenciatransversal-2023",
+          "type": "information technology",
+          "name": "Cross-disciplinary Competency - Information and Communication Technology",
+          "logo": "assets/images/iconsenai.webp",
+          "provider": "SENAI",
+          "date": "Nov 2023",
+          "credentialUrl": "http://www.sp.senai.br/consulta-certificado?qrcode=00022804/7460876"
         }
       ],
       "projects": [
@@ -482,7 +496,7 @@
         }
       ],
       "footer": {
-        "copy": "&copy; 2025 Everson Filipe. Last updated: July 2026."
+        "copy": "&copy; 2026 Everson Filipe. Last updated: July 2026."
       },
       "hero": {
         "overline": "Junior Implementation Engineer · Aspiring AI Engineer",
@@ -684,13 +698,13 @@
           "company": "Kartado",
           "date": "Set 2025 – Presente",
           "bullets": [
-            "Configurei regras em JSONLogic para formulários dinâmicos em mais de 42 ambientes de clientes, utilizando Django Admin para garantir integridade dos dados e consistência funcional.",
-            "Desenvolvi scripts de automação ETL em Python integrados ao Django ORM, substituindo processos manuais de transformação e carregamento de dados.",
-            "Desenvolvi scripts em Python (Jupyter Notebook) para extração de metadados JSON, validação de esquemas e detecção proativa de inconsistências estruturais em conjuntos de dados exportados.",
-            "Corrigi mapas GIS, ajustei arquivos Shapefile e validei geometrias espaciais para apoiar a parametrização de sistemas de concessionárias de rodovias.",
-            "Mantive a documentação de integrações REST API e JWT, além de scripts de validação com Pytest para módulos Django.",
-            "Utilizei AWS IAM, EC2, ECS (Docker), Step Functions, ODBC e Amazon Athena em fluxos de infraestrutura, controle de acesso, integração de dados e análises.",
-            "Automatizei a geração de planilhas de parametrização utilizando Python, Pandas e openpyxl, reduzindo o esforço manual nos processos de implantação."
+            "Configurou regras em JSONLogic para formulários dinâmicos em mais de 42 ambientes de clientes, utilizando Django Admin para garantir integridade dos dados e consistência funcional.",
+            "Desenvolveu scripts de automação ETL em Python integrados ao Django ORM, substituindo processos manuais de transformação e carregamento de dados.",
+            "Desenvolveu scripts em Python (Jupyter Notebook) para extração de metadados JSON, validação de esquemas e detecção proativa de inconsistências estruturais em conjuntos de dados exportados.",
+            "Corrigiu mapas GIS, ajustou arquivos Shapefile e validou geometrias espaciais para apoiar a parametrização de sistemas de concessionárias de rodovias.",
+            "Manteve a documentação de integrações REST API e JWT, além de scripts de validação com Pytest para módulos Django.",
+            "Utilizou AWS IAM, EC2, ECS (Docker), Step Functions, ODBC e Amazon Athena em fluxos de infraestrutura, controle de acesso, integração de dados e análises.",
+            "Automatizou a geração de planilhas de parametrização utilizando Python, Pandas e openpyxl, reduzindo o esforço manual nos processos de implantação."
           ],
           "tags": [
             "Python",
@@ -717,6 +731,11 @@
                 "src": "assets/images/kartado_welcome.png",
                 "alt": "Kit de boas-vindas da Kartado",
                 "caption": "Kit de boas-vindas recebido ao ingressar na equipe da Kartado."
+              },
+              {
+                "src": "assets/images/chart_july_2026.png",
+                "alt": "Entrega de implementação do 1º semestre de 2026 (100% de pontualidade pessoal)",
+                "caption": "Entrega de implementação do 1º semestre de 2026 (100% de pontualidade pessoal)"
               }
             ]
           },
@@ -738,9 +757,9 @@
           "company": "Daus",
           "date": "Dez 2024 – Jun 2025",
           "bullets": [
-            "Apliquei Scrum, Kanban e Lean Thinking para conduzir discovery de produtos e levantamento de requisitos em projetos internos e de múltiplos clientes.",
-            "Documentei insights de produto, fluxos de usuários e requisitos funcionais utilizando o ecossistema Atlassian (Jira e Confluence) e FigJam.",
-            "Mentorei dois cohorts simultâneos durante programas estruturados de onboarding em Gestão Ágil de Produtos e desenvolvimento de MVPs."
+            "Aplicou Scrum, Kanban e Lean Thinking para conduzir discovery de produtos e levantamento de requisitos em projetos internos e de múltiplos clientes.",
+            "Documentou insights de produto, fluxos de usuários e requisitos funcionais utilizando o ecossistema Atlassian (Jira e Confluence) e FigJam.",
+            "Mentoreou dois cohorts simultâneos durante programas estruturados de onboarding em Gestão Ágil de Produtos e desenvolvimento de MVPs."
           ],
           "tags": [
             "Jira",
@@ -754,7 +773,7 @@
           "specificAchievements": [
             {
               "tag": "Mentoria",
-              "description": "Mentorei dois cohorts simultâneos, incluindo estagiários do programa SOFTEX e uma turma do Porto Digital/Embarque Digital."
+              "description": "Mentoreou dois cohorts simultâneos, incluindo estagiários do programa SOFTEX e uma turma do Porto Digital/Embarque Digital."
             }
           ]
         }
@@ -832,6 +851,15 @@
           "provider": "EF Education First",
           "date": "Mar 2025",
           "credentialUrl": "https://cert.efset.org/en/88BaNL"
+        },
+        {
+          "id": "curso-competenciatransversal-2023",
+          "type": "information technology",
+          "name": "Competência Transversal - Tecnologia da Informação e Comunicação",
+          "logo": "assets/images/iconsenai.webp",
+          "provider": "SENAI",
+          "date": "Nov 2023",
+          "credentialUrl": "http://www.sp.senai.br/consulta-certificado?qrcode=00022804/7460876"
         }
       ],
       "projects": [
@@ -1066,11 +1094,11 @@
         }
       ],
       "footer": {
-        "copy": "&copy; 2025 Everson Filipe. Última atualização: Julho de 2026."
+        "copy": "&copy; 2026 Éverson Filipe. Última atualização: Julho de 2026."
       },
       "hero": {
         "overline": "Engenheiro de Implantação Júnior · Aspirante a AI Engineer",
-        "name": "<strong>Everson</strong> Filipe",
+        "name": "<strong>Éverson</strong> Filipe",
         "title": "Implantação Técnica · Integrações · Integridade de Dados",
         "tagline": "Unindo requisitos de negócio à execução escalável de software por meio de validação de dados e automação de processos."
       },
@@ -1301,6 +1329,11 @@
                 "src": "assets/images/kartado_welcome.png",
                 "alt": "Kit de bienvenida de Kartado",
                 "caption": "Kit de bienvenida recibido al incorporarme al equipo de Kartado"
+              },
+              {
+                "src": "assets/images/chart_july_2026.png",
+                "alt": "Entrega de implementación del 1º semestre de 2026 (100% de pontualidade pessoal)",
+                "caption": "Entrega de implementación del 1º semestre de 2026 (100% de pontualidade pessoal)"
               }
             ]
           },
@@ -1416,6 +1449,15 @@
           "provider": "EF Education First",
           "date": "Mar 2025",
           "credentialUrl": "https://cert.efset.org/en/88BaNL"
+        },
+        {
+          "id": "curso-competenciatransversal-2023",
+          "type": "information technology",
+          "name": "Competencia Transversal - Tecnologías de la Información y la Comunicación",
+          "logo": "assets/images/iconsenai.webp",
+          "provider": "SENAI",
+          "date": "Nov 2023",
+          "credentialUrl": "http://www.sp.senai.br/consulta-certificado?qrcode=00022804/7460876"
         }
       ],
       "projects": [
@@ -1650,11 +1692,11 @@
         }
       ],
       "footer": {
-        "copy": "&copy; 2025 Everson Filipe. Última actualización: Julio de 2026."
+        "copy": "&copy; 2026 Éverson Filipe. Última actualización: Julio de 2026."
       },
       "hero": {
         "overline": "Ingeniero de Implementación Junior · Aspirante a AI Engineer",
-        "name": "<strong>Everson</strong> Filipe",
+        "name": "<strong>Éverson</strong> Filipe",
         "title": "Implementación Técnica · Integraciones · Integridad de Datos",
         "tagline": "Conectando requisitos de negocio con ejecución escalable de software a través de validación rigurosa de datos y automatización de procesos."
       },
@@ -1935,6 +1977,14 @@
             "en": "Languages",
             "pt": "Idiomas",
             "es": "Idiomas"
+          }
+        },
+        {
+          "id": "information technology",
+          "label": {
+            "en": "Information Technology",
+            "pt": "Tecnologia da Informação",
+            "es": "Tecnología de la Información"
           }
         }
       ],

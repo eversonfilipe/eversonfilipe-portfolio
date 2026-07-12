@@ -51,6 +51,7 @@ Conquistas/Achievements:
 - Lab.AI: Preparing the Next Generation for the Future of Work (Instituto Joule, Sep 2025)
 - SkillsBuild - Customer Engagement: Problem Solving and Process Controls (IBM, Aug 2025)
 - EF SET English Certificate 69/100 (C1 Advanced) (EF Education First, Mar 2025)
+- Cross-disciplinary Competency - Information and Communication Technology (SENAI, Nov 2023)
 
 ## Publications
 - From Chaos to Clarity (Medium, Oct 2025)
