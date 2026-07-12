@@ -100,19 +100,25 @@
   });
 
   // Handle mobile menu submenu toggle clicks
+  // ⚠️ Submenus only open on desktop (≥1024px).
+  // On mobile, this handler is skipped so the parent nav-link
+  // navigates directly to the section without opening a submenu.
   document.addEventListener('click', (e) => {
     const toggle = e.target.closest('.nav-mobile-toggle');
     if (!toggle) return;
-    
+
+    // Desktop-only: allow submenu expansion
+    if (window.innerWidth < 1024) return;
+
     e.preventDefault();
     e.stopPropagation();
-    
+
     const parent = toggle.closest('.nav-item-dropdown');
     if (!parent) return;
-    
+
     const submenu = parent.querySelector('.nav-dropdown');
     if (!submenu) return;
-    
+
     const expanded = toggle.getAttribute('aria-expanded') === 'true';
     toggle.setAttribute('aria-expanded', String(!expanded));
     submenu.classList.toggle('open-mobile', !expanded);

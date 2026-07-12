@@ -1323,44 +1323,9 @@
     border-bottom: 1px solid rgba(182, 204, 215, 0.08);
   }
 
+  /* Submenus are desktop-only — hide the chevron toggle on mobile */
   .nav-mobile-toggle {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 44px !important;
-    /* Larger touch target for better usability (WCAG AA) */
-    height: 44px !important;
-    flex-shrink: 0 !important;
-    background: transparent !important;
-    border: none !important;
-    color: var(--color-text-muted) !important;
-    font-size: 1.35rem !important;
-    font-weight: 300 !important;
-    cursor: pointer !important;
-    transition: transform var(--duration-fast) var(--ease-out), color var(--duration-fast) !important;
-    padding: 0 !important;
-    outline: none !important;
-    /* Remove blue outline square when clicked */
-    box-shadow: none !important;
-  }
-
-  .nav-mobile-toggle:focus {
-    outline: none !important;
-    box-shadow: none !important;
-  }
-
-  .nav-mobile-toggle:focus-visible {
-    outline: 2px solid var(--color-accent-electric) !important;
-    outline-offset: 2px !important;
-  }
-
-  .nav-mobile-toggle:hover {
-    color: var(--color-text-primary) !important;
-  }
-
-  .nav-mobile-toggle[aria-expanded="true"] {
-    transform: rotate(45deg) !important;
-    color: var(--color-accent-electric-text) !important;
+    display: none !important;
   }
 
   .nav-link {
