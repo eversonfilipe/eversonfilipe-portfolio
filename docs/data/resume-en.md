@@ -10,13 +10,7 @@ My work is grounded in data integrity and workflow standardization. Operating wi
 Python, Django Admin, JSONLogic, REST API, AWS IAM, Amazon S3, EC2, Step Functions, Postman, openpyxl, Pandas, Jira, ClickUp
 
 ## Main Projects
-### AI Automation - B2B Onboarding Pipeline (Mar 2025 - Aug 2025) [Completed]
-  Category: AI Engineering
-  Stack: Python, JSONLogic, AWS Step Functions, Amazon S3, Django Admin, Postman, Pytest
-  Linked to: kartado, curso-labai-mentoria2025
-  Repository: https://github.com/eversonfilipe/eversonfilipe-portfolio
-  Description:
-  Designed and implemented an automated B2B client onboarding pipeline integrated with Kartado's SaaS ERP platform. The system reduced average configuration time per client from 3 days to under 4 hours.Key components: JSONLogic-driven rule engine for dynamic configuration resolution, AWS Step Functions orchestration, S3 document storage, and Django Admin UI for operations team control.Processed 42+ B2B clients through the automated flowAchieved 32% team output contribution within first monthsZero production incidents in 6 months of operation
+Under Construction
 
 ## Experience
 ### Technical Implementation Intern at Kartado (Sep 2025 - Present)
