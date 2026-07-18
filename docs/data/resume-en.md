@@ -7,7 +7,7 @@ Working directly with cloud-based ERP systems and SaaS platforms, I configure so
 My work is grounded in data integrity and workflow standardization. Operating within Agile frameworks, I mentor new engineers, lead technical onboarding, and contribute directly to production environments from day one.
 
 ### Core Stack
-Python, Django Admin, JSONLogic, REST API, AWS IAM, Amazon S3, EC2, Step Functions, Postman, openpyxl, Pandas, Jira, ClickUp
+Python, Django, JSONLogic, REST API, AWS, Pandas, Jira, ClickUp
 
 ## Main Projects
 Under Construction

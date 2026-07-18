@@ -44,7 +44,7 @@
             "icon": "assets/images/python-svgrepo-com.svg"
           },
           {
-            "name": "Django Admin",
+            "name": "Django",
             "icon": "assets/images/django-svgrepo-com.svg"
           },
           {
@@ -56,28 +56,8 @@
             "icon": "assets/images/api-svgrepo-com.svg"
           },
           {
-            "name": "AWS IAM",
-            "icon": "assets/images/aws-iam-svgrepo-com.svg"
-          },
-          {
-            "name": "Amazon S3",
-            "icon": "assets/images/Simple Storage Service.svg"
-          },
-          {
-            "name": "EC2",
-            "icon": "assets/images/EC2.svg"
-          },
-          {
-            "name": "Step Functions",
-            "icon": "assets/images/Step Functions.svg"
-          },
-          {
-            "name": "Postman",
-            "icon": "assets/images/Postman.svg"
-          },
-          {
-            "name": "openpyxl",
-            "icon": "assets/images/python-svgrepo-com.svg"
+            "name": "AWS",
+            "icon": "assets/images/aws_icon.svg"
           },
           {
             "name": "Pandas",
@@ -109,12 +89,17 @@
             "Automated parameterization spreadsheet generation using Python, Pandas, and openpyxl, reducing manual effort in implementation workflows."
           ],
           "tags": [
+            "Pandas",
             "Python",
-            "Django Admin",
+            "ClickUp",
+            "EPR Implementations",
+            "REST APIs",
             "JSONLogic",
+            "GIS",
             "AWS",
-            "Postman",
-            "Pandas"
+            "AWS IAM",
+            "GIS",
+            "ETL"
           ],
           "carousel": {
             "label": "Performance & Recognition Evidence",
@@ -164,12 +149,13 @@
             "Mentored two intern cohorts across structured onboarding programs in Agile Product Management workflows and MVP-delivery."
           ],
           "tags": [
-            "Jira",
-            "Confluence",
-            "Figma",
-            "Miro",
+            "Requirement Analysis",
             "Scrum",
-            "Kanban"
+            "Jira",
+            "Agile Methodologies",
+            "Mentoring",
+            "Product Discovery",
+            "Figma"
           ],
           "logo": "assets/images/daus_software_house_logo.jpg",
           "specificAchievements": [
@@ -642,7 +628,7 @@
             "icon": "assets/images/python-svgrepo-com.svg"
           },
           {
-            "name": "Django Admin",
+            "name": "Django",
             "icon": "assets/images/django-svgrepo-com.svg"
           },
           {
@@ -654,28 +640,8 @@
             "icon": "assets/images/api-svgrepo-com.svg"
           },
           {
-            "name": "AWS IAM",
-            "icon": "assets/images/aws-iam-svgrepo-com.svg"
-          },
-          {
-            "name": "Amazon S3",
-            "icon": "assets/images/Simple Storage Service.svg"
-          },
-          {
-            "name": "EC2",
-            "icon": "assets/images/EC2.svg"
-          },
-          {
-            "name": "Step Functions",
-            "icon": "assets/images/Step Functions.svg"
-          },
-          {
-            "name": "Postman",
-            "icon": "assets/images/Postman.svg"
-          },
-          {
-            "name": "openpyxl",
-            "icon": "assets/images/python-svgrepo-com.svg"
+            "name": "AWS",
+            "icon": "assets/images/aws_icon.svg"
           },
           {
             "name": "Pandas",
@@ -707,12 +673,17 @@
             "Automatizou a geração de planilhas de parametrização utilizando Python, Pandas e openpyxl, reduzindo o esforço manual nos processos de implantação."
           ],
           "tags": [
+            "Pandas",
             "Python",
-            "Django Admin",
+            "ClickUp",
+            "EPR Implementations",
+            "REST APIs",
             "JSONLogic",
+            "GIS",
             "AWS",
-            "Postman",
-            "Pandas"
+            "AWS IAM",
+            "GIS",
+            "ETL"
           ],
           "carousel": {
             "label": "Evidências de Desempenho e Reconhecimento",
@@ -762,12 +733,13 @@
             "Mentoreou dois cohorts simultâneos durante programas estruturados de onboarding em Gestão Ágil de Produtos e desenvolvimento de MVPs."
           ],
           "tags": [
-            "Jira",
-            "Confluence",
-            "Figma",
-            "Miro",
+            "Requirement Analysis",
             "Scrum",
-            "Kanban"
+            "Jira",
+            "Agile Methodologies",
+            "Mentoring",
+            "Product Discovery",
+            "Figma"
           ],
           "logo": "assets/images/daus_software_house_logo.jpg",
           "specificAchievements": [
@@ -1242,7 +1214,7 @@
             "icon": "assets/images/python-svgrepo-com.svg"
           },
           {
-            "name": "Django Admin",
+            "name": "Django",
             "icon": "assets/images/django-svgrepo-com.svg"
           },
           {
@@ -1254,28 +1226,8 @@
             "icon": "assets/images/api-svgrepo-com.svg"
           },
           {
-            "name": "AWS IAM",
-            "icon": "assets/images/aws-iam-svgrepo-com.svg"
-          },
-          {
-            "name": "Amazon S3",
-            "icon": "assets/images/Simple Storage Service.svg"
-          },
-          {
-            "name": "EC2",
-            "icon": "assets/images/EC2.svg"
-          },
-          {
-            "name": "Step Functions",
-            "icon": "assets/images/Step Functions.svg"
-          },
-          {
-            "name": "Postman",
-            "icon": "assets/images/Postman.svg"
-          },
-          {
-            "name": "openpyxl",
-            "icon": "assets/images/python-svgrepo-com.svg"
+            "name": "AWS",
+            "icon": "assets/images/aws_icon.svg"
           },
           {
             "name": "Pandas",
@@ -1307,12 +1259,17 @@
             "Automaticé la generación de hojas de cálculo de parametrización utilizando Python, Pandas y openpyxl, reduciendo el esfuerzo manual en los procesos de implementación."
           ],
           "tags": [
+            "Pandas",
             "Python",
-            "Django Admin",
+            "ClickUp",
+            "EPR Implementations",
+            "REST APIs",
             "JSONLogic",
+            "GIS",
             "AWS",
-            "Postman",
-            "Pandas"
+            "AWS IAM",
+            "GIS",
+            "ETL"
           ],
           "carousel": {
             "label": "Evidencias de Desempeño y Reconocimiento",
@@ -1362,12 +1319,13 @@
             "Mentoricé a dos cohortes de practicantes mediante programas estructurados de incorporación en flujos de trabajo de Gestión Ágil de Productos y entrega de MVP."
           ],
           "tags": [
-            "Jira",
-            "Confluence",
-            "Figma",
-            "Miro",
+            "Requirement Analysis",
             "Scrum",
-            "Kanban"
+            "Jira",
+            "Agile Methodologies",
+            "Mentoring",
+            "Product Discovery",
+            "Figma"
           ],
           "logo": "assets/images/daus_software_house_logo.jpg",
           "specificAchievements": [
@@ -1822,14 +1780,6 @@
           }
         },
         {
-          "id": "Django Admin",
-          "label": {
-            "en": "Django Admin",
-            "pt": "Django Admin",
-            "es": "Django Admin"
-          }
-        },
-        {
           "id": "JSONLogic",
           "label": {
             "en": "JSONLogic",
@@ -1846,11 +1796,11 @@
           }
         },
         {
-          "id": "REST API",
+          "id": "REST APIs",
           "label": {
-            "en": "REST API",
-            "pt": "REST API",
-            "es": "REST API"
+            "en": "REST APIs",
+            "pt": "REST APIs",
+            "es": "REST APIs"
           }
         },
         {
@@ -1870,22 +1820,6 @@
           }
         },
         {
-          "id": "Postman",
-          "label": {
-            "en": "Postman",
-            "pt": "Postman",
-            "es": "Postman"
-          }
-        },
-        {
-          "id": "Confluence",
-          "label": {
-            "en": "Confluence",
-            "pt": "Confluence",
-            "es": "Confluence"
-          }
-        },
-        {
           "id": "Jira",
           "label": {
             "en": "Jira",
@@ -1902,27 +1836,11 @@
           }
         },
         {
-          "id": "Kanban",
-          "label": {
-            "en": "Kanban",
-            "pt": "Kanban",
-            "es": "Kanban"
-          }
-        },
-        {
           "id": "Figma",
           "label": {
             "en": "Figma",
             "pt": "Figma",
             "es": "Figma"
-          }
-        },
-        {
-          "id": "Miro",
-          "label": {
-            "en": "Miro",
-            "pt": "Miro",
-            "es": "Miro"
           }
         }
       ],

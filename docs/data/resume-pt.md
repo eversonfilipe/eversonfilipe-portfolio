@@ -7,7 +7,7 @@ Atuando diretamente com sistemas ERP em nuvem e plataformas SaaS, configuro solu
 Meu trabalho é fundamentado em integridade de dados e padronização de fluxos de trabalho. Em ambientes Ágeis, realizo a mentoria de novos profissionais, conduzo onboardings técnicos e contribuo diretamente para ambientes de produção desde o primeiro dia.
 
 ### Core Stack
-Python, Django Admin, JSONLogic, REST API, AWS IAM, Amazon S3, EC2, Step Functions, Postman, openpyxl, Pandas, Jira, ClickUp
+Python, Django, JSONLogic, REST API, AWS, Pandas, Jira, ClickUp
 
 ## Main Projects
 Under Construction
