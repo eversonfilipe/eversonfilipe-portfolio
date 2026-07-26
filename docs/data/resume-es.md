@@ -1,5 +1,5 @@
 # Éverson Filipe
-Implementación Técnica · Integraciones · Integridad de Datos | Conectando requisitos de negocio con ejecución escalable de software a través de validación rigurosa de datos y automatización de procesos.
+Implementación y Análisis de Sistemas · Integraciones | Conectando requisitos de negocio con ejecución escalable de software a través de validación rigurosa de datos y automatización de procesos.
 
 ## About
 Como Analista de Implementación especializado en Ingeniería de Implementación y Automatización impulsada por IA, transformo requisitos de negocio complejos en flujos de trabajo escalables, confiables y configuraciones de software para clientes B2B.
@@ -13,7 +13,7 @@ Python, Django, JSONLogic, REST API, AWS, Pandas, Jira, ClickUp
 Under Construction
 
 ## Experience
-### Practicante de Implementación Técnica at Kartado (Sep 2025 - Presente)
+### Analista de Implementación de Sistemas Practicante at Kartado (Sep 2025 - Presente)
 - Configuré reglas de JSONLogic para formularios dinámicos en más de 42 entornos de clientes mediante Django Admin, garantizando la integridad de los datos y la consistencia funcional.
 - Desarrollé scripts de automatización ETL en Python integrados con Django ORM, reemplazando procesos manuales de transformación y carga de datos.
 - Desarrollé scripts en Python basados en Jupyter Notebook para la extracción de metadatos JSON, la validación de esquemas y la detección proactiva de inconsistencias estructurales en conjuntos de datos exportados.
@@ -21,6 +21,7 @@ Under Construction
 - Mantuve la documentación de integraciones con API REST y JWT junto con scripts de validación en Pytest para módulos de Django.
 - Utilicé AWS IAM, Amazon EC2, Amazon ECS (Docker), AWS Step Functions, ODBC y Amazon Athena en flujos de infraestructura, acceso seguro, integración de datos y análisis dentro de entornos de clientes.
 - Automaticé la generación de hojas de cálculo de parametrización utilizando Python, Pandas y openpyxl, reduciendo el esfuerzo manual en los procesos de implementación.
+- Tech Stack: JSONLogic, Django, Python, Pandas, OpenpyXL, GIS, AWS.
 Conquistas/Achievements:
   * [Reconocimiento] Nominado al Premio Agilidad del Mes de la empresa en abril de 2026 por su desempeño en implementación técnica y corrección de errores.
   * [Entrega] Contribuí a que el equipo alcanzara un 99,48 % de entregas de implementación a tiempo, manteniendo una tasa personal del 100 % de entregas puntuales durante el primer semestre de 2026.

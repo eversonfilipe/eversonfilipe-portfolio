@@ -1,5 +1,5 @@
 # Everson Filipe
-Technical Implementation · Integrations · Data Integrity | Bridging the gap between business requirements and scalable software execution through rigorous data validation and process automation.
+Systems Implementation & Analysis · Integrations | Bridging the gap between business requirements and scalable software execution through rigorous data validation and process automation.
 
 ## About
 As an Implementation Analyst specializing in Implementation Engineering and AI-driven Automation, I transform complex business requirements into scalable, reliable workflows and software configurations for B2B clients.
@@ -13,7 +13,7 @@ Python, Django, JSONLogic, REST API, AWS, Pandas, Jira, ClickUp
 Under Construction
 
 ## Experience
-### Technical Implementation Intern at Kartado (Sep 2025 - Present)
+### Systems Implementation Analyst Intern at Kartado (Sep 2025 - Present)
 - Configured JSONLogic rules for dynamic forms across 42+ client environments via Django Admin, ensuring data integrity and functional consistency.
 - Developed Python ETL automation scripts integrated with Django ORM, replacing manual data transformation and loading workflows.
 - Built notebook-based Python scripts for JSON metadata extraction, schema validation, and proactive detection of structural inconsistencies in exported datasets.
@@ -21,6 +21,7 @@ Under Construction
 - Maintained REST API and JWT integration documentation alongside Pytest validation scripts for Django modules.
 - Leveraged AWS IAM, Amazon EC2, Amazon ECS (Docker), AWS Step Functions, ODBC, and Amazon Athena across infrastructure, secure access, data integration, and analytics workflows in client environments.
 - Automated parameterization spreadsheet generation using Python, Pandas, and openpyxl, reducing manual effort in implementation workflows.
+- Tech Stack: JSONLogic, Django, Python, Pandas, OpenpyXL, GIS, AWS.
 Conquistas/Achievements:
   * [Recognition] Nominated for the company's Monthly Agility Award in April 2026 for technical implementation performance and bugs fixes.
   * [Delivery] Helped achieve 99.48% on-time implementation delivery while maintaining a 100% personal on-time completion rate throughout H1 2026.
@@ -29,6 +30,8 @@ Conquistas/Achievements:
 - Applied Scrum, Kanban, and Lean Thinking frameworks to drive product discovery and requirements analysis across internal and multi-client portfolio projects in a software house environment.
 - Documented product insights, user flows, and functional requirements across the Atlassian ecosystem (Jira, Confluence) and FigJam.
 - Mentored two intern cohorts across structured onboarding programs in Agile Product Management workflows and MVP-delivery.
+- Tech Stack: Figma, FigJam, Jira, Confluence.
+- Methodologies: Scrum, Kanban, Lean Thinking.
 Conquistas/Achievements:
   * [Mentorship] Mentored two concurrent cohorts, including SOFTEX interns and a Porto Digital/Embarque Digital student class.
 

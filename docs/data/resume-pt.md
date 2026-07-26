@@ -1,5 +1,5 @@
 # Éverson Filipe
-Implantação Técnica · Integrações · Integridade de Dados | Unindo requisitos de negócio à execução escalável de software por meio de validação de dados e automação de processos.
+Implantação e Análise de Sistemas · Integrações | Unindo requisitos de negócio à execução escalável de software por meio de validação de dados e automação de processos.
 
 ## About
 Como Analista de Implantação especializado em Engenharia de Implantação e Automação orientada por IA, transformo requisitos de negócio complexos em fluxos de trabalho escaláveis, confiáveis e configurações de software para clientes B2B.
@@ -13,7 +13,7 @@ Python, Django, JSONLogic, REST API, AWS, Pandas, Jira, ClickUp
 Under Construction
 
 ## Experience
-### Estagiário em Implantação Técnica at Kartado (Set 2025 - Presente)
+### Analista de Implantação de Sistemas Estagiário at Kartado (Set 2025 - Presente)
 - Configurou regras em JSONLogic para formulários dinâmicos em mais de 42 ambientes de clientes, utilizando Django Admin para garantir integridade dos dados e consistência funcional.
 - Desenvolveu scripts de automação ETL em Python integrados ao Django ORM, substituindo processos manuais de transformação e carregamento de dados.
 - Desenvolveu scripts em Python (Jupyter Notebook) para extração de metadados JSON, validação de esquemas e detecção proativa de inconsistências estruturais em conjuntos de dados exportados.
@@ -21,6 +21,7 @@ Under Construction
 - Manteve a documentação de integrações REST API e JWT, além de scripts de validação com Pytest para módulos Django.
 - Utilizou AWS IAM, EC2, ECS (Docker), Step Functions, ODBC e Amazon Athena em fluxos de infraestrutura, controle de acesso, integração de dados e análises.
 - Automatizou a geração de planilhas de parametrização utilizando Python, Pandas e openpyxl, reduzindo o esforço manual nos processos de implantação.
+- Tech Stack: JSONLogic, Django, Python, Pandas, OpenpyXL, GIS, AWS.
 Conquistas/Achievements:
   * [Reconhecimento] Indicado ao Prêmio Agilidade do Mês da empresa em abril de 2026 pelo desempenho em Implantação Técnica.
   * [Entrega] Contribuiu para que a equipe alcançasse 99,48% de entregas de implantação no prazo, mantendo 100% de pontualidade nas próprias entregas durante o primeiro semestre de 2026.

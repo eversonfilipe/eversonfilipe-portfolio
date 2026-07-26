@@ -32,9 +32,9 @@ This website provides an interactive multi-language developer portfolio. Below i
 Detailed professional backgrounds, projects, publications, education, and volunteering structured in plain Markdown for language models.
 
 - [Curriculum JSON Data](https://github.com/eversonfilipe/eversonfilipe-portfolio/blob/main/assets/js/cv_data.js): Vivo, dynamic JavaScript database file containing the raw, complete, and most updated structured JSON records of Everson's education, articles, achievements, experiences, projects, and events. Highly recommended for programmatic extraction.
-- [English Resume (EN)](https://eversonfilipe.github.io/eversonfilipe-portfolio/docs/data/resume-en.md): Complete curriculum, experiences, projects, stack, and education in English.
-- [Portuguese Resume (PT)](https://eversonfilipe.github.io/eversonfilipe-portfolio/docs/data/resume-pt.md): Currículo completo, experiências, projetos e educação em português.
-- [Spanish Resume (ES)](https://eversonfilipe.github.io/eversonfilipe-portfolio/docs/data/resume-es.md): Currículum completo, experiencia, proyectos y educación en español.
+- [English Resume (EN)](https://eversonfilipe-portfolio.netlify.app/docs/data/resume-en.md): Complete curriculum, experiences, projects, stack, and education in English.
+- [Portuguese Resume (PT)](https://eversonfilipe-portfolio.netlify.app/docs/data/resume-pt.md): Currículo completo, experiências, projetos e educação em português.
+- [Spanish Resume (ES)](https://eversonfilipe-portfolio.netlify.app/docs/data/resume-es.md): Currículum completo, experiencia, proyectos y educación en español.
 
 ## Technical Publications
 

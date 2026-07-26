@@ -76,7 +76,7 @@
       "experience": [
         {
           "id": "kartado",
-          "role": "Technical Implementation Intern",
+          "role": "Systems Implementation Analyst Intern",
           "company": "Kartado",
           "date": "Sep 2025 – Present",
           "bullets": [
@@ -86,7 +86,8 @@
             "Corrected GIS maps, adjusted Shapefiles, and validated spatial geometries to support highway concession system parameterization.",
             "Maintained REST API and JWT integration documentation alongside Pytest validation scripts for Django modules.",
             "Leveraged AWS IAM, Amazon EC2, Amazon ECS (Docker), AWS Step Functions, ODBC, and Amazon Athena across infrastructure, secure access, data integration, and analytics workflows in client environments.",
-            "Automated parameterization spreadsheet generation using Python, Pandas, and openpyxl, reducing manual effort in implementation workflows."
+            "Automated parameterization spreadsheet generation using Python, Pandas, and openpyxl, reducing manual effort in implementation workflows.",
+            "Tech Stack: JSONLogic, Django, Python, Pandas, OpenpyXL, GIS, AWS."
           ],
           "tags": [
             "Pandas",
@@ -95,7 +96,6 @@
             "EPR Implementations",
             "REST APIs",
             "JSONLogic",
-            "GIS",
             "AWS",
             "AWS IAM",
             "GIS",
@@ -146,7 +146,9 @@
           "bullets": [
             "Applied Scrum, Kanban, and Lean Thinking frameworks to drive product discovery and requirements analysis across internal and multi-client portfolio projects in a software house environment.",
             "Documented product insights, user flows, and functional requirements across the Atlassian ecosystem (Jira, Confluence) and FigJam.",
-            "Mentored two intern cohorts across structured onboarding programs in Agile Product Management workflows and MVP-delivery."
+            "Mentored two intern cohorts across structured onboarding programs in Agile Product Management workflows and MVP-delivery.",
+            "Tech Stack: Figma, FigJam, Jira, Confluence.",
+            "Methodologies: Scrum, Kanban, Lean Thinking."
           ],
           "tags": [
             "Requirement Analysis",
@@ -485,9 +487,9 @@
         "copy": "&copy; 2026 Everson Filipe. Last updated: July 2026."
       },
       "hero": {
-        "overline": "Junior Implementation Engineer · Aspiring AI Engineer",
+        "overline": "Jr. Implementation Analyst · Aspiring AI Engineer",
         "name": "<strong>Everson</strong> Filipe",
-        "title": "Technical Implementation · Integrations · Data Integrity",
+        "title": "Systems Implementation & Analysis · Integrations",
         "tagline": "Bridging the gap between business requirements and scalable software execution through rigorous data validation and process automation."
       },
       "publications": [
@@ -660,7 +662,7 @@
       "experience": [
         {
           "id": "kartado",
-          "role": "Estagiário em Implantação Técnica",
+          "role": "Analista de Implantação de Sistemas Estagiário",
           "company": "Kartado",
           "date": "Set 2025 – Presente",
           "bullets": [
@@ -670,7 +672,8 @@
             "Corrigiu mapas GIS, ajustou arquivos Shapefile e validou geometrias espaciais para apoiar a parametrização de sistemas de concessionárias de rodovias.",
             "Manteve a documentação de integrações REST API e JWT, além de scripts de validação com Pytest para módulos Django.",
             "Utilizou AWS IAM, EC2, ECS (Docker), Step Functions, ODBC e Amazon Athena em fluxos de infraestrutura, controle de acesso, integração de dados e análises.",
-            "Automatizou a geração de planilhas de parametrização utilizando Python, Pandas e openpyxl, reduzindo o esforço manual nos processos de implantação."
+            "Automatizou a geração de planilhas de parametrização utilizando Python, Pandas e openpyxl, reduzindo o esforço manual nos processos de implantação.",
+            "Tech Stack: JSONLogic, Django, Python, Pandas, OpenpyXL, GIS, AWS."
           ],
           "tags": [
             "Pandas",
@@ -682,7 +685,6 @@
             "GIS",
             "AWS",
             "AWS IAM",
-            "GIS",
             "ETL"
           ],
           "carousel": {
@@ -1071,9 +1073,9 @@
         "copy": "&copy; 2026 Éverson Filipe. Última atualização: Julho de 2026."
       },
       "hero": {
-        "overline": "Engenheiro de Implantação Júnior · Aspirante a AI Engineer",
+        "overline": "Analista de Implantação Jr. · Aspirante a Engenharia de IA",
         "name": "<strong>Éverson</strong> Filipe",
-        "title": "Implantação Técnica · Integrações · Integridade de Dados",
+        "title": "Implantação e Análise de Sistemas · Integrações",
         "tagline": "Unindo requisitos de negócio à execução escalável de software por meio de validação de dados e automação de processos."
       },
       "publications": [
@@ -1246,7 +1248,7 @@
       "experience": [
         {
           "id": "kartado",
-          "role": "Practicante de Implementación Técnica",
+          "role": "Analista de Implementación de Sistemas Practicante",
           "company": "Kartado",
           "date": "Sep 2025 – Presente",
           "bullets": [
@@ -1256,7 +1258,8 @@
             "Corregí mapas GIS, ajusté archivos Shapefile y validé geometrías espaciales para respaldar la parametrización de sistemas de concesionarias de autopistas.",
             "Mantuve la documentación de integraciones con API REST y JWT junto con scripts de validación en Pytest para módulos de Django.",
             "Utilicé AWS IAM, Amazon EC2, Amazon ECS (Docker), AWS Step Functions, ODBC y Amazon Athena en flujos de infraestructura, acceso seguro, integración de datos y análisis dentro de entornos de clientes.",
-            "Automaticé la generación de hojas de cálculo de parametrización utilizando Python, Pandas y openpyxl, reduciendo el esfuerzo manual en los procesos de implementación."
+            "Automaticé la generación de hojas de cálculo de parametrización utilizando Python, Pandas y openpyxl, reduciendo el esfuerzo manual en los procesos de implementación.",
+            "Tech Stack: JSONLogic, Django, Python, Pandas, OpenpyXL, GIS, AWS."
           ],
           "tags": [
             "Pandas",
@@ -1268,7 +1271,6 @@
             "GIS",
             "AWS",
             "AWS IAM",
-            "GIS",
             "ETL"
           ],
           "carousel": {
@@ -1657,9 +1659,9 @@
         "copy": "&copy; 2026 Éverson Filipe. Última actualización: Julio de 2026."
       },
       "hero": {
-        "overline": "Ingeniero de Implementación Junior · Aspirante a AI Engineer",
+        "overline": "Analista Jr. de Implementación · Aspirante a Ingeniería de IA",
         "name": "<strong>Éverson</strong> Filipe",
-        "title": "Implementación Técnica · Integraciones · Integridad de Datos",
+        "title": "Implementación y Análisis de Sistemas · Integraciones",
         "tagline": "Conectando requisitos de negocio con ejecución escalable de software a través de validación rigurosa de datos y automatización de procesos."
       },
       "publications": [
