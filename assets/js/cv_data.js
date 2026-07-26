@@ -76,7 +76,7 @@
       "experience": [
         {
           "id": "kartado",
-          "role": "Systems Implementation Analyst Intern",
+          "role": "Systems Implementation Intern",
           "company": "Kartado",
           "date": "Sep 2025 – Present",
           "bullets": [
@@ -662,7 +662,7 @@
       "experience": [
         {
           "id": "kartado",
-          "role": "Analista de Implantação de Sistemas Estagiário",
+          "role": "Estagiário em Implantação de Sistemas",
           "company": "Kartado",
           "date": "Set 2025 – Presente",
           "bullets": [
@@ -1248,7 +1248,7 @@
       "experience": [
         {
           "id": "kartado",
-          "role": "Analista de Implementación de Sistemas Practicante",
+          "role": "Practicante en Implementación de Sistemas",
           "company": "Kartado",
           "date": "Sep 2025 – Presente",
           "bullets": [

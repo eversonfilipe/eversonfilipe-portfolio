@@ -13,7 +13,7 @@ Python, Django, JSONLogic, REST API, AWS, Pandas, Jira, ClickUp
 Under Construction
 
 ## Experience
-### Systems Implementation Analyst Intern at Kartado (Sep 2025 - Present)
+### Systems Implementation Intern at Kartado (Sep 2025 - Present)
 - Configured JSONLogic rules for dynamic forms across 42+ client environments via Django Admin, ensuring data integrity and functional consistency.
 - Developed Python ETL automation scripts integrated with Django ORM, replacing manual data transformation and loading workflows.
 - Built notebook-based Python scripts for JSON metadata extraction, schema validation, and proactive detection of structural inconsistencies in exported datasets.

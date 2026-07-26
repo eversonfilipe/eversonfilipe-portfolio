@@ -13,7 +13,7 @@ Python, Django, JSONLogic, REST API, AWS, Pandas, Jira, ClickUp
 Under Construction
 
 ## Experience
-### Analista de Implantação de Sistemas Estagiário at Kartado (Set 2025 - Presente)
+### Estagiário em Implantação de Sistemas at Kartado (Set 2025 - Presente)
 - Configurou regras em JSONLogic para formulários dinâmicos em mais de 42 ambientes de clientes, utilizando Django Admin para garantir integridade dos dados e consistência funcional.
 - Desenvolveu scripts de automação ETL em Python integrados ao Django ORM, substituindo processos manuais de transformação e carregamento de dados.
 - Desenvolveu scripts em Python (Jupyter Notebook) para extração de metadados JSON, validação de esquemas e detecção proativa de inconsistências estruturais em conjuntos de dados exportados.
