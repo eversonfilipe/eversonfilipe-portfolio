@@ -41,6 +41,7 @@ Conquistas/Achievements:
   Highlights: Seleccionado para participar en mentorías individuales y grupales orientadas a la tecnología a través del programa Lab.AI - Laboratório de Mentes, ofrecido por el Instituto Joule en colaboración con el Instituto Localiza., Laboratorios prácticos centrados en proyectos de tecnología e impacto social potenciados por herramientas de Inteligencia Artificial., Conferencias, sesiones de mentoría y actividades individuales y grupales impartidas por profesionales voluntarios de la industria tecnológica.
 
 ## Courses
+- Introducción al SAFe (Simplilearn, Jul 2026)
 - Postman: From Zero to Advanced + Automated Testing (Udemy, Dec 2025)
 - Application Programming Interface: API and Web Services (Udemy, Dec 2025)
 - Lab.AI: Preparing the Next Generation for the Future of Work (Instituto Joule, Sep 2025)

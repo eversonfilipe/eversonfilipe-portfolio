@@ -4,10 +4,13 @@ import os
 
 # Relative paths for scalability across any environment (e.g. GitHub Actions or local checkout)
 cv_data_path = './assets/js/cv_data.js'
+readme_json_path = './docs/data/readme.json'
 index_html_path = './index.html'
 llms_path = './llms.txt'
+api_dir = './api'
+docs_data_dir = './docs/data'
 
-print("--- 1. Loading cv_data.js ---")
+print("--- 1. Loading cv_data.js & readme.json ---")
 if not os.path.exists(cv_data_path):
     print(f"[ERROR] cv_data.js not found at {cv_data_path}")
     exit(1)
@@ -25,7 +28,6 @@ json_start = cv_content.find('{', start_idx)
 end_marker = "};\n})();"
 end_idx = cv_content.rfind(end_marker)
 if end_idx == -1:
-    # Try alternate end marker
     end_marker = "};"
     end_idx = cv_content.rfind(end_marker)
 
@@ -36,16 +38,21 @@ try:
     cv_data = json.loads(json_str)
 except Exception as e:
     print(f"[ERROR] Failed to parse JSON from cv_data.js: {e}")
-    # Show snippet around failure
     exit(1)
+
+readme_data = {}
+if os.path.exists(readme_json_path):
+    try:
+        with open(readme_json_path, 'r', encoding='utf-8') as rf:
+            readme_data = json.load(rf)
+    except Exception as e:
+        print(f"[WARNING] Could not parse readme.json: {e}")
 
 # Helper function to strip HTML tags properly
 def strip_html(text):
     if not text:
         return ""
-    # Strip HTML tags
     clean = re.sub(r'<[^>]+>', '', text)
-    # Decode HTML entities
     clean = clean.replace('&middot;', '·')
     clean = clean.replace('&amp;', '&')
     clean = clean.replace('&quot;', '"')
@@ -81,6 +88,32 @@ def get_end_date_value(date_str):
                 month = months[prefix]
     return year * 100 + month
 
+# --- 2. Build RAG Static JSON Endpoint ---
+print("--- 2. Exporting Static RAG JSON Endpoints ---")
+rag_data = {
+    "_meta": {
+        "title": "Everson Filipe — Developer Portfolio & RAG Dataset",
+        "author": "Everson Filipe (Éverson Filipe)",
+        "canonical": "https://eversonfilipe-portfolio.netlify.app/",
+        "description": "Structured JSON database for Retrieval-Augmented Generation (RAG) and LLM consumption detailing Everson Filipe's software engineering experience, projects, skills, education, and achievements.",
+        "lastUpdated": "2026-07-29"
+    },
+    "cvData": cv_data,
+    "githubReadme": readme_data
+}
+
+os.makedirs(api_dir, exist_ok=True)
+os.makedirs(docs_data_dir, exist_ok=True)
+
+api_json_path = os.path.join(api_dir, 'portfolio-data.json')
+docs_json_path = os.path.join(docs_data_dir, 'portfolio-data.json')
+
+with open(api_json_path, 'w', encoding='utf-8') as f:
+    json.dump(rag_data, f, ensure_ascii=False, indent=2)
+with open(docs_json_path, 'w', encoding='utf-8') as f:
+    json.dump(rag_data, f, ensure_ascii=False, indent=2)
+print("[OK] Generated api/portfolio-data.json and docs/data/portfolio-data.json")
+
 # Compile the clean text summary of Everson's CV
 noscript_cv_markdown = ""
 for lang in ["en", "pt", "es"]:
@@ -99,7 +132,6 @@ for lang in ["en", "pt", "es"]:
     # --- Projects Section (SEO/LLMO main focus) ---
     lang_markdown += "## Main Projects\n"
     if "projects" in cv_data[lang] and cv_data[lang]["projects"]:
-        # Sort projects chronological/status descending
         cv_data[lang]["projects"].sort(key=lambda x: get_end_date_value(x.get("date")), reverse=True)
         for proj in cv_data[lang]["projects"]:
             status_label = "In Progress" if proj.get("status") == "in-progress" else "Completed"
@@ -127,7 +159,6 @@ for lang in ["en", "pt", "es"]:
         lang_markdown += "\n"
         
     lang_markdown += "## Education\n"
-    # Sort education chronological/status descending
     cv_data[lang]["education"].sort(key=lambda x: get_end_date_value(x.get("date")), reverse=True)
     for edu in cv_data[lang]["education"]:
         lang_markdown += f"### {strip_html(edu['degree'])} - {strip_html(edu['institution'])} ({strip_html(edu['date'])}) [{strip_html(edu['type'])}]\n"
@@ -167,8 +198,7 @@ for lang in ["en", "pt", "es"]:
 
     # Save individual language resume markdown
     lang_markdown = lang_markdown.replace('–', '-').replace('—', '-')
-    os.makedirs(os.path.join(".", "docs", "data"), exist_ok=True)
-    resume_path = os.path.join(".", "docs", "data", f"resume-{lang}.md")
+    resume_path = os.path.join(docs_data_dir, f"resume-{lang}.md")
     with open(resume_path, "w", encoding="utf-8") as rf:
         rf.write(lang_markdown)
 
@@ -177,12 +207,12 @@ for lang in ["en", "pt", "es"]:
 
 noscript_cv_markdown = noscript_cv_markdown.replace('–', '-').replace('—', '-')
 
-print("--- 2. Updating index.html noscript block ---")
+print("--- 3. Updating index.html noscript block & Schema.org JSON-LD ---")
 if os.path.exists(index_html_path):
     with open(index_html_path, 'r', encoding='utf-8') as f:
         html_content = f.read()
 
-    # Replace the old noscript block with the new clean block
+    # Update noscript block
     noscript_start = html_content.find("  <noscript>")
     noscript_end = html_content.find("  </noscript>") + len("  </noscript>")
 
@@ -194,31 +224,131 @@ if os.path.exists(index_html_path):
     </div>
   </noscript>"""
         html_content = html_content[:noscript_start] + new_noscript_block + html_content[noscript_end:]
-        with open(index_html_path, 'w', encoding='utf-8') as f:
-            f.write(html_content)
         print("[OK] Updated index.html noscript block.")
-    else:
-        print("[ERROR] Noscript block not found in index.html.")
-else:
-    print(f"[ERROR] index.html not found at {index_html_path}")
 
-print("--- 3. Updating llms.txt ---")
+    # Update JSON-LD schema with ProfilePage + Person graph
+    json_ld_schema = [
+        {
+            "@context": "https://schema.org",
+            "@type": "ProfilePage",
+            "@id": "https://eversonfilipe-portfolio.netlify.app/#profilepage",
+            "url": "https://eversonfilipe-portfolio.netlify.app/",
+            "name": "Everson Filipe | Systems Implementation & AI Professional",
+            "description": "Official interactive developer portfolio of Éverson Filipe (Everson Filipe) — Systems Implementation Intern, DevOps & AI Automation Professional.",
+            "inLanguage": ["en", "pt", "es"],
+            "mainEntity": {
+                "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+            }
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "@id": "https://eversonfilipe-portfolio.netlify.app/#person",
+            "name": "Everson Filipe",
+            "alternateName": [
+                "Éverson Filipe",
+                "Everson Filipe Silva",
+                "Éverson Filipe Silva",
+                "eversonfilipe"
+            ],
+            "jobTitle": "Systems Implementation Intern",
+            "description": "Systems Implementation Intern and AI Automation Developer specialized in B2B SaaS onboarding pipelines, Python ETL workflows, JSONLogic rule engines, and AWS cloud orchestration. Currently at Kartado.",
+            "url": "https://eversonfilipe-portfolio.netlify.app/",
+            "image": "https://eversonfilipe-portfolio.netlify.app/assets/images/profile.png",
+            "email": "mailto:eversonfilipe124@gmail.com",
+            "nationality": "Brazilian",
+            "knowsLanguage": ["en", "pt", "es"],
+            "sameAs": [
+                "https://github.com/eversonfilipe",
+                "https://www.linkedin.com/in/eversonfilipe-agile-products-ai/",
+                "https://eversonfilipe.medium.com/"
+            ],
+            "knowsAbout": [
+                "Systems Implementation",
+                "Implementation Engineering",
+                "DevOps",
+                "AI Engineering",
+                "Python",
+                "Django Admin",
+                "JSONLogic",
+                "AWS Step Functions",
+                "Amazon S3",
+                "Amazon Athena",
+                "REST API Validation",
+                "ETL Automation",
+                "GIS Spatial Data",
+                "Agile Product Management",
+                "Scrum & Kanban",
+                "Scaled Agile Framework (SAFe)"
+            ],
+            "alumniOf": {
+                "@type": "EducationalOrganization",
+                "name": "UniFavip Wyden",
+                "url": "https://www.unifavip.edu.br/"
+            },
+            "worksFor": {
+                "@type": "Organization",
+                "name": "Kartado"
+            },
+            "hasOccupation": {
+                "@type": "Occupation",
+                "name": "Systems Implementation Intern",
+                "occupationLocation": {
+                    "@type": "Country",
+                    "name": "Brazil"
+                },
+                "skills": "Python, Django Admin, JSONLogic, AWS, REST API, ETL, GIS, SAFe"
+            }
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "https://eversonfilipe-portfolio.netlify.app/#website",
+            "name": "Everson Filipe — Developer Portfolio",
+            "url": "https://eversonfilipe-portfolio.netlify.app/",
+            "description": "Interactive multilingual portfolio of Everson Filipe — Systems Implementation Intern, DevOps & AI Automation professional.",
+            "inLanguage": ["en", "pt", "es"],
+            "publisher": {
+                "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+            }
+        }
+    ]
+
+    json_ld_str = json.dumps(json_ld_schema, ensure_ascii=False, indent=2)
+    ld_start = html_content.find('<script type="application/ld+json">')
+    ld_end = html_content.find('</script>', ld_start)
+
+    if ld_start != -1 and ld_end != -1:
+        new_ld_block = f'<script type="application/ld+json">\n{json_ld_str}\n  </script>'
+        html_content = html_content[:ld_start] + new_ld_block + html_content[ld_end + len('</script>'):]
+        print("[OK] Updated index.html JSON-LD Schema.org block.")
+
+    with open(index_html_path, 'w', encoding='utf-8') as f:
+        f.write(html_content)
+
+print("--- 4. Updating llms.txt ---")
 # Create clean text version of the CV for AI Agents following the Jeremy Howard spec
 llms_txt_content = """# Everson Filipe
 
-> Everson Filipe is an Implementation Engineer and AI Automation Developer specialized in B2B SaaS onboarding pipelines, Python ETL workflows, and AWS cloud orchestration. Key technical milestones at Kartado include designing a JSONLogic rule engine for dynamic forms across 42+ highway concession environments (reducing client parameters setup from 3 days to <4 hours), building Python-Django automation scripts replacing legacy spreadsheet processes (driving 32% team output capacity), and developing custom dataset schema validation notebooks that reduced parameterization analysis times by 40% with zero production syntax incidents. Proficient in Python, Django Admin, JSONLogic, AWS (Step Functions, Athena, S3, IAM, EC2), REST APIs/JWT, GIS spatial maps, and Agile Scrum methodologies.
+> Éverson Filipe (Everson Filipe) is a Systems Implementation Intern and AI Automation Developer specialized in B2B SaaS onboarding pipelines, Python ETL workflows, and AWS cloud orchestration. Key technical milestones at Kartado include designing a JSONLogic rule engine for dynamic forms across 42+ highway concession environments (reducing client parameters setup from 3 days to <4 hours), building Python-Django automation scripts replacing legacy spreadsheet processes (driving 32% team output capacity), and developing custom dataset schema validation notebooks that reduced parameterization analysis times by 40% with zero production syntax incidents. Proficient in Python, Django Admin, JSONLogic, AWS (Step Functions, Athena, S3, IAM, EC2), REST APIs/JWT, GIS spatial maps, and Agile Scrum methodologies.
 
-This website provides an interactive multi-language developer portfolio. Below is a curated index of resources, structured resumes, and data schemas optimized for LLMs, AI agents, and search engines.
+This website provides an interactive multi-language developer portfolio. Below is a curated index of resources, structured resumes, RAG endpoints, and data schemas optimized for LLMs, AI agents, and search engines.
+
+**Core RAG Endpoints & Machine-Readable Data (JSON)**
+- [RAG API Endpoint (JSON)](https://eversonfilipe-portfolio.netlify.app/api/portfolio-data.json): Primary Machine-Readable static JSON endpoint containing the complete structured records of Everson Filipe for Retrieval-Augmented Generation (RAG) and AI agent tool consumption.
+- [Docs Portfolio Dataset (JSON)](https://eversonfilipe-portfolio.netlify.app/docs/data/portfolio-data.json): Alternate static endpoint for structured JSON extraction.
+- [Curriculum JSON Data](https://github.com/eversonfilipe/eversonfilipe-portfolio/blob/main/assets/js/cv_data.js): Vivo, dynamic JavaScript database file containing raw, complete JSON records.
 
 **Core Technical Projects**
 - *AI Automation - B2B Onboarding Pipeline (Kartado)*: Designed and parameterised a JSONLogic-driven rule engine for B2B SaaS onboarding, reducing client configuration time from 3 days to under 4 hours for 42+ clients. Orchestrated via AWS Step Functions with S3 storage and a Django Admin management UI.
 
 **Core Professional Experiences**
-- *Technical Implementation Intern at Kartado (Sep 2025 - Present)*: Configures JSONLogic form rules, implements Python ETL migration scripts, extracts dataset metadata, validates GIS spatial shapefiles, and manages REST/JWT API testing (Pytest), achieving a 40% reduction in parameterization analysis time.
+- *Systems Implementation Intern at Kartado (Sep 2025 - Present)*: Configures JSONLogic form rules, implements Python ETL migration scripts, extracts dataset metadata, validates GIS spatial shapefiles, and manages REST/JWT API testing (Pytest), achieving a 40% reduction in parameterization analysis time.
 - *Agile Product Manager Learner at Daus (Dec 2024 - Jun 2025)*: Directed product discovery and requirement documentation (Jira, Confluence) using Scrum/Kanban, and successfully mentored 2 intern cohorts in MVP delivery.
 
 **Education & Certifications**
 - *Computer Science (B.S.) at UniFavip Wyden (Feb 2024 - In Progress)*: GPA 9.2/10, focused on OOP and algorithms.
+- *Introduction to SAFe (Simplilearn, Jul 2026)*: Scaled Agile Framework certification.
 - *Artificial Intelligence Mentorship (Lab.AI / Instituto Joule, Sep 2025)*: Applied AI readiness and career mentorship.
 - *EF SET English Certificate*: C1 Advanced score of 69/100 (March 2025).
 
@@ -237,7 +367,6 @@ This website provides an interactive multi-language developer portfolio. Below i
 
 Detailed professional backgrounds, projects, publications, education, and volunteering structured in plain Markdown for language models.
 
-- [Curriculum JSON Data](https://github.com/eversonfilipe/eversonfilipe-portfolio/blob/main/assets/js/cv_data.js): Vivo, dynamic JavaScript database file containing the raw, complete, and most updated structured JSON records of Everson's education, articles, achievements, experiences, projects, and events. Highly recommended for programmatic extraction.
 - [English Resume (EN)](https://eversonfilipe-portfolio.netlify.app/docs/data/resume-en.md): Complete curriculum, experiences, projects, stack, and education in English.
 - [Portuguese Resume (PT)](https://eversonfilipe-portfolio.netlify.app/docs/data/resume-pt.md): Currículo completo, experiências, projetos e educação em português.
 - [Spanish Resume (ES)](https://eversonfilipe-portfolio.netlify.app/docs/data/resume-es.md): Currículum completo, experiencia, proyectos y educación en español.
@@ -251,9 +380,8 @@ Articles and essays sharing insights on parameterization, automation engineering
 - [Gestão Ágil Simplificada (PT)](https://www.linkedin.com/pulse/gest%C3%A3o-%C3%A1gil-simplificada-%C3%A9verson-filipe-zgdoe): Simplified methodologies for agile team operations and project management.
 """
 
-# Clean up dashes for LLM compliance
 llms_txt_content = llms_txt_content.replace('–', '-').replace('—', '-')
 
 with open(llms_path, 'w', encoding='utf-8') as f:
     f.write(llms_txt_content)
-print("[OK] Overwritten llms.txt with correct formatting.")
+print("[OK] Overwritten llms.txt with correct RAG index formatting.")

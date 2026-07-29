@@ -4,6 +4,8 @@
 # ── General crawlers ──────────────────────────────────────────────
 User-agent: *
 Allow: /
+Allow: /api/
+Allow: /docs/data/
 
 # ── Google AI (Gemini training & indexing) ────────────────────────
 User-agent: Google-Extended
@@ -34,6 +36,10 @@ Allow: /
 # ── Meta AI ───────────────────────────────────────────────────────
 User-agent: FacebookBot
 Allow: /
+
+# ── RAG & Machine-Readable Endpoints ──────────────────────────────
+# RAG API JSON: https://eversonfilipe-portfolio.netlify.app/api/portfolio-data.json
+# LLMs Index: https://eversonfilipe-portfolio.netlify.app/llms.txt
 
 # ── Sitemap location ──────────────────────────────────────────────
 Sitemap: https://eversonfilipe-portfolio.netlify.app/sitemap.xml

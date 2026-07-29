@@ -30,6 +30,10 @@
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400&amp;display=swap" rel="stylesheet" />
+  <link rel="preload" href="assets/css/tokens.css" as="style" />
+  <link rel="preload" href="assets/css/base.css" as="style" />
+  <link rel="preload" href="assets/css/components.css" as="style" />
+  <link rel="preload" href="assets/css/layout.css" as="style" />
   <link href="assets/css/tokens.css" rel="stylesheet" />
   <link href="assets/css/base.css" rel="stylesheet" />
   <link href="assets/css/components.css" rel="stylesheet" />
@@ -37,71 +41,104 @@
   <link rel="icon" type="image/png" href="assets/images/profile.png" />
   <!-- JSON-LD Structured Data — Person + WebSite (SEO/LLMO) -->
   <script type="application/ld+json">
-  [
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Everson Filipe",
-      "jobTitle": "Implementation Engineer & AI Automation Analyst",
-      "description": "Implementation Engineer specialized in B2B SaaS onboarding pipelines, Python ETL workflows, JSONLogic rule engines, and AWS cloud orchestration. Currently at Kartado, configuring 42+ client environments.",
-      "url": "https://eversonfilipe-portfolio.netlify.app/",
-      "image": "https://eversonfilipe-portfolio.netlify.app/assets/images/profile.png",
-      "email": "mailto:eversonfilipe124@gmail.com",
-      "nationality": "Brazilian",
-      "knowsLanguage": ["en", "pt", "es"],
-      "sameAs": [
-        "https://github.com/eversonfilipe",
-        "https://www.linkedin.com/in/eversonfilipe-agile-products-ai/",
-        "https://eversonfilipe.medium.com/"
-      ],
-      "knowsAbout": [
-        "Implementation Engineering",
-        "DevOps",
-        "AI Engineering",
-        "Python",
-        "Django Admin",
-        "JSONLogic",
-        "AWS Step Functions",
-        "Amazon S3",
-        "Amazon Athena",
-        "REST API Validation",
-        "ETL Automation",
-        "GIS Spatial Data",
-        "Agile Product Management",
-        "Scrum & Kanban"
-      ],
-      "alumniOf": {
-        "@type": "EducationalOrganization",
-        "name": "UniFavip Wyden",
-        "url": "https://www.unifavip.edu.br/"
-      },
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Kartado"
-      },
-      "hasOccupation": {
-        "@type": "Occupation",
-        "name": "Systems Implementation Intern",
-        "occupationLocation": {
-          "@type": "Country",
-          "name": "Brazil"
-        },
-        "skills": "Python, Django Admin, JSONLogic, AWS, REST API, ETL, GIS"
-      }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Everson Filipe — Developer Portfolio",
-      "url": "https://eversonfilipe-portfolio.netlify.app/",
-      "description": "Interactive multilingual portfolio of Everson Filipe — Implementation Engineer, DevOps & AI Automation professional.",
-      "inLanguage": ["en", "pt", "es"],
-      "author": {
-        "@type": "Person",
-        "name": "Everson Filipe"
-      }
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "@id": "https://eversonfilipe-portfolio.netlify.app/#profilepage",
+    "url": "https://eversonfilipe-portfolio.netlify.app/",
+    "name": "Everson Filipe | Systems Implementation & AI Professional",
+    "description": "Official interactive developer portfolio of Éverson Filipe (Everson Filipe) — Systems Implementation Intern, DevOps & AI Automation Professional.",
+    "inLanguage": [
+      "en",
+      "pt",
+      "es"
+    ],
+    "mainEntity": {
+      "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
     }
-  ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://eversonfilipe-portfolio.netlify.app/#person",
+    "name": "Everson Filipe",
+    "alternateName": [
+      "Éverson Filipe",
+      "Everson Filipe Silva",
+      "Éverson Filipe Silva",
+      "eversonfilipe"
+    ],
+    "jobTitle": "Systems Implementation Intern",
+    "description": "Systems Implementation Intern and AI Automation Developer specialized in B2B SaaS onboarding pipelines, Python ETL workflows, JSONLogic rule engines, and AWS cloud orchestration. Currently at Kartado.",
+    "url": "https://eversonfilipe-portfolio.netlify.app/",
+    "image": "https://eversonfilipe-portfolio.netlify.app/assets/images/profile.png",
+    "email": "mailto:eversonfilipe124@gmail.com",
+    "nationality": "Brazilian",
+    "knowsLanguage": [
+      "en",
+      "pt",
+      "es"
+    ],
+    "sameAs": [
+      "https://github.com/eversonfilipe",
+      "https://www.linkedin.com/in/eversonfilipe-agile-products-ai/",
+      "https://eversonfilipe.medium.com/"
+    ],
+    "knowsAbout": [
+      "Systems Implementation",
+      "Implementation Engineering",
+      "DevOps",
+      "AI Engineering",
+      "Python",
+      "Django Admin",
+      "JSONLogic",
+      "AWS Step Functions",
+      "Amazon S3",
+      "Amazon Athena",
+      "REST API Validation",
+      "ETL Automation",
+      "GIS Spatial Data",
+      "Agile Product Management",
+      "Scrum & Kanban",
+      "Scaled Agile Framework (SAFe)"
+    ],
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "UniFavip Wyden",
+      "url": "https://www.unifavip.edu.br/"
+    },
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Kartado"
+    },
+    "hasOccupation": {
+      "@type": "Occupation",
+      "name": "Systems Implementation Intern",
+      "occupationLocation": {
+        "@type": "Country",
+        "name": "Brazil"
+      },
+      "skills": "Python, Django Admin, JSONLogic, AWS, REST API, ETL, GIS, SAFe"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://eversonfilipe-portfolio.netlify.app/#website",
+    "name": "Everson Filipe — Developer Portfolio",
+    "url": "https://eversonfilipe-portfolio.netlify.app/",
+    "description": "Interactive multilingual portfolio of Everson Filipe — Systems Implementation Intern, DevOps & AI Automation professional.",
+    "inLanguage": [
+      "en",
+      "pt",
+      "es"
+    ],
+    "publisher": {
+      "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+    }
+  }
+]
   </script>
 </head>
 
@@ -156,6 +193,7 @@ Conquistas/Achievements:
   Highlights: Selected to participate in individual and group technology-focused mentoring through the Lab.AI - Laboratório de Mentes program, offered by Instituto Joule in partnership with Instituto Localiza., Hands-on laboratories focused on technology and social impact projects enhanced by Artificial Intelligence tools., Lectures, mentorship sessions, and individual and group activities led by volunteer professionals from the technology industry.
 
 ## Courses
+- Introduction to SAFe (Simplilearn, Jul 2026)
 - Postman: From Zero to Advanced + Automated Testing (Udemy, Dec 2025)
 - Application Programming Interface: API and Web Services (Udemy, Dec 2025)
 - Lab.AI: Preparing the Next Generation for the Future of Work (Instituto Joule, Sep 2025)
@@ -260,6 +298,7 @@ Conquistas/Achievements:
   Highlights: Selecionado para mentorias individuais e coletivas direcionadas á tecnologia através do programa Lab.AI - Laboratório de Mentes, oferecido pelo Instituto Joule em parceria com o Instituto Localiza., Laboratórios hand-on de projetos de tecnologia e impacto social otimizados por ferramentas de Inteligência Artificial., Palestras, mentorias e dinâmicas individuais ou coletivas com profissionais voluntários da área.
 
 ## Courses
+- Introdução ao SAFe (Simplilearn, Jul 2026)
 - Postman: Do Zero ao Avançado + Testes Automatizados (Udemy, Dez 2025)
 - Interface de Programação de Aplicação: APIs e Web Services (Udemy, Dez 2025)
 - Lab.AI: Preparando a Próxima Geração para o Futuro do Trabalho (Instituto Joule, Set 2025)
@@ -364,6 +403,7 @@ Conquistas/Achievements:
   Highlights: Seleccionado para participar en mentorías individuales y grupales orientadas a la tecnología a través del programa Lab.AI - Laboratório de Mentes, ofrecido por el Instituto Joule en colaboración con el Instituto Localiza., Laboratorios prácticos centrados en proyectos de tecnología e impacto social potenciados por herramientas de Inteligencia Artificial., Conferencias, sesiones de mentoría y actividades individuales y grupales impartidas por profesionales voluntarios de la industria tecnológica.
 
 ## Courses
+- Introducción al SAFe (Simplilearn, Jul 2026)
 - Postman: From Zero to Advanced + Automated Testing (Udemy, Dec 2025)
 - Application Programming Interface: API and Web Services (Udemy, Dec 2025)
 - Lab.AI: Preparing the Next Generation for the Future of Work (Instituto Joule, Sep 2025)
