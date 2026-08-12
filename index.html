@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
+  <base href="/" />
   <meta name="google-site-verification" content="_U05k2msyNmW2a51WCl2kK18aQg83Fg5wB9te7td38E" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Everson Filipe | Implementation Engineer, DevOps &amp; AI Professional</title>
@@ -31,8 +32,10 @@
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400&amp;display=swap" rel="stylesheet" />
   <!-- Font Preloads: eliminate FOUT (Flash of Unstyled Text) & CLS -->
-  <link rel="preload" href="assets/fonts/GlacialIndifference-Regular.otf" as="font" type="font/otf" crossorigin="anonymous" />
-  <link rel="preload" href="assets/fonts/LibreBaskerville-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous" />
+  <link rel="preload" href="assets/fonts/GlacialIndifference-Regular.otf" as="font" type="font/otf"
+    crossorigin="anonymous" />
+  <link rel="preload" href="assets/fonts/LibreBaskerville-Regular.ttf" as="font" type="font/ttf"
+    crossorigin="anonymous" />
   <link rel="preload" href="assets/css/tokens.css" as="style" />
   <link rel="preload" href="assets/css/base.css" as="style" />
   <link rel="preload" href="assets/css/components.css" as="style" />
@@ -42,6 +45,9 @@
   <link href="assets/css/components.css" rel="stylesheet" />
   <link href="assets/css/layout.css" rel="stylesheet" />
   <link rel="icon" type="image/png" href="assets/images/profile.png" />
+  <!-- marked.js — Markdown parser for Blog section -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@9.1.6/marked.min.js"
+    integrity="sha256-YAKvY0hbBD+mDdq6GzQ2O5jSqLLGO2BwBPOiQFqKBTo=" crossorigin="anonymous"></script>
   <!-- JSON-LD Structured Data — Person + WebSite (SEO/LLMO) -->
   <script type="application/ld+json">
 [
@@ -50,13 +56,10 @@
     "@type": "ProfilePage",
     "@id": "https://eversonfilipe-portfolio.netlify.app/#profilepage",
     "url": "https://eversonfilipe-portfolio.netlify.app/",
-    "name": "Everson Filipe | Systems Implementation & AI Professional",
-    "description": "Official interactive developer portfolio of Éverson Filipe (Everson Filipe) — Systems Implementation Intern, DevOps & AI Automation Professional.",
-    "inLanguage": [
-      "en",
-      "pt",
-      "es"
-    ],
+    "name": "Everson Filipe | Systems Analyst & Implementation · Agentic AI",
+    "description": "Official interactive developer portfolio of Everson Filipe — AI Engineering, GenAI & Automation · Python, Django, AWS, REST APIs.",
+    "inLanguage": "en",
+    "dateModified": "2026-08-11",
     "mainEntity": {
       "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
     }
@@ -73,11 +76,21 @@
       "eversonfilipe"
     ],
     "jobTitle": "Systems Implementation Intern",
-    "description": "Systems Implementation Intern and AI Automation Developer specialized in B2B SaaS onboarding pipelines, Python ETL workflows, JSONLogic rule engines, and AWS cloud orchestration. Currently at Kartado.",
+    "description": "I'm an early-career Systems Analyst focused on AI Engineering and Workflows Implementation, where I transform business requirements into reliable software configurations, standardized workflows, and production-ready solutions for B2B environments. Working with ERP and SaaS platforms has strengthened my foundation in systems analysis, software implementation, process automation, data validation, and cloud-based integrations using technologies such as Python, Django, REST APIs and AWS. While still at the beginning of my career, I've already contributed to production environments, delivering measurable results through structured execution and continuous learning. My professional interests naturally extend toward AI Engineering, where I explore how intelligent systems can improve software delivery and operational efficiency. I study and build practical projects involving LLMs, Agentic AI, Retrieval-Augmented Generation (RAG), LangChain, LangGraph, GenAI, and workflow automation, always approaching AI from a systems implementation perspective. Rather than treating AI as a standalone technology, I see it as an extension of software engineering, combining automation, structured reasoning, and scalable architectures to solve real business problems.",
     "url": "https://eversonfilipe-portfolio.netlify.app/",
     "image": "https://eversonfilipe-portfolio.netlify.app/assets/images/profile.png",
     "email": "mailto:eversonfilipe124@gmail.com",
     "nationality": "Brazilian",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Catende",
+      "addressRegion": "PE",
+      "addressCountry": "BR"
+    },
+    "homeLocation": {
+      "@type": "Place",
+      "name": "Catende, Pernambuco, Brazil"
+    },
     "knowsLanguage": [
       "en",
       "pt",
@@ -89,41 +102,356 @@
       "https://eversonfilipe.medium.com/"
     ],
     "knowsAbout": [
-      "Systems Implementation",
-      "Implementation Engineering",
-      "DevOps",
-      "AI Engineering",
       "Python",
-      "Django Admin",
+      "Django",
       "JSONLogic",
-      "AWS Step Functions",
-      "Amazon S3",
-      "Amazon Athena",
-      "REST API Validation",
-      "ETL Automation",
-      "GIS Spatial Data",
-      "Agile Product Management",
-      "Scrum & Kanban",
-      "Scaled Agile Framework (SAFe)"
+      "REST API",
+      "AWS",
+      "Pandas",
+      "Jira",
+      "ClickUp",
+      "EPR Implementations",
+      "REST APIs",
+      "AWS IAM",
+      "GIS",
+      "ETL",
+      "Requirement Analysis",
+      "Scrum",
+      "Agile Methodologies",
+      "Mentoring",
+      "Product Discovery",
+      "Product Management",
+      "Figma",
+      "Google Drive"
     ],
-    "alumniOf": {
-      "@type": "EducationalOrganization",
-      "name": "UniFavip Wyden",
-      "url": "https://www.unifavip.edu.br/"
-    },
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Kartado"
-    },
-    "hasOccupation": {
-      "@type": "Occupation",
-      "name": "Systems Implementation Intern",
-      "occupationLocation": {
-        "@type": "Country",
-        "name": "Brazil"
+    "subjectOf": [
+      {
+        "@id": "https://eversonfilipe-portfolio.netlify.app/#endorsements"
       },
-      "skills": "Python, Django Admin, JSONLogic, AWS, REST API, ETL, GIS, SAFe"
-    }
+      {
+        "@id": "https://eversonfilipe-portfolio.netlify.app/#hackathons"
+      },
+      {
+        "@id": "https://eversonfilipe-portfolio.netlify.app/#exhibitions"
+      }
+    ],
+    "worksFor": [
+      {
+        "@type": "EmployeeRole",
+        "roleName": "Systems Implementation Intern",
+        "startDate": "2025-09",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Kartado",
+          "url": "https://kartado.com.br",
+          "description": "Kartado is a B2B SaaS company serving the highway concession sector. As a Systems Implementation Intern, I turned client business requirements into software configurations and automated workflows across 42+ B2B client environments, operating within Agile frameworks."
+        }
+      },
+      {
+        "@type": "EmployeeRole",
+        "roleName": "Agile Product Management Learner",
+        "startDate": "2024-12",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Daus",
+          "url": "https://studiodaus.com/",
+          "description": "Daus is a software house/startup delivering internal and multi-client portfolio projects. As a Product Management Learner focused on requirements gathering, I combined hands-on delivery with structured learning: while building fluency in Agile Product Management, I supported product discovery and requirements analysis, turning stakeholder needs into documented, actionable delivery artifacts."
+        },
+        "endDate": "2025-06"
+      },
+      {
+        "@type": "EmployeeRole",
+        "roleName": "Product Manager Intern",
+        "startDate": "2024-09",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "TT&T Soluções em Informática",
+          "description": "TT&T Soluções em Informática LTDA develops internal and external systems, including the HiApps product line. As a Product Manager Intern, I combined hands-on delivery with structured learning: while deepening my command of Agile methodologies, I coordinated ceremonies and translated requirements throughout the sprints."
+        },
+        "endDate": "2025-02"
+      }
+    ],
+    "hasOccupation": [
+      {
+        "@type": "Occupation",
+        "name": "Systems Implementation Intern",
+        "description": "Systems Implementation Intern at Kartado",
+        "occupationalCategory": "15-1211.00 Computer Systems Analysts",
+        "occupationLocation": {
+          "@type": "Country",
+          "name": "Brazil"
+        },
+        "skills": "JSONLogic, Django, Python, Pandas, OpenpyXL, GIS, AWS",
+        "responsibilities": [
+          "Configured JSONLogic rules for dynamic forms across 42+ client environments via Django Admin, ensuring data integrity and functional consistency; corrected GIS maps, adjusted Shapefiles, and validated spatial geometries for highway concession system parameterization;",
+          "Developed Python ETL automation scripts integrated with Django ORM, replacing manual data transformation workflows; automated the generation of parameterization spreadsheets using Python, Pandas, and openpyxl, reducing manual effort;",
+          "Built notebook-based Python scripts for JSON metadata extraction, schema validation, and proactive detection of structural inconsistencies in exported datasets; maintained REST API/JWT integration documentation and Pytest validation scripts for Django modules;",
+          "Leveraged AWS IAM, Amazon EC2, Amazon ECS (Docker), AWS Step Functions, ODBC, and Amazon Athena across infrastructure, secure access, data integration, and analytics workflows in client environments;",
+          "Tech Stack: JSONLogic, Django, Python, Pandas, OpenpyXL, GIS, AWS."
+        ],
+        "qualifications": [
+          "Nominated for the company's Monthly Agility Award in April 2026 for technical implementation performance and bugs fixes.",
+          "Helped achieve 99.48% on-time implementation delivery while maintaining a 100% personal on-time completion rate throughout H1 2026."
+        ]
+      },
+      {
+        "@type": "Occupation",
+        "name": "Agile Product Management Learner",
+        "description": "Agile Product Management Learner at Daus",
+        "occupationalCategory": "15-1299.09 Information Technology Project Managers",
+        "occupationLocation": {
+          "@type": "Country",
+          "name": "Brazil"
+        },
+        "skills": "Figma, FigJam, Jira, Confluence",
+        "responsibilities": [
+          "Applied Scrum, Kanban, and Lean Thinking frameworks to drive product discovery in a software house environment;",
+          "Conducted requirements analysis across internal and multi-client portfolio projects;",
+          "Documented product insights, user flows, and functional requirements across the Atlassian ecosystem (Jira, Confluence) and FigJam;",
+          "Tech Stack: Figma, FigJam, Jira, Confluence.",
+          "Methodologies: Scrum, Kanban, Lean Thinking."
+        ],
+        "qualifications": [
+          "Mentored two intern cohorts across structured onboarding programs in Agile Product Management workflows and MVP-delivery."
+        ]
+      },
+      {
+        "@type": "Occupation",
+        "name": "Product Manager Intern",
+        "description": "Product Manager Intern at TT&T Soluções em Informática",
+        "occupationalCategory": "15-1299.09 Information Technology Project Managers",
+        "occupationLocation": {
+          "@type": "Country",
+          "name": "Brazil"
+        },
+        "skills": "Agile Methodologies, Product Management, Google Drive",
+        "responsibilities": [
+          "Coordinated and participated in Agile ceremonies and other Agile methodology artifacts throughout the sprints, including dailies",
+          "Collaborated closely with UX/UI teams on the company's internal and external systems, the HiApps product line",
+          "Documented functional requirements and translated business requirements for technical teams",
+          "Applied prioritization and analysis matrices such as the Eisenhower Matrix and 5W2H in day-to-day product work",
+          "Organized and maintained product documentation in Google Drive repositories, with intensive use of spreadsheets",
+          "Tools: Google Drive, Spreadsheets.",
+          "Methodologies: Agile methodologies, Eisenhower Matrix, 5W2H."
+        ],
+        "qualifications": [
+          "Took part in Sponsor's Days, events held during the sprints for results presentations across departments, where I presented development updates on HiEmergência, one of the flagship internal products in the HiApps line."
+        ]
+      }
+    ],
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "degree",
+        "educationalLevel": "Bachelor",
+        "name": "Bachelor of Computer Science (B.S.)",
+        "dateCreated": "2024-02",
+        "recognizedBy": {
+          "@type": "EducationalOrganization",
+          "@id": "https://eversonfilipe-portfolio.netlify.app/#unifavip",
+          "name": "UniFavip Wyden",
+          "url": "https://www.wyden.com.br/unifavip"
+        }
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Introduction to SAFe",
+        "credentialCategory": "agile",
+        "dateCreated": "2026-07",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "Simplilearn"
+        },
+        "url": "https://simpli-web.app.link/e/BQljCvpb84b"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Postman: From Zero to Advanced + Automated Testing",
+        "credentialCategory": "api",
+        "dateCreated": "2025-12",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "Udemy"
+        },
+        "url": "https://www.udemy.com/certificate/UC-12234f7a-0178-4a06-b809-864522caa58c/"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Application Programming Interface: API and Web Services",
+        "credentialCategory": "api",
+        "dateCreated": "2025-12",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "Udemy"
+        },
+        "url": "https://www.udemy.com/certificate/UC-9eff9f3e-ab9e-4e05-86e2-181eddd6e921/"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "2025 Aspire Leaders Program",
+        "credentialCategory": "softskills",
+        "dateCreated": "2025-12",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "Aspire Institute"
+        },
+        "url": "https://engage.aspireleaders.org/share/certificate/did:rcw:bbe75782-e060-4363-8078-a1fade3ab696"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Lab.AI: Preparing the Next Generation for the Future of Work",
+        "credentialCategory": "ai",
+        "dateCreated": "2025-09",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "Instituto Joule"
+        },
+        "url": "https://academy.institutojoule.org/certificado/?cert_hash=6710237ef0505f06"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Ignite Entrepreneurship Program",
+        "credentialCategory": "softskills",
+        "dateCreated": "2025-07",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "Wadhwani Foundation"
+        },
+        "url": "https://github.com/eversonfilipe/eversonfilipe/blob/d4521ab193c9ce4fdf4b00cb2cfff4276e341e24/certificates-extra/Certificado%20Ignite%20-%20Wadhwani.pdf"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "SkillsBuild - Customer Engagement: Problem Solving and Process Controls",
+        "credentialCategory": "softskills",
+        "dateCreated": "2025-07",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "IBM"
+        },
+        "url": "https://www.credly.com/badges/a9ac260f-4415-43d0-a2e2-479478acbddd/linked_in_profile"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "EF SET English Certificate 69/100 (C1 Advanced)",
+        "credentialCategory": "languages",
+        "dateCreated": "2025-02",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "EF Education First"
+        },
+        "url": "https://cert.efset.org/en/88BaNL"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Comunicación Intercultural - Proyecto Internacional",
+        "credentialCategory": "languages",
+        "dateCreated": "2024-10",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "Campus B"
+        },
+        "url": "https://www.brasilopenbadge.com.br/pages/badge/e661e5f36942fe4cdf319e4ecb18d452"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Cross-disciplinary Competency - Information and Communication Technology",
+        "credentialCategory": "information technology",
+        "dateCreated": "2023-11",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "SENAI"
+        },
+        "url": "http://www.sp.senai.br/consulta-certificado?qrcode=00022804/7460876"
+      }
+    ],
+    "memberOf": [
+      {
+        "@type": "OrganizationRole",
+        "roleName": "Computer Science Student (B.S.)",
+        "startDate": "2024-02",
+        "memberOf": {
+          "@type": "EducationalOrganization",
+          "@id": "https://eversonfilipe-portfolio.netlify.app/#unifavip",
+          "name": "UniFavip Wyden",
+          "url": "https://www.wyden.com.br/unifavip"
+        }
+      },
+      {
+        "@type": "OrganizationRole",
+        "roleName": "Co-organizer",
+        "startDate": "2025-08",
+        "memberOf": {
+          "@type": "Organization",
+          "name": "Google Developers Group (GDG Barueri)",
+          "url": "https://gdg.community.dev/gdg-barueri/"
+        }
+      },
+      {
+        "@type": "OrganizationRole",
+        "roleName": "Ambassador & Facilitator",
+        "startDate": "2025-05",
+        "memberOf": {
+          "@type": "Organization",
+          "name": "Politize! (Politize! Caruaru)",
+          "url": "https://www.politize.com.br/"
+        }
+      },
+      {
+        "@type": "OrganizationRole",
+        "roleName": "OGT & Marketing Committee Member",
+        "startDate": "2025-03",
+        "memberOf": {
+          "@type": "Organization",
+          "name": "AIESEC (AIESEC no Mackenzie)",
+          "url": "https://aiesec.org.br/"
+        },
+        "endDate": "2025-08"
+      },
+      {
+        "@type": "OrganizationRole",
+        "roleName": "Soft Skills Instructor",
+        "startDate": "2025-01",
+        "memberOf": {
+          "@type": "Organization",
+          "name": "Vai Na Web",
+          "url": "https://vainaweb.com.br/"
+        }
+      }
+    ],
+    "performerIn": [
+      {
+        "@type": "Event",
+        "name": "FLISoL 2026",
+        "startDate": "2026-04",
+        "location": {
+          "@type": "Place",
+          "name": "IFPE/Palmares"
+        },
+        "performer": {
+          "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+        }
+      },
+      {
+        "@type": "Event",
+        "name": "Trends for New Generations of Professionals",
+        "startDate": "2025-02",
+        "location": {
+          "@type": "Place",
+          "name": "Recife Front-End Community"
+        },
+        "performer": {
+          "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+        }
+      }
+    ],
+    "award": [
+      "Nomination for Kartado Monthly Agility Award (Kartado, Apr 2026)",
+      "Accepted Mentee - Aspire Leaders 2025.2 Cohort 5 (Aspire Institute, Oct 2025)",
+      "Nominated for the company's Monthly Agility Award in April 2026 for technical implementation performance and bugs fixes. (Kartado)",
+      "Helped achieve 99.48% on-time implementation delivery while maintaining a 100% personal on-time completion rate throughout H1 2026. (Kartado)",
+      "Mentored two intern cohorts across structured onboarding programs in Agile Product Management workflows and MVP-delivery. (Daus)",
+      "Took part in Sponsor's Days, events held during the sprints for results presentations across departments, where I presented development updates on HiEmergência, one of the flagship internal products in the HiApps line. (TT&T Soluções em Informática)"
+    ]
   },
   {
     "@context": "https://schema.org",
@@ -131,33 +459,534 @@
     "@id": "https://eversonfilipe-portfolio.netlify.app/#website",
     "name": "Everson Filipe — Developer Portfolio",
     "url": "https://eversonfilipe-portfolio.netlify.app/",
-    "description": "Interactive multilingual portfolio of Everson Filipe — Systems Implementation Intern, DevOps & AI Automation professional.",
-    "inLanguage": [
-      "en",
-      "pt",
-      "es"
-    ],
+    "description": "Interactive multilingual portfolio of Everson Filipe — AI Engineering, GenAI & Automation · Python, Django, AWS, REST APIs.",
+    "inLanguage": "en",
     "publisher": {
       "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": "https://eversonfilipe-portfolio.netlify.app/#blog",
+    "name": "Everson Filipe Tech Blog",
+    "url": "https://eversonfilipe-portfolio.netlify.app/en/community/blog",
+    "description": "Technical articles by Everson Filipe on Systems Analyst & Implementation · Agentic AI — Bridging the gap between business requirements and scalable software execution through rigorous data validation and process automation.",
+    "publisher": {
+      "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+    },
+    "blogPost": [
+      {
+        "@type": "BlogPosting",
+        "@id": "https://eversonfilipe-portfolio.netlify.app/en/community/blog/post-implementation-engineering-vs-software-engineering#article",
+        "headline": "Implementation Engineering vs. Software Engineering: What's the Difference?",
+        "description": "A practical comparison between Implementation Engineering and Software Engineering — scopes, workflows, and where they overlap in B2B SaaS environments.",
+        "datePublished": "2026-07-20",
+        "url": "https://eversonfilipe-portfolio.netlify.app/en/community/blog/post-implementation-engineering-vs-software-engineering",
+        "inLanguage": "en",
+        "author": {
+          "@type": "Person",
+          "@id": "https://eversonfilipe-portfolio.netlify.app/#person",
+          "name": "Everson Filipe"
+        },
+        "creator": {
+          "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+        },
+        "publisher": {
+          "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+        },
+        "keywords": "implementation engineering, software engineering, b2b saas, python, django, jsonlogic, kartado, career comparison",
+        "articleBody": "## Implementation Engineering vs. Software Engineering\n\n*A practical perspective from the field.*\n\n---\n\nWhen people hear \"Implementation Engineer,\" they often assume it's just a softer title for a junior developer. It's not. And understanding the difference matters — both for hiring managers and for engineers figuring out where their strengths fit.\n\n### What Software Engineers Build\n\nSoftware Engineers design, build, and maintain software systems from scratch (or near-scratch). They write core logic, architect APIs, and ship features to production.\n\nTheir primary artifact is **source code**.\n\n### What Implementation Engineers Configure\n\nImplementation Engineers deploy and configure existing software systems into new client environments. They work at the intersection of product, data, and client requirements.\n\nTheir primary artifact is **a working, validated client environment**.\n\n---\n\n## The Real Overlap\n\nThe best implementation engineers write code — they have to. At Kartado, my day-to-day involves:\n\n- Writing **Python ETL scripts** integrated with Django ORM\n- Configuring **JSONLogic rules** for dynamic form behavior across 42+ client environments\n- Validating **GIS spatial data** and correcting Shapefiles\n- Using **AWS Step Functions**, S3, Athena for analytics pipeline work\n\nThis isn't \"clicking buttons in a GUI.\" It requires understanding data models, writing logic, and debugging production-like environments.\n\n---\n\n## Where They Diverge\n\n| Dimension | Software Engineering | Implementation Engineering |\n|---|---|---|\n| **Primary output** | New software features | Configured client environments |\n| **Client proximity** | Indirect (product team) | Direct (B2B clients) |\n| **Codebase ownership** | Core product | Automation & config scripts |\n| **Testing scope** | Unit, integration, E2E | Data integrity, regression, UAT |\n| **Velocity metric** | Features shipped | Clients onboarded / SLA met |\n\n---\n\n## Why I Work This Way\n\nI chose Implementation Engineering because I wanted production impact from day one. Not a year of code reviews before touching anything real.\n\nThe tradeoff: you own less of the product architecture. But you own 100% of client success for every environment you configure.\n\nBoth paths are valid. Knowing which one fits your working style is the first step.\n\n---\n\n*This is the first post on this blog. More coming on Python automation, JSONLogic patterns, and working within Agile frameworks at B2B SaaS companies.*",
+        "isPartOf": {
+          "@id": "https://eversonfilipe-portfolio.netlify.app/#blog"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": "https://eversonfilipe-portfolio.netlify.app/#endorsements",
+    "name": "Peer Endorsements & Recommendations for Everson Filipe",
+    "description": "Professional recommendations and peer validations received by Everson Filipe across corporate environments, projects, and mentorships.",
+    "numberOfItems": 11,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Recommendation",
+          "author": {
+            "@type": "Person",
+            "name": "Brenno Carvalho",
+            "jobTitle": "Military | Businesses Management | Human Resources",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Brazilian Navy | Alumni Aspire"
+            }
+          },
+          "reviewBody": "I was in the same group as Éverson at Aspire Leaders 2025. From the very beginning, he proved to be a highly dedicated and resilient person, helping and answering many questions from other people in the group. He is a humble person, of exemplary character, always ready to solve any problem that may arise.",
+          "datePublished": "2025-10",
+          "itemReviewed": {
+            "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Recommendation",
+          "author": {
+            "@type": "Person",
+            "name": "Sebastião Rogério, Ph.D.",
+            "jobTitle": "System Analyst @FCx Labs | PhD in Computer Engineering | AI & Data Science Researcher | Professor",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "FCx Labs | Ex- Educational Coordinator @UniFavipWyden"
+            }
+          },
+          "reviewBody": "Éverson is a very dedicated student, always seeking to improve himself. In addition, he is always engaged in the course activities.",
+          "datePublished": "2025-05",
+          "itemReviewed": {
+            "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Recommendation",
+          "author": {
+            "@type": "Person",
+            "name": "Fabíola Cavalcanti",
+            "jobTitle": "DevOps/DevSecOps Engineer | AWS Cloud | IaC (Terraform) | K8s | 20+ years of expertise in Business Operations & Retail | AWS Certified",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "AI/R - UOL | Ideathon AC Ex-Participant"
+            }
+          },
+          "reviewBody": "Everson Filipe is a strategic and results-oriented product leader with a passion for creating exceptional products that customers love.I had the pleasure of working with Everson Filipe at the Ideathon at Armazém de Ideias. During that time, I was impressed by his ability to:Understand customer needs and translate them into clear and concise product roadmaps.Prioritize and manage a complex product backlog.Collaborate effectively with cross-functional teams, including engineering, design and marketing.Launch successful products that met or exceeded customer expectations.Analyze product data and use insights to make informed decisions.Everson is a passionate and experienced product leader who is always looking for ways to improve his products and processes. He is a valuable team player and a mentor to other product managers.I strongly recommend Everson for any product management role. He is a valuable asset to any team.",
+          "datePublished": "2025-02",
+          "itemReviewed": {
+            "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "Recommendation",
+          "author": {
+            "@type": "Person",
+            "name": "Luciana Sérvulo da Cunha",
+            "jobTitle": "Project & Social Impact Manager | Advocacy, Human Rights & Gender Equality | Audiovisual, Storytelling and Strategic Communication",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Brasil 247"
+            }
+          },
+          "reviewBody": "He understands everything about technology. I recommend him!",
+          "datePublished": "2025-02",
+          "itemReviewed": {
+            "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "Recommendation",
+          "author": {
+            "@type": "Person",
+            "name": "Julia Zultauskas",
+            "jobTitle": "Psychology Student | Psychology Intern at Centro de Reabilitação Neurológica Matheus Alvares | ABA and Naturalistic Strategies | Social Psychology | 5/10 Psychologist",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Centro de Reabilitação Neurológica Matheus Alvares (Neurological Rehabilitation Center) | Ex-Human Resources Intern @TT&T"
+            }
+          },
+          "reviewBody": "Éverson went through my Recruitment & Selection process and the company's initial training, and we also crossed paths several times within the company.He is a hard-working, communicative, responsible and very competent guy. Always chasing down the tasks assigned to him.He is also very easy to work with, and his communication is very clear and assertive.I am sure that whoever has him on their team is in good hands!",
+          "datePublished": "2025-01",
+          "itemReviewed": {
+            "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "Recommendation",
+          "author": {
+            "@type": "Person",
+            "name": "Marcos Torres",
+            "jobTitle": "Head of Controllership & Industrial Finance | Accounting | Tax | Cost Management | FP&A | Business Partner | SAP CO | IFRS | Cosmetics • Pharmaceutical • Manufacturing",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Amend Cosmetics"
+            }
+          },
+          "reviewBody": "I was fortunate to count on Éverson's support to understand the automation tools, and the experience was incredible. He has a unique way of explaining complex things in a simple and practical way, which made all the difference for me to adapt quickly to the new tools.Beyond mastering the subject, Éverson is extremely approachable and proactive. He was always ready to help and looked for solutions that truly met our needs. His support was essential to understanding how the tools work.I recommend Éverson with my eyes closed! He is a competent and committed professional, who makes a point of seeing everyone around him achieve results.",
+          "datePublished": "2025-01",
+          "itemReviewed": {
+            "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "Recommendation",
+          "author": {
+            "@type": "Person",
+            "name": "Felipe G. P. Carvalho",
+            "jobTitle": "I am an architect of possibilities: I translate ideas into digital solutions that connect purpose to performance. I help companies innovate and turn processes into concrete results.",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Ex-CSO @Daus | CEO @Proveai"
+            }
+          },
+          "reviewBody": "Éverson is an extraordinary professional: engaged, proactive and committed. His dedication, fast learning ability and clarity in sharing knowledge are inspiring. I had the privilege of witnessing his talent in projects and events, and I have no doubt that he will have a brilliant future.",
+          "datePublished": "2025-01",
+          "itemReviewed": {
+            "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "Recommendation",
+          "author": {
+            "@type": "Person",
+            "name": "Thalita Costa",
+            "jobTitle": "Human Resources | Recruitment & Selection | Tech Recruiter | HR Generalist",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "HR Assistant @S4Sys | Ex-Tech Recruiter @TT&T"
+            }
+          },
+          "reviewBody": "Éverson is a super engaged and proactive professional. In the meetings and events I attended alongside him, such as the company's Sponsor Day, I could see his commitment and dedication to the projects he carried out. In addition to his willingness to share knowledge and explain processes in detail. It was a privilege to have had contact with such a competent professional, even if only briefly. 🤗",
+          "datePublished": "2025-01",
+          "itemReviewed": {
+            "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "Recommendation",
+          "author": {
+            "@type": "Person",
+            "name": "Edil Dias",
+            "jobTitle": "Co-Founder, Umans - Intelligent Agents | Digital Products | UX / UI | Automation | SaaS | Agentic Development",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Co-founder @Umans | CEO @Daus"
+            }
+          },
+          "reviewBody": "Working with Everson day to day is rewarding, he is a completely engaged and proactive guy. He likes to learn and learns fast. The kind of person you know will have a brilliant future.",
+          "datePublished": "2025-01",
+          "itemReviewed": {
+            "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "Recommendation",
+          "author": {
+            "@type": "Person",
+            "name": "Felipe dos Reis de Andrade",
+            "jobTitle": "Endemic Disease Control Agent",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Municipal Government of Frei Miguelinho"
+            }
+          },
+          "reviewBody": "I had the privilege of counting on Éverson Filipe's support in matters related to Information Systems, and his help was fundamental to the success of my learning. Éverson Filipe demonstrated technical knowledge, as well as a lot of patience and dedication in sharing his knowledge.",
+          "datePublished": "2025-01",
+          "itemReviewed": {
+            "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "item": {
+          "@type": "Recommendation",
+          "author": {
+            "@type": "Person",
+            "name": "Luis Daniel Infante Pena",
+            "jobTitle": "Relationship management | Localization",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Relationship Manager @SIL Global | Ex-Program Assistant @Campus b"
+            }
+          },
+          "reviewBody": "I had the pleasure of supporting Éverson as a Program Assistant in the “Comunicación Intercultural” program offered by Campus B in partnership with YDUQS. He was a participative and proactive student, demonstrating great ability to solve problems related to teamwork, especially in an international context. His commitment to attending the sessions and his willingness to help his colleagues were remarkable. Éverson also developed significant soft skills, such as intercultural intelligence and teamwork, and demonstrated fluency in a second language.",
+          "datePublished": "2024-10",
+          "itemReviewed": {
+            "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": "https://eversonfilipe-portfolio.netlify.app/#hackathons",
+    "name": "Hackathons & Technical Competitions for Everson Filipe",
+    "description": "Hackathons, ideathons, and technical competitions participated in by Everson Filipe.",
+    "numberOfItems": 10,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Event",
+          "name": "Hackathon HAVK - Hacking the Desert",
+          "startDate": "2025-07",
+          "location": {
+            "@type": "Place",
+            "name": "HAVK"
+          },
+          "attendee": {
+            "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Event",
+          "name": "VOX ASTRA Hackathon",
+          "startDate": "2025-05",
+          "location": {
+            "@type": "Place",
+            "name": "EQ Hacks"
+          },
+          "attendee": {
+            "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Event",
+          "name": "2025 Hackatopia Hackathon",
+          "startDate": "2025-04",
+          "location": {
+            "@type": "Place",
+            "name": "YPStem"
+          },
+          "attendee": {
+            "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "Event",
+          "name": "Hackathon Fenearte",
+          "startDate": "2025-02",
+          "location": {
+            "@type": "Place",
+            "name": "Porto Digital"
+          },
+          "attendee": {
+            "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "Event",
+          "name": "Ideathon AC",
+          "startDate": "2025-02",
+          "location": {
+            "@type": "Place",
+            "name": "Porto Digital"
+          },
+          "attendee": {
+            "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "Event",
+          "name": "Hackathon Impulso Regional",
+          "startDate": "2024-12",
+          "location": {
+            "@type": "Place",
+            "name": "ENAP"
+          },
+          "attendee": {
+            "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "Event",
+          "name": "Hackathon Luminahub",
+          "startDate": "2024-12",
+          "location": {
+            "@type": "Place",
+            "name": "Luminahub"
+          },
+          "attendee": {
+            "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "Event",
+          "name": "Hackathon Data Flow",
+          "startDate": "2024-08",
+          "location": {
+            "@type": "Place",
+            "name": "Porto Digital"
+          },
+          "attendee": {
+            "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "Event",
+          "name": "Ideathon - Caruaru Campus Party Day",
+          "startDate": "2024-08",
+          "location": {
+            "@type": "Place",
+            "name": "Porto Digital"
+          },
+          "attendee": {
+            "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "Event",
+          "name": "Olimpíadas Jovens de Impacto (Youth Impact Olympics)",
+          "startDate": "2021-11",
+          "location": {
+            "@type": "Place",
+            "name": "SEBRAE & Instituto Verda"
+          },
+          "attendee": {
+            "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": "https://eversonfilipe-portfolio.netlify.app/#exhibitions",
+    "name": "Academic Fairs & Technical Exhibitions for Everson Filipe",
+    "description": "Academic technology fairs and university project exhibitions contributed to by Everson Filipe at UniFavip Wyden.",
+    "numberOfItems": 3,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Event",
+          "name": "ExpoTech 2025.2",
+          "startDate": "2025-12",
+          "location": {
+            "@type": "Place",
+            "name": "UniFavip Wyden"
+          },
+          "contributor": {
+            "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Event",
+          "name": "ExpoTech 2025.1",
+          "startDate": "2025-06",
+          "location": {
+            "@type": "Place",
+            "name": "UniFavip Wyden"
+          },
+          "contributor": {
+            "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Event",
+          "name": "ExpoTech 2024.2",
+          "startDate": "2024-11",
+          "location": {
+            "@type": "Place",
+            "name": "UniFavip Wyden"
+          },
+          "contributor": {
+            "@id": "https://eversonfilipe-portfolio.netlify.app/#person"
+          }
+        }
+      }
+    ]
   }
 ]
   </script>
 </head>
 
 <body>
-  <noscript>
+    <noscript>
     <div style="padding: 20px; background: #374f5b; color: #ffffff;">
       <p>This page requires JavaScript to render the interactive portfolio. Here is the text summary for screen readers and search crawlers:</p>
-      ## LANGUAGE: EN
-
-# Everson Filipe
-Systems Implementation & Analysis · Integrations | Bridging the gap between business requirements and scalable software execution through rigorous data validation and process automation.
+      # Everson Filipe
+Systems Analyst & Implementation · Agentic AI | Bridging the gap between business requirements and scalable software execution through rigorous data validation and process automation.
 
 ## About
-As an Implementation Analyst specializing in Implementation Engineering and AI-driven Automation, I transform complex business requirements into scalable, reliable workflows and software configurations for B2B clients.
-Working directly with cloud-based ERP systems and SaaS platforms, I configure solutions using Python, Django Admin, JSONLogic, and AWS, ensuring integrations with REST APIs and cloud BI services such as Amazon Athena.
-My work is grounded in data integrity and workflow standardization. Operating within Agile frameworks, I mentor new engineers, lead technical onboarding, and contribute directly to production environments from day one.
+I'm an early-career Systems Analyst focused on AI Engineering and Workflows Implementation, where I transform business requirements into reliable software configurations, standardized workflows, and production-ready solutions for B2B environments. Working with ERP and SaaS platforms has strengthened my foundation in systems analysis, software implementation, process automation, data validation, and cloud-based integrations using technologies such as Python, Django, REST APIs and AWS. While still at the beginning of my career, I've already contributed to production environments, delivering measurable results through structured execution and continuous learning.
+My professional interests naturally extend toward AI Engineering, where I explore how intelligent systems can improve software delivery and operational efficiency. I study and build practical projects involving LLMs, Agentic AI, Retrieval-Augmented Generation (RAG), LangChain, LangGraph, GenAI, and workflow automation, always approaching AI from a systems implementation perspective. Rather than treating AI as a standalone technology, I see it as an extension of software engineering, combining automation, structured reasoning, and scalable architectures to solve real business problems.
+I enjoy working at the intersection of systems, automation, and artificial intelligence, continuously expanding my technical foundation while collaborating with multidisciplinary teams and learning from real-world challenges. My goal is to grow into an engineer capable of designing reliable AI systems and intelligent automation that create measurable business value. I'm always open to connecting with professionals, discussing technology, sharing ideas, and exploring opportunities in Systems Analysis, Implementation Engineering, AI Engineering, and Automation. Let's connect and build intelligent systems together!
 
 ### Core Stack
 Python, Django, JSONLogic, REST API, AWS, Pandas, Jira, ClickUp
@@ -166,305 +995,181 @@ Python, Django, JSONLogic, REST API, AWS, Pandas, Jira, ClickUp
 Under Construction
 
 ## Experience
-### Systems Implementation Intern at Kartado (Sep 2025 - Present)
-- Configured JSONLogic rules for dynamic forms across 42+ client environments via Django Admin, ensuring data integrity and functional consistency.
-- Developed Python ETL automation scripts integrated with Django ORM, replacing manual data transformation and loading workflows.
-- Built notebook-based Python scripts for JSON metadata extraction, schema validation, and proactive detection of structural inconsistencies in exported datasets.
-- Corrected GIS maps, adjusted Shapefiles, and validated spatial geometries to support highway concession system parameterization.
-- Maintained REST API and JWT integration documentation alongside Pytest validation scripts for Django modules.
-- Leveraged AWS IAM, Amazon EC2, Amazon ECS (Docker), AWS Step Functions, ODBC, and Amazon Athena across infrastructure, secure access, data integration, and analytics workflows in client environments.
-- Automated parameterization spreadsheet generation using Python, Pandas, and openpyxl, reducing manual effort in implementation workflows.
-- Tech Stack: JSONLogic, Django, Python, Pandas, OpenpyXL, GIS, AWS.
-Conquistas/Achievements:
-  * [Recognition] Nominated for the company's Monthly Agility Award in April 2026 for technical implementation performance and bugs fixes.
-  * [Delivery] Helped achieve 99.48% on-time implementation delivery while maintaining a 100% personal on-time completion rate throughout H1 2026.
+### Systems Implementation Intern at Kartado (Sep 2025 – Present)
+**About Kartado**: Kartado is a B2B SaaS company serving the highway concession sector. As a Systems Implementation Intern, I turned client business requirements into software configurations and automated workflows across 42+ B2B client environments, operating within Agile frameworks.
 
-### Agile Product Management Learner at Daus (Dec 2024 - Jun 2025)
-- Applied Scrum, Kanban, and Lean Thinking frameworks to drive product discovery and requirements analysis across internal and multi-client portfolio projects in a software house environment.
-- Documented product insights, user flows, and functional requirements across the Atlassian ecosystem (Jira, Confluence) and FigJam.
-- Mentored two intern cohorts across structured onboarding programs in Agile Product Management workflows and MVP-delivery.
+Key Responsibilities:
+- Configured JSONLogic rules for dynamic forms across 42+ client environments via Django Admin, ensuring data integrity and functional consistency; corrected GIS maps, adjusted Shapefiles, and validated spatial geometries for highway concession system parameterization;
+- Developed Python ETL automation scripts integrated with Django ORM, replacing manual data transformation workflows; automated the generation of parameterization spreadsheets using Python, Pandas, and openpyxl, reducing manual effort;
+- Built notebook-based Python scripts for JSON metadata extraction, schema validation, and proactive detection of structural inconsistencies in exported datasets; maintained REST API/JWT integration documentation and Pytest validation scripts for Django modules;
+- Leveraged AWS IAM, Amazon EC2, Amazon ECS (Docker), AWS Step Functions, ODBC, and Amazon Athena across infrastructure, secure access, data integration, and analytics workflows in client environments;
+- Tech Stack: JSONLogic, Django, Python, Pandas, OpenpyXL, GIS, AWS.
+
+Key Achievements:
+- [Recognition] Nominated for the company's Monthly Agility Award in April 2026 for technical implementation performance and bugs fixes.
+- [Delivery] Helped achieve 99.48% on-time implementation delivery while maintaining a 100% personal on-time completion rate throughout H1 2026.
+
+- **Tech Stack**: JSONLogic, Django, Python, Pandas, OpenpyXL, GIS, AWS
+
+### Agile Product Management Learner at Daus (Dec 2024 – Jun 2025)
+**About Daus**: Daus is a software house/startup delivering internal and multi-client portfolio projects. As a Product Management Learner focused on requirements gathering, I combined hands-on delivery with structured learning: while building fluency in Agile Product Management, I supported product discovery and requirements analysis, turning stakeholder needs into documented, actionable delivery artifacts.
+
+Key Responsibilities:
+- Applied Scrum, Kanban, and Lean Thinking frameworks to drive product discovery in a software house environment;
+- Conducted requirements analysis across internal and multi-client portfolio projects;
+- Documented product insights, user flows, and functional requirements across the Atlassian ecosystem (Jira, Confluence) and FigJam;
 - Tech Stack: Figma, FigJam, Jira, Confluence.
 - Methodologies: Scrum, Kanban, Lean Thinking.
-Conquistas/Achievements:
-  * [Mentorship] Mentored two concurrent cohorts, including SOFTEX interns and a Porto Digital/Embarque Digital student class.
 
-## Education
-### Computer Science - UniFavip Wyden (Feb 2024 - Present) [Bachelor's Degree]
-  Highlights: Active participation as an exhibitor at extension project fairs showcasing university projects to invited companies., Professional development through extracurricular courses, technology events, and lectures offered by the institution., Selected for a remote academic mobility program conducted in Spanish during the 2024.2 semester, in partnership with Universidad Siglo 21, to develop projects for competitions focused on the United Nations Sustainable Development Goals (SDGs).
+Key Achievements:
+- [Enablement & impact] Mentored two intern cohorts across structured onboarding programs in Agile Product Management workflows and MVP-delivery.
 
-### Artificial Intelligence Mentorship Program - Offered by LAB.AI, Instituto Joule (Aug 2025 - Sep 2025) [Mentorship Program]
-  Highlights: Selected to participate in individual and group technology-focused mentoring through the Lab.AI - Laboratório de Mentes program, offered by Instituto Joule in partnership with Instituto Localiza., Hands-on laboratories focused on technology and social impact projects enhanced by Artificial Intelligence tools., Lectures, mentorship sessions, and individual and group activities led by volunteer professionals from the technology industry.
+- **Tech Stack**: Figma, FigJam, Jira, Confluence
+- **Methodologies**: Scrum, Kanban, Lean Thinking
 
-## Courses
-- Introduction to SAFe (Simplilearn, Jul 2026)
-- Postman: From Zero to Advanced + Automated Testing (Udemy, Dec 2025)
-- Application Programming Interface: API and Web Services (Udemy, Dec 2025)
-- Lab.AI: Preparing the Next Generation for the Future of Work (Instituto Joule, Sep 2025)
-- SkillsBuild - Customer Engagement: Problem Solving and Process Controls (IBM, Aug 2025)
-- EF SET English Certificate 69/100 (C1 Advanced) (EF Education First, Mar 2025)
-- Cross-disciplinary Competency - Information and Communication Technology (SENAI, Nov 2023)
+### Product Manager Intern at TT&T Soluções em Informática (Sep 2024 – Feb 2025)
+**About TT&T Soluções em Informática**: TT&T Soluções em Informática LTDA develops internal and external systems, including the HiApps product line. As a Product Manager Intern, I combined hands-on delivery with structured learning: while deepening my command of Agile methodologies, I coordinated ceremonies and translated requirements throughout the sprints.
 
-## Publications
-- From Chaos to Clarity (Medium, Oct 2025)
-- The Fallacy of “Plural MVP” in GovTech: Why Unrelenting Focus is the Only Real Metric of Success. (Medium, Jul 2025)
-- Communication and its Paradigms (Medium, Apr 2025)
-- Product Optimization: Too much UI can break your UX (Medium, Mar 2025)
-- From Problem to Solution: A Framework for Building Value-Driven Products (Medium, Feb 2025)
-- Design your thinking: the art of being (Medium, Jan 2025)
-- Using AI for the Customer Experience Management (Medium, Dec 2024)
-- Development of the Creative Economy in Northeastern Brazil (Medium, Dec 2024)
-- Alive Architecture: Redefining How We Build a Sustainable Future (Medium, Dec 2024)
-- Some trends do not stay as trends: the world is a fractal (Medium, Nov 2024)
-- Fishes and cars: UX’s study objects (Medium, Nov 2024)
-- Gestão Ágil Simplificada (LinkedIn, Oct 2024)
+Key Responsibilities:
+- Coordinated and participated in Agile ceremonies and other Agile methodology artifacts throughout the sprints, including dailies
+- Collaborated closely with UX/UI teams on the company's internal and external systems, the HiApps product line
+- Documented functional requirements and translated business requirements for technical teams
+- Applied prioritization and analysis matrices such as the Eisenhower Matrix and 5W2H in day-to-day product work
+- Organized and maintained product documentation in Google Drive repositories, with intensive use of spreadsheets
+- Tools: Google Drive, Spreadsheets.
+- Methodologies: Agile methodologies, Eisenhower Matrix, 5W2H.
 
-## Volunteering
-### Co-organizer at Google Developers Group (GDG Barueri) (Aug 2025 - Present)
-  Highlights: Co-organized events focused on Technology, Artificial Intelligence (AI), and Innovation at Google Developers Group Barueri.
+Key Achievements:
+- [Presentation] Took part in Sponsor's Days, events held during the sprints for results presentations across departments, where I presented development updates on HiEmergência, one of the flagship internal products in the HiApps line.
 
-### Ambassador & Facilitator at Politize! (Politize! Caruaru) (May 2025 - Present)
-  Highlights: reated and co-organized workshops on technology, politics, and civic rights applied to society at Politize! Caruaru, while also contributing to internal projects.
+- **Tech Stack**: Agile Methodologies, Product Management, Google Drive
+- **Methodologies**: Agile methodologies, Eisenhower Matrix, 5W2H
 
-### OGT & Marketing Committee Member at AIESEC (AIESEC no Mackenzie) (Mar 2025 - Aug 2025)
-  Highlights: Served as a member of the Outgoing Global Talent (OGT) team at AIESEC Mackenzie and was selected as the committee's Marketing Lead., Designed marketing materials and facilitated meetings with team leaders, including collaboration with AIESEC committees from other countries, such as Jalandhar, India.
+## Education & Qualifications
+- **Artificial Intelligence Mentorship Program**, Offered by LAB.AI, Instituto Joule (Aug 2025 – Sep 2025) - 
+  - Selected to participate in individual and group technology-focused mentoring through the Lab.AI – Laboratório de Mentes program, offered by Instituto Joule in partnership with Instituto Localiza.
+  - Hands-on laboratories focused on technology and social impact projects enhanced by Artificial Intelligence tools.
+  - Lectures, mentorship sessions, and individual and group activities led by volunteer professionals from the technology industry.
+- **Computer Science**, UniFavip Wyden (Feb 2024 – Present) - 
+  - Active participation as an exhibitor at extension project fairs showcasing university projects to invited companies.
+  - Professional development through extracurricular courses, technology events, and lectures offered by the institution.
+  - Selected for a remote academic mobility program conducted in Spanish during the 2024.2 semester, in partnership with Universidad Siglo 21, to develop projects for competitions focused on the United Nations Sustainable Development Goals (SDGs).
 
-### Soft Skills Instructor at Vai Na Web (Jan 2025)
-  Highlights: Delivered a soft skills lecture at Vai na Web in January 2025, demonstrating their practical application in Information Technology problem-solving., Highlighted how empathy strengthens the understanding of client and user needs, fostering systems thinking and enabling more effective solutions.
+## Certifications & Courses
+- **Introduction to SAFe**, Simplilearn (Jul 2026) — [Credential/Proof](https://simpli-web.app.link/e/BQljCvpb84b)
+- **Postman: From Zero to Advanced + Automated Testing**, Udemy (Dec 2025) — [Credential/Proof](https://www.udemy.com/certificate/UC-12234f7a-0178-4a06-b809-864522caa58c/)
+- **Application Programming Interface: API and Web Services**, Udemy (Dec 2025) — [Credential/Proof](https://www.udemy.com/certificate/UC-9eff9f3e-ab9e-4e05-86e2-181eddd6e921/)
+- **2025 Aspire Leaders Program**, Aspire Institute (Dec 2025) — [Credential/Proof](https://engage.aspireleaders.org/share/certificate/did:rcw:bbe75782-e060-4363-8078-a1fade3ab696)
+- **Lab.AI: Preparing the Next Generation for the Future of Work**, Instituto Joule (Sep 2025) — [Credential/Proof](https://academy.institutojoule.org/certificado/?cert_hash=6710237ef0505f06)
+- **Ignite Entrepreneurship Program**, Wadhwani Foundation (Jul 2025) — [Credential/Proof](https://github.com/eversonfilipe/eversonfilipe/blob/d4521ab193c9ce4fdf4b00cb2cfff4276e341e24/certificates-extra/Certificado%20Ignite%20-%20Wadhwani.pdf)
+- **SkillsBuild - Customer Engagement: Problem Solving and Process Controls**, IBM (Jul 2025) — [Credential/Proof](https://www.credly.com/badges/a9ac260f-4415-43d0-a2e2-479478acbddd/linked_in_profile)
+- **EF SET English Certificate 69/100 (C1 Advanced)**, EF Education First (Feb 2025) — [Credential/Proof](https://cert.efset.org/en/88BaNL)
+- **Comunicación Intercultural - Proyecto Internacional**, Campus B (Oct 2024) — [Credential/Proof](https://www.brasilopenbadge.com.br/pages/badge/e661e5f36942fe4cdf319e4ecb18d452)
+- **Cross-disciplinary Competency - Information and Communication Technology**, SENAI (Nov 2023) — [Credential/Proof](http://www.sp.senai.br/consulta-certificado?qrcode=00022804/7460876)
 
-## Hackathons
-- Hackathon HAVK - Hacking the Desert (HAVK, Jul 2025)
-- VOX ASTRA Hackathon (EQ Hacks, May 2025)
-- 2025 Hackatopia Hackathon (YPStem, Apr 2025)
-- Hackathon Fenearte (Porto Digital, Feb 2025)
-- Ideathon AC (Porto Digital, Feb 2025)
-- Hackathon Impulso Regional (ENAP, Dec 2024)
-- Hackathon Luminahub (Luminahub, Dec 2024)
-- Hackathon Data Flow (Porto Digital, Aug 2024)
-- Ideathon - Caruaru Campus Party Day (Porto Digital, Aug 2024)
-- Olimpíadas Jovens de Impacto (Youth Impact Olympics) (SEBRAE & Instituto Verda, Nov 2021)
+## Achievements & Recognition
+- **Nomination for Kartado Monthly Agility Award**, Kartado (Apr 2026)
+- **Accepted Mentee - Aspire Leaders 2025.2 Cohort 5**, Aspire Institute (Oct 2025)
 
-## Events
-- FLISoL 2026 - Role: Speaker (IFPE/Palmares, Apr 2026)
-- ExpoTech 2025.2 - Role: Exhibitor (UniFavip Wyden, Dec 2025)
-- Festival Agile Trends 2025 - Role: Listener (Remote, Nov 2025)
-- ExpoTech 2025.1 - Role: Exhibitor (UniFavip Wyden, Jun 2025)
-- BRICS Youth - Role: Listener (Remote, May 2025)
-- Trends for New Generations of Professionals - Role: Speaker (Recife Front-End Community, Feb 2025)
-- ExpoTech 2024.2 - Role: Exhibitor (UniFavip Wyden, Nov 2024)
-- Campus Party NE 2024 - Role: Listener (Sao Lourenco da Mata, Sep 2024)
-- Caruaru Campus Party Day - Role: Listener (Caruaru, Aug 2024)
+## Hackathons & Technical Competitions
+- **Hackathon HAVK - Hacking the Desert** (HAVK, Jul 2025)
+- **VOX ASTRA Hackathon** (EQ Hacks, May 2025)
+- **2025 Hackatopia Hackathon** (YPStem, Apr 2025)
+- **Hackathon Fenearte** (Porto Digital, Feb 2025)
+- **Ideathon AC** (Porto Digital, Feb 2025)
+- **Hackathon Impulso Regional** (ENAP, Dec 2024)
+- **Hackathon Luminahub** (Luminahub, Dec 2024)
+- **Hackathon Data Flow** (Porto Digital, Aug 2024)
+- **Ideathon - Caruaru Campus Party Day** (Porto Digital, Aug 2024)
+- **Olimpíadas Jovens de Impacto (Youth Impact Olympics)** (SEBRAE & Instituto Verda, Nov 2021)
 
-
-
-## LANGUAGE: PT
-
-# Éverson Filipe
-Implantação e Análise de Sistemas · Integrações | Unindo requisitos de negócio à execução escalável de software por meio de validação de dados e automação de processos.
-
-## About
-Como Analista de Implantação especializado em Engenharia de Implantação e Automação orientada por IA, transformo requisitos de negócio complexos em fluxos de trabalho escaláveis, confiáveis e configurações de software para clientes B2B.
-Atuando diretamente com sistemas ERP em nuvem e plataformas SaaS, configuro soluções utilizando Python, Django Admin, JSONLogic e AWS, garantindo integrações com APIs REST e serviços de BI em nuvem, como o Amazon Athena.
-Meu trabalho é fundamentado em integridade de dados e padronização de fluxos de trabalho. Em ambientes Ágeis, realizo a mentoria de novos profissionais, conduzo onboardings técnicos e contribuo diretamente para ambientes de produção desde o primeiro dia.
-
-### Core Stack
-Python, Django, JSONLogic, REST API, AWS, Pandas, Jira, ClickUp
-
-## Main Projects
-Under Construction
-
-## Experience
-### Estagiário em Implantação de Sistemas at Kartado (Set 2025 - Presente)
-- Configurou regras em JSONLogic para formulários dinâmicos em mais de 42 ambientes de clientes, utilizando Django Admin para garantir integridade dos dados e consistência funcional.
-- Desenvolveu scripts de automação ETL em Python integrados ao Django ORM, substituindo processos manuais de transformação e carregamento de dados.
-- Desenvolveu scripts em Python (Jupyter Notebook) para extração de metadados JSON, validação de esquemas e detecção proativa de inconsistências estruturais em conjuntos de dados exportados.
-- Corrigiu mapas GIS, ajustou arquivos Shapefile e validou geometrias espaciais para apoiar a parametrização de sistemas de concessionárias de rodovias.
-- Manteve a documentação de integrações REST API e JWT, além de scripts de validação com Pytest para módulos Django.
-- Utilizou AWS IAM, EC2, ECS (Docker), Step Functions, ODBC e Amazon Athena em fluxos de infraestrutura, controle de acesso, integração de dados e análises.
-- Automatizou a geração de planilhas de parametrização utilizando Python, Pandas e openpyxl, reduzindo o esforço manual nos processos de implantação.
-- Tech Stack: JSONLogic, Django, Python, Pandas, OpenpyXL, GIS, AWS.
-Conquistas/Achievements:
-  * [Reconhecimento] Indicado ao Prêmio Agilidade do Mês da empresa em abril de 2026 pelo desempenho em Implantação Técnica.
-  * [Entrega] Contribuiu para que a equipe alcançasse 99,48% de entregas de implantação no prazo, mantendo 100% de pontualidade nas próprias entregas durante o primeiro semestre de 2026.
-
-### Aprendiz em Gestão Ágil de Produtos at Daus (Dez 2024 - Jun 2025)
-- Aplicou Scrum, Kanban e Lean Thinking para conduzir discovery de produtos e levantamento de requisitos em projetos internos e de múltiplos clientes.
-- Documentou insights de produto, fluxos de usuários e requisitos funcionais utilizando o ecossistema Atlassian (Jira e Confluence) e FigJam.
-- Mentoreou dois cohorts simultâneos durante programas estruturados de onboarding em Gestão Ágil de Produtos e desenvolvimento de MVPs.
-Conquistas/Achievements:
-  * [Mentoria] Mentoreou dois cohorts simultâneos, incluindo estagiários do programa SOFTEX e uma turma do Porto Digital/Embarque Digital.
-
-## Education
-### Ciência da Computação - UniFavip Wyden (Fev 2024 - Presente) [Bacharelado]
-  Highlights: Participação ativa em feiras de apresentação de projetos extensionistas com empresas convidadas, como expositor., Capacitação em cursos extracurriculares, eventos de tecnologia e palestras oferecidas pela instituição., Selecionado para mobilidade remota em espanhol em 2024.2, em parceria com Universidad Siglo 21 para produção de projetos para competições envolvendo ODS.
-
-### Programa de Mentoria em Inteligência Artificial - Oferecido pela LAB.AI, do Instituto Joule (Ago 2025 - Set 2025) [Programa de Mentoria]
-  Highlights: Selecionado para mentorias individuais e coletivas direcionadas á tecnologia através do programa Lab.AI - Laboratório de Mentes, oferecido pelo Instituto Joule em parceria com o Instituto Localiza., Laboratórios hand-on de projetos de tecnologia e impacto social otimizados por ferramentas de Inteligência Artificial., Palestras, mentorias e dinâmicas individuais ou coletivas com profissionais voluntários da área.
-
-## Courses
-- Introdução ao SAFe (Simplilearn, Jul 2026)
-- Postman: Do Zero ao Avançado + Testes Automatizados (Udemy, Dez 2025)
-- Interface de Programação de Aplicação: APIs e Web Services (Udemy, Dez 2025)
-- Lab.AI: Preparando a Próxima Geração para o Futuro do Trabalho (Instituto Joule, Set 2025)
-- SkillsBuild - Engajamento do Cliente: Resolução de Problemas e Controles de Processos (IBM, Ago 2025)
-- Certificado de Inglês EF SET 69/100 (C1 Avançado) (EF Education First, Mar 2025)
-- Competência Transversal - Tecnologia da Informação e Comunicação (SENAI, Nov 2023)
+## Tech Events & Industry Conferences
+- **FLISoL 2026** (Speaker — IFPE/Palmares, Apr 2026)
+- **ExpoTech 2025.2** (Exhibitor — UniFavip Wyden, Dec 2025)
+- **Festival Agile Trends 2025** (Listener — Remote, Nov 2025)
+- **ExpoTech 2025.1** (Exhibitor — UniFavip Wyden, Jun 2025)
+- **BRICS Youth** (Listener — Remote, May 2025)
+- **Trends for New Generations of Professionals** (Speaker — Recife Front-End Community, Feb 2025)
+- **ExpoTech 2024.2** (Exhibitor — UniFavip Wyden, Nov 2024)
+- **Campus Party NE 2024** (Listener — Sao Lourenco da Mata, Sep 2024)
+- **Caruaru Campus Party Day** (Listener — Caruaru, Aug 2024)
 
 ## Publications
-- From Chaos to Clarity (Medium, Out 2025)
-- The Fallacy of “Plural MVP” in GovTech: Why Unrelenting Focus is the Only Real Metric of Success. (Medium, Jul 2025)
-- Communication and its Paradigms (Medium, Abr 2025)
-- Product Optimization: Too much UI can break your UX (Medium, Mar 2025)
-- From Problem to Solution: A Framework for Building Value-Driven Products (Medium, Fev 2025)
-- Design your thinking: the art of being (Medium, Jan 2025)
-- Using AI for the Customer Experience Management (Medium, Dez 2024)
-- Development of the Creative Economy in Northeastern Brazil (Medium, Dez 2024)
-- Alive Architecture: Redefining How We Build a Sustainable Future (Medium, Dez 2024)
-- Some trends do not stay as trends: the world is a fractal (Medium, Nov 2024)
-- Fishes and cars: UX’s study objects (Medium, Nov 2024)
-- Gestão Ágil Simplificada (LinkedIn, Out 2024)
+- **Some trends do not stay as trends: the world is a fractal** (Medium, Nov 2024) — [URL](https://medium.com/design-bootcamp/some-trends-do-not-stay-as-trends-the-world-is-a-fractal-fe374bdc088f?sharedUserId=eversonfilipe) - 
+- **Fishes and cars: UX’s study objects** (Medium, Nov 2024) — [URL](https://medium.com/design-bootcamp/fishes-and-cars-uxs-study-objects-c8c251f8c9df?sharedUserId=eversonfilipe) - 
+- **Using AI for the Customer Experience Management** (Medium, Dec 2024) — [URL](https://eversonfilipe.medium.com/using-ai-for-the-customer-experience-management-386ec828542a?sharedUserId=eversonfilipe) - 
+- **Development of the Creative Economy in Northeastern Brazil** (Medium, Dec 2024) — [URL](https://eversonfilipe.medium.com/development-of-the-creative-economy-in-northeastern-brazil-f6cc0962a659?sharedUserId=eversonfilipe) - 
+- **Alive Architecture: Redefining How We Build a Sustainable Future** (Medium, Dec 2024) — [URL](https://eversonfilipe.medium.com/illustrative-image-alive-architecture-redefining-how-we-build-a-sustainable-future-a4705fc0685c?sharedUserId=eversonfilipe) - 
+- **Design your thinking: the art of being** (Medium, Jan 2025) — [URL](https://medium.com/design-bootcamp/design-your-thinking-the-art-of-being-5b7e8b9ca3b7?sharedUserId=eversonfilipe) - 
+- **From Problem to Solution: A Framework for Building Value-Driven Products** (Medium, Feb 2025) — [URL](https://eversonfilipe.medium.com/from-problem-to-solution-a-framework-for-building-value-driven-products-c6e5d564d111?sharedUserId=eversonfilipe) - 
+- **Product Optimization: Too much UI can break your UX** (Medium, Mar 2025) — [URL](https://medium.com/design-bootcamp/product-optimization-too-much-ui-can-break-your-ux-4a00c5a1b125?sharedUserId=eversonfilipe) - 
+- **Communication and its Paradigms** (Medium, Apr 2025) — [URL](https://eversonfilipe.medium.com/communication-and-its-paradigms-513cedfbb059?sharedUserId=eversonfilipe) - 
+- **From Chaos to Clarity** (Medium, Oct 2025) — [URL](https://eversonfilipe.medium.com/from-chaos-to-clarity-b7fb92368218?sharedUserId=eversonfilipe) - 
+- **The Fallacy of “Plural MVP” in GovTech: Why Unrelenting Focus is the Only Real Metric of Success.** (Medium, Jul 2025) — [URL](https://medium.com/design-bootcamp/the-fallacy-of-plural-mvp-in-govtech-why-unrelenting-focus-is-the-only-real-metric-of-success-64329bbfe4ec?sharedUserId=eversonfilipe) - 
+- **Gestão Ágil Simplificada** (LinkedIn, Oct 2024) — [URL](https://www.linkedin.com/pulse/gest%C3%A3o-%C3%A1gil-simplificada-%C3%A9verson-filipe-zgdoe) - 
 
 ## Volunteering
-### Coorganizador at Google Developers Group (GDG Barueri) (Ago 2025 - Presente)
-  Highlights: Coorganizou eventos voltados para Tecnologia, Inteligência Artificial (IA) e Inovação no Google Developers Group (GDG) Barueri.
+- **Co-organizer**, Google Developers Group (GDG Barueri) (Aug 2025 - Present) - 
+  - Co-organized events focused on Technology, Artificial Intelligence (AI), and Innovation at Google Developers Group Barueri.
+- **Ambassador & Facilitator**, Politize! (Politize! Caruaru) (May 2025 - Present) - 
+  - reated and co-organized workshops on technology, politics, and civic rights applied to society at Politize! Caruaru, while also contributing to internal projects.
+- **OGT & Marketing Committee Member**, AIESEC (AIESEC no Mackenzie) (Mar 2025 - Aug 2025) - 
+  - Served as a member of the Outgoing Global Talent (OGT) team at AIESEC Mackenzie and was selected as the committee's Marketing Lead.
+  - Designed marketing materials and facilitated meetings with team leaders, including collaboration with AIESEC committees from other countries, such as Jalandhar, India.
+- **Soft Skills Instructor**, Vai Na Web (Jan 2025) - 
+  - Delivered a soft skills lecture at Vai na Web in January 2025, demonstrating their practical application in Information Technology problem-solving.
+  - Highlighted how empathy strengthens the understanding of client and user needs, fostering systems thinking and enabling more effective solutions.
 
-### Embaixador e Facilitador at Politize! (Politize! Caruaru) (Mai 2025 - Presente)
-  Highlights: Criou e coorganizou workshops sobre tecnologia, política e direitos civis aplicados à sociedade na Politize! Caruaru, além de contribuir para projetos internos.
+## Endorsements & Peer Recommendations
+### Brenno Carvalho — Military | Businesses Management | Human Resources (Oct 2025)
+**Company/Context**: Brazilian Navy | Alumni Aspire
+**Testimonial**: I was in the same group as Éverson at Aspire Leaders 2025. From the very beginning, he proved to be a highly dedicated and resilient person, helping and answering many questions from other people in the group. He is a humble person, of exemplary character, always ready to solve any problem that may arise.
 
-### Membro do Comitê de OGT e Marketing at AIESEC (AIESEC no Mackenzie) (Mar 2025 - Ago 2025)
-  Highlights: Atuou como membro da equipe de Outgoing Global Talent (OGT) da AIESEC Mackenzie e foi selecionado como Líder de Marketing do comitê., Desenvolveu materiais de marketing e conduziu reuniões com líderes de equipe, incluindo a colaboração com comitês da AIESEC de outros países, como Jalandhar, na Índia.
+### Sebastião Rogério, Ph.D. — System Analyst @FCx Labs | PhD in Computer Engineering | AI & Data Science Researcher | Professor (May 2025)
+**Company/Context**: FCx Labs | Ex- Educational Coordinator @UniFavipWyden
+**Testimonial**: Éverson is a very dedicated student, always seeking to improve himself. In addition, he is always engaged in the course activities.
 
-### Instrutor de Soft Skills at Vai Na Web (Jan 2025)
-  Highlights: Ministrou uma palestra sobre soft skills na Vai na Web, em janeiro de 2025, demonstrando sua aplicação prática na resolução de problemas de Tecnologia da Informação., Abordou como a empatia fortalece a compreensão das necessidades de clientes e usuários, favorecendo o pensamento sistêmico e a busca por soluções mais eficazes.
+### Fabíola Cavalcanti — DevOps/DevSecOps Engineer | AWS Cloud | IaC (Terraform) | K8s | 20+ years of expertise in Business Operations & Retail | AWS Certified (Feb 2025)
+**Company/Context**: AI/R - UOL | Ideathon AC Ex-Participant
+**Testimonial**: Everson Filipe is a strategic and results-oriented product leader with a passion for creating exceptional products that customers love.I had the pleasure of working with Everson Filipe at the Ideathon at Armazém de Ideias. During that time, I was impressed by his ability to:Understand customer needs and translate them into clear and concise product roadmaps.Prioritize and manage a complex product backlog.Collaborate effectively with cross-functional teams, including engineering, design and marketing.Launch successful products that met or exceeded customer expectations.Analyze product data and use insights to make informed decisions.Everson is a passionate and experienced product leader who is always looking for ways to improve his products and processes. He is a valuable team player and a mentor to other product managers.I strongly recommend Everson for any product management role. He is a valuable asset to any team.
 
-## Hackathons
-- Hackathon HAVK - Hacking the Desert (HAVK, Jul 2025)
-- VOX ASTRA Hackathon (EQ Hacks, Mai 2025)
-- 2025 Hackatopia Hackathon (YPStem, Abr 2025)
-- Hackathon Fenearte (Porto Digital, Fev 2025)
-- Ideathon AC (Porto Digital, Fev 2025)
-- Hackathon Impulso Regional (ENAP, Dez 2024)
-- Hackathon Luminahub (Luminahub, Dez 2024)
-- Hackathon Data Flow (Porto Digital, Ago 2024)
-- Ideathon - Caruaru Campus Party Day (Porto Digital, Ago 2024)
-- Olimpíadas Jovens de Impacto (SEBRAE & Instituto Verda, Nov 2021)
+### Luciana Sérvulo da Cunha — Project & Social Impact Manager | Advocacy, Human Rights & Gender Equality | Audiovisual, Storytelling and Strategic Communication (Feb 2025)
+**Company/Context**: Brasil 247
+**Testimonial**: He understands everything about technology. I recommend him!
 
-## Events
-- FLISoL 2026 - Role: Palestrante (IFPE/Palmares, Abr 2026)
-- ExpoTech 2025.2 - Role: Expositor (UniFavip Wyden, Dez 2025)
-- Festival Agile Trends 2025 - Role: Participante (Remoto, Nov 2025)
-- ExpoTech 2025.1 - Role: Expositor (UniFavip Wyden, Jun 2025)
-- BRICS Youth - Role: Participante (Remoto, Mai 2025)
-- As Tendências para as Novas Gerações de Profissionais - Role: Palestrante (Recife Front-End Community, Fev 2025)
-- ExpoTech 2024.2 - Role: Expositor (UniFavip Wyden, Nov 2024)
-- Campus Party NE 2024 - Role: Participante (Sao Lourenco da Mata, Set 2024)
-- Caruaru Campus Party Day - Role: Participante (Caruaru, Ago 2024)
+### Julia Zultauskas — Psychology Student | Psychology Intern at Centro de Reabilitação Neurológica Matheus Alvares | ABA and Naturalistic Strategies | Social Psychology | 5/10 Psychologist (Jan 2025)
+**Company/Context**: Centro de Reabilitação Neurológica Matheus Alvares (Neurological Rehabilitation Center) | Ex-Human Resources Intern @TT&T
+**Testimonial**: Éverson went through my Recruitment & Selection process and the company's initial training, and we also crossed paths several times within the company.He is a hard-working, communicative, responsible and very competent guy. Always chasing down the tasks assigned to him.He is also very easy to work with, and his communication is very clear and assertive.I am sure that whoever has him on their team is in good hands!
 
+### Marcos Torres — Head of Controllership & Industrial Finance | Accounting | Tax | Cost Management | FP&A | Business Partner | SAP CO | IFRS | Cosmetics • Pharmaceutical • Manufacturing (Jan 2025)
+**Company/Context**: Amend Cosmetics
+**Testimonial**: I was fortunate to count on Éverson's support to understand the automation tools, and the experience was incredible. He has a unique way of explaining complex things in a simple and practical way, which made all the difference for me to adapt quickly to the new tools.Beyond mastering the subject, Éverson is extremely approachable and proactive. He was always ready to help and looked for solutions that truly met our needs. His support was essential to understanding how the tools work.I recommend Éverson with my eyes closed! He is a competent and committed professional, who makes a point of seeing everyone around him achieve results.
 
+### Felipe G. P. Carvalho — I am an architect of possibilities: I translate ideas into digital solutions that connect purpose to performance. I help companies innovate and turn processes into concrete results. (Jan 2025)
+**Company/Context**: Ex-CSO @Daus | CEO @Proveai
+**Testimonial**: Éverson is an extraordinary professional: engaged, proactive and committed. His dedication, fast learning ability and clarity in sharing knowledge are inspiring. I had the privilege of witnessing his talent in projects and events, and I have no doubt that he will have a brilliant future.
 
-## LANGUAGE: ES
+### Thalita Costa — Human Resources | Recruitment & Selection | Tech Recruiter | HR Generalist (Jan 2025)
+**Company/Context**: HR Assistant @S4Sys | Ex-Tech Recruiter @TT&T
+**Testimonial**: Éverson is a super engaged and proactive professional. In the meetings and events I attended alongside him, such as the company's Sponsor Day, I could see his commitment and dedication to the projects he carried out. In addition to his willingness to share knowledge and explain processes in detail. It was a privilege to have had contact with such a competent professional, even if only briefly. 🤗
 
-# Éverson Filipe
-Implementación y Análisis de Sistemas · Integraciones | Conectando requisitos de negocio con ejecución escalable de software a través de validación rigurosa de datos y automatización de procesos.
+### Edil Dias — Co-Founder, Umans - Intelligent Agents | Digital Products | UX / UI | Automation | SaaS | Agentic Development (Jan 2025)
+**Company/Context**: Co-founder @Umans | CEO @Daus
+**Testimonial**: Working with Everson day to day is rewarding, he is a completely engaged and proactive guy. He likes to learn and learns fast. The kind of person you know will have a brilliant future.
 
-## About
-Como Analista de Implementación especializado en Ingeniería de Implementación y Automatización impulsada por IA, transformo requisitos de negocio complejos en flujos de trabajo escalables, confiables y configuraciones de software para clientes B2B.
-Trabajando directamente con sistemas ERP en la nube y plataformas SaaS, configuro soluciones utilizando Python, Django Admin, JSONLogic y AWS, garantizando integraciones con APIs REST y servicios de BI en la nube, como Amazon Athena.
-Mi trabajo se fundamenta en la integridad de los datos y la estandarización de los flujos de trabajo. Trabajando con metodologías Ágiles, asesoro a nuevos ingenieros, lidero el proceso de incorporación técnica (technical onboarding) y contribuyo directamente a entornos de producción desde el primer día.
+### Felipe dos Reis de Andrade — Endemic Disease Control Agent (Jan 2025)
+**Company/Context**: Municipal Government of Frei Miguelinho
+**Testimonial**: I had the privilege of counting on Éverson Filipe's support in matters related to Information Systems, and his help was fundamental to the success of my learning. Éverson Filipe demonstrated technical knowledge, as well as a lot of patience and dedication in sharing his knowledge.
 
-### Core Stack
-Python, Django, JSONLogic, REST API, AWS, Pandas, Jira, ClickUp
+### Luis Daniel Infante Pena — Relationship management | Localization (Oct 2024)
+**Company/Context**: Relationship Manager @SIL Global | Ex-Program Assistant @Campus b
+**Testimonial**: I had the pleasure of supporting Éverson as a Program Assistant in the “Comunicación Intercultural” program offered by Campus B in partnership with YDUQS. He was a participative and proactive student, demonstrating great ability to solve problems related to teamwork, especially in an international context. His commitment to attending the sessions and his willingness to help his colleagues were remarkable. Éverson also developed significant soft skills, such as intercultural intelligence and teamwork, and demonstrated fluency in a second language.
 
-## Main Projects
-Under Construction
-
-## Experience
-### Practicante en Implementación de Sistemas at Kartado (Sep 2025 - Presente)
-- Configuré reglas de JSONLogic para formularios dinámicos en más de 42 entornos de clientes mediante Django Admin, garantizando la integridad de los datos y la consistencia funcional.
-- Desarrollé scripts de automatización ETL en Python integrados con Django ORM, reemplazando procesos manuales de transformación y carga de datos.
-- Desarrollé scripts en Python basados en Jupyter Notebook para la extracción de metadatos JSON, la validación de esquemas y la detección proactiva de inconsistencias estructurales en conjuntos de datos exportados.
-- Corregí mapas GIS, ajusté archivos Shapefile y validé geometrías espaciales para respaldar la parametrización de sistemas de concesionarias de autopistas.
-- Mantuve la documentación de integraciones con API REST y JWT junto con scripts de validación en Pytest para módulos de Django.
-- Utilicé AWS IAM, Amazon EC2, Amazon ECS (Docker), AWS Step Functions, ODBC y Amazon Athena en flujos de infraestructura, acceso seguro, integración de datos y análisis dentro de entornos de clientes.
-- Automaticé la generación de hojas de cálculo de parametrización utilizando Python, Pandas y openpyxl, reduciendo el esfuerzo manual en los procesos de implementación.
-- Tech Stack: JSONLogic, Django, Python, Pandas, OpenpyXL, GIS, AWS.
-Conquistas/Achievements:
-  * [Reconocimiento] Nominado al Premio Agilidad del Mes de la empresa en abril de 2026 por su desempeño en implementación técnica y corrección de errores.
-  * [Entrega] Contribuí a que el equipo alcanzara un 99,48 % de entregas de implementación a tiempo, manteniendo una tasa personal del 100 % de entregas puntuales durante el primer semestre de 2026.
-
-### Aprendiz en Gestión Ágil de Productos at Daus (Dic 2024 - Jun 2025)
-- Apliqué los marcos de trabajo Scrum, Kanban y Lean Thinking para impulsar el descubrimiento de productos y el análisis de requisitos en proyectos internos y de múltiples clientes dentro de una software house.
-- Documenté hallazgos de producto, flujos de usuario y requisitos funcionales utilizando el ecosistema Atlassian (Jira y Confluence) y FigJam.
-- Mentoricé a dos cohortes de practicantes mediante programas estructurados de incorporación en flujos de trabajo de Gestión Ágil de Productos y entrega de MVP.
-Conquistas/Achievements:
-  * [Mentoría] Mentoricé dos cohortes simultáneas, incluidos practicantes de SOFTEX y un grupo de estudiantes de Porto Digital/Embarque Digital.
-
-## Education
-### Ciencias de la Computación - UniFavip Wyden (Feb 2024 - Presente) [Licenciatura]
-  Highlights: Participación activa como expositor en ferias de proyectos de extensión universitaria, presentando proyectos académicos a empresas invitadas., Desarrollo profesional mediante cursos extracurriculares, eventos tecnológicos y conferencias ofrecidos por la institución., Seleccionado para un programa remoto de movilidad académica impartido en español durante el semestre 2024.2, en colaboración con la Universidad Siglo 21, para desarrollar proyectos destinados a competencias enfocadas en los Objetivos de Desarrollo Sostenible (ODS) de las Naciones Unidas.
-
-### Programa de Mentoría en Inteligencia Artificial - Ofrecido por LAB.AI, Instituto Joule (Ago 2025 - Sep 2025) [Programa de Mentoría]
-  Highlights: Seleccionado para participar en mentorías individuales y grupales orientadas a la tecnología a través del programa Lab.AI - Laboratório de Mentes, ofrecido por el Instituto Joule en colaboración con el Instituto Localiza., Laboratorios prácticos centrados en proyectos de tecnología e impacto social potenciados por herramientas de Inteligencia Artificial., Conferencias, sesiones de mentoría y actividades individuales y grupales impartidas por profesionales voluntarios de la industria tecnológica.
-
-## Courses
-- Introducción al SAFe (Simplilearn, Jul 2026)
-- Postman: From Zero to Advanced + Automated Testing (Udemy, Dec 2025)
-- Application Programming Interface: API and Web Services (Udemy, Dec 2025)
-- Lab.AI: Preparing the Next Generation for the Future of Work (Instituto Joule, Sep 2025)
-- SkillsBuild - Customer Engagement: Problem Solving and Process Controls (IBM, Aug 2025)
-- EF SET English Certificate 69/100 (C1 Advanced) (EF Education First, Mar 2025)
-- Competencia Transversal - Tecnologías de la Información y la Comunicación (SENAI, Nov 2023)
-
-## Publications
-- From Chaos to Clarity (Medium, Oct 2025)
-- The Fallacy of “Plural MVP” in GovTech: Why Unrelenting Focus is the Only Real Metric of Success. (Medium, Jul 2025)
-- Communication and its Paradigms (Medium, Abr 2025)
-- Product Optimization: Too much UI can break your UX (Medium, Mar 2025)
-- From Problem to Solution: A Framework for Building Value-Driven Products (Medium, Feb 2025)
-- Design your thinking: the art of being (Medium, Enero 2025)
-- Using AI for the Customer Experience Management (Medium, Dic 2024)
-- Development of the Creative Economy in Northeastern Brazil (Medium, Dic 2024)
-- Alive Architecture: Redefining How We Build a Sustainable Future (Medium, Dic 2024)
-- Some trends do not stay as trends: the world is a fractal (Medium, Nov 2024)
-- Fishes and cars: UX’s study objects (Medium, Nov 2024)
-- Gestão Ágil Simplificada (LinkedIn, Oct 2024)
-
-## Volunteering
-### Coorganizador at Google Developers Group (GDG Barueri) (Ago 2025 - Presente)
-  Highlights: Coorganicé eventos enfocados en Tecnología, Inteligencia Artificial (IA) e Innovación en Google Developers Group Barueri.
-
-### Embajador y Facilitador at Politize! (Politize! Caruaru) (May 2025 - Presente)
-  Highlights: Creé y coorganicé talleres sobre tecnología, política y derechos cívicos aplicados a la sociedad en Politize! Caruaru, además de contribuir a proyectos internos.
-
-### Miembro del equipo de OGT y Marketing at AIESEC (AIESEC en Mackenzie) (Mar 2025 - Ago 2025)
-  Highlights: Formé parte del equipo de Outgoing Global Talent (OGT) de AIESEC en Mackenzie y fui seleccionado como Líder de Marketing del comité., Diseñé materiales de marketing y facilité reuniones con líderes de equipo, incluyendo la colaboración con comités de AIESEC de otros países, como Jalandhar, India.
-
-### Instructor de Habilidades Blandas at Vai Na Web (Ene 2025)
-  Highlights: Impartí una conferencia sobre habilidades blandas en Vai Na Web en enero de 2025, demostrando su aplicación práctica en la resolución de problemas de Tecnología de la Información., Expliqué cómo la empatía fortalece la comprensión de las necesidades de clientes y usuarios, promoviendo el pensamiento sistémico y permitiendo desarrollar soluciones más eficaces.
-
-## Hackathons
-- Hackathon HAVK - Hacking the Desert (HAVK, Jul 2025)
-- VOX ASTRA Hackathon (EQ Hacks, May 2025)
-- 2025 Hackatopia Hackathon (YPStem, Abr 2025)
-- Hackathon Fenearte (Porto Digital, Feb 2025)
-- Ideathon AC (Porto Digital, Feb 2025)
-- Hackathon Impulso Regional (ENAP, Dic 2024)
-- Hackathon Luminahub (Luminahub, Dic 2024)
-- Hackathon Data Flow (Porto Digital, Ago 2024)
-- Ideathon - Caruaru Campus Party Day (Porto Digital, Ago 2024)
-- Olimpíadas Jóvenes de Impacto (SEBRAE & Instituto Verda, Nov 2021)
-
-## Events
-- FLISoL 2026 - Role: Ponente (IFPE/Palmares, Abr 2026)
-- ExpoTech 2025.2 - Role: Expositor (UniFavip Wyden, Dic 2025)
-- Festival Agile Trends 2025 - Role: Asistente (Remoto, Nov 2025)
-- ExpoTech 2025.1 - Role: Expositor (UniFavip Wyden, Jun 2025)
-- BRICS Youth - Role: Asistente (Remoto, May 2025)
-- Tendencias para las Nuevas Generaciones de Profesionales - Role: Ponente (Recife Front-End Community, Feb 2025)
-- ExpoTech 2024.2 - Role: Expositor (UniFavip Wyden, Nov 2024)
-- Campus Party NE 2024 - Role: Asistente (Sao Lourenco da Mata, Sep 2024)
-- Caruaru Campus Party Day - Role: Asistente (Caruaru, Ago 2024)
-
-
+## Blog Articles
+### Implementation Engineering vs. Software Engineering: What's the Difference?
+  Published: 2026-07-20
+  URL: https://eversonfilipe-portfolio.netlify.app/en/community/blog/post-implementation-engineering-vs-software-engineering
+  Summary: Both roles build with technology — but with very different scopes, clients, and workflows. A practical breakdown from someone doing both.
 
 
     </div>
@@ -739,12 +1444,41 @@ Conquistas/Achievements:
             Where I have worked
           </h2>
         </header>
+        <!-- ── COMPANY LOGO HEADLINE TICKER ── -->
+        <div class="company-ticker-wrapper reveal reveal-delay-1" id="company-ticker-wrapper"
+          aria-label="Company logo marquee">
+          <div class="company-ticker-inner">
+            <div class="company-ticker-track" id="company-ticker-track">
+              <!-- Dynamically generated square company cards -->
+            </div>
+          </div>
+        </div>
         <div class="filter-section-header reveal reveal-delay-1">
           <div aria-label="Filter technologies" class="exp-filter-bar" id="exp-filter-bar" role="group">
           </div>
           <div class="total-counter-tag" id="exp-total-counter" role="status" aria-live="polite"></div>
         </div>
         <div class="timeline" id="exp-timeline" role="list">
+        </div>
+        <!-- ── ENDORSEMENTS / RECOMENDAÇÕES SUBSECTION ── -->
+        <div class="endorsements-subsection reveal reveal-delay-2" id="endorsements-section"
+          style="margin-top:var(--space-16); border-top:1px solid var(--color-border-subtle); padding-top:var(--space-12);">
+          <header class="section-header">
+            <p class="overline" data-i18n="endorsements.overline">
+              Social Proof & Peer Validation
+            </p>
+            <h3 class="section-title" data-i18n="endorsements.title" id="endorsements-heading"
+              style="font-size:clamp(1.5rem, 3.5vw, 2.25rem);">
+              Endorsements & Recommendations
+            </h3>
+            <p class="section-subtitle" data-i18n="endorsements.subtitle"
+              style="font-size:var(--text-sm); color:var(--color-text-muted); max-width:640px; margin-top:var(--space-2);">
+              Testimonials, recognitions, and peer validations received across corporate environments, projects, and
+              mentorships.
+            </p>
+          </header>
+          <div class="endorsements-grid" id="endorsements-list" role="list" style="margin-top:var(--space-8);">
+          </div>
         </div>
       </div>
     </section>
@@ -766,6 +1500,15 @@ Conquistas/Achievements:
           <p class="overline reveal" data-i18n="edu.courses.label" style="margin-bottom:var(--space-8);">
             Courses
           </p>
+          <!-- ── PROVIDER LOGO TICKER (courses-select) ── -->
+          <div class="provider-ticker-wrapper reveal reveal-delay-1" id="provider-ticker-wrapper"
+            aria-label="Course provider logos">
+            <div class="provider-ticker-inner">
+              <div class="provider-ticker-track" id="provider-ticker-track">
+                <!-- Dynamically generated square provider cards -->
+              </div>
+            </div>
+          </div>
           <div class="filter-section-header reveal">
             <div aria-label="Filter courses" class="filter-bar" id="course-filter-bar" role="group">
             </div>
@@ -900,6 +1643,66 @@ Conquistas/Achievements:
         </div>
       </div>
     </section>
+
+    <!-- ── BLOG ────────────────────────────────────────── -->
+    <!-- Fade transition between community and blog -->
+    <div class="blog-section-fade-top" aria-hidden="true"></div>
+
+    <section aria-labelledby="blog-heading" class="blog-section" id="blog">
+      <div class="blog-section-bg" aria-hidden="true"></div>
+      <div class="container blog-section-inner">
+        <header class="blog-section-header reveal">
+          <p class="overline blog-overline reveal" data-i18n="blog.overline">Writing</p>
+          <h2 class="blog-title" id="blog-heading" data-i18n="blog.title">Blog</h2>
+        </header>
+
+        <!-- Blog carousel -->
+        <div class="blog-carousel-wrapper reveal reveal-delay-1">
+          <button class="blog-carousel-arrow blog-carousel-arrow--prev" aria-label="Previous post"
+            id="blog-prev-btn">&#8249;</button>
+          <div class="blog-carousel-viewport" id="blog-carousel-viewport">
+            <div class="blog-carousel-track" id="blog-carousel-track" role="list" aria-label="Blog posts">
+              <!-- injected by renderBlog() -->
+            </div>
+          </div>
+          <button class="blog-carousel-arrow blog-carousel-arrow--next" aria-label="Next post"
+            id="blog-next-btn">&#8250;</button>
+        </div>
+        <div class="blog-carousel-dots" id="blog-carousel-dots" role="group" aria-label="Blog navigation dots"></div>
+      </div>
+
+      <!-- Blog fade bottom -->
+      <div class="blog-section-fade-bottom" aria-hidden="true"></div>
+    </section>
+
+    <!-- ── BLOG READER MODAL ────────────────────────── -->
+    <div class="blog-modal" id="blog-modal" role="dialog" aria-modal="true" aria-labelledby="blog-modal-title" hidden>
+      <div class="blog-modal-backdrop" id="blog-modal-backdrop"></div>
+      <article class="blog-modal-container" tabindex="-1">
+        <header class="blog-modal-header">
+          <div class="blog-modal-meta">
+            <span class="blog-modal-overline" data-i18n="blog.overline">Writing</span>
+            <span class="blog-modal-date" id="blog-modal-date"></span>
+          </div>
+          <div class="blog-modal-actions">
+            <button class="blog-modal-share-btn" id="blog-modal-share-btn" aria-label="Copy share link"
+              data-i18n-aria="blog.share.btn" type="button">
+              <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+              </svg>
+              <span class="blog-modal-share-text" id="blog-modal-share-text" data-i18n="blog.share.btn">Share</span>
+            </button>
+            <button class="blog-modal-close" id="blog-modal-close" aria-label="Close article"
+              data-i18n-aria="blog.close.btn">&#10005;</button>
+          </div>
+        </header>
+        <h1 class="blog-modal-title" id="blog-modal-title"></h1>
+        <div class="blog-modal-body" id="blog-modal-body" aria-live="polite"></div>
+      </article>
+    </div>
+
   </main>
   <!-- Footer -->
   <footer class="footer" role="contentinfo">
@@ -1036,12 +1839,74 @@ Conquistas/Achievements:
       &gt;
     </button>
   </div>
+
+  <!-- ── COMPANY MINI-MODAL (/experience-select) ── -->
+  <div id="company-mini-modal" class="company-select-modal" aria-hidden="true" role="dialog" aria-modal="true"
+    aria-labelledby="company-modal-title">
+    <div class="company-select-modal-overlay" id="company-modal-overlay" data-close-company-modal="true"></div>
+    <div class="company-select-modal-dialog">
+      <button class="company-select-modal-close" id="company-modal-close-btn" type="button" aria-label="Close modal"
+        data-i18n-aria="exp.company_modal.close">&times;</button>
+      <header class="company-select-modal-header">
+        <img id="company-modal-logo" class="company-select-modal-logo" src="" alt="" />
+        <div class="company-select-modal-header-info">
+          <h3 id="company-modal-title" class="company-select-modal-title"></h3>
+          <span id="company-modal-subtitle" class="company-select-modal-subtitle"></span>
+        </div>
+      </header>
+      <div class="company-select-modal-body">
+        <section class="company-select-modal-section">
+          <h4 class="company-select-modal-section-title" data-i18n="exp.company_modal.about">About the Company</h4>
+          <div id="company-modal-about" class="company-select-modal-about-text"></div>
+        </section>
+        <section class="company-select-modal-section">
+          <h4 class="company-select-modal-section-title" data-i18n="exp.company_modal.roles">Positions & Roles</h4>
+          <div class="company-select-modal-roles-scroll">
+            <ul id="company-modal-roles-list" class="company-select-modal-roles-list" role="list"></ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── PROVIDER MINI-MODAL (/courses-select) ── -->
+  <div id="provider-mini-modal" class="company-select-modal" aria-hidden="true" role="dialog" aria-modal="true"
+    aria-labelledby="provider-modal-title">
+    <div class="company-select-modal-overlay" id="provider-modal-overlay" data-close-provider-modal="true"></div>
+    <div class="company-select-modal-dialog">
+      <button class="company-select-modal-close" id="provider-modal-close-btn" type="button" aria-label="Close modal"
+        data-i18n-aria="edu.provider_modal.close">&times;</button>
+      <header class="company-select-modal-header">
+        <img id="provider-modal-logo" class="company-select-modal-logo" src="" alt="" />
+        <div class="company-select-modal-header-info">
+          <h3 id="provider-modal-title" class="company-select-modal-title"></h3>
+          <span id="provider-modal-subtitle" class="company-select-modal-subtitle"></span>
+        </div>
+      </header>
+      <div class="company-select-modal-body">
+        <section class="company-select-modal-section">
+          <h4 class="company-select-modal-section-title" data-i18n="edu.provider_modal.credentials">Credential Links
+          </h4>
+          <ul id="provider-modal-credentials-list" class="company-select-modal-roles-list" role="list"></ul>
+        </section>
+        <section class="company-select-modal-section">
+          <h4 class="company-select-modal-section-title" data-i18n="edu.provider_modal.all_courses">All courses from
+            this provider</h4>
+          <div class="company-select-modal-roles-scroll">
+            <ul id="provider-modal-courses-list" class="company-select-modal-roles-list" role="list"></ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
   <script defer="" src="assets/js/i18n.js">
   </script>
   <script defer="" src="assets/js/a11y.js">
   </script>
   <script defer="" src="assets/js/lines.js">
   </script>
+  <script src="assets/js/blog_data.js"></script>
   <script defer="" src="assets/js/cv_data.js">
   </script>
   <script defer="" src="assets/js/renderer.js">
@@ -1049,6 +1914,8 @@ Conquistas/Achievements:
   <script defer="" src="assets/js/filters.js">
   </script>
   <script defer="" src="assets/js/carousel.js">
+  </script>
+  <script defer="" src="assets/js/router.js">
   </script>
   <script defer="" src="assets/js/main.js">
   </script>

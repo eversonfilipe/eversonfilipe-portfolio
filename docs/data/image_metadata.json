@@ -1,0 +1,419 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "description": "Multilingual image metadata for SEO/LLMO/A11Y. Alt texts and captions derived from real CV data. Consumed by build_static.py for sitemap <image:caption> enrichment.",
+    "lastUpdated": "2026-08-06"
+  },
+  "assets/images/profile.webp": {
+    "alt": {
+      "pt": "Foto profissional de Éverson Filipe — Analista de Sistemas e Engenheiro de IA",
+      "en": "Professional photo of Éverson Filipe — Systems Analyst and AI Engineer",
+      "es": "Foto profesional de Éverson Filipe — Analista de Sistemas e Ingeniero de IA"
+    },
+    "caption": {
+      "pt": "Éverson Filipe — Analista de Sistemas focado em Engenharia de IA, Automação e Workflows de Implementação",
+      "en": "Éverson Filipe — Systems Analyst focused on AI Engineering, Automation and Implementation Workflows",
+      "es": "Éverson Filipe — Analista de Sistemas enfocado en Ingeniería de IA, Automatización y Flujos de Implementación"
+    },
+    "category": "profile"
+  },
+  "assets/images/Simbolo_Kartado_Footer.svg": {
+    "alt": {
+      "pt": "Logo da Kartado — Empresa B2B SaaS de concessões rodoviárias",
+      "en": "Kartado logo — B2B SaaS company for highway concessions",
+      "es": "Logo de Kartado — Empresa B2B SaaS de concesiones viales"
+    },
+    "webp_fallback": "assets/images/simbolo_kartado_footer.webp",
+    "category": "logo"
+  },
+  "assets/images/daus_software_house_logo.jpg": {
+    "alt": {
+      "pt": "Logo da Daus Software House — Startup de portfólio multi-cliente",
+      "en": "Daus Software House logo — Multi-client portfolio startup",
+      "es": "Logo de Daus Software House — Startup de portafolio multi-cliente"
+    },
+    "category": "logo"
+  },
+  "assets/images/instituto_joule_logo.jpg": {
+    "alt": {
+      "pt": "Logo do Instituto Joule — Programa Lab.AI de Mentoria em IA",
+      "en": "Instituto Joule logo — Lab.AI Mentorship Program in AI",
+      "es": "Logo del Instituto Joule — Programa Lab.AI de Mentoría en IA"
+    },
+    "category": "logo"
+  },
+  "assets/images/unifavip_logo.jpg": {
+    "alt": {
+      "pt": "Logo da UniFavip Wyden — Bacharelado em Ciência da Computação",
+      "en": "UniFavip Wyden logo — Bachelor's in Computer Science",
+      "es": "Logo de UniFavip Wyden — Licenciatura en Ciencias de la Computación"
+    },
+    "category": "logo"
+  },
+  "assets/images/simplilearn_logo.webp": {
+    "alt": {
+      "pt": "Logo da Simplilearn — Curso Introdução ao SAFe",
+      "en": "Simplilearn logo — Introduction to SAFe course",
+      "es": "Logo de Simplilearn — Curso Introducción a SAFe"
+    },
+    "category": "logo"
+  },
+  "assets/images/udemy-3.svg": {
+    "alt": {
+      "pt": "Logo da Udemy — Plataforma de cursos online",
+      "en": "Udemy logo — Online course platform",
+      "es": "Logo de Udemy — Plataforma de cursos en línea"
+    },
+    "webp_fallback": "assets/images/udemy-3.webp",
+    "category": "logo"
+  },
+  "assets/images/aspire-institute-logo-large-updated-2048x695.webp": {
+    "alt": {
+      "pt": "Logo do Aspire Institute — Programa Aspire Leaders 2025",
+      "en": "Aspire Institute logo — Aspire Leaders Program 2025",
+      "es": "Logo del Aspire Institute — Programa Aspire Leaders 2025"
+    },
+    "category": "logo"
+  },
+  "assets/images/wadhwani-foundation.webp": {
+    "alt": {
+      "pt": "Logo da Wadhwani Foundation — Programa de Empreendedorismo Ignite",
+      "en": "Wadhwani Foundation logo — Ignite Entrepreneurship Program",
+      "es": "Logo de la Wadhwani Foundation — Programa de Emprendimiento Ignite"
+    },
+    "category": "logo"
+  },
+  "assets/images/ibm-svgrepo-com.svg": {
+    "alt": {
+      "pt": "Logo da IBM — Curso SkillsBuild de Engajamento do Cliente",
+      "en": "IBM logo — SkillsBuild Customer Engagement course",
+      "es": "Logo de IBM — Curso SkillsBuild de Compromiso del Cliente"
+    },
+    "webp_fallback": "assets/images/ibm-svgrepo-com.webp",
+    "category": "logo"
+  },
+  "assets/images/idxeymiMn5_1783788580495.jpeg": {
+    "alt": {
+      "pt": "Logo da EF Education First — Certificado de Inglês EF SET C1 Avançado",
+      "en": "EF Education First logo — EF SET English Certificate C1 Advanced",
+      "es": "Logo de EF Education First — Certificado de Inglés EF SET C1 Avanzado"
+    },
+    "category": "logo"
+  },
+  "assets/images/campusb_logo.webp": {
+    "alt": {
+      "pt": "Logo do Campus B — Programa Comunicación Intercultural",
+      "en": "Campus B logo — Intercultural Communication Program",
+      "es": "Logo de Campus B — Programa Comunicación Intercultural"
+    },
+    "category": "logo"
+  },
+  "assets/images/iconsenai.webp": {
+    "alt": {
+      "pt": "Logo do SENAI — Curso Competência Transversal em TIC",
+      "en": "SENAI logo — Transversal Competence in ICT course",
+      "es": "Logo del SENAI — Curso Competencia Transversal en TIC"
+    },
+    "category": "logo"
+  },
+  "assets/images/google_developers_group_barueri_logo.jpg": {
+    "alt": {
+      "pt": "Logo do Google Developers Group (GDG) Barueri — Tecnologia, IA e Inovação",
+      "en": "Google Developers Group (GDG) Barueri logo — Technology, AI and Innovation",
+      "es": "Logo del Google Developers Group (GDG) Barueri — Tecnología, IA e Innovación"
+    },
+    "category": "logo"
+  },
+  "assets/images/politize__logo.jpg": {
+    "alt": {
+      "pt": "Logo da Politize! — Educação política e cidadania",
+      "en": "Politize! logo — Political education and citizenship",
+      "es": "Logo de Politize! — Educación política y ciudadanía"
+    },
+    "category": "logo"
+  },
+  "assets/images/1754110.webp": {
+    "alt": {
+      "pt": "Logo da AIESEC no Mackenzie — OGT e Marketing",
+      "en": "AIESEC at Mackenzie logo — OGT and Marketing",
+      "es": "Logo de AIESEC en Mackenzie — OGT y Marketing"
+    },
+    "category": "logo"
+  },
+  "assets/images/vai_na_web.jpg": {
+    "alt": {
+      "pt": "Logo da Vai Na Web — Instrutor de Soft Skills",
+      "en": "Vai Na Web logo — Soft Skills Instructor",
+      "es": "Logo de Vai Na Web — Instructor de Soft Skills"
+    },
+    "category": "logo"
+  },
+  "assets/images/photo_flisol_logo.webp": {
+    "alt": {
+      "pt": "Logo do FLISoL 2026 — Palestrante no IFPE Palmares",
+      "en": "FLISoL 2026 logo — Speaker at IFPE Palmares",
+      "es": "Logo del FLISoL 2026 — Ponente en IFPE Palmares"
+    },
+    "category": "logo"
+  },
+  "assets/images/agile_trends_logo.jpg": {
+    "alt": {
+      "pt": "Logo do Festival Agile Trends 2025",
+      "en": "Agile Trends Festival 2025 logo",
+      "es": "Logo del Festival Agile Trends 2025"
+    },
+    "category": "logo"
+  },
+  "assets/images/brics_youth_alliance_2025.jpg": {
+    "alt": {
+      "pt": "Logo do BRICS Youth Alliance 2025",
+      "en": "BRICS Youth Alliance 2025 logo",
+      "es": "Logo de la Alianza Juvenil BRICS 2025"
+    },
+    "category": "logo"
+  },
+  "assets/images/recife_front_end_community_logo.jpg": {
+    "alt": {
+      "pt": "Logo da Recife Front-End Community — Palestrante sobre tendências para novas gerações",
+      "en": "Recife Front-End Community logo — Speaker on trends for new generations",
+      "es": "Logo de Recife Front-End Community — Ponente sobre tendencias para nuevas generaciones"
+    },
+    "category": "logo"
+  },
+  "assets/images/campusparty_ltd_logo.jpg": {
+    "alt": {
+      "pt": "Logo da Campus Party — Evento de tecnologia",
+      "en": "Campus Party logo — Technology event",
+      "es": "Logo de Campus Party — Evento de tecnología"
+    },
+    "category": "logo"
+  },
+  "assets/images/kartado_chart.png": {
+    "alt": {
+      "pt": "Gráfico de desempenho na Kartado — 32% de contribuição para a produção da equipe",
+      "en": "Performance chart at Kartado — 32% contribution to team output",
+      "es": "Gráfico de rendimiento en Kartado — 32% de contribución a la producción del equipo"
+    },
+    "caption": {
+      "pt": "Métricas de desempenho — 32% de contribuição para a produção da equipe",
+      "en": "Performance metrics — 32% contribution to team output",
+      "es": "Métricas de rendimiento — 32% de contribución a la producción del equipo"
+    },
+    "webp_fallback": "assets/images/kartado_chart.webp",
+    "category": "evidence"
+  },
+  "assets/images/kartado_award.png": {
+    "alt": {
+      "pt": "Indicação ao Prêmio Agilidade da Kartado — reconhecimento por correção de bugs e aceleração de processos",
+      "en": "Kartado Agility Award nomination — recognition for bug fixes and process acceleration",
+      "es": "Nominación al Premio Agilidad de Kartado — reconocimiento por corrección de bugs y aceleración de procesos"
+    },
+    "caption": {
+      "pt": "Indicado ao Prêmio Agilidade do Mês — 'Éverson, sempre pronto para corrigir bugs e acelerar processos'",
+      "en": "Nominated for Monthly Agility Award — 'Éverson, always ready to fix bugs and accelerate processes'",
+      "es": "Nominado al Premio Agilidad del Mes — 'Éverson, siempre listo para corregir bugs y acelerar procesos'"
+    },
+    "webp_fallback": "assets/images/kartado_award.webp",
+    "category": "evidence"
+  },
+  "assets/images/kartado_welcome.png": {
+    "alt": {
+      "pt": "Kit de boas-vindas da Kartado recebido ao ingressar na equipe",
+      "en": "Kartado welcome kit received upon joining the team",
+      "es": "Kit de bienvenida de Kartado recibido al unirse al equipo"
+    },
+    "caption": {
+      "pt": "Kit de boas-vindas recebido ao ingressar na equipe da Kartado",
+      "en": "Welcome kit received upon joining the Kartado team",
+      "es": "Kit de bienvenida recibido al unirse al equipo de Kartado"
+    },
+    "webp_fallback": "assets/images/kartado_welcome.webp",
+    "category": "evidence"
+  },
+  "assets/images/chart_july_2026.png": {
+    "alt": {
+      "pt": "Gráfico de entrega do 1º semestre de 2026 — 100% de pontualidade pessoal",
+      "en": "H1 2026 delivery chart — 100% personal on-time delivery",
+      "es": "Gráfico de entrega del 1er semestre de 2026 — 100% de puntualidad personal"
+    },
+    "caption": {
+      "pt": "Entrega de implementação do 1º semestre de 2026 (100% de pontualidade pessoal)",
+      "en": "H1 2026 implementation delivery (100% personal on-time rate)",
+      "es": "Entrega de implementación del 1er semestre de 2026 (100% de puntualidad personal)"
+    },
+    "webp_fallback": "assets/images/chart_july_2026.webp",
+    "category": "evidence"
+  },
+  "assets/images/print-landing-page-daus.webp": {
+    "alt": {
+      "pt": "Captura de tela da Landing Page da Daus — Aprendiz de Product Manager/Agilista",
+      "en": "Screenshot of Daus Landing Page — Product Manager/Agilist Learner",
+      "es": "Captura de pantalla de la Landing Page de Daus — Aprendiz de Product Manager/Agilista"
+    },
+    "caption": {
+      "pt": "Captura de tela da Landing Page da Daus, em que Éverson Filipe foi aprendiz de Product Manager/Agilista.",
+      "en": "Screenshot of Daus Landing Page, where Éverson Filipe was a Product Manager/Agilist learner.",
+      "es": "Captura de pantalla de la Landing Page de Daus, donde Éverson Filipe fue aprendiz de Product Manager/Agilista."
+    },
+    "category": "evidence"
+  },
+  "assets/images/tt_t_solues_em_informtica_ltda_logo.webp": {
+    "alt": {
+      "pt": "Logo da TT&T Soluções em Informática — Gestor de Produtos Estagiário",
+      "en": "TT&T Soluções em Informática logo — Product Manager Intern",
+      "es": "Logo de TT&T Soluções em Informática — Pasante de Gestión de Productos"
+    },
+    "category": "logo"
+  },
+  "assets/images/print-endorsement-to-everson-1.webp": {
+    "alt": {
+      "pt": "Recomendação profissional de Brenno Carvalho — Marinha do Brasil e Alumni Aspire Leaders",
+      "en": "Professional endorsement by Brenno Carvalho — Brazilian Navy and Alumni Aspire Leaders",
+      "es": "Recomendación profesional de Brenno Carvalho — Marina de Brasil y Alumni Aspire Leaders"
+    },
+    "category": "endorsement"
+  },
+  "assets/images/print-endorsement-to-everson-2.webp": {
+    "alt": {
+      "pt": "Recomendação profissional de Sebastião Rogério, Ph.D. — Analista de Sistemas e Professor na FCx Labs",
+      "en": "Professional endorsement by Sebastião Rogério, Ph.D. — System Analyst and Professor at FCx Labs",
+      "es": "Recomendación profesional de Sebastião Rogério, Ph.D. — Analista de Sistemas y Profesor en FCx Labs"
+    },
+    "category": "endorsement"
+  },
+  "assets/images/print-endorsement-to-everson-3.webp": {
+    "alt": {
+      "pt": "Recomendação profissional de Fabíola Cavalcanti — Engenheira DevOps/DevSecOps e AWS Certified",
+      "en": "Professional endorsement by Fabíola Cavalcanti — DevOps/DevSecOps Engineer and AWS Certified",
+      "es": "Recomendación profesional de Fabíola Cavalcanti — Ingeniera DevOps/DevSecOps y AWS Certified"
+    },
+    "category": "endorsement"
+  },
+  "assets/images/print-endorsement-to-everson-4.webp": {
+    "alt": {
+      "pt": "Recomendação profissional de Luciana Sérvulo da Cunha — Gestora de Projetos e Impacto Social",
+      "en": "Professional endorsement by Luciana Sérvulo da Cunha — Project and Social Impact Manager",
+      "es": "Recomendación profesional de Luciana Sérvulo da Cunha — Gestora de Proyectos e Impacto Social"
+    },
+    "category": "endorsement"
+  },
+  "assets/images/print-endorsement-to-everson-5.webp": {
+    "alt": {
+      "pt": "Recomendação profissional de Julia Zultauskas — Estagiária de Psicologia e ex-RH na TT&T",
+      "en": "Professional endorsement by Julia Zultauskas — Psychology Intern and former HR at TT&T",
+      "es": "Recomendación profesional de Julia Zultauskas — Pasante de Psicología y ex-RRHH en TT&T"
+    },
+    "category": "endorsement"
+  },
+  "assets/images/print-endorsement-to-everson-6.webp": {
+    "alt": {
+      "pt": "Recomendação profissional de Marcos Torres — Head de Controladoria e Finanças Industriais",
+      "en": "Professional endorsement by Marcos Torres — Head of Controllership and Industrial Finance",
+      "es": "Recomendación profesional de Marcos Torres — Head de Contraloría y Finanzas Industriales"
+    },
+    "category": "endorsement"
+  },
+  "assets/images/print-endorsement-to-everson-7.webp": {
+    "alt": {
+      "pt": "Recomendação profissional de Felipe G. P. Carvalho — ex-CSO da Daus e CEO da Proveai",
+      "en": "Professional endorsement by Felipe G. P. Carvalho — former CSO at Daus and CEO at Proveai",
+      "es": "Recomendación profesional de Felipe G. P. Carvalho — ex-CSO de Daus y CEO de Proveai"
+    },
+    "category": "endorsement"
+  },
+  "assets/images/print-endorsement-to-everson-8.webp": {
+    "alt": {
+      "pt": "Recomendação profissional de Thalita Costa — Tech Recruiter e Assistente de RH",
+      "en": "Professional endorsement by Thalita Costa — Tech Recruiter and HR Assistant",
+      "es": "Recomendación profesional de Thalita Costa — Tech Recruiter y Asistente de RRHH"
+    },
+    "category": "endorsement"
+  },
+  "assets/images/print-endorsement-to-everson-9.webp": {
+    "alt": {
+      "pt": "Recomendação profissional de Edil Dias — Co-fundador da Umans e CEO da Daus",
+      "en": "Professional endorsement by Edil Dias — Co-founder at Umans and CEO at Daus",
+      "es": "Recomendación profesional de Edil Dias — Co-fundador de Umans y CEO de Daus"
+    },
+    "category": "endorsement"
+  },
+  "assets/images/print-endorsement-to-everson-10.webp": {
+    "alt": {
+      "pt": "Recomendação profissional de Felipe dos Reis de Andrade — Agente de Controle de Endemias",
+      "en": "Professional endorsement by Felipe dos Reis de Andrade — Endemic Disease Control Agent",
+      "es": "Recomendación profesional de Felipe dos Reis de Andrade — Agente de Control de Endemias"
+    },
+    "category": "endorsement"
+  },
+  "assets/images/print-endorsement-to-everson-11.webp": {
+    "alt": {
+      "pt": "Recomendação profissional de Luis Daniel Infante Pena — Gerente de Relacionamento na SIL Global",
+      "en": "Professional endorsement by Luis Daniel Infante Pena — Relationship Manager at SIL Global",
+      "es": "Recomendación profesional de Luis Daniel Infante Pena — Gerente de Relaciones en SIL Global"
+    },
+    "category": "endorsement"
+  },
+  "assets/images/python-svgrepo-com.svg": {
+    "alt": {
+      "pt": "Ícone Python — Linguagem de programação",
+      "en": "Python icon — Programming language",
+      "es": "Ícono Python — Lenguaje de programación"
+    },
+    "webp_fallback": "assets/images/python-svgrepo-com.webp",
+    "category": "skill"
+  },
+  "assets/images/django-svgrepo-com.svg": {
+    "alt": {
+      "pt": "Ícone Django — Framework web Python",
+      "en": "Django icon — Python web framework",
+      "es": "Ícono Django — Framework web Python"
+    },
+    "webp_fallback": "assets/images/django-svgrepo-com.webp",
+    "category": "skill"
+  },
+  "assets/images/json-svgrepo-com.svg": {
+    "alt": {
+      "pt": "Ícone JSONLogic — Motor de regras dinâmicas",
+      "en": "JSONLogic icon — Dynamic rules engine",
+      "es": "Ícono JSONLogic — Motor de reglas dinámicas"
+    },
+    "webp_fallback": "assets/images/json-svgrepo-com.webp",
+    "category": "skill"
+  },
+  "assets/images/api-svgrepo-com.svg": {
+    "alt": {
+      "pt": "Ícone REST API — Interface de programação de aplicações",
+      "en": "REST API icon — Application programming interface",
+      "es": "Ícono REST API — Interfaz de programación de aplicaciones"
+    },
+    "webp_fallback": "assets/images/api-svgrepo-com.webp",
+    "category": "skill"
+  },
+  "assets/images/aws_icon.svg": {
+    "alt": {
+      "pt": "Ícone AWS — Amazon Web Services",
+      "en": "AWS icon — Amazon Web Services",
+      "es": "Ícono AWS — Amazon Web Services"
+    },
+    "webp_fallback": "assets/images/aws_icon.webp",
+    "category": "skill"
+  },
+  "assets/images/Jira.svg": {
+    "alt": {
+      "pt": "Ícone Jira — Gestão de projetos ágeis Atlassian",
+      "en": "Jira icon — Atlassian agile project management",
+      "es": "Ícono Jira — Gestión de proyectos ágiles Atlassian"
+    },
+    "webp_fallback": "assets/images/jira.webp",
+    "category": "skill"
+  },
+  "assets/images/clickup.svg": {
+    "alt": {
+      "pt": "Ícone ClickUp — Plataforma de gestão de tarefas",
+      "en": "ClickUp icon — Task management platform",
+      "es": "Ícono ClickUp — Plataforma de gestión de tareas"
+    },
+    "webp_fallback": "assets/images/clickup.webp",
+    "category": "skill"
+  }
+}

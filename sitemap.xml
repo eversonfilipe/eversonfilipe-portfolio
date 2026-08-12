@@ -1,48 +1,2579 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sitemap - eversonfilipe-portfolio.netlify.app
+  Revisao: 2026-08-10
+
+  CONVENCOES APLICADAS
+  1. Ordem canonica dentro de <url> (sitemaps.org XSD, xsd:sequence):
+     <loc> -> <lastmod> -> <changefreq> -> <priority> -> <xhtml:link> -> <image:image>
+  2. Somente URLs finais com status 200 OK. A raiz "/" faz 301 -> /pt e por isso
+     NAO e listada; as tres homes de idioma (/pt, /en, /es) sao listadas diretamente.
+  3. hreflang autorreferencial em todos os clusters (pt, en, es + x-default -> /pt).
+  4. Escala de <priority>:
+     1.00 homes de idioma | 0.90 secoes | 0.80 hubs | 0.60 itens folha
+     0.30 rotas utilitarias | 0.10 endpoints machine-readable (nao-HTML)
+  5. Secao /projects sem itens publicados: bloco desativado abaixo (reativar quando
+     houver ao menos 1 projeto renderizado).
+-->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-          http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  <!-- Primary portfolio page -->
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Language Homes (1.00) -->
   <url>
-    <loc>https://eversonfilipe-portfolio.netlify.app/</loc>
-    <lastmod>2026-07-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/profile.webp</image:loc>
+      <image:caption>Éverson Filipe — Analista de Sistemas focado em Engenharia de IA, Automação e Workflows de Implementação</image:caption>
+    </image:image>
   </url>
-  <!-- RAG API JSON Endpoint -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/profile.webp</image:loc>
+      <image:caption>Éverson Filipe — Systems Analyst focused on AI Engineering, Automation and Implementation Workflows</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/profile.webp</image:loc>
+      <image:caption>Éverson Filipe — Analista de Sistemas enfocado en Ingeniería de IA, Automatización y Flujos de Implementación</image:caption>
+    </image:image>
+  </url>
+
+
+  <!-- Main Section Routes (0.90) -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/experience</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/experience"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/experience</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/experience"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/experience</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/experience"/>
+  </url>
+
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/education</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/education</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/education</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education"/>
+  </url>
+
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community"/>
+  </url>
+
+
+  <!-- Utility Routes (0.30) -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/experience/experiences-select</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.30</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/experiences-select"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience/experiences-select"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience/experiences-select"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/experiences-select"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/experience/experiences-select</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.30</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/experiences-select"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience/experiences-select"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience/experiences-select"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/experiences-select"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/experience/experiences-select</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.30</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/experiences-select"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience/experiences-select"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience/experiences-select"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/experiences-select"/>
+  </url>
+
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/courses-select</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.30</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses-select"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses-select"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses-select"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses-select"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/education/courses-select</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.30</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses-select"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses-select"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses-select"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses-select"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/education/courses-select</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.30</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses-select"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses-select"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses-select"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses-select"/>
+  </url>
+
+
+  <!-- ===================================================================
+       /projects - DESATIVADO ate a publicacao do primeiro projeto.
+       Motivo: a rota renderiza uma secao vazia (thin content). Submeter a
+       URL agora tende a gerar 'Rastreada - no momento nao indexada' no GSC
+       e contradiz a priority alta que estava declarada (0.90 sem conteudo).
+       REATIVACAO: descomentar o bloco e ajustar priority para 0.90 quando
+       houver ao menos 1 item em /projects.
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/projects</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/projects"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/projects"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/projects"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/projects"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/projects</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/projects"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/projects"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/projects"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/projects"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/projects</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/projects"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/projects"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/projects"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/projects"/>
+  </url>
+       =================================================================== -->
+
+  <!-- Experience Hub: endorsements -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/experience/endorsements</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/endorsements"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience/endorsements"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience/endorsements"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/endorsements"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/experience/endorsements</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/endorsements"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience/endorsements"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience/endorsements"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/endorsements"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/experience/endorsements</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/endorsements"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience/endorsements"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience/endorsements"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/endorsements"/>
+  </url>
+  <!-- Experience Route: kartado/kartado-systems-implementation-intern -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/experience/kartado/kartado-systems-implementation-intern</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/kartado/kartado-systems-implementation-intern"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience/kartado/kartado-systems-implementation-intern"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience/kartado/kartado-systems-implementation-intern"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/kartado/kartado-systems-implementation-intern"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/Simbolo_Kartado_Footer.webp</image:loc>
+      <image:caption>Logo da Kartado — Empresa B2B SaaS de concessões rodoviárias</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/kartado_chart.png</image:loc>
+      <image:caption>Métricas de desempenho — 32% de contribuição para a produção da equipe</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/kartado_award.png</image:loc>
+      <image:caption>Indicado ao Prêmio Agilidade do Mês — &apos;Éverson, sempre pronto para corrigir bugs e acelerar processos&apos;</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/kartado_welcome.png</image:loc>
+      <image:caption>Kit de boas-vindas recebido ao ingressar na equipe da Kartado</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/chart_july_2026.png</image:loc>
+      <image:caption>Entrega de implementação do 1º semestre de 2026 (100% de pontualidade pessoal)</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/experience/kartado/kartado-systems-implementation-intern</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/kartado/kartado-systems-implementation-intern"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience/kartado/kartado-systems-implementation-intern"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience/kartado/kartado-systems-implementation-intern"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/kartado/kartado-systems-implementation-intern"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/Simbolo_Kartado_Footer.webp</image:loc>
+      <image:caption>Kartado logo — B2B SaaS company for highway concessions</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/kartado_chart.png</image:loc>
+      <image:caption>Performance metrics — 32% contribution to team output</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/kartado_award.png</image:loc>
+      <image:caption>Nominated for Monthly Agility Award — &apos;Éverson, always ready to fix bugs and accelerate processes&apos;</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/kartado_welcome.png</image:loc>
+      <image:caption>Welcome kit received upon joining the Kartado team</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/chart_july_2026.png</image:loc>
+      <image:caption>H1 2026 implementation delivery (100% personal on-time rate)</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/experience/kartado/kartado-systems-implementation-intern</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/kartado/kartado-systems-implementation-intern"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience/kartado/kartado-systems-implementation-intern"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience/kartado/kartado-systems-implementation-intern"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/kartado/kartado-systems-implementation-intern"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/Simbolo_Kartado_Footer.webp</image:loc>
+      <image:caption>Logo de Kartado — Empresa B2B SaaS de concesiones viales</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/kartado_chart.png</image:loc>
+      <image:caption>Métricas de rendimiento — 32% de contribución a la producción del equipo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/kartado_award.png</image:loc>
+      <image:caption>Nominado al Premio Agilidad del Mes — &apos;Éverson, siempre listo para corregir bugs y acelerar procesos&apos;</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/kartado_welcome.png</image:loc>
+      <image:caption>Kit de bienvenida recibido al unirse al equipo de Kartado</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/chart_july_2026.png</image:loc>
+      <image:caption>Entrega de implementación del 1er semestre de 2026 (100% de puntualidad personal)</image:caption>
+    </image:image>
+  </url>
+  <!-- Experience Route: daus/daus-agile-product-management-learner -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/experience/daus/daus-agile-product-management-learner</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/daus/daus-agile-product-management-learner"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience/daus/daus-agile-product-management-learner"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience/daus/daus-agile-product-management-learner"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/daus/daus-agile-product-management-learner"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/daus_software_house_logo.jpg</image:loc>
+      <image:caption>Logo da Daus Software House — Startup de portfólio multi-cliente</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/print-landing-page-daus.webp</image:loc>
+      <image:caption>Captura de tela da Landing Page da Daus, em que Éverson Filipe foi aprendiz de Product Manager/Agilista.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/experience/daus/daus-agile-product-management-learner</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/daus/daus-agile-product-management-learner"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience/daus/daus-agile-product-management-learner"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience/daus/daus-agile-product-management-learner"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/daus/daus-agile-product-management-learner"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/daus_software_house_logo.jpg</image:loc>
+      <image:caption>Daus Software House logo — Multi-client portfolio startup</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/print-landing-page-daus.webp</image:loc>
+      <image:caption>Screenshot of Daus Landing Page, where Éverson Filipe was a Product Manager/Agilist learner.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/experience/daus/daus-agile-product-management-learner</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/daus/daus-agile-product-management-learner"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience/daus/daus-agile-product-management-learner"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience/daus/daus-agile-product-management-learner"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/daus/daus-agile-product-management-learner"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/daus_software_house_logo.jpg</image:loc>
+      <image:caption>Logo de Daus Software House — Startup de portafolio multi-cliente</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/print-landing-page-daus.webp</image:loc>
+      <image:caption>Captura de pantalla de la Landing Page de Daus, donde Éverson Filipe fue aprendiz de Product Manager/Agilista.</image:caption>
+    </image:image>
+  </url>
+  <!-- Experience Route: tt-t-solucoes-em-informatica/product-manager-intern-ttet -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/experience/tt-t-solucoes-em-informatica/product-manager-intern-ttet</loc>
+    <lastmod>2025-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/tt-t-solucoes-em-informatica/product-manager-intern-ttet"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience/tt-t-solucoes-em-informatica/product-manager-intern-ttet"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience/tt-t-solucoes-em-informatica/product-manager-intern-ttet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/tt-t-solucoes-em-informatica/product-manager-intern-ttet"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/tt_t_solues_em_informtica_ltda_logo.webp</image:loc>
+      <image:caption>Logo da TT&amp;T Soluções em Informática — Gestor de Produtos Estagiário</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/experience/tt-t-solucoes-em-informatica/product-manager-intern-ttet</loc>
+    <lastmod>2025-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/tt-t-solucoes-em-informatica/product-manager-intern-ttet"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience/tt-t-solucoes-em-informatica/product-manager-intern-ttet"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience/tt-t-solucoes-em-informatica/product-manager-intern-ttet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/tt-t-solucoes-em-informatica/product-manager-intern-ttet"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/tt_t_solues_em_informtica_ltda_logo.webp</image:loc>
+      <image:caption>TT&amp;T Soluções em Informática logo — Product Manager Intern</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/experience/tt-t-solucoes-em-informatica/product-manager-intern-ttet</loc>
+    <lastmod>2025-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/tt-t-solucoes-em-informatica/product-manager-intern-ttet"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience/tt-t-solucoes-em-informatica/product-manager-intern-ttet"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience/tt-t-solucoes-em-informatica/product-manager-intern-ttet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/tt-t-solucoes-em-informatica/product-manager-intern-ttet"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/tt_t_solues_em_informtica_ltda_logo.webp</image:loc>
+      <image:caption>Logo de TT&amp;T Soluções em Informática — Pasante de Gestión de Productos</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Education Hubs -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/academic</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/academic"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/academic"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/academic"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/academic"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/education/academic</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/academic"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/academic"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/academic"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/academic"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/education/academic</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/academic"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/academic"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/academic"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/academic"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/courses</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/education/courses</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/education/courses</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/publications</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/education/publications</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/education/publications</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications"/>
+  </url>
+  <!-- Academic Formation Route: mentoria-labai-institutojoule-ia2025 -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/academic/mentoria-labai-institutojoule-ia2025</loc>
+    <lastmod>2025-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/academic/mentoria-labai-institutojoule-ia2025"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/academic/mentoria-labai-institutojoule-ia2025"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/academic/mentoria-labai-institutojoule-ia2025"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/academic/mentoria-labai-institutojoule-ia2025"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/instituto_joule_logo.jpg</image:loc>
+      <image:caption>Logo do Instituto Joule — Programa Lab.AI de Mentoria em IA</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/education/academic/mentoria-labai-institutojoule-ia2025</loc>
+    <lastmod>2025-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/academic/mentoria-labai-institutojoule-ia2025"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/academic/mentoria-labai-institutojoule-ia2025"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/academic/mentoria-labai-institutojoule-ia2025"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/academic/mentoria-labai-institutojoule-ia2025"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/instituto_joule_logo.jpg</image:loc>
+      <image:caption>Instituto Joule logo — Lab.AI Mentorship Program in AI</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/education/academic/mentoria-labai-institutojoule-ia2025</loc>
+    <lastmod>2025-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/academic/mentoria-labai-institutojoule-ia2025"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/academic/mentoria-labai-institutojoule-ia2025"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/academic/mentoria-labai-institutojoule-ia2025"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/academic/mentoria-labai-institutojoule-ia2025"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/instituto_joule_logo.jpg</image:loc>
+      <image:caption>Logo del Instituto Joule — Programa Lab.AI de Mentoría en IA</image:caption>
+    </image:image>
+  </url>
+  <!-- Academic Formation Route: graduacao-ciencia-computacao-unifavipwyden -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/academic/graduacao-ciencia-computacao-unifavipwyden</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/academic/graduacao-ciencia-computacao-unifavipwyden"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/academic/graduacao-ciencia-computacao-unifavipwyden"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/academic/graduacao-ciencia-computacao-unifavipwyden"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/academic/graduacao-ciencia-computacao-unifavipwyden"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/unifavip_logo.jpg</image:loc>
+      <image:caption>Logo da UniFavip Wyden — Bacharelado em Ciência da Computação</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/education/academic/graduacao-ciencia-computacao-unifavipwyden</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/academic/graduacao-ciencia-computacao-unifavipwyden"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/academic/graduacao-ciencia-computacao-unifavipwyden"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/academic/graduacao-ciencia-computacao-unifavipwyden"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/academic/graduacao-ciencia-computacao-unifavipwyden"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/unifavip_logo.jpg</image:loc>
+      <image:caption>UniFavip Wyden logo — Bachelor&apos;s in Computer Science</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/education/academic/graduacao-ciencia-computacao-unifavipwyden</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/academic/graduacao-ciencia-computacao-unifavipwyden"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/academic/graduacao-ciencia-computacao-unifavipwyden"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/academic/graduacao-ciencia-computacao-unifavipwyden"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/academic/graduacao-ciencia-computacao-unifavipwyden"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/unifavip_logo.jpg</image:loc>
+      <image:caption>Logo de UniFavip Wyden — Licenciatura en Ciencias de la Computación</image:caption>
+    </image:image>
+  </url>
+  <!-- Course Route: introduction-to-safe -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/courses/introduction-to-safe</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/introduction-to-safe"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/introduction-to-safe"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/introduction-to-safe"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/introduction-to-safe"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/simplilearn_logo.webp</image:loc>
+      <image:caption>Logo da Simplilearn — Curso Introdução ao SAFe</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/education/courses/introduction-to-safe</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/introduction-to-safe"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/introduction-to-safe"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/introduction-to-safe"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/introduction-to-safe"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/simplilearn_logo.webp</image:loc>
+      <image:caption>Simplilearn logo — Introduction to SAFe course</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/education/courses/introduction-to-safe</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/introduction-to-safe"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/introduction-to-safe"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/introduction-to-safe"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/introduction-to-safe"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/simplilearn_logo.webp</image:loc>
+      <image:caption>Logo de Simplilearn — Curso Introducción a SAFe</image:caption>
+    </image:image>
+  </url>
+  <!-- Course Route: curso-postman-zeroaoavancado -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-postman-zeroaoavancado</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-postman-zeroaoavancado"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-postman-zeroaoavancado"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-postman-zeroaoavancado"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-postman-zeroaoavancado"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/udemy-3.webp</image:loc>
+      <image:caption>Logo da Udemy — Plataforma de cursos online</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-postman-zeroaoavancado</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-postman-zeroaoavancado"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-postman-zeroaoavancado"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-postman-zeroaoavancado"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-postman-zeroaoavancado"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/udemy-3.webp</image:loc>
+      <image:caption>Udemy logo — Online course platform</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-postman-zeroaoavancado</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-postman-zeroaoavancado"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-postman-zeroaoavancado"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-postman-zeroaoavancado"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-postman-zeroaoavancado"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/udemy-3.webp</image:loc>
+      <image:caption>Logo de Udemy — Plataforma de cursos en línea</image:caption>
+    </image:image>
+  </url>
+  <!-- Course Route: curso-applicationprogramminginterfaces-api -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-applicationprogramminginterfaces-api</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-applicationprogramminginterfaces-api"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-applicationprogramminginterfaces-api"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-applicationprogramminginterfaces-api"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-applicationprogramminginterfaces-api"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/udemy-3.webp</image:loc>
+      <image:caption>Logo da Udemy — Plataforma de cursos online</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-applicationprogramminginterfaces-api</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-applicationprogramminginterfaces-api"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-applicationprogramminginterfaces-api"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-applicationprogramminginterfaces-api"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-applicationprogramminginterfaces-api"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/udemy-3.webp</image:loc>
+      <image:caption>Udemy logo — Online course platform</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-applicationprogramminginterfaces-api</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-applicationprogramminginterfaces-api"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-applicationprogramminginterfaces-api"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-applicationprogramminginterfaces-api"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-applicationprogramminginterfaces-api"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/udemy-3.webp</image:loc>
+      <image:caption>Logo de Udemy — Plataforma de cursos en línea</image:caption>
+    </image:image>
+  </url>
+  <!-- Course Route: curso-aspireleaders-2025 -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-aspireleaders-2025</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-aspireleaders-2025"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-aspireleaders-2025"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-aspireleaders-2025"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-aspireleaders-2025"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/aspire-institute-logo-large-updated-2048x695.webp</image:loc>
+      <image:caption>Logo do Aspire Institute — Programa Aspire Leaders 2025</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-aspireleaders-2025</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-aspireleaders-2025"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-aspireleaders-2025"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-aspireleaders-2025"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-aspireleaders-2025"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/aspire-institute-logo-large-updated-2048x695.webp</image:loc>
+      <image:caption>Aspire Institute logo — Aspire Leaders Program 2025</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-aspireleaders-2025</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-aspireleaders-2025"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-aspireleaders-2025"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-aspireleaders-2025"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-aspireleaders-2025"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/aspire-institute-logo-large-updated-2048x695.webp</image:loc>
+      <image:caption>Logo del Aspire Institute — Programa Aspire Leaders 2025</image:caption>
+    </image:image>
+  </url>
+  <!-- Course Route: curso-labai-mentoria2025 -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-labai-mentoria2025</loc>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-labai-mentoria2025"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-labai-mentoria2025"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-labai-mentoria2025"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-labai-mentoria2025"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/instituto_joule_logo.jpg</image:loc>
+      <image:caption>Logo do Instituto Joule — Programa Lab.AI de Mentoria em IA</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-labai-mentoria2025</loc>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-labai-mentoria2025"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-labai-mentoria2025"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-labai-mentoria2025"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-labai-mentoria2025"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/instituto_joule_logo.jpg</image:loc>
+      <image:caption>Instituto Joule logo — Lab.AI Mentorship Program in AI</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-labai-mentoria2025</loc>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-labai-mentoria2025"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-labai-mentoria2025"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-labai-mentoria2025"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-labai-mentoria2025"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/instituto_joule_logo.jpg</image:loc>
+      <image:caption>Logo del Instituto Joule — Programa Lab.AI de Mentoría en IA</image:caption>
+    </image:image>
+  </url>
+  <!-- Course Route: curso-empreendedorismo-ignite -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-empreendedorismo-ignite</loc>
+    <lastmod>2025-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-empreendedorismo-ignite"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-empreendedorismo-ignite"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-empreendedorismo-ignite"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-empreendedorismo-ignite"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/wadhwani-foundation.webp</image:loc>
+      <image:caption>Logo da Wadhwani Foundation — Programa de Empreendedorismo Ignite</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-empreendedorismo-ignite</loc>
+    <lastmod>2025-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-empreendedorismo-ignite"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-empreendedorismo-ignite"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-empreendedorismo-ignite"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-empreendedorismo-ignite"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/wadhwani-foundation.webp</image:loc>
+      <image:caption>Wadhwani Foundation logo — Ignite Entrepreneurship Program</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-empreendedorismo-ignite</loc>
+    <lastmod>2025-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-empreendedorismo-ignite"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-empreendedorismo-ignite"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-empreendedorismo-ignite"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-empreendedorismo-ignite"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/wadhwani-foundation.webp</image:loc>
+      <image:caption>Logo de la Wadhwani Foundation — Programa de Emprendimiento Ignite</image:caption>
+    </image:image>
+  </url>
+  <!-- Course Route: curso-skillsbuild-customerengagement -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-skillsbuild-customerengagement</loc>
+    <lastmod>2025-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-skillsbuild-customerengagement"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-skillsbuild-customerengagement"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-skillsbuild-customerengagement"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-skillsbuild-customerengagement"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/ibm-svgrepo-com.webp</image:loc>
+      <image:caption>Logo da IBM — Curso SkillsBuild de Engajamento do Cliente</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-skillsbuild-customerengagement</loc>
+    <lastmod>2025-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-skillsbuild-customerengagement"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-skillsbuild-customerengagement"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-skillsbuild-customerengagement"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-skillsbuild-customerengagement"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/ibm-svgrepo-com.webp</image:loc>
+      <image:caption>IBM logo — SkillsBuild Customer Engagement course</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-skillsbuild-customerengagement</loc>
+    <lastmod>2025-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-skillsbuild-customerengagement"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-skillsbuild-customerengagement"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-skillsbuild-customerengagement"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-skillsbuild-customerengagement"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/ibm-svgrepo-com.webp</image:loc>
+      <image:caption>Logo de IBM — Curso SkillsBuild de Compromiso del Cliente</image:caption>
+    </image:image>
+  </url>
+  <!-- Course Route: curso-efset-2025 -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-efset-2025</loc>
+    <lastmod>2025-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-efset-2025"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-efset-2025"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-efset-2025"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-efset-2025"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/idxeymiMn5_1783788580495.jpeg</image:loc>
+      <image:caption>Logo da EF Education First — Certificado de Inglês EF SET C1 Avançado</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-efset-2025</loc>
+    <lastmod>2025-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-efset-2025"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-efset-2025"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-efset-2025"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-efset-2025"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/idxeymiMn5_1783788580495.jpeg</image:loc>
+      <image:caption>EF Education First logo — EF SET English Certificate C1 Advanced</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-efset-2025</loc>
+    <lastmod>2025-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-efset-2025"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-efset-2025"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-efset-2025"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-efset-2025"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/idxeymiMn5_1783788580495.jpeg</image:loc>
+      <image:caption>Logo de EF Education First — Certificado de Inglés EF SET C1 Avanzado</image:caption>
+    </image:image>
+  </url>
+  <!-- Course Route: curso-campusb-intercambio-2024 -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-campusb-intercambio-2024</loc>
+    <lastmod>2024-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-campusb-intercambio-2024"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-campusb-intercambio-2024"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-campusb-intercambio-2024"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-campusb-intercambio-2024"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/campusb_logo.webp</image:loc>
+      <image:caption>Logo do Campus B — Programa Comunicación Intercultural</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-campusb-intercambio-2024</loc>
+    <lastmod>2024-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-campusb-intercambio-2024"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-campusb-intercambio-2024"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-campusb-intercambio-2024"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-campusb-intercambio-2024"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/campusb_logo.webp</image:loc>
+      <image:caption>Campus B logo — Intercultural Communication Program</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-campusb-intercambio-2024</loc>
+    <lastmod>2024-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-campusb-intercambio-2024"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-campusb-intercambio-2024"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-campusb-intercambio-2024"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-campusb-intercambio-2024"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/campusb_logo.webp</image:loc>
+      <image:caption>Logo de Campus B — Programa Comunicación Intercultural</image:caption>
+    </image:image>
+  </url>
+  <!-- Course Route: curso-competenciatransversal-2023 -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-competenciatransversal-2023</loc>
+    <lastmod>2023-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-competenciatransversal-2023"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-competenciatransversal-2023"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-competenciatransversal-2023"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-competenciatransversal-2023"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/iconsenai.webp</image:loc>
+      <image:caption>Logo do SENAI — Curso Competência Transversal em TIC</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-competenciatransversal-2023</loc>
+    <lastmod>2023-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-competenciatransversal-2023"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-competenciatransversal-2023"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-competenciatransversal-2023"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-competenciatransversal-2023"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/iconsenai.webp</image:loc>
+      <image:caption>SENAI logo — Transversal Competence in ICT course</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-competenciatransversal-2023</loc>
+    <lastmod>2023-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-competenciatransversal-2023"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-competenciatransversal-2023"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-competenciatransversal-2023"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-competenciatransversal-2023"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/iconsenai.webp</image:loc>
+      <image:caption>Logo del SENAI — Curso Competencia Transversal en TIC</image:caption>
+    </image:image>
+  </url>
+  <!-- Publication Route: pub-some-trends-doesnt-stay-trend-2024 -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-some-trends-doesnt-stay-trend-2024</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-some-trends-doesnt-stay-trend-2024"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-some-trends-doesnt-stay-trend-2024"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-some-trends-doesnt-stay-trend-2024"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-some-trends-doesnt-stay-trend-2024"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-some-trends-doesnt-stay-trend-2024</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-some-trends-doesnt-stay-trend-2024"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-some-trends-doesnt-stay-trend-2024"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-some-trends-doesnt-stay-trend-2024"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-some-trends-doesnt-stay-trend-2024"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-some-trends-doesnt-stay-trend-2024</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-some-trends-doesnt-stay-trend-2024"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-some-trends-doesnt-stay-trend-2024"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-some-trends-doesnt-stay-trend-2024"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-some-trends-doesnt-stay-trend-2024"/>
+  </url>
+  <!-- Publication Route: pub-fishes-and-cars -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-fishes-and-cars</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-fishes-and-cars"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-fishes-and-cars"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-fishes-and-cars"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-fishes-and-cars"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-fishes-and-cars</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-fishes-and-cars"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-fishes-and-cars"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-fishes-and-cars"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-fishes-and-cars"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-fishes-and-cars</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-fishes-and-cars"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-fishes-and-cars"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-fishes-and-cars"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-fishes-and-cars"/>
+  </url>
+  <!-- Publication Route: pub-using-ai-for-cx -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-using-ai-for-cx</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-using-ai-for-cx"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-using-ai-for-cx"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-using-ai-for-cx"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-using-ai-for-cx"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-using-ai-for-cx</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-using-ai-for-cx"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-using-ai-for-cx"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-using-ai-for-cx"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-using-ai-for-cx"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-using-ai-for-cx</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-using-ai-for-cx"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-using-ai-for-cx"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-using-ai-for-cx"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-using-ai-for-cx"/>
+  </url>
+  <!-- Publication Route: pub-creative-economy-northeast-brazil -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-creative-economy-northeast-brazil</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-creative-economy-northeast-brazil"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-creative-economy-northeast-brazil"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-creative-economy-northeast-brazil"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-creative-economy-northeast-brazil"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-creative-economy-northeast-brazil</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-creative-economy-northeast-brazil"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-creative-economy-northeast-brazil"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-creative-economy-northeast-brazil"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-creative-economy-northeast-brazil"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-creative-economy-northeast-brazil</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-creative-economy-northeast-brazil"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-creative-economy-northeast-brazil"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-creative-economy-northeast-brazil"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-creative-economy-northeast-brazil"/>
+  </url>
+  <!-- Publication Route: pub-alive-architecture-future-esg -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-alive-architecture-future-esg</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-alive-architecture-future-esg"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-alive-architecture-future-esg"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-alive-architecture-future-esg"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-alive-architecture-future-esg"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-alive-architecture-future-esg</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-alive-architecture-future-esg"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-alive-architecture-future-esg"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-alive-architecture-future-esg"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-alive-architecture-future-esg"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-alive-architecture-future-esg</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-alive-architecture-future-esg"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-alive-architecture-future-esg"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-alive-architecture-future-esg"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-alive-architecture-future-esg"/>
+  </url>
+  <!-- Publication Route: pub-design-thinking-medium -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-design-thinking-medium</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-design-thinking-medium"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-design-thinking-medium"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-design-thinking-medium"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-design-thinking-medium"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-design-thinking-medium</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-design-thinking-medium"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-design-thinking-medium"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-design-thinking-medium"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-design-thinking-medium"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-design-thinking-medium</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-design-thinking-medium"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-design-thinking-medium"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-design-thinking-medium"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-design-thinking-medium"/>
+  </url>
+  <!-- Publication Route: pub-from-problem-to-product -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-from-problem-to-product</loc>
+    <lastmod>2025-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-from-problem-to-product"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-from-problem-to-product"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-from-problem-to-product"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-from-problem-to-product"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-from-problem-to-product</loc>
+    <lastmod>2025-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-from-problem-to-product"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-from-problem-to-product"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-from-problem-to-product"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-from-problem-to-product"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-from-problem-to-product</loc>
+    <lastmod>2025-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-from-problem-to-product"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-from-problem-to-product"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-from-problem-to-product"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-from-problem-to-product"/>
+  </url>
+  <!-- Publication Route: pub-too-much-ui-can-break-ux -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-too-much-ui-can-break-ux</loc>
+    <lastmod>2025-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-too-much-ui-can-break-ux"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-too-much-ui-can-break-ux"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-too-much-ui-can-break-ux"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-too-much-ui-can-break-ux"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-too-much-ui-can-break-ux</loc>
+    <lastmod>2025-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-too-much-ui-can-break-ux"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-too-much-ui-can-break-ux"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-too-much-ui-can-break-ux"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-too-much-ui-can-break-ux"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-too-much-ui-can-break-ux</loc>
+    <lastmod>2025-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-too-much-ui-can-break-ux"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-too-much-ui-can-break-ux"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-too-much-ui-can-break-ux"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-too-much-ui-can-break-ux"/>
+  </url>
+  <!-- Publication Route: pub-communication-and-its-paradigms -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-communication-and-its-paradigms</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-communication-and-its-paradigms"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-communication-and-its-paradigms"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-communication-and-its-paradigms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-communication-and-its-paradigms"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-communication-and-its-paradigms</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-communication-and-its-paradigms"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-communication-and-its-paradigms"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-communication-and-its-paradigms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-communication-and-its-paradigms"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-communication-and-its-paradigms</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-communication-and-its-paradigms"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-communication-and-its-paradigms"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-communication-and-its-paradigms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-communication-and-its-paradigms"/>
+  </url>
+  <!-- Publication Route: pub-from-chaos-to-clarity -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-from-chaos-to-clarity</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-from-chaos-to-clarity"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-from-chaos-to-clarity"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-from-chaos-to-clarity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-from-chaos-to-clarity"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-from-chaos-to-clarity</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-from-chaos-to-clarity"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-from-chaos-to-clarity"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-from-chaos-to-clarity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-from-chaos-to-clarity"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-from-chaos-to-clarity</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-from-chaos-to-clarity"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-from-chaos-to-clarity"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-from-chaos-to-clarity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-from-chaos-to-clarity"/>
+  </url>
+  <!-- Publication Route: pub-the-fallacy-of-plural-mvp -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-the-fallacy-of-plural-mvp</loc>
+    <lastmod>2025-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-the-fallacy-of-plural-mvp"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-the-fallacy-of-plural-mvp"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-the-fallacy-of-plural-mvp"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-the-fallacy-of-plural-mvp"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-the-fallacy-of-plural-mvp</loc>
+    <lastmod>2025-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-the-fallacy-of-plural-mvp"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-the-fallacy-of-plural-mvp"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-the-fallacy-of-plural-mvp"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-the-fallacy-of-plural-mvp"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-the-fallacy-of-plural-mvp</loc>
+    <lastmod>2025-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-the-fallacy-of-plural-mvp"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-the-fallacy-of-plural-mvp"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-the-fallacy-of-plural-mvp"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-the-fallacy-of-plural-mvp"/>
+  </url>
+  <!-- Publication Route: pub-gestao-agil-simplificada -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-gestao-agil-simplificada</loc>
+    <lastmod>2024-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-gestao-agil-simplificada"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-gestao-agil-simplificada"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-gestao-agil-simplificada"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-gestao-agil-simplificada"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-gestao-agil-simplificada</loc>
+    <lastmod>2024-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-gestao-agil-simplificada"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-gestao-agil-simplificada"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-gestao-agil-simplificada"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-gestao-agil-simplificada"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-gestao-agil-simplificada</loc>
+    <lastmod>2024-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-gestao-agil-simplificada"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-gestao-agil-simplificada"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-gestao-agil-simplificada"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-gestao-agil-simplificada"/>
+  </url>
+
+  <!-- Community Hubs -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/volunteering"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/volunteering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community/volunteering</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/volunteering"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/volunteering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community/volunteering</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/volunteering"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/volunteering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community/hackathons</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community/hackathons</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/events</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community/events</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community/events</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/achievements</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/achievements"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/achievements"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/achievements"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/achievements"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community/achievements</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/achievements"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/achievements"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/achievements"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/achievements"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community/achievements</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/achievements"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/achievements"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/achievements"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/achievements"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/blog</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/blog"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/blog"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community/blog</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/blog"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/blog"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community/blog</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/blog"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/blog"/>
+  </url>
+  <!-- Blog Post Route: post-implementation-engineering-vs-software-engineering -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/blog/post-implementation-engineering-vs-software-engineering</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/blog/post-implementation-engineering-vs-software-engineering"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/blog/post-implementation-engineering-vs-software-engineering"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/blog/post-implementation-engineering-vs-software-engineering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/blog/post-implementation-engineering-vs-software-engineering"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community/blog/post-implementation-engineering-vs-software-engineering</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/blog/post-implementation-engineering-vs-software-engineering"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/blog/post-implementation-engineering-vs-software-engineering"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/blog/post-implementation-engineering-vs-software-engineering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/blog/post-implementation-engineering-vs-software-engineering"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community/blog/post-implementation-engineering-vs-software-engineering</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/blog/post-implementation-engineering-vs-software-engineering"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/blog/post-implementation-engineering-vs-software-engineering"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/blog/post-implementation-engineering-vs-software-engineering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/blog/post-implementation-engineering-vs-software-engineering"/>
+  </url>
+  <!-- Volunteering Route: co-organizer-gdgbarueri -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/co-organizer-gdgbarueri</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/co-organizer-gdgbarueri"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/co-organizer-gdgbarueri"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/co-organizer-gdgbarueri"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/co-organizer-gdgbarueri"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/google_developers_group_barueri_logo.jpg</image:loc>
+      <image:caption>Logo do Google Developers Group (GDG) Barueri — Tecnologia, IA e Inovação</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/co-organizer-gdgbarueri</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/co-organizer-gdgbarueri"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/co-organizer-gdgbarueri"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/co-organizer-gdgbarueri"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/co-organizer-gdgbarueri"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/google_developers_group_barueri_logo.jpg</image:loc>
+      <image:caption>Google Developers Group (GDG) Barueri logo — Technology, AI and Innovation</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/co-organizer-gdgbarueri</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/co-organizer-gdgbarueri"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/co-organizer-gdgbarueri"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/co-organizer-gdgbarueri"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/co-organizer-gdgbarueri"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/google_developers_group_barueri_logo.jpg</image:loc>
+      <image:caption>Logo del Google Developers Group (GDG) Barueri — Tecnología, IA e Innovación</image:caption>
+    </image:image>
+  </url>
+  <!-- Volunteering Route: ambassador-facilitator-politize -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/ambassador-facilitator-politize</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/ambassador-facilitator-politize"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/ambassador-facilitator-politize"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/ambassador-facilitator-politize"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/ambassador-facilitator-politize"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/politize__logo.jpg</image:loc>
+      <image:caption>Logo da Politize! — Educação política e cidadania</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/ambassador-facilitator-politize</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/ambassador-facilitator-politize"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/ambassador-facilitator-politize"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/ambassador-facilitator-politize"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/ambassador-facilitator-politize"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/politize__logo.jpg</image:loc>
+      <image:caption>Politize! logo — Political education and citizenship</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/ambassador-facilitator-politize</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/ambassador-facilitator-politize"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/ambassador-facilitator-politize"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/ambassador-facilitator-politize"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/ambassador-facilitator-politize"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/politize__logo.jpg</image:loc>
+      <image:caption>Logo de Politize! — Educación política y ciudadanía</image:caption>
+    </image:image>
+  </url>
+  <!-- Volunteering Route: aiesecmackenzie-volunteer -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/aiesecmackenzie-volunteer</loc>
+    <lastmod>2025-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/aiesecmackenzie-volunteer"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/aiesecmackenzie-volunteer"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/aiesecmackenzie-volunteer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/aiesecmackenzie-volunteer"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/1754110.webp</image:loc>
+      <image:caption>Logo da AIESEC no Mackenzie — OGT e Marketing</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/aiesecmackenzie-volunteer</loc>
+    <lastmod>2025-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/aiesecmackenzie-volunteer"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/aiesecmackenzie-volunteer"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/aiesecmackenzie-volunteer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/aiesecmackenzie-volunteer"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/1754110.webp</image:loc>
+      <image:caption>AIESEC at Mackenzie logo — OGT and Marketing</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/aiesecmackenzie-volunteer</loc>
+    <lastmod>2025-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/aiesecmackenzie-volunteer"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/aiesecmackenzie-volunteer"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/aiesecmackenzie-volunteer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/aiesecmackenzie-volunteer"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/1754110.webp</image:loc>
+      <image:caption>Logo de AIESEC en Mackenzie — OGT y Marketing</image:caption>
+    </image:image>
+  </url>
+  <!-- Volunteering Route: vainaweb-volunteering -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/vainaweb-volunteering</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/vainaweb-volunteering"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/vainaweb-volunteering"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/vainaweb-volunteering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/vainaweb-volunteering"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/vai_na_web.jpg</image:loc>
+      <image:caption>Logo da Vai Na Web — Instrutor de Soft Skills</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/vainaweb-volunteering</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/vainaweb-volunteering"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/vainaweb-volunteering"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/vainaweb-volunteering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/vainaweb-volunteering"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/vai_na_web.jpg</image:loc>
+      <image:caption>Vai Na Web logo — Soft Skills Instructor</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/vainaweb-volunteering</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/vainaweb-volunteering"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/vainaweb-volunteering"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/vainaweb-volunteering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/vainaweb-volunteering"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/vai_na_web.jpg</image:loc>
+      <image:caption>Logo de Vai Na Web — Instructor de Soft Skills</image:caption>
+    </image:image>
+  </url>
+  <!-- Hackathon Route: hackathon-havk-hacking-the-desert -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-havk-hacking-the-desert</loc>
+    <lastmod>2025-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-havk-hacking-the-desert"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-havk-hacking-the-desert"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-havk-hacking-the-desert"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-havk-hacking-the-desert"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-havk-hacking-the-desert</loc>
+    <lastmod>2025-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-havk-hacking-the-desert"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-havk-hacking-the-desert"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-havk-hacking-the-desert"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-havk-hacking-the-desert"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-havk-hacking-the-desert</loc>
+    <lastmod>2025-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-havk-hacking-the-desert"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-havk-hacking-the-desert"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-havk-hacking-the-desert"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-havk-hacking-the-desert"/>
+  </url>
+  <!-- Hackathon Route: vox-astra-hackathon -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/vox-astra-hackathon</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/vox-astra-hackathon"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/vox-astra-hackathon"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/vox-astra-hackathon"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/vox-astra-hackathon"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/vox-astra-hackathon</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/vox-astra-hackathon"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/vox-astra-hackathon"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/vox-astra-hackathon"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/vox-astra-hackathon"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/vox-astra-hackathon</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/vox-astra-hackathon"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/vox-astra-hackathon"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/vox-astra-hackathon"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/vox-astra-hackathon"/>
+  </url>
+  <!-- Hackathon Route: 2025-hackatopia-hackathon -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/2025-hackatopia-hackathon</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/2025-hackatopia-hackathon"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/2025-hackatopia-hackathon"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/2025-hackatopia-hackathon"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/2025-hackatopia-hackathon"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/2025-hackatopia-hackathon</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/2025-hackatopia-hackathon"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/2025-hackatopia-hackathon"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/2025-hackatopia-hackathon"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/2025-hackatopia-hackathon"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/2025-hackatopia-hackathon</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/2025-hackatopia-hackathon"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/2025-hackatopia-hackathon"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/2025-hackatopia-hackathon"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/2025-hackatopia-hackathon"/>
+  </url>
+  <!-- Hackathon Route: hackathon-fenearte -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-fenearte</loc>
+    <lastmod>2025-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-fenearte"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-fenearte"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-fenearte"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-fenearte"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-fenearte</loc>
+    <lastmod>2025-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-fenearte"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-fenearte"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-fenearte"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-fenearte"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-fenearte</loc>
+    <lastmod>2025-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-fenearte"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-fenearte"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-fenearte"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-fenearte"/>
+  </url>
+  <!-- Hackathon Route: ideathon-ac -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/ideathon-ac</loc>
+    <lastmod>2025-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/ideathon-ac"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/ideathon-ac"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/ideathon-ac"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/ideathon-ac"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/ideathon-ac</loc>
+    <lastmod>2025-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/ideathon-ac"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/ideathon-ac"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/ideathon-ac"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/ideathon-ac"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/ideathon-ac</loc>
+    <lastmod>2025-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/ideathon-ac"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/ideathon-ac"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/ideathon-ac"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/ideathon-ac"/>
+  </url>
+  <!-- Hackathon Route: hackathon-impulso-regional -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-impulso-regional</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-impulso-regional"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-impulso-regional"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-impulso-regional"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-impulso-regional"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-impulso-regional</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-impulso-regional"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-impulso-regional"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-impulso-regional"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-impulso-regional"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-impulso-regional</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-impulso-regional"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-impulso-regional"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-impulso-regional"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-impulso-regional"/>
+  </url>
+  <!-- Hackathon Route: hackathon-luminahub -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-luminahub</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-luminahub"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-luminahub"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-luminahub"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-luminahub"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-luminahub</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-luminahub"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-luminahub"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-luminahub"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-luminahub"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-luminahub</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-luminahub"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-luminahub"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-luminahub"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-luminahub"/>
+  </url>
+  <!-- Hackathon Route: hackathon-dataflow -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-dataflow</loc>
+    <lastmod>2024-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-dataflow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-dataflow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-dataflow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-dataflow"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-dataflow</loc>
+    <lastmod>2024-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-dataflow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-dataflow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-dataflow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-dataflow"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-dataflow</loc>
+    <lastmod>2024-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-dataflow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-dataflow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-dataflow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-dataflow"/>
+  </url>
+  <!-- Hackathon Route: ideathon-caruaru-campusparty-day -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/ideathon-caruaru-campusparty-day</loc>
+    <lastmod>2024-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/ideathon-caruaru-campusparty-day"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/ideathon-caruaru-campusparty-day"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/ideathon-caruaru-campusparty-day"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/ideathon-caruaru-campusparty-day"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/ideathon-caruaru-campusparty-day</loc>
+    <lastmod>2024-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/ideathon-caruaru-campusparty-day"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/ideathon-caruaru-campusparty-day"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/ideathon-caruaru-campusparty-day"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/ideathon-caruaru-campusparty-day"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/ideathon-caruaru-campusparty-day</loc>
+    <lastmod>2024-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/ideathon-caruaru-campusparty-day"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/ideathon-caruaru-campusparty-day"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/ideathon-caruaru-campusparty-day"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/ideathon-caruaru-campusparty-day"/>
+  </url>
+  <!-- Hackathon Route: olimpiadas-jovens-impacto -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/olimpiadas-jovens-impacto</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/olimpiadas-jovens-impacto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/olimpiadas-jovens-impacto"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/olimpiadas-jovens-impacto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/olimpiadas-jovens-impacto"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/olimpiadas-jovens-impacto</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/olimpiadas-jovens-impacto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/olimpiadas-jovens-impacto"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/olimpiadas-jovens-impacto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/olimpiadas-jovens-impacto"/>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/olimpiadas-jovens-impacto</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/olimpiadas-jovens-impacto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/olimpiadas-jovens-impacto"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/olimpiadas-jovens-impacto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/olimpiadas-jovens-impacto"/>
+  </url>
+  <!-- Event Route: flisol-palmares-2026 -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/events/flisol-palmares-2026</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/flisol-palmares-2026"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/flisol-palmares-2026"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/flisol-palmares-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/flisol-palmares-2026"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/photo_flisol_logo.webp</image:loc>
+      <image:caption>Logo do FLISoL 2026 — Palestrante no IFPE Palmares</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community/events/flisol-palmares-2026</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/flisol-palmares-2026"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/flisol-palmares-2026"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/flisol-palmares-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/flisol-palmares-2026"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/photo_flisol_logo.webp</image:loc>
+      <image:caption>FLISoL 2026 logo — Speaker at IFPE Palmares</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community/events/flisol-palmares-2026</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/flisol-palmares-2026"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/flisol-palmares-2026"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/flisol-palmares-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/flisol-palmares-2026"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/photo_flisol_logo.webp</image:loc>
+      <image:caption>Logo del FLISoL 2026 — Ponente en IFPE Palmares</image:caption>
+    </image:image>
+  </url>
+  <!-- Event Route: expotech-2025-2 -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2025-2</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2025-2"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/expotech-2025-2"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/expotech-2025-2"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2025-2"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/unifavip_logo.jpg</image:loc>
+      <image:caption>Logo da UniFavip Wyden — Bacharelado em Ciência da Computação</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community/events/expotech-2025-2</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2025-2"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/expotech-2025-2"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/expotech-2025-2"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2025-2"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/unifavip_logo.jpg</image:loc>
+      <image:caption>UniFavip Wyden logo — Bachelor&apos;s in Computer Science</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community/events/expotech-2025-2</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2025-2"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/expotech-2025-2"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/expotech-2025-2"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2025-2"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/unifavip_logo.jpg</image:loc>
+      <image:caption>Logo de UniFavip Wyden — Licenciatura en Ciencias de la Computación</image:caption>
+    </image:image>
+  </url>
+  <!-- Event Route: festival-agile-trends-2025 -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/events/festival-agile-trends-2025</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/festival-agile-trends-2025"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/festival-agile-trends-2025"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/festival-agile-trends-2025"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/festival-agile-trends-2025"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/agile_trends_logo.jpg</image:loc>
+      <image:caption>Logo do Festival Agile Trends 2025</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community/events/festival-agile-trends-2025</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/festival-agile-trends-2025"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/festival-agile-trends-2025"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/festival-agile-trends-2025"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/festival-agile-trends-2025"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/agile_trends_logo.jpg</image:loc>
+      <image:caption>Agile Trends Festival 2025 logo</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community/events/festival-agile-trends-2025</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/festival-agile-trends-2025"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/festival-agile-trends-2025"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/festival-agile-trends-2025"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/festival-agile-trends-2025"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/agile_trends_logo.jpg</image:loc>
+      <image:caption>Logo del Festival Agile Trends 2025</image:caption>
+    </image:image>
+  </url>
+  <!-- Event Route: expotech-2025-1 -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2025-1</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2025-1"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/expotech-2025-1"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/expotech-2025-1"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2025-1"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/unifavip_logo.jpg</image:loc>
+      <image:caption>Logo da UniFavip Wyden — Bacharelado em Ciência da Computação</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community/events/expotech-2025-1</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2025-1"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/expotech-2025-1"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/expotech-2025-1"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2025-1"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/unifavip_logo.jpg</image:loc>
+      <image:caption>UniFavip Wyden logo — Bachelor&apos;s in Computer Science</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community/events/expotech-2025-1</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2025-1"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/expotech-2025-1"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/expotech-2025-1"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2025-1"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/unifavip_logo.jpg</image:loc>
+      <image:caption>Logo de UniFavip Wyden — Licenciatura en Ciencias de la Computación</image:caption>
+    </image:image>
+  </url>
+  <!-- Event Route: brics-youth-2025 -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/events/brics-youth-2025</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/brics-youth-2025"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/brics-youth-2025"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/brics-youth-2025"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/brics-youth-2025"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/brics_youth_alliance_2025.jpg</image:loc>
+      <image:caption>Logo do BRICS Youth Alliance 2025</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community/events/brics-youth-2025</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/brics-youth-2025"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/brics-youth-2025"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/brics-youth-2025"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/brics-youth-2025"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/brics_youth_alliance_2025.jpg</image:loc>
+      <image:caption>BRICS Youth Alliance 2025 logo</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community/events/brics-youth-2025</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/brics-youth-2025"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/brics-youth-2025"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/brics-youth-2025"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/brics-youth-2025"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/brics_youth_alliance_2025.jpg</image:loc>
+      <image:caption>Logo de la Alianza Juvenil BRICS 2025</image:caption>
+    </image:image>
+  </url>
+  <!-- Event Route: as-tendencias-para-novasgeracoes-2025-1 -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/events/as-tendencias-para-novasgeracoes-2025-1</loc>
+    <lastmod>2025-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/as-tendencias-para-novasgeracoes-2025-1"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/as-tendencias-para-novasgeracoes-2025-1"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/as-tendencias-para-novasgeracoes-2025-1"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/as-tendencias-para-novasgeracoes-2025-1"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/recife_front_end_community_logo.jpg</image:loc>
+      <image:caption>Logo da Recife Front-End Community — Palestrante sobre tendências para novas gerações</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community/events/as-tendencias-para-novasgeracoes-2025-1</loc>
+    <lastmod>2025-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/as-tendencias-para-novasgeracoes-2025-1"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/as-tendencias-para-novasgeracoes-2025-1"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/as-tendencias-para-novasgeracoes-2025-1"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/as-tendencias-para-novasgeracoes-2025-1"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/recife_front_end_community_logo.jpg</image:loc>
+      <image:caption>Recife Front-End Community logo — Speaker on trends for new generations</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community/events/as-tendencias-para-novasgeracoes-2025-1</loc>
+    <lastmod>2025-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/as-tendencias-para-novasgeracoes-2025-1"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/as-tendencias-para-novasgeracoes-2025-1"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/as-tendencias-para-novasgeracoes-2025-1"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/as-tendencias-para-novasgeracoes-2025-1"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/recife_front_end_community_logo.jpg</image:loc>
+      <image:caption>Logo de Recife Front-End Community — Ponente sobre tendencias para nuevas generaciones</image:caption>
+    </image:image>
+  </url>
+  <!-- Event Route: expotech-2024-2 -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2024-2</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2024-2"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/expotech-2024-2"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/expotech-2024-2"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2024-2"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/unifavip_logo.jpg</image:loc>
+      <image:caption>Logo da UniFavip Wyden — Bacharelado em Ciência da Computação</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community/events/expotech-2024-2</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2024-2"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/expotech-2024-2"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/expotech-2024-2"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2024-2"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/unifavip_logo.jpg</image:loc>
+      <image:caption>UniFavip Wyden logo — Bachelor&apos;s in Computer Science</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community/events/expotech-2024-2</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2024-2"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/expotech-2024-2"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/expotech-2024-2"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2024-2"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/unifavip_logo.jpg</image:loc>
+      <image:caption>Logo de UniFavip Wyden — Licenciatura en Ciencias de la Computación</image:caption>
+    </image:image>
+  </url>
+  <!-- Event Route: campus-party-nordeste-2024 -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/events/campus-party-nordeste-2024</loc>
+    <lastmod>2024-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/campus-party-nordeste-2024"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/campus-party-nordeste-2024"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/campus-party-nordeste-2024"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/campus-party-nordeste-2024"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/campusparty_ltd_logo.jpg</image:loc>
+      <image:caption>Logo da Campus Party — Evento de tecnologia</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community/events/campus-party-nordeste-2024</loc>
+    <lastmod>2024-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/campus-party-nordeste-2024"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/campus-party-nordeste-2024"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/campus-party-nordeste-2024"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/campus-party-nordeste-2024"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/campusparty_ltd_logo.jpg</image:loc>
+      <image:caption>Campus Party logo — Technology event</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community/events/campus-party-nordeste-2024</loc>
+    <lastmod>2024-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/campus-party-nordeste-2024"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/campus-party-nordeste-2024"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/campus-party-nordeste-2024"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/campus-party-nordeste-2024"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/campusparty_ltd_logo.jpg</image:loc>
+      <image:caption>Logo de Campus Party — Evento de tecnología</image:caption>
+    </image:image>
+  </url>
+  <!-- Achievement Route: award-kartado-agility-2026 -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/achievements/award-kartado-agility-2026</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/achievements/award-kartado-agility-2026"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/achievements/award-kartado-agility-2026"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/achievements/award-kartado-agility-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/achievements/award-kartado-agility-2026"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/Simbolo_Kartado_Footer.webp</image:loc>
+      <image:caption>Logo da Kartado — Empresa B2B SaaS de concessões rodoviárias</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community/achievements/award-kartado-agility-2026</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/achievements/award-kartado-agility-2026"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/achievements/award-kartado-agility-2026"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/achievements/award-kartado-agility-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/achievements/award-kartado-agility-2026"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/Simbolo_Kartado_Footer.webp</image:loc>
+      <image:caption>Kartado logo — B2B SaaS company for highway concessions</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community/achievements/award-kartado-agility-2026</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/achievements/award-kartado-agility-2026"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/achievements/award-kartado-agility-2026"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/achievements/award-kartado-agility-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/achievements/award-kartado-agility-2026"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/Simbolo_Kartado_Footer.webp</image:loc>
+      <image:caption>Logo de Kartado — Empresa B2B SaaS de concesiones viales</image:caption>
+    </image:image>
+  </url>
+  <!-- Achievement Route: accepted-mentee-alp-2025-2 -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/achievements/accepted-mentee-alp-2025-2</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/achievements/accepted-mentee-alp-2025-2"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/achievements/accepted-mentee-alp-2025-2"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/achievements/accepted-mentee-alp-2025-2"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/achievements/accepted-mentee-alp-2025-2"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/aspire-institute-logo-large-updated-2048x695.webp</image:loc>
+      <image:caption>Logo do Aspire Institute — Programa Aspire Leaders 2025</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/en/community/achievements/accepted-mentee-alp-2025-2</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/achievements/accepted-mentee-alp-2025-2"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/achievements/accepted-mentee-alp-2025-2"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/achievements/accepted-mentee-alp-2025-2"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/achievements/accepted-mentee-alp-2025-2"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/aspire-institute-logo-large-updated-2048x695.webp</image:loc>
+      <image:caption>Aspire Institute logo — Aspire Leaders Program 2025</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/es/community/achievements/accepted-mentee-alp-2025-2</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/achievements/accepted-mentee-alp-2025-2"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/achievements/accepted-mentee-alp-2025-2"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/achievements/accepted-mentee-alp-2025-2"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/achievements/accepted-mentee-alp-2025-2"/>
+    <image:image>
+      <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/aspire-institute-logo-large-updated-2048x695.webp</image:loc>
+      <image:caption>Logo del Aspire Institute — Programa Aspire Leaders 2025</image:caption>
+    </image:image>
+  </url>
+  <!-- Machine-Readable Data & OKF Endpoints -->
+  <url>
+    <loc>https://eversonfilipe-portfolio.netlify.app/okf/manifest.json</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.10</priority>
+  </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/api/portfolio-data.json</loc>
-    <lastmod>2026-07-29</lastmod>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.10</priority>
   </url>
-  <!-- LLM-friendly index -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/llms.txt</loc>
-    <lastmod>2026-07-29</lastmod>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- English resume (Markdown) -->
-  <url>
-    <loc>https://eversonfilipe-portfolio.netlify.app/docs/data/resume-en.md</loc>
-    <lastmod>2026-07-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <!-- Portuguese resume (Markdown) -->
-  <url>
-    <loc>https://eversonfilipe-portfolio.netlify.app/docs/data/resume-pt.md</loc>
-    <lastmod>2026-07-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <!-- Spanish resume (Markdown) -->
-  <url>
-    <loc>https://eversonfilipe-portfolio.netlify.app/docs/data/resume-es.md</loc>
-    <lastmod>2026-07-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.10</priority>
   </url>
 </urlset>

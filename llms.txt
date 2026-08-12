@@ -2,12 +2,29 @@
 
 > Éverson Filipe (Everson Filipe) is a Systems Implementation Intern and AI Automation Developer specialized in B2B SaaS onboarding pipelines, Python ETL workflows, and AWS cloud orchestration. Key technical milestones at Kartado include designing a JSONLogic rule engine for dynamic forms across 42+ highway concession environments (reducing client parameters setup from 3 days to <4 hours), building Python-Django automation scripts replacing legacy spreadsheet processes (driving 32% team output capacity), and developing custom dataset schema validation notebooks that reduced parameterization analysis times by 40% with zero production syntax incidents. Proficient in Python, Django Admin, JSONLogic, AWS (Step Functions, Athena, S3, IAM, EC2), REST APIs/JWT, GIS spatial maps, and Agile Scrum methodologies.
 
-This website provides an interactive multi-language developer portfolio. Below is a curated index of resources, structured resumes, RAG endpoints, and data schemas optimized for LLMs, AI agents, and search engines.
+This website provides an interactive multi-language developer portfolio with clean dynamic routing (/{lang}/{section}/{subsection}/{slug}). Below is a curated index of resources, structured resumes, RAG endpoints, Open Knowledge Format (OKF) bundles, blog articles, and data schemas optimized for LLMs, AI agents, and search engines.
 
 **Core RAG Endpoints & Machine-Readable Data (JSON)**
-- [RAG API Endpoint (JSON)](https://eversonfilipe-portfolio.netlify.app/api/portfolio-data.json): Primary Machine-Readable static JSON endpoint containing the complete structured records of Everson Filipe for Retrieval-Augmented Generation (RAG) and AI agent tool consumption.
+- [RAG API Endpoint (JSON)](https://eversonfilipe-portfolio.netlify.app/api/portfolio-data.json): Primary Machine-Readable static JSON endpoint containing complete structured records of Everson Filipe (experiences, projects, education, blog posts, skills) for Retrieval-Augmented Generation (RAG) and AI agent tool consumption.
+- [OKF Manifest (JSON)](https://eversonfilipe-portfolio.netlify.app/okf/manifest.json): Open Knowledge Format (OKF v0.1) manifest listing agent-readable profile modules.
+- [OKF Profile Module](https://eversonfilipe-portfolio.netlify.app/okf/profile.md): Structured E-E-A-T profile background and technical focus.
+- [OKF Experience Module](https://eversonfilipe-portfolio.netlify.app/okf/experience.md): Structured Implementation Engineering experience and Kartado metrics.
+- [OKF Projects Module](https://eversonfilipe-portfolio.netlify.app/okf/projects.md): Structured AI Automation & B2B SaaS onboarding projects dataset.
+- [OKF Blog Module](https://eversonfilipe-portfolio.netlify.app/okf/blog.md): Structured index of technical blog articles.
 - [Docs Portfolio Dataset (JSON)](https://eversonfilipe-portfolio.netlify.app/docs/data/portfolio-data.json): Alternate static endpoint for structured JSON extraction.
 - [Curriculum JSON Data](https://github.com/eversonfilipe/eversonfilipe-portfolio/blob/main/assets/js/cv_data.js): Vivo, dynamic JavaScript database file containing raw, complete JSON records.
+- [Blog JSON Data](https://github.com/eversonfilipe/eversonfilipe-portfolio/blob/main/assets/js/blog_data.js): Multilingual database file containing technical articles in Markdown format (EN, PT, ES).
+
+**Core Dynamic Navigation Routes**
+- [Company Select Experiences Route](https://eversonfilipe-portfolio.netlify.app/en/experience/experiences-select): Interactive subroute showcasing company profiles, B2B SaaS onboarding contexts, and specific implementation roles.
+- [Endorsements & Recommendations Route](https://eversonfilipe-portfolio.netlify.app/en/experience/endorsements): Direct route to peer recommendations and social proof validations.
+- [Academic Background Route](https://eversonfilipe-portfolio.netlify.app/en/education/academic): Direct route to Everson's computer science academic degree.
+- [Courses Route](https://eversonfilipe-portfolio.netlify.app/en/education/courses): Direct route to Everson's technical certifications and courses.
+- [Publications Route](https://eversonfilipe-portfolio.netlify.app/en/education/publications): Direct route to published articles and research papers.
+- [Blog Route](https://eversonfilipe-portfolio.netlify.app/en/community/blog): Direct route to the interactive technical blog.
+
+**Technical Blog Articles**
+- [Implementation Engineering vs. Software Engineering](https://eversonfilipe-portfolio.netlify.app/en/community/blog/post-implementation-engineering-vs-software-engineering): A practical perspective from the field comparing software creation vs client environment configuration, Python ETL workflows, and JSONLogic rule engines.
 
 **Core Technical Projects**
 - *AI Automation - B2B Onboarding Pipeline (Kartado)*: Designed and parameterised a JSONLogic-driven rule engine for B2B SaaS onboarding, reducing client configuration time from 3 days to under 4 hours for 42+ clients. Orchestrated via AWS Step Functions with S3 storage and a Django Admin management UI.
@@ -35,16 +52,17 @@ This website provides an interactive multi-language developer portfolio. Below i
 
 ## Resumes & Core Data (Markdown)
 
-Detailed professional backgrounds, projects, publications, education, and volunteering structured in plain Markdown for language models.
+Detailed professional backgrounds, projects, blog articles, publications, education, and volunteering structured in plain Markdown for language models.
 
-- [English Resume (EN)](https://eversonfilipe-portfolio.netlify.app/docs/data/resume-en.md): Complete curriculum, experiences, projects, stack, and education in English.
-- [Portuguese Resume (PT)](https://eversonfilipe-portfolio.netlify.app/docs/data/resume-pt.md): Currículo completo, experiências, projetos e educação em português.
-- [Spanish Resume (ES)](https://eversonfilipe-portfolio.netlify.app/docs/data/resume-es.md): Currículum completo, experiencia, proyectos y educación en español.
+- [English Resume (EN)](https://eversonfilipe-portfolio.netlify.app/docs/data/resume-en.md): Complete curriculum, experiences, projects, stack, blog articles, and education in English.
+- [Portuguese Resume (PT)](https://eversonfilipe-portfolio.netlify.app/docs/data/resume-pt.md): Currículo completo, experiências, projetos, artigos do blog e educação em português.
+- [Spanish Resume (ES)](https://eversonfilipe-portfolio.netlify.app/docs/data/resume-es.md): Currículum completo, experiencia, proyectos, artículos del blog y educación en español.
 
 ## Technical Publications
 
 Articles and essays sharing insights on parameterization, automation engineering, and career metrics.
 
+- [Implementation Engineering vs. Software Engineering](https://eversonfilipe-portfolio.netlify.app/en/community/blog/post-implementation-engineering-vs-software-engineering): In-depth comparison of core software engineering vs. implementation engineering.
 - [The Fallacy of Plural MVP in GovTech](https://medium.com/design-bootcamp/the-fallacy-of-plural-mvp-in-govtech-why-unrelenting-focus-is-the-only-real-metric-of-success-64329bbfe4ec?sharedUserId=eversonfilipe): Analysis on why unrelenting focus is the core metric of success for GovTech MVPs.
 - [From Problem to Solution: Value-Driven Products](https://eversonfilipe.medium.com/from-problem-to-solution-a-framework-for-building-value-driven-products-c6e5d564d111?sharedUserId=eversonfilipe): Product discovery framework focusing on problem definition and value execution.
 - [Gestão Ágil Simplificada (PT)](https://www.linkedin.com/pulse/gest%C3%A3o-%C3%A1gil-simplificada-%C3%A9verson-filipe-zgdoe): Simplified methodologies for agile team operations and project management.

@@ -1,4 +1,4 @@
-# robots.txt — Everson Filipe Portfolio
+# robots.txt — Everson Filipe Portfolio & AI-SEO Machine-Readable Access
 # https://eversonfilipe-portfolio.netlify.app/
 
 # ── General crawlers ──────────────────────────────────────────────
@@ -6,6 +6,7 @@ User-agent: *
 Allow: /
 Allow: /api/
 Allow: /docs/data/
+Allow: /okf/
 
 # ── Google AI (Gemini training & indexing) ────────────────────────
 User-agent: Google-Extended
@@ -29,6 +30,14 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
+# ── Apple Intelligence & Siri AI ──────────────────────────────────
+User-agent: Applebot-Extended
+Allow: /
+
+# ── Cohere AI ─────────────────────────────────────────────────────
+User-agent: Cohere-ai
+Allow: /
+
 # ── Common Crawl (training datasets) ─────────────────────────────
 User-agent: CCBot
 Allow: /
@@ -37,8 +46,9 @@ Allow: /
 User-agent: FacebookBot
 Allow: /
 
-# ── RAG & Machine-Readable Endpoints ──────────────────────────────
+# ── RAG & Machine-Readable Knowledge Endpoints ────────────────────
 # RAG API JSON: https://eversonfilipe-portfolio.netlify.app/api/portfolio-data.json
+# OKF Bundle: https://eversonfilipe-portfolio.netlify.app/okf/manifest.json
 # LLMs Index: https://eversonfilipe-portfolio.netlify.app/llms.txt
 
 # ── Sitemap location ──────────────────────────────────────────────

@@ -27,20 +27,20 @@ Para executar o portfólio em sua máquina local, você só precisa de um servid
 ## Architecture Overview / Visão Geral da Arquitetura
 
 ### English
-The project is built as a highly optimized, static client-side web application. It is engineered around four core architecture pillars:
-* **Separation of Concerns**: Layout structures (HTML/CSS) are fully decoupled from curriculum content. All professional records are maintained in a centralized database file.
-* **GitOps and Validation Pipeline (pre-commit & pre-push)**: A secure validation pipeline governs code quality. Upon commit, `build_static.py` compiles the raw Javascript curriculum database (`cv_data.js`) into a clean `<noscript>` block inside `index.html`, generates the Jeremy Howard Spec-compliant `/llms.txt` index file, and writes individual Markdown files (`resume-en.md`, `resume-pt.md`, `resume-es.md`). Before pushing, the `pre-push` hook validates syntax (via Node lint checks) and executes an integrity audit, blocking the upload if any compiled static asset is out of sync with `cv_data.js` or contains uncommitted local modifications (including `README.md` and `cv_data.js`).
+The project is built as a highly optimized, static client-side web application. It is engineered around five core architecture pillars:
+* **Separation of Concerns**: Layout structures (HTML/CSS) are fully decoupled from curriculum content. All professional records are maintained in centralized database files (`cv_data.js` for resume data, `blog_data.js` for multilingual Markdown technical articles).
+* **Dynamic Client-Side Routing (`router.js`)**: Clean URL schema (`/{lang}/{section}/{subsection}/{slug}`) mapping routes seamlessly to sections (e.g. `/pt/education/academic`, `/pt/education/courses`, `/pt/education/publications`, `/pt/community/blog`, `/pt/community/blog/post-implementation-engineering-vs-software-engineering`). Dynamically updates `<title>`, `<link rel="canonical">`, OpenGraph tags, and injects dynamic JSON-LD `@type: BlogPosting` schema per route.
+* **GitOps and Validation Pipeline (pre-commit & pre-push)**: A secure validation pipeline governs code quality. Upon commit, `build_static.py` compiles raw Javascript databases (`cv_data.js` and `blog_data.js`) into a clean `<noscript>` block inside `index.html`, exports RAG static endpoints (`api/portfolio-data.json`), generates the Jeremy Howard Spec-compliant `/llms.txt` index file, and writes individual Markdown files (`resume-en.md`, `resume-pt.md`, `resume-es.md`). Before pushing, the `pre-push` hook validates syntax (via Node lint checks) and executes an integrity audit, blocking the upload if any compiled static asset is out of sync or contains uncommitted local modifications.
 * **Client-Side Reactive Translation (i18n)**: Static UI strings are centralized in dictionaries (`i18n.js`). When a user changes language, a dynamic hydrator translates all DOM elements tagged with `data-i18n` or `data-i18n-aria`. Simultaneously, SEO-relevant head attributes (titles, meta descriptions, and OpenGraph tags) are re-written programmatically to match the active language schema.
-* **Entity Connections & Target Propagation (linkedTo)**: An intelligent resolver function (`resolveLinkedItem` in `renderer.js`) scans through project associations. If a project lists a course, experience, or volunteering ID inside its `linkedTo` array, the interface dynamically propagates that entity's logo as an inline icon inside the project's link tags, visually linking skills to accomplishments.
-* **Adaptive Design System & Components**: Powered by semantic CSS tokens (`tokens.css`) implementing premium glassmorphism interfaces and Glacial Indifference typography. Spacing, timelines, and grids adapt responsively. Lists (Experiences, Hackathons, Events) automatically render a "Show More/Minimize" toggle. Large grids (Courses and Volunteering) convert dynamically into interactive horizontal sliders on desktop, falling back to swipeable touch tracks on mobile devices.
+* **Adaptive Design System & Medium-Inspired Reader**: Powered by semantic CSS tokens (`tokens.css`) implementing premium glassmorphism interfaces and Glacial Indifference typography. The Blog reader modal provides Medium-style typography, zero-dependency Markdown rendering (`window.renderMarkdown`), and real-time translation across 3 languages (EN, PT, ES).
 
 ### Português
-O projeto foi construído como uma aplicação web estática de alto desempenho no lado do cliente. A arquitetura foi estruturada com base em quatro pilares principais:
-* **Separação de Responsabilidades**: As estruturas de layout (HTML/CSS) estão completamente desacopladas do conteúdo curricular. Todo o histórico profissional é mantido em um banco de dados centralizado.
-* **Pipeline de Validação GitOps (pre-commit & pre-push)**: Um fluxo automatizado garante a qualidade do código. Ao commitar, o script `build_static.py` compila o banco de dados curricular (`cv_data.js`) em um bloco `<noscript>` no `index.html`, gera o arquivo `/llms.txt` conforme a especificação do FastHTML e escreve resumos individuais em markdown (`resume-en.md`, `resume-pt.md`, `resume-es.md`). Antes de efetuar o push, o hook `pre-push` valida a sintaxe JS e executa uma auditoria de integridade, abortando o envio se algum arquivo compilado estiver desalinhado em relação ao `cv_data.js` ou contiver modificações locais pendentes de commit (incluindo `README.md` e `cv_data.js`).
-* **Tradução Reativa no Client-Side (i18n)**: Rótulos estáticos de interface ficam armazenados em dicionários (`i18n.js`). O selecionador de idiomas hidrata de forma reativa os elementos do DOM marcados com `data-i18n` ou `data-i18n-aria`, reescrevendo em tempo de execução os cabeçalhos de metadados cruciais para motores de busca (títulos, meta descrições e atributos OpenGraph).
-* **Mapeamento de Conexões & Propagação de Vínculos (linkedTo)**: Uma função inteligente no renderizador (`resolveLinkedItem`) percorre as associações dos projetos. Se um projeto referencia o ID de um curso, experiência ou voluntariado na chave `linkedTo`, a interface propaga e renderiza automaticamente o logotipo da instituição correspondente como um pequeno ícone inline à esquerda da tag do link.
-* **Design System & Componentes Adaptativos**: Estruturado por meio de CSS Vanilla semântico (`tokens.css`) aplicando interfaces premium de glassmorphism e tipografia Glacial Indifference. Linhas de tempo e grades são responsivas. Listas (Experiências, Hackathons, Eventos) contam com botões reativos de expansão e minimização. Grades extensas (Cursos e Voluntariados) convertem-se automaticamente em sliders horizontais iterativos no desktop, adotando rolagem por toque em dispositivos móveis.
+O projeto foi construído como uma aplicação web estática de alto desempenho no lado do cliente. A arquitetura foi estruturada com base em cinco pilares principais:
+* **Separação de Responsabilidades**: As estruturas de layout (HTML/CSS) estão completamente desacopladas do conteúdo curricular. Todo o histórico profissional e artigos são mantidos em arquivos de dados centralizados (`cv_data.js` para o currículo, `blog_data.js` para artigos do blog em Markdown).
+* **Roteamento Dinâmico no Client-Side (`router.js`)**: Esquema de URLs limpas (`/{lang}/{section}/{subsection}/{slug}`) mapeando rotas para seções (ex: `/pt/education/academic`, `/pt/education/courses`, `/pt/education/publications`, `/pt/community/blog`, `/pt/community/blog/post-implementation-engineering-vs-software-engineering`). Atualiza dinamicamente `<title>`, `<link rel="canonical">`, tags OpenGraph e injeta schemas JSON-LD `@type: BlogPosting`.
+* **Pipeline de Validação GitOps (pre-commit & pre-push)**: Um fluxo automatizado garante a qualidade do código. Ao commitar, o script `build_static.py` compila os bancos de dados (`cv_data.js` e `blog_data.js`) em um bloco `<noscript>` no `index.html`, exporta endpoints estáticos de RAG (`api/portfolio-data.json`), gera o arquivo `/llms.txt` conforme a especificação do FastHTML e escreve resumos individuais em markdown (`resume-en.md`, `resume-pt.md`, `resume-es.md`). Antes de efetuar o push, o hook `pre-push` valida a sintaxe JS e executa uma auditoria de integridade, abortando o envio se algum arquivo compilado estiver desalinhado.
+* **Tradução Reativa no Client-Side (i18n)**: Rótulos estáticos de interface ficam armazenados em dicionários (`i18n.js`). O selecionador de idiomas hidrata de forma reativa os elementos do DOM marcados com `data-i18n` ou `data-i18n-aria`, reescrevendo em tempo de execução os cabeçalhos de metadados cruciais para motores de busca.
+* **Design System Adaptativo & Leitor Inspirado no Medium**: Estruturado por meio de CSS Vanilla semântico (`tokens.css`) aplicando interfaces premium de glassmorphism e tipografia Glacial Indifference. O leitor do blog oferece tipografia estilo Medium, renderização de Markdown sem dependências (`window.renderMarkdown`) e tradução reativa em 3 idiomas (EN, PT, ES).
 
 ***
 
@@ -48,26 +48,33 @@ O projeto foi construído como uma aplicação web estática de alto desempenho 
 
 ```
 .
+├── api/
+│   └── portfolio-data.json    # Machine-readable static RAG dataset endpoint / Endpoint estático de RAG JSON
 ├── assets/
 │   ├── css/
 │   │   ├── base.css           # Global defaults and typography reset / Padrões globais e tipografia
-│   │   ├── components.css     # UI components, buttons, and slider tracks / Componentes de interface e carrosséis
+│   │   ├── components.css     # UI components, buttons, and blog modal styles / Componentes de interface e estilos do blog
 │   │   ├── layout.css         # Grid layouts, spacing, and responsive timelines / Layout de grids e linhas do tempo
 │   │   ├── reset.css          # Normalize margins and border box / Normalização de margens
 │   │   └── tokens.css         # Color palettes, transition speeds, and fonts / Paletas de cores e fontes
 │   ├── images/                # Images, credentials, and company logos / Imagens de evidências e logotipos
 │   └── js/
 │       ├── a11y.js            # Accessibility features, font size, and motion / Recursos de acessibilidade
+│       ├── blog_data.js       # Multilingual Blog Markdown dataset / Banco de dados de artigos do blog em Markdown
 │       ├── carousel.js        # Lightbox evidence viewer logic / Visualizador de fotos do carrossel
 │       ├── cv_data.js         # Centralized database (EN, PT, ES) / Banco de dados centralizado do currículo
 │       ├── filters.js         # Event listener binds for buttons / Conexão de cliques nos botões de filtros
 │       ├── i18n.js            # Dictionaries for static UI labels / Dicionário para rótulos estáticos de interface
 │       ├── lines.js           # Animated grid background logic / Fundo animado de linhas de conexões
 │       ├── main.js            # Mobile navigation toggles and scroll handlers / Controle do menu móvel e scroll
-│       └── renderer.js        # Dynamic DOM generation and list limiter / Renderizador do DOM e limitador de listas
+│       ├── renderer.js        # Dynamic DOM generation and Markdown engine / Renderizador do DOM e motor Markdown
+│       └── router.js          # Dynamic Client-Side SPA Router / Roteador dinâmico de SPA no cliente
 ├── index.html                 # Main application structure / Estrutura principal do HTML
+├── devserver.py               # Local SPA development server / Servidor de desenvolvimento local com fallback SPA
+├── netlify.toml               # Netlify headers, redirects, and SPA routing config / Configurações do Netlify
+├── build_static.py            # SSG & RAG dataset build script / Script de compilação estática, RAG e schemas
 ├── robots.txt                 # Crawler instructions for search engines and AI / Instruções para rastreadores e IA
-├── sitemap.xml                # Site layout index for indexers / Índice de páginas do site
+├── sitemap.xml                # Site layout index for indexers / Índice de páginas do site com subrotas
 ├── llms.txt                   # Clean text version of the CV for AI Agents / Versão em texto limpo para IAs
 └── README.md                  # Project documentation / Documentação do projeto
 ```

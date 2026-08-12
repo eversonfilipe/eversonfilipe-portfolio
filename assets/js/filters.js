@@ -12,10 +12,10 @@
       const val = expActive.getAttribute('data-filter');
       document.querySelectorAll('.timeline-item').forEach(item => {
         if (val === 'all') {
-          item.style.display = 'grid';
+          item.style.display = '';
         } else {
           const tags = Array.from(item.querySelectorAll('.tech-tag')).map(t => t.textContent.trim());
-          item.style.display = tags.includes(val) ? 'grid' : 'none';
+          item.style.display = tags.includes(val) ? '' : 'none';
         }
       });
     }
@@ -26,35 +26,35 @@
       const val = courseActive.getAttribute('data-filter');
       document.querySelectorAll('#courses-list .course-card').forEach(row => {
         if (val === 'all') {
-          row.style.display = 'flex';
+          row.style.display = '';
         } else {
-          row.style.display = (row.getAttribute('data-type') === val) ? 'flex' : 'none';
+          row.style.display = (row.getAttribute('data-type') === val) ? '' : 'none';
         }
       });
     }
 
-    // 4. Publications
+    // 3. Publications
     const pubActive = document.querySelector('#publication-filter-bar .filter-btn.active');
     if (pubActive) {
       const val = pubActive.getAttribute('data-filter');
       document.querySelectorAll('#publications-list .course-card').forEach(row => {
         if (val === 'all') {
-          row.style.display = 'flex';
+          row.style.display = '';
         } else {
-          row.style.display = (row.getAttribute('data-type') === val) ? 'flex' : 'none';
+          row.style.display = (row.getAttribute('data-type') === val) ? '' : 'none';
         }
       });
     }
 
-    // 3. Events
+    // 4. Events
     const eventActive = document.querySelector('#event-filter-bar .filter-btn.active');
     if (eventActive) {
       const val = eventActive.getAttribute('data-filter');
       document.querySelectorAll('.event-card').forEach(card => {
         if (val === 'all') {
-          card.style.display = 'flex';
+          card.style.display = '';
         } else {
-          card.style.display = (card.getAttribute('data-type') === val) ? 'flex' : 'none';
+          card.style.display = (card.getAttribute('data-type') === val) ? '' : 'none';
         }
       });
     }

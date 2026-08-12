@@ -1,0 +1,30 @@
+{
+  "specVersion": "0.1.0",
+  "title": "Everson Filipe — Knowledge Bundle & Developer Profile",
+  "author": "Everson Filipe",
+  "updated": "2026-08-01",
+  "canonicalUrl": "https://eversonfilipe-portfolio.netlify.app/",
+  "description": "Systems Analyst & Implementation · Agentic AI | Bridging the gap between business requirements and scalable software execution through rigorous data validation and process automation.",
+  "modules": [
+    {
+      "id": "profile",
+      "path": "profile.md",
+      "title": "Profile & Technical Background"
+    },
+    {
+      "id": "experience",
+      "path": "experience.md",
+      "title": "Professional Trajectory & Impact"
+    },
+    {
+      "id": "projects",
+      "path": "projects.md",
+      "title": "Technical Projects & Applications"
+    },
+    {
+      "id": "blog",
+      "path": "blog.md",
+      "title": "Multilingual Technical Blog Articles"
+    }
+  ]
+}
