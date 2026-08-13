@@ -749,6 +749,10 @@ if os.path.exists(index_html_path):
     noscript_start = html_content.find('<noscript>')
     noscript_end = html_content.find('</noscript>')
     if noscript_start != -1 and noscript_end != -1:
+        # Include leading whitespace line start to ensure idempotent indentation
+        line_start = html_content.rfind('\n', 0, noscript_start)
+        if line_start != -1 and html_content[line_start + 1:noscript_start].strip() == '':
+            noscript_start = line_start + 1
         new_noscript_block = f"""  <noscript>
     <div style="padding: 20px; background: #374f5b; color: #ffffff;">
       <p>This page requires JavaScript to render the interactive portfolio. Here is the text summary for screen readers and search crawlers:</p>
