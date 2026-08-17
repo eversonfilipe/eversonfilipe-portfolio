@@ -11,8 +11,9 @@ author: Everson Filipe
 Kartado is a B2B SaaS company serving the highway concession sector. As a Systems Implementation Intern, I turned client business requirements into software configurations and automated workflows across 42+ B2B client environments, operating within Agile frameworks.
 
 ### Key Achievements:
-- [Recognition] Nominated for the company's Monthly Agility Award in April 2026 for technical implementation performance and bugs fixes.
+- [Recognition] Nominated for the company's Monthly Agility Award in March 2026 for technical implementation performance and bugs fixes.
 - [Delivery] Helped achieve 99.48% on-time implementation delivery while maintaining a 100% personal on-time completion rate throughout H1 2026.
+- [Re-implementation] Co-led the July re-implementation of 4 companies for a major Northeast Brazil highway concessionaire with a Commercial Consultant, translating client specifications into agile configurations, custom scripts, and validated tests; project highlighted in the company-wide results review.
 
 ### Technical Stack & Methodologies:
 - [Tech Stack] JSONLogic, Django, Python, Pandas, OpenpyXL, GIS, AWS

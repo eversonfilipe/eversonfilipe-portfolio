@@ -8,7 +8,7 @@ author: Everson Filipe
 
 ## Key Technical Achievements & Recognition
 
-### Nomination for Kartado Monthly Agility Award (Apr 2026)
+### Nomination for Kartado Monthly Agility Award (Mar 2026)
 ### Accepted Mentee - Aspire Leaders 2025.2 Cohort 5 (Oct 2025)
 ## Hackathons & Technical Competitions
 

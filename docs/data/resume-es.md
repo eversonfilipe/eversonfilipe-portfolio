@@ -24,8 +24,9 @@ Key Responsibilities:
 - Tech Stack: JSONLogic, Django, Python, Pandas, OpenpyXL, GIS, AWS.
 
 Key Achievements:
-- [Reconocimiento] Nominado al Premio Agilidad del Mes de la empresa en abril de 2026 por su desempeño en implementación técnica y corrección de errores.
+- [Reconocimiento] Nominado al Premio Agilidad del Mes de la empresa en marzo de 2026 por su desempeño en implementación técnica y corrección de errores.
 - [Entrega] Contribuí a que el equipo alcanzara un 99,48 % de entregas de implementación a tiempo, manteniendo una tasa personal del 100 % de entregas puntuales durante el primer semestre de 2026.
+- [Reimplementación] Cocoordiné en julio la reimplementación de 4 empresas para una importante concesionaria vial del Nordeste de Brasil junto con un Consultor Comercial, traduciendo especificaciones del cliente en configuraciones ágiles, scripts personalizados y pruebas validadas; proyecto destacado en la reunión general de resultados.
 
 - **Tech Stack**: JSONLogic, Django, Python, Pandas, OpenpyXL, GIS, AWS
 
@@ -62,6 +63,11 @@ Key Achievements:
 - **Tech Stack**: Agile Methodologies, Product Management, Google Drive
 
 ## Education & Qualifications
+- **Jornada de Innovación Inove Aí (Parte del programa REPE) — Ejecutor, Squad 03**, Ofrecido por la UFPE, mediante la Convocatoria n.º 26/2024 – Jornada REPE (FACEPE) (Mar 2025 – May 2025) - 
+  - Seleccionado mediante la Convocatoria n.º 26/2024 – Jornada REPE: Rede de Ecossistemas de Pernambuco (FACEPE) para actuar como Ejecutor en el Squad 03, en un proyecto de unificación para una de las secretarías de Medio Ambiente y Sostenibilidad del estado. Ver la nota de la UFPE sobre la convocatoria
+  - Inmersiones de producto, casos de éxito y resolución de problemas utilizando metodologías ágiles, heurísticas y frameworks de resolución de problemas.
+  - Aplicación de conceptos de innovación y sostenibilidad, como el Lean Canvas, en talleres presenciales en el Porto Digital (Armazém da Criatividade) y en la UFPE Campus Agreste, en Caruaru.
+  - Salí del programa para priorizar la mentoría de dos cohortes de becarios en Daus, sumado al factor de distancia, ya que la mayoría de los encuentros eran presenciales.
 - **Programa de Mentoría en Inteligencia Artificial**, Ofrecido por LAB.AI, Instituto Joule (Ago 2025 – Sep 2025) - 
   - Seleccionado para participar en mentorías individuales y grupales orientadas a la tecnología a través del programa Lab.AI – Laboratório de Mentes, ofrecido por el Instituto Joule en colaboración con el Instituto Localiza.
   - Laboratorios prácticos centrados en proyectos de tecnología e impacto social potenciados por herramientas de Inteligencia Artificial.
@@ -84,7 +90,7 @@ Key Achievements:
 - **Competencia Transversal - Tecnologías de la Información y la Comunicación**, SENAI (Nov 2023) — [Credential/Proof](http://www.sp.senai.br/consulta-certificado?qrcode=00022804/7460876)
 
 ## Achievements & Recognition
-- **Nominación al Premio Mensual de Agilidad Kartado**, Kartado (Abr 2026)
+- **Nominación al Premio Mensual de Agilidad Kartado**, Kartado (Mar 2026)
 - **Mentee Aceptado - Aspire Leaders 2025.2 Cohort 5**, Aspire Institute (Oct 2025)
 
 ## Hackathons & Technical Competitions

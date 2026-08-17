@@ -10,12 +10,27 @@
     const expActive = document.querySelector('#exp-filter-bar .filter-btn.active');
     if (expActive) {
       const val = expActive.getAttribute('data-filter');
-      document.querySelectorAll('.timeline-item').forEach(item => {
+      const items = Array.from(document.querySelectorAll('.timeline-item'));
+      let visibleIdx = 0;
+      items.forEach(item => {
         if (val === 'all') {
           item.style.display = '';
+          if (visibleIdx === 0) {
+            item.classList.add('is-expanded');
+            item.classList.remove('is-collapsed');
+          } else {
+            item.classList.add('is-collapsed');
+            item.classList.remove('is-expanded');
+          }
+          visibleIdx++;
         } else {
           const tags = Array.from(item.querySelectorAll('.tech-tag')).map(t => t.textContent.trim());
-          item.style.display = tags.includes(val) ? '' : 'none';
+          const matches = tags.includes(val);
+          item.style.display = matches ? '' : 'none';
+          if (matches) {
+            item.classList.add('is-expanded');
+            item.classList.remove('is-collapsed');
+          }
         }
       });
     }

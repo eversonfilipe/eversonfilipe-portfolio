@@ -24,8 +24,9 @@ Key Responsibilities:
 - Tech Stack: JSONLogic, Django, Python, Pandas, OpenpyXL, GIS, AWS.
 
 Key Achievements:
-- [Recognition] Nominated for the company's Monthly Agility Award in April 2026 for technical implementation performance and bugs fixes.
+- [Recognition] Nominated for the company's Monthly Agility Award in March 2026 for technical implementation performance and bugs fixes.
 - [Delivery] Helped achieve 99.48% on-time implementation delivery while maintaining a 100% personal on-time completion rate throughout H1 2026.
+- [Re-implementation] Co-led the July re-implementation of 4 companies for a major Northeast Brazil highway concessionaire with a Commercial Consultant, translating client specifications into agile configurations, custom scripts, and validated tests; project highlighted in the company-wide results review.
 
 - **Tech Stack**: JSONLogic, Django, Python, Pandas, OpenpyXL, GIS, AWS
 
@@ -64,6 +65,11 @@ Key Achievements:
 - **Methodologies**: Agile methodologies, Eisenhower Matrix, 5W2H
 
 ## Education & Qualifications
+- **Inove Aí's Innovation Journey ( Part of REPE Program) — Executor, Squad 03**, Offered by UFPE, through Public Call No. 26/2024 – Jornada REPE (FACEPE) (Mar 2025 – May 2025) - 
+  - Selected through Public Call No. 26/2024 – Jornada REPE: Rede de Ecossistemas de Pernambuco (FACEPE) to serve as an Executor in Squad 03, on a unification project for one of the state's Environment and Sustainability secretariats. See UFPE's article on the public call
+  - Product immersions, success cases, and problem-solving sessions using Agile methodologies, heuristics, and problem-solving frameworks.
+  - Application of innovation and sustainability concepts, such as the Lean Canvas, in on-site workshops at Porto Digital (Armazém da Criatividade) and at UFPE Campus Agreste, in Caruaru.
+  - I left the program to prioritize mentoring two intern cohorts at Daus, compounded by the distance factor, as most sessions were held in person.
 - **Artificial Intelligence Mentorship Program**, Offered by LAB.AI, Instituto Joule (Aug 2025 – Sep 2025) - 
   - Selected to participate in individual and group technology-focused mentoring through the Lab.AI – Laboratório de Mentes program, offered by Instituto Joule in partnership with Instituto Localiza.
   - Hands-on laboratories focused on technology and social impact projects enhanced by Artificial Intelligence tools.
@@ -86,7 +92,7 @@ Key Achievements:
 - **Cross-disciplinary Competency - Information and Communication Technology**, SENAI (Nov 2023) — [Credential/Proof](http://www.sp.senai.br/consulta-certificado?qrcode=00022804/7460876)
 
 ## Achievements & Recognition
-- **Nomination for Kartado Monthly Agility Award**, Kartado (Apr 2026)
+- **Nomination for Kartado Monthly Agility Award**, Kartado (Mar 2026)
 - **Accepted Mentee - Aspire Leaders 2025.2 Cohort 5**, Aspire Institute (Oct 2025)
 
 ## Hackathons & Technical Competitions
@@ -130,7 +136,7 @@ Key Achievements:
 - **Co-organizer**, Google Developers Group (GDG Barueri) (Aug 2025 - Present) - 
   - Co-organized events focused on Technology, Artificial Intelligence (AI), and Innovation at Google Developers Group Barueri.
 - **Ambassador & Facilitator**, Politize! (Politize! Caruaru) (May 2025 - Present) - 
-  - reated and co-organized workshops on technology, politics, and civic rights applied to society at Politize! Caruaru, while also contributing to internal projects.
+  - Created and co-organized workshops on technology, politics, and civic rights applied to society at Politize! Caruaru, while also contributing to internal projects.
 - **OGT & Marketing Committee Member**, AIESEC (AIESEC no Mackenzie) (Mar 2025 - Aug 2025) - 
   - Served as a member of the Outgoing Global Talent (OGT) team at AIESEC Mackenzie and was selected as the committee's Marketing Lead.
   - Designed marketing materials and facilitated meetings with team leaders, including collaboration with AIESEC committees from other countries, such as Jalandhar, India.

@@ -394,6 +394,7 @@
             if (targetEl) {
               targetEl.classList.remove('hidden-collapsed');
               targetEl.style.display = '';
+              expandExperienceCard(targetEl);
 
               const navH = document.getElementById('main-nav')?.offsetHeight || 70;
               const topPos = targetEl.getBoundingClientRect().top + window.scrollY - navH - 24;
@@ -678,9 +679,17 @@
     // Auto-organize experience: present/active first, then most recent end date descending
     data.experience.sort((a, b) => getEndDateValue(b.date) - getEndDateValue(a.date));
 
+    const activeFilter = document.querySelector('#exp-filter-bar .filter-btn.active')?.getAttribute('data-filter') || 'all';
+    const currentLang = lang || (window.i18n && window.i18n.getCurrentLang ? window.i18n.getCurrentLang() : 'en');
+    const expandText = (window.i18n && window.i18n.t) ? (window.i18n.t('exp.card.expand', currentLang) || 'Expand details') : 'Expand details';
+    const collapseText = (window.i18n && window.i18n.t) ? (window.i18n.t('exp.card.collapse', currentLang) || 'Collapse details') : 'Collapse details';
+
     let html = '';
     data.experience.forEach((job, idx) => {
       const delay = idx + 1;
+      const isExpanded = (activeFilter !== 'all') || (idx === 0);
+      const toggleLabel = isExpanded ? collapseText : expandText;
+
       let bulletsHtml = '';
       job.bullets.forEach(b => {
         bulletsHtml += `<li class="timeline-bullet">${b}</li>`;
@@ -732,7 +741,6 @@
 
       let achievementsHtml = '';
       if (job.specificAchievements && job.specificAchievements.length > 0) {
-        const currentLang = lang || (window.i18n && window.i18n.getCurrentLang ? window.i18n.getCurrentLang() : 'en');
         const achLabel = window.i18n && window.i18n.t ? window.i18n.t('exp.achievements.label', currentLang) : 'Specific Achievements';
         let itemsHtml = '';
         job.specificAchievements.forEach(ach => {
@@ -753,10 +761,8 @@
         `;
       }
 
-
       let aboutCompanyHtml = '';
       if (job.optional_more_about_company) {
-        const currentLang = lang || (window.i18n && window.i18n.getCurrentLang ? window.i18n.getCurrentLang() : 'en');
         const btnLabel = window.i18n && window.i18n.t ? window.i18n.t('exp.about.company.btn', currentLang) : 'About the Company';
         const closeLbl = window.i18n && window.i18n.t ? window.i18n.t('exp.about.company.close', currentLang) : 'Close company info';
         const panelId = `about-company-${job.id}`;
@@ -790,41 +796,111 @@
         `;
       }
 
+      const compSlug = job.company ? slugifySegment(job.company) : 'company';
+
       html += `
-        <article class="timeline-item reveal reveal-delay-${delay}" id="${job.id}" data-exp-id="${job.id}" role="listitem">
-          <div style="display: flex; align-items: flex-start; gap: var(--space-4);">
-            ${job.logo ? `
-              <img src="${job.logo}" alt="${job.role} — ${job.company}" style="width: 36px; height: 36px; border-radius: var(--radius-sm); border: 1px solid rgba(182, 204, 215, 0.15); object-fit: contain; flex-shrink: 0; background: var(--color-bg-deep); padding: 2px; margin-top: 4px;" />
-            ` : ''}
-            <div style="flex-grow: 1; min-width: 0;">
-              <div class="timeline-meta">
-                <span class="timeline-role">${job.role}</span>
-                <span class="timeline-company">${job.company}</span>
-                <span class="timeline-date">${job.date}</span>
+        <article class="timeline-item reveal reveal-delay-${delay} ${isExpanded ? 'is-expanded' : 'is-collapsed'}" id="${job.id}" data-exp-id="${job.id}" data-company-slug="${compSlug}" role="listitem">
+          <div class="exp-card-box">
+            <div class="exp-card-header">
+              ${job.logo ? `
+                <img src="${job.logo}" alt="${job.role} — ${job.company}" class="exp-card-logo" />
+              ` : ''}
+              <div class="exp-card-meta-wrap">
+                <div class="timeline-meta">
+                  <div class="timeline-title-group">
+                    <span class="timeline-role">${job.role}</span>
+                    <span class="timeline-company">${job.company}</span>
+                  </div>
+                  <span class="timeline-date">${job.date}</span>
+                </div>
+                <div aria-label="Technologies used at ${job.company}" class="exp-tags-scroll-row timeline-tags" role="list">
+                  ${tagsHtml}
+                </div>
               </div>
+              <button
+                type="button"
+                class="exp-card-toggle-btn"
+                aria-expanded="${isExpanded ? 'true' : 'false'}"
+                aria-controls="exp-details-${job.id}"
+                data-exp-card-toggle
+              >
+                <span class="exp-card-toggle-text">${toggleLabel}</span>
+                <span class="exp-card-toggle-icon" aria-hidden="true">${isExpanded ? '&#9650;' : '&#9660;'}</span>
+              </button>
+            </div>
+            <div class="exp-card-details" id="exp-details-${job.id}" role="region" aria-label="${job.role} at ${job.company}">
               ${achievementsHtml}
               ${aboutCompanyHtml}
               <div class="timeline-body-box">
                 <ul aria-label="Responsibilities at ${job.company}" class="timeline-bullets" style="margin-top: 0;">
                   ${bulletsHtml}
                 </ul>
-                <div aria-label="Technologies used at ${job.company}" class="timeline-tags" role="list" style="margin-bottom: 0;">
-                  ${tagsHtml}
-                </div>
                 ${carouselHtml}
               </div>
             </div>
           </div>
         </article>
       `;
-
     });
 
     container.innerHTML = html;
 
     // Apply Experience limits/expansion logic
-    const activeExp = document.querySelector('#exp-filter-bar .filter-btn.active')?.getAttribute('data-filter') || 'all';
-    applySectionLimits('exp-timeline', 4, activeExp, sectionStates.experience);
+    applySectionLimits('exp-timeline', 4, activeFilter, sectionStates.experience);
+
+    // Bind event delegation for card expansion toggle buttons
+    if (!container.dataset.expCardToggleBound) {
+      container.dataset.expCardToggleBound = '1';
+      container.addEventListener('click', function handleExpCardToggle(e) {
+        const toggleBtn = e.target.closest('[data-exp-card-toggle]');
+        if (!toggleBtn) return;
+        const item = toggleBtn.closest('.timeline-item');
+        if (!item) return;
+
+        const isExpanded = item.classList.contains('is-expanded');
+        const expId = item.getAttribute('data-exp-id') || item.id;
+        const compSlug = item.getAttribute('data-company-slug') || 'company';
+        const activeLang = (window.i18n && window.i18n.getCurrentLang) ? window.i18n.getCurrentLang() : 'en';
+        const expLabel = (window.i18n && window.i18n.t) ? (window.i18n.t('exp.card.expand', activeLang) || 'Expand details') : 'Expand details';
+        const colLabel = (window.i18n && window.i18n.t) ? (window.i18n.t('exp.card.collapse', activeLang) || 'Collapse details') : 'Collapse details';
+
+        if (isExpanded) {
+          // Collapse card -> Revert URL 2 levels back to /{lang}/experience
+          item.classList.remove('is-expanded');
+          item.classList.add('is-collapsed');
+          toggleBtn.setAttribute('aria-expanded', 'false');
+          const textEl = toggleBtn.querySelector('.exp-card-toggle-text');
+          const iconEl = toggleBtn.querySelector('.exp-card-toggle-icon');
+          if (textEl) textEl.textContent = expLabel;
+          if (iconEl) iconEl.innerHTML = '&#9660;';
+
+          if (window.history && window.history.pushState) {
+            window.history.pushState({ section: 'experience' }, '', `/${activeLang}/experience`);
+          }
+          if (window.i18n && window.i18n.t) {
+            document.title = window.i18n.t('meta.title', activeLang);
+          }
+        } else {
+          // Expand card -> Push URL to /{lang}/experience/{compSlug}/{expId}
+          item.classList.remove('is-collapsed');
+          item.classList.add('is-expanded');
+          toggleBtn.setAttribute('aria-expanded', 'true');
+          const textEl = toggleBtn.querySelector('.exp-card-toggle-text');
+          const iconEl = toggleBtn.querySelector('.exp-card-toggle-icon');
+          if (textEl) textEl.textContent = colLabel;
+          if (iconEl) iconEl.innerHTML = '&#9650;';
+
+          if (window.history && window.history.pushState) {
+            window.history.pushState({ expId: expId, company: compSlug }, '', `/${activeLang}/experience/${compSlug}/${expId}`);
+          }
+          const roleEl = item.querySelector('.timeline-role');
+          const compEl = item.querySelector('.timeline-company');
+          if (roleEl && compEl) {
+            document.title = `${roleEl.textContent.trim()} @ ${compEl.textContent.trim()} | Everson Filipe`;
+          }
+        }
+      });
+    }
 
     // ── About the Company toggle (event delegation, registrado 1x) ──
     // Guard: evita duplicar listeners a cada re-render (troca de idioma)
@@ -877,6 +953,25 @@
       });
     }
   }
+
+  function expandExperienceCard(targetEl) {
+    if (!targetEl) return;
+    targetEl.classList.remove('is-collapsed');
+    targetEl.classList.add('is-expanded');
+
+    const toggleBtn = targetEl.querySelector('[data-exp-card-toggle]');
+    if (toggleBtn) {
+      toggleBtn.setAttribute('aria-expanded', 'true');
+      const activeLang = (window.i18n && window.i18n.getCurrentLang) ? window.i18n.getCurrentLang() : 'pt';
+      const colLabel = (window.i18n && window.i18n.t) ? (window.i18n.t('exp.card.collapse', activeLang) || 'Recolher detalhes') : 'Recolher detalhes';
+      const textEl = toggleBtn.querySelector('.exp-card-toggle-text');
+      const iconEl = toggleBtn.querySelector('.exp-card-toggle-icon');
+      if (textEl) textEl.textContent = colLabel;
+      if (iconEl) iconEl.innerHTML = '&#9650;';
+    }
+  }
+
+  window.expandExperienceCard = expandExperienceCard;
 
 
 

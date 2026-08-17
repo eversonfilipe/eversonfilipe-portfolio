@@ -24,6 +24,12 @@ I enjoy working at the intersection of systems, automation, and artificial intel
 Python, Django, JSONLogic, REST API, AWS, Pandas, Jira, ClickUp
 
 ### Academic Background & Formal Education
+#### Inove Aí's Innovation Journey ( Part of REPE Program) — Executor, Squad 03 — Offered by UFPE, through Public Call No. 26/2024 – Jornada REPE (FACEPE) (Mar 2025 – May 2025)
+- Selected through Public Call No. 26/2024 – Jornada REPE: Rede de Ecossistemas de Pernambuco (FACEPE) to serve as an Executor in Squad 03, on a unification project for one of the state's Environment and Sustainability secretariats. See UFPE's article on the public call
+- Product immersions, success cases, and problem-solving sessions using Agile methodologies, heuristics, and problem-solving frameworks.
+- Application of innovation and sustainability concepts, such as the Lean Canvas, in on-site workshops at Porto Digital (Armazém da Criatividade) and at UFPE Campus Agreste, in Caruaru.
+- I left the program to prioritize mentoring two intern cohorts at Daus, compounded by the distance factor, as most sessions were held in person.
+
 #### Artificial Intelligence Mentorship Program — Offered by LAB.AI, Instituto Joule (Aug 2025 – Sep 2025)
 - Selected to participate in individual and group technology-focused mentoring through the Lab.AI – Laboratório de Mentes program, offered by Instituto Joule in partnership with Instituto Localiza.
 - Hands-on laboratories focused on technology and social impact projects enhanced by Artificial Intelligence tools.

@@ -421,6 +421,13 @@
 
         const targetEl = document.getElementById(targetId) || document.getElementById(`${targetId}-heading`);
         if (targetEl) {
+          if (targetEl.classList.contains('timeline-item')) {
+            targetEl.classList.remove('hidden-collapsed');
+            targetEl.style.display = '';
+            if (window.expandExperienceCard) {
+              window.expandExperienceCard(targetEl);
+            }
+          }
           const navH = document.getElementById('main-nav')?.offsetHeight || 70;
           const topPos = targetEl.getBoundingClientRect().top + window.scrollY - navH - 16;
           window.scrollTo({ top: Math.max(0, topPos), behavior: options.isInitial ? 'auto' : 'smooth' });

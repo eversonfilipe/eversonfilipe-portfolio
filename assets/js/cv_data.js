@@ -128,11 +128,15 @@
           "specificAchievements": [
             {
               "tag": "Recognition",
-              "description": "Nominated for the company's Monthly Agility Award in April 2026 for technical implementation performance and bugs fixes."
+              "description": "Nominated for the company's Monthly Agility Award in March 2026 for technical implementation performance and bugs fixes."
             },
             {
               "tag": "Delivery",
               "description": "Helped achieve 99.48% on-time implementation delivery while maintaining a 100% personal on-time completion rate throughout H1 2026."
+            },
+            {
+              "tag": "Re-implementation",
+              "description": "Co-led the July re-implementation of 4 companies for a major Northeast Brazil highway concessionaire with a Commercial Consultant, translating client specifications into agile configurations, custom scripts, and validated tests; project highlighted in the company-wide results review."
             }
           ]
         },
@@ -207,6 +211,20 @@
         }
       ],
       "education": [
+        {
+          "id": "inoveai-ufpe-innovation2025",
+          "type": "Innovation Program",
+          "degree": "Inove Aí's Innovation Journey ( Part of REPE Program) — Executor, Squad 03",
+          "institution": "Offered by UFPE, through Public Call No. 26/2024 – Jornada REPE (FACEPE)",
+          "date": "Mar 2025 – May 2025",
+          "logo": "assets/images/aigenerated_illustrative_image_facepesecti_x_ufpe_2025.webp",
+          "highlights": [
+            "Selected through Public Call No. 26/2024 – Jornada REPE: Rede de Ecossistemas de Pernambuco (FACEPE) to serve as an Executor in Squad 03, on a unification project for one of the state's Environment and Sustainability secretariats. <a href=\"https://sites.ufpe.br/parquetec/2025/01/15/ufpe-tem-duas-propostas-aprovadas-no-edital-jornada-repe-da-facepe/\" target=\"_blank\" rel=\"noopener\">See UFPE's article on the public call</a>",
+            "Product immersions, success cases, and problem-solving sessions using Agile methodologies, heuristics, and problem-solving frameworks.",
+            "Application of innovation and sustainability concepts, such as the Lean Canvas, in on-site workshops at Porto Digital (Armazém da Criatividade) and at UFPE Campus Agreste, in Caruaru.",
+            "I left the program to prioritize mentoring two intern cohorts at Daus, compounded by the distance factor, as most sessions were held in person."
+          ]
+        },
         {
           "id": "mentoria-labai-institutojoule-ia2025",
           "type": "Mentorship Program",
@@ -370,7 +388,7 @@
           "date": "May 2025 - Present",
           "logo": "assets/images/politize__logo.jpg",
           "highlights": [
-            "reated and co-organized workshops on technology, politics, and civic rights applied to society at Politize! Caruaru, while also contributing to internal projects."
+            "Created and co-organized workshops on technology, politics, and civic rights applied to society at Politize! Caruaru, while also contributing to internal projects."
           ]
         },
         {
@@ -547,7 +565,7 @@
           "title": "Nomination for Kartado Monthly Agility Award",
           "issuer": "Kartado",
           "logo": "assets/images/Simbolo_Kartado_Footer.svg",
-          "date": "Apr 2026"
+          "date": "Mar 2026"
         },
         {
           "id": "accepted-mentee-alp-2025-2",
@@ -911,11 +929,15 @@
           "specificAchievements": [
             {
               "tag": "Reconhecimento",
-              "description": "Indicado ao Prêmio Agilidade do Mês da empresa em abril de 2026 pelo desempenho em Implantação Técnica."
+              "description": "Indicado ao Prêmio Agilidade do Mês da empresa em março de 2026 pelo desempenho em Implantação Técnica."
             },
             {
               "tag": "Entrega",
               "description": "Contribuiu para que a equipe alcançasse 99,48% de entregas de implantação no prazo, mantendo 100% de pontualidade nas próprias entregas durante o primeiro semestre de 2026."
+            },
+            {
+              "tag": "Reimplantação",
+              "description": "Cocordenei em julho a reimplantação de 4 empresas de uma grande concessionária rodoviária do Nordeste com um Consultor Comercial, traduzindo especificações do cliente em configurações ágeis, scripts sob demanda e testes validados; projeto destacado na reunião geral de resultados."
             }
           ]
         },
@@ -990,6 +1012,20 @@
         }
       ],
       "education": [
+        {
+          "id": "inoveai-ufpe-innovation2025",
+          "type": "Programa de Inovação",
+          "degree": "Jornada de Inovação Inove Aí (Parte do programa REPE) — Executor, Squad 03",
+          "institution": "Oferecido pela UFPE, via Edital nº 26/2024 – Jornada REPE (FACEPE)",
+          "date": "Mar 2025 – Mai 2025",
+          "logo": "assets/images/aigenerated_illustrative_image_facepesecti_x_ufpe_2025.webp",
+          "highlights": [
+            "Selecionado pelo Edital nº 26/2024 – Jornada REPE: Rede de Ecossistemas de Pernambuco (FACEPE) para atuar como Executor no Squad 03, em um projeto de unificação para uma das secretarias de Meio Ambiente e Sustentabilidade do estado. <a href=\"https://sites.ufpe.br/parquetec/2025/01/15/ufpe-tem-duas-propostas-aprovadas-no-edital-jornada-repe-da-facepe/\" target=\"_blank\" rel=\"noopener\">Ver matéria da UFPE sobre o edital</a>",
+            "Imersões de produto, cases de sucesso e resolução de problemas utilizando metodologias ágeis, heurísticas e frameworks de resolução de problemas.",
+            "Aplicação de conceitos de inovação e sustentabilidade, como o Lean Canvas, em workshops presenciais no Porto Digital (Armazém da Criatividade) e na UFPE Campus Agreste, em Caruaru.",
+            "Saí do programa para priorizar a mentoria de dois cohortes de estagiários na Daus, somado ao fator de distância, já que a maioria dos encontros era presencial."
+          ]
+        },
         {
           "id": "mentoria-labai-institutojoule-ia2025",
           "type": "Programa de Mentoria",
@@ -1332,7 +1368,7 @@
           "title": "Nomeação ao Prêmio Mensal de Agilidade Kartado",
           "issuer": "Kartado",
           "logo": "assets/images/Simbolo_Kartado_Footer.svg",
-          "date": "Abr 2026"
+          "date": "Mar 2026"
         },
         {
           "id": "accepted-mentee-alp-2025-2",
@@ -1696,11 +1732,15 @@
           "specificAchievements": [
             {
               "tag": "Reconocimiento",
-              "description": "Nominado al Premio Agilidad del Mes de la empresa en abril de 2026 por su desempeño en implementación técnica y corrección de errores."
+              "description": "Nominado al Premio Agilidad del Mes de la empresa en marzo de 2026 por su desempeño en implementación técnica y corrección de errores."
             },
             {
               "tag": "Entrega",
               "description": "Contribuí a que el equipo alcanzara un 99,48 % de entregas de implementación a tiempo, manteniendo una tasa personal del 100 % de entregas puntuales durante el primer semestre de 2026."
+            },
+            {
+              "tag": "Reimplementación",
+              "description": "Cocoordiné en julio la reimplementación de 4 empresas para una importante concesionaria vial del Nordeste de Brasil junto con un Consultor Comercial, traduciendo especificaciones del cliente en configuraciones ágiles, scripts personalizados y pruebas validadas; proyecto destacado en la reunión general de resultados."
             }
           ]
         },
@@ -1775,6 +1815,20 @@
         }
       ],
       "education": [
+        {
+          "id": "inoveai-ufpe-innovation2025",
+          "type": "Programa de Innovación",
+          "degree": "Jornada de Innovación Inove Aí (Parte del programa REPE) — Ejecutor, Squad 03",
+          "institution": "Ofrecido por la UFPE, mediante la Convocatoria n.º 26/2024 – Jornada REPE (FACEPE)",
+          "date": "Mar 2025 – May 2025",
+          "logo": "assets/images/aigenerated_illustrative_image_facepesecti_x_ufpe_2025.webp",
+          "highlights": [
+            "Seleccionado mediante la Convocatoria n.º 26/2024 – Jornada REPE: Rede de Ecossistemas de Pernambuco (FACEPE) para actuar como Ejecutor en el Squad 03, en un proyecto de unificación para una de las secretarías de Medio Ambiente y Sostenibilidad del estado. <a href=\"https://sites.ufpe.br/parquetec/2025/01/15/ufpe-tem-duas-propostas-aprovadas-no-edital-jornada-repe-da-facepe/\" target=\"_blank\" rel=\"noopener\">Ver la nota de la UFPE sobre la convocatoria</a>",
+            "Inmersiones de producto, casos de éxito y resolución de problemas utilizando metodologías ágiles, heurísticas y frameworks de resolución de problemas.",
+            "Aplicación de conceptos de innovación y sostenibilidad, como el Lean Canvas, en talleres presenciales en el Porto Digital (Armazém da Criatividade) y en la UFPE Campus Agreste, en Caruaru.",
+            "Salí del programa para priorizar la mentoría de dos cohortes de becarios en Daus, sumado al factor de distancia, ya que la mayoría de los encuentros eran presenciales."
+          ]
+        },
         {
           "id": "mentoria-labai-institutojoule-ia2025",
           "type": "Programa de Mentoría",
@@ -2117,7 +2171,7 @@
           "title": "Nominación al Premio Mensual de Agilidad Kartado",
           "issuer": "Kartado",
           "logo": "assets/images/Simbolo_Kartado_Footer.svg",
-          "date": "Abr 2026"
+          "date": "Mar 2026"
         },
         {
           "id": "accepted-mentee-alp-2025-2",
