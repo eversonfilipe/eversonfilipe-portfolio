@@ -14,9 +14,10 @@ Under Construction
 
 ## Experience
 ### Estagiário em Implantação de Sistemas at Kartado (Set 2025 – Presente)
-**About Kartado**: A Kartado é uma empresa de SaaS B2B que atende o setor de concessões rodoviárias. Como Estagiário de Implantação de Sistemas, traduzi requisitos de negócio em configurações de software e fluxos automatizados em mais de 42 ambientes de clientes B2B, atuando em frameworks ágeis.
+**About Kartado**: A Kartado é uma empresa B2B de SaaS que atende ao setor de concessões rodoviárias, oferecendo uma plataforma integrada para gestão de ativos, operações de serviços de campo, construção, manutenção e conformidade regulatória. Fundada em Florianópolis em 2017, a empresa desenvolveu uma solução web e móvel voltada para operadores de infraestrutura, concessionárias, empreiteiras, empresas de engenharia e prestadores de serviços.
 
 Key Responsibilities:
+- Como Estagiário de Implantação de Sistemas, traduzi requisitos de negócio em configurações de software e fluxos automatizados em mais de 42 ambientes de clientes B2B, atuando em frameworks ágeis.
 - Configurei regras JSONLogic para formulários dinâmicos em mais de 42 ambientes de clientes via Django Admin, garantindo integridade de dados e consistência funcional; corrigi mapas GIS, ajustei Shapefiles e validei geometrias espaciais para a parametrização de sistemas de concessão rodoviária;
 - Desenvolvi scripts Python de automação ETL integrados ao Django ORM, substituindo fluxos manuais de transformação de dados; automatizei a geração de planilhas de parametrização com Python, Pandas e openpyxl, reduzindo o esforço manual;
 - Construí scripts Python em notebooks para extração de metadados JSON, validação de schema e detecção proativa de inconsistências estruturais em datasets exportados; mantive a documentação de integração REST API/JWT e scripts de validação Pytest para módulos Django;
@@ -31,9 +32,10 @@ Key Achievements:
 - **Tech Stack**: JSONLogic, Django, Python, Pandas, OpenpyXL, GIS, AWS
 
 ### Aprendiz em Gestão Ágil de Produtos at Daus (Dez 2024 – Jun 2025)
-**About Daus**: A Daus é uma software house/startup que entrega projetos internos de portfólio multi-cliente. Como Aprendiz em Gestão de Produtos focado em levantamento de requisitos, combinei prática e aprendizado estruturado: ao mesmo tempo que desenvolvia fluência em Gestão Ágil de Produtos, atuei em product discovery e análise de requisitos, transformando necessidades de stakeholders em artefatos de entrega documentados e acionáveis.
+**About Daus**: A Daus é uma software house e startup sediada no Recife, fundada em 2023, que desenvolve projetos internos e soluções para múltiplos clientes, combinando estratégia de produto, design UX/UI, desenvolvimento de software, inteligência artificial, automação e SaaS. Atuando a partir do Porto Digital, o studio coc cria produtos digitais seguros e escaláveis — de websites e landing pages a plataformas de e-commerce, sistemas web e aplicações — apoiando os clientes desde a descoberta até a entrega.
 
 Key Responsibilities:
+- Como Aprendiz em Gestão de Produtos focado em levantamento de requisitos, combinei prática e aprendizado estruturado: ao mesmo tempo que desenvolvia fluência em Gestão Ágil de Produtos, atuei em product discovery e análise de requisitos, transformando necessidades de stakeholders em artefatos de entrega documentados e acionáveis.
 - Apliquei os frameworks Scrum, Kanban e Lean Thinking para conduzir product discovery em ambiente de software house;
 - Realizei análise de requisitos em projetos internos e de portfólio multi-cliente;
 - Documentei insights de produto, user flows e requisitos funcionais no ecossistema Atlassian (Jira, Confluence) e no FigJam;
@@ -46,9 +48,10 @@ Key Achievements:
 - **Tech Stack**: Figma, FigJam, Jira, Confluence
 
 ### Gestor de Produtos Estagiário at TT&T Soluções em Informática (Set 2024 – Fev 2025)
-**About TT&T Soluções em Informática**: TT&T Soluções em Informática LTDA desenvolve sistemas internos e externos, incluindo a linha de produtos HiApps. Como Estagiário de Gestão de Produtos, combinei entrega prática com aprendizado estruturado: aprofundando meu domínio de metodologias Ágeis, coordenei cerimônias e traduzi requisitos ao longo dos sprints.
+**About TT&T Soluções em Informática**: A TT&T Soluções em Informática Ltda é uma empresa de software sediada em São Paulo, fundada em 1996, que desenvolve sistemas internos e externos, incluindo a linha de produtos HiApps, mantendo também um forte perfil acadêmico e voltado à formação de estagiários, com oportunidades para estudantes adquirirem experiência prática em desenvolvimento de software, tecnologia da informação, metodologias ágeis e tecnologias emergentes.
 
 Key Responsibilities:
+- Como Estagiário de Gestão de Produtos, combinei entrega prática com aprendizado estruturado: aprofundando meu domínio de metodologias Ágeis, coordenei cerimônias e traduzi requisitos ao longo dos sprints.
 - Coordenou e participou de cerimônias Ágeis e outros artefatos de metodologia Ágil ao longo dos sprints, incluindo dailies
 - Colaborou estreitamente com equipes de UX/UI nos sistemas internos e externos da empresa, a linha de produtos HiApps
 - Documentou requisitos funcionais e traduziu requisitos de negócios para equipes técnicas

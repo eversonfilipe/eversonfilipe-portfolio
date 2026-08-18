@@ -223,12 +223,34 @@
   }
 
   /**
-   * Updates Document Title, Canonical Link, OpenGraph, and JSON-LD schema
+   * Updates Document Title, Canonical Link, OpenGraph, Twitter Card, and JSON-LD schema.
+   * Ensures Prerender.io snapshots per route carry full social-sharing meta.
    */
   function updateMetadata(route) {
     const { lang, section, subsection, slug } = route;
     const path = buildPath(lang, section, subsection, slug);
     const canonicalUrl = `${CANONICAL_BASE}${path}`;
+
+    // ── Helper: set OG + Twitter meta tags ──────────────────────────────────
+    function setMetaTags(title, description, imageUrl) {
+      const ogTitle     = document.querySelector('meta[property="og:title"]');
+      const ogDesc      = document.querySelector('meta[property="og:description"]');
+      const ogImg       = document.querySelector('meta[property="og:image"]');
+      const ogUrl       = document.querySelector('meta[property="og:url"]');
+      const twTitle     = document.querySelector('meta[name="twitter:title"]');
+      const twDesc      = document.querySelector('meta[name="twitter:description"]');
+      const twImg       = document.querySelector('meta[name="twitter:image"]');
+      const metaDesc    = document.querySelector('meta[name="description"]');
+
+      if (ogTitle) ogTitle.content   = title;
+      if (ogDesc)  ogDesc.content    = description;
+      if (ogImg && imageUrl) ogImg.content = imageUrl;
+      if (ogUrl)   ogUrl.content     = canonicalUrl;
+      if (twTitle) twTitle.content   = title;
+      if (twDesc)  twDesc.content    = description;
+      if (twImg && imageUrl) twImg.content = imageUrl;
+      if (metaDesc) metaDesc.content = description;
+    }
 
     // 1. Update Canonical Link
     let canonicalTag = document.querySelector('link[rel="canonical"]');
@@ -239,29 +261,18 @@
     }
     canonicalTag.href = canonicalUrl;
 
-    // 2. Update OpenGraph URL
-    let ogUrl = document.querySelector('meta[property="og:url"]');
-    if (ogUrl) ogUrl.content = canonicalUrl;
-
-    // 3. Dynamic Title & Schema per route
+    // 2. Dynamic Title, OG & Twitter per route
     if (section === 'community' && subsection === 'blog' && slug) {
       const posts = window.BLOG_DATA || [];
       const post = posts.find(p => p.id === slug);
       if (post) {
         const loc = post[lang] || post.en || {};
-        const postTitle = loc.title || 'Blog Post';
-        const postSummary = loc.summary || '';
+        const postTitle   = loc.title || 'Blog Post';
+        const postSummary = (post.seo && post.seo.description) || loc.summary || '';
+        const postImage   = post.image || `${CANONICAL_BASE}/assets/images/profile.png`;
 
         document.title = `${postTitle} | Blog — Everson Filipe`;
-
-        let metaDesc = document.querySelector('meta[name="description"]');
-        if (metaDesc) metaDesc.content = postSummary;
-
-        let ogTitle = document.querySelector('meta[property="og:title"]');
-        if (ogTitle) ogTitle.content = `${postTitle} | Blog — Everson Filipe`;
-
-        let ogDesc = document.querySelector('meta[property="og:description"]');
-        if (ogDesc) ogDesc.content = postSummary;
+        setMetaTags(`${postTitle} | Blog — Everson Filipe`, postSummary, postImage);
 
         injectJSONLD('dynamic-blog-jsonld', {
           "@context": "https://schema.org",
@@ -285,7 +296,9 @@
       if (subsection === 'courses') key = 'edu.courses.label';
       else if (subsection === 'publications') key = 'edu.publications.label';
       const subTitle = (window.i18n && window.i18n.t) ? window.i18n.t(key, lang) : subsection;
-      document.title = `${subTitle} | Everson Filipe`;
+      const title = `${subTitle} | Everson Filipe`;
+      document.title = title;
+      setMetaTags(title, 'Academic background, courses, certifications and publications by Everson Filipe — Systems Analyst & AI Engineer.', null);
       removeJSONLD('dynamic-blog-jsonld');
       return;
     }
@@ -294,7 +307,9 @@
       if (subsection === 'endorsements') {
         const key = 'nav.experience.endorsements';
         const subTitle = (window.i18n && window.i18n.t) ? window.i18n.t(key, lang) : 'Recomendações';
-        document.title = `${subTitle} | Everson Filipe`;
+        const title = `${subTitle} | Everson Filipe`;
+        document.title = title;
+        setMetaTags(title, 'Peer endorsements and professional recommendations for Everson Filipe.', null);
         removeJSONLD('dynamic-blog-jsonld');
         return;
       }
@@ -303,8 +318,22 @@
         if (cvData && cvData.experience) {
           const job = cvData.experience.find(j => j.id === slug);
           if (job) {
-            document.title = `${job.role} @ ${job.company} | Everson Filipe`;
-            removeJSONLD('dynamic-blog-jsonld');
+            const expTitle = `${job.role} @ ${job.company} | Everson Filipe`;
+            const expDesc  = (job.bullets && job.bullets.length > 0)
+              ? job.bullets[0].replace(/<[^>]+>/g, '').slice(0, 155)
+              : `Professional experience as ${job.role} at ${job.company}.`;
+            const expImage = job.logo || `${CANONICAL_BASE}/assets/images/profile.png`;
+
+            document.title = expTitle;
+            setMetaTags(expTitle, expDesc, expImage);
+
+            injectJSONLD('dynamic-blog-jsonld', {
+              "@context": "https://schema.org",
+              "@type": "EmployerAggregateRating",
+              "name": `${job.role} at ${job.company}`,
+              "description": expDesc,
+              "url": canonicalUrl
+            });
             return;
           }
         }
@@ -316,17 +345,27 @@
       if (cvData && cvData.projects) {
         const proj = cvData.projects.find(p => p.id === slug);
         if (proj) {
-          document.title = `${proj.title} | Everson Filipe`;
+          const projTitle = `${proj.title} | Everson Filipe`;
+          const projDesc  = proj.description
+            ? proj.description.replace(/<[^>]+>/g, '').slice(0, 155)
+            : `Project: ${proj.title}`;
+          const projImage = (proj.images && proj.images[0]) || `${CANONICAL_BASE}/assets/images/profile.png`;
+
+          document.title = projTitle;
+          setMetaTags(projTitle, projDesc, projImage);
           removeJSONLD('dynamic-blog-jsonld');
           return;
         }
       }
     }
 
-    // Default Section Title
+    // Default Section Title — reset to homepage defaults
     removeJSONLD('dynamic-blog-jsonld');
     if (window.i18n && window.i18n.t) {
-      document.title = window.i18n.t('meta.title', lang);
+      const defaultTitle = window.i18n.t('meta.title', lang);
+      const defaultDesc  = 'Implementation Engineer & AI Automation Analyst specializing in Python, JSONLogic, AWS integrations, and B2B SaaS configurations.';
+      document.title = defaultTitle;
+      setMetaTags(defaultTitle, defaultDesc, `${CANONICAL_BASE}/assets/images/profile.png`);
     }
   }
 

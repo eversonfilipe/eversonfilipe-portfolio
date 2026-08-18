@@ -8,7 +8,7 @@ author: Everson Filipe
 
 ## Systems Implementation Intern at Kartado (Sep 2025 – Present)
 ### About Kartado:
-Kartado is a B2B SaaS company serving the highway concession sector. As a Systems Implementation Intern, I turned client business requirements into software configurations and automated workflows across 42+ B2B client environments, operating within Agile frameworks.
+Kartado is a B2B SaaS company serving the highway concession sector, providing an integrated platform for asset management, field-service operations, construction, maintenance, and regulatory compliance. Founded in Florianópolis in 2017, the company developed a web and mobile solution designed for infrastructure operators, concessionaires, contractors, engineering firms, and service providers.
 
 ### Key Achievements:
 - [Recognition] Nominated for the company's Monthly Agility Award in March 2026 for technical implementation performance and bugs fixes.
@@ -20,7 +20,7 @@ Kartado is a B2B SaaS company serving the highway concession sector. As a System
 
 ## Agile Product Management Learner at Daus (Dec 2024 – Jun 2025)
 ### About Daus:
-Daus is a software house/startup delivering internal and multi-client portfolio projects. As a Product Management Learner focused on requirements gathering, I combined hands-on delivery with structured learning: while building fluency in Agile Product Management, I supported product discovery and requirements analysis, turning stakeholder needs into documented, actionable delivery artifacts.
+Daus is a Recife-based software house and startup, founded in 2023, that delivers internal and multi-client portfolio projects by combining product strategy, UX/UI design, software development, AI, automation, and SaaS capabilities. Operating from Porto Digital, the studio co-creates secure, scalable digital products—from websites and landing pages to e-commerce platforms, web systems, and applications—supporting clients from discovery through delivery.
 
 ### Key Achievements:
 - [Enablement & impact] Mentored two intern cohorts across structured onboarding programs in Agile Product Management workflows and MVP-delivery.
@@ -31,7 +31,7 @@ Daus is a software house/startup delivering internal and multi-client portfolio 
 
 ## Product Manager Intern at TT&T Soluções em Informática (Sep 2024 – Feb 2025)
 ### About TT&T Soluções em Informática:
-TT&T Soluções em Informática LTDA develops internal and external systems, including the HiApps product line. As a Product Manager Intern, I combined hands-on delivery with structured learning: while deepening my command of Agile methodologies, I coordinated ceremonies and translated requirements throughout the sprints.
+TT&T Soluções em Informática Ltda is a São Paulo based software company founded in 1996 that develops internal and external systems, including the HiApps product line, while maintaining a strong academic and internship oriented profile, offering students opportunities to gain practical experience in software development, information technology, agile methods, and emerging technologies.
 
 ### Key Achievements:
 - [Presentation] Took part in Sponsor's Days, events held during the sprints for results presentations across departments, where I presented development updates on HiEmergência, one of the flagship internal products in the HiApps line.

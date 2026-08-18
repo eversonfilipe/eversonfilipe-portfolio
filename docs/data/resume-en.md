@@ -14,9 +14,10 @@ Under Construction
 
 ## Experience
 ### Systems Implementation Intern at Kartado (Sep 2025 – Present)
-**About Kartado**: Kartado is a B2B SaaS company serving the highway concession sector. As a Systems Implementation Intern, I turned client business requirements into software configurations and automated workflows across 42+ B2B client environments, operating within Agile frameworks.
+**About Kartado**: Kartado is a B2B SaaS company serving the highway concession sector, providing an integrated platform for asset management, field-service operations, construction, maintenance, and regulatory compliance. Founded in Florianópolis in 2017, the company developed a web and mobile solution designed for infrastructure operators, concessionaires, contractors, engineering firms, and service providers.
 
 Key Responsibilities:
+- As a Systems Implementation Intern, I turned client business requirements into software configurations and automated workflows across 42+ B2B client environments, operating within Agile frameworks.
 - Configured JSONLogic rules for dynamic forms across 42+ client environments via Django Admin, ensuring data integrity and functional consistency; corrected GIS maps, adjusted Shapefiles, and validated spatial geometries for highway concession system parameterization;
 - Developed Python ETL automation scripts integrated with Django ORM, replacing manual data transformation workflows; automated the generation of parameterization spreadsheets using Python, Pandas, and openpyxl, reducing manual effort;
 - Built notebook-based Python scripts for JSON metadata extraction, schema validation, and proactive detection of structural inconsistencies in exported datasets; maintained REST API/JWT integration documentation and Pytest validation scripts for Django modules;
@@ -31,9 +32,10 @@ Key Achievements:
 - **Tech Stack**: JSONLogic, Django, Python, Pandas, OpenpyXL, GIS, AWS
 
 ### Agile Product Management Learner at Daus (Dec 2024 – Jun 2025)
-**About Daus**: Daus is a software house/startup delivering internal and multi-client portfolio projects. As a Product Management Learner focused on requirements gathering, I combined hands-on delivery with structured learning: while building fluency in Agile Product Management, I supported product discovery and requirements analysis, turning stakeholder needs into documented, actionable delivery artifacts.
+**About Daus**: Daus is a Recife-based software house and startup, founded in 2023, that delivers internal and multi-client portfolio projects by combining product strategy, UX/UI design, software development, AI, automation, and SaaS capabilities. Operating from Porto Digital, the studio co-creates secure, scalable digital products—from websites and landing pages to e-commerce platforms, web systems, and applications—supporting clients from discovery through delivery.
 
 Key Responsibilities:
+- As a Product Management Learner focused on requirements gathering, I combined hands-on delivery with structured learning: while building fluency in Agile Product Management, I supported product discovery and requirements analysis, turning stakeholder needs into documented, actionable delivery artifacts.
 - Applied Scrum, Kanban, and Lean Thinking frameworks to drive product discovery in a software house environment;
 - Conducted requirements analysis across internal and multi-client portfolio projects;
 - Documented product insights, user flows, and functional requirements across the Atlassian ecosystem (Jira, Confluence) and FigJam;
@@ -47,9 +49,10 @@ Key Achievements:
 - **Methodologies**: Scrum, Kanban, Lean Thinking
 
 ### Product Manager Intern at TT&T Soluções em Informática (Sep 2024 – Feb 2025)
-**About TT&T Soluções em Informática**: TT&T Soluções em Informática LTDA develops internal and external systems, including the HiApps product line. As a Product Manager Intern, I combined hands-on delivery with structured learning: while deepening my command of Agile methodologies, I coordinated ceremonies and translated requirements throughout the sprints.
+**About TT&T Soluções em Informática**: TT&T Soluções em Informática Ltda is a São Paulo based software company founded in 1996 that develops internal and external systems, including the HiApps product line, while maintaining a strong academic and internship oriented profile, offering students opportunities to gain practical experience in software development, information technology, agile methods, and emerging technologies.
 
 Key Responsibilities:
+- As a Product Manager Intern, I combined hands-on delivery with structured learning: while deepening my command of Agile methodologies, I coordinated ceremonies and translated requirements throughout the sprints.
 - Coordinated and participated in Agile ceremonies and other Agile methodology artifacts throughout the sprints, including dailies
 - Collaborated closely with UX/UI teams on the company's internal and external systems, the HiApps product line
 - Documented functional requirements and translated business requirements for technical teams

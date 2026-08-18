@@ -14,9 +14,10 @@ Under Construction
 
 ## Experience
 ### Practicante en Implementación de Sistemas at Kartado (Sep 2025 – Presente)
-**About Kartado**: Kartado es una empresa B2B SaaS que atiende al sector de concesiones de carreteras. Como Pasante de Implementación de Sistemas, traduje requisitos de negocio en configuraciones de software y flujos automatizados en más de 42 entornos de clientes B2B, operando dentro de marcos ágiles.
+**About Kartado**: Kartado es una empresa B2B de SaaS que presta servicios al sector de concesiones viales, ofreciendo una plataforma integrada para la gestión de activos, las operaciones de servicios de campo, la construcción, el mantenimiento y el cumplimiento normativo. Fundada en Florianópolis en 2017, la empresa desarrolló una solución web y móvil dirigida a operadores de infraestructura, concesionarias, contratistas, empresas de ingeniería y proveedores de servicios.
 
 Key Responsibilities:
+- Como Pasante de Implementación de Sistemas, traduje requisitos de negocio en configuraciones de software y flujos automatizados en más de 42 entornos de clientes B2B, operando dentro de marcos ágiles.
 - Configuré reglas de JSONLogic para formularios dinámicos en más de 42 entornos de clientes vía Django Admin, garantizando integridad de datos y consistencia funcional; corregí mapas GIS, ajusté Shapefiles y validé geometrías espaciales para la parametrización de sistemas de concesión vial;
 - Desarrollé scripts Python de automatización ETL integrados al Django ORM, sustituyendo flujos manuales de transformación de datos; automatizé la generación de planilhas de parametrización con Python, Pandas y openpyxl, reduciendo el esfuerzo manual;
 - Construí scripts Python en notebooks para extracción de metadatos JSON, validación de schema y detección proactiva de inconsistencias estructurales en datasets exportados; mantuve la documentación de integración REST API/JWT y scripts de validación Pytest para módulos Django;
@@ -31,9 +32,10 @@ Key Achievements:
 - **Tech Stack**: JSONLogic, Django, Python, Pandas, OpenpyXL, GIS, AWS
 
 ### Aprendiz en Gestión Ágil de Productos at Daus (Dic 2024 – Jun 2025)
-**About Daus**: Daus es una empresa de desarrollo de software/startup que entrega proyectos internos y de portafolio con múltiples clientes. Como Aprendiz en Gestión de Productos enfocado en levantamiento de requisitos, combiné práctica y aprendizaje estructurado: al mismo tiempo que desarrollaba fluidez en Gestión Ágil de Productos, participé en product discovery y análisis de requisitos, transformando necesidades de stakeholders en artefactos de entrega documentados y accionables.
+**About Daus**: Daus es una software house y startup con sede en Recife, fundada en 2023, que desarrolla proyectos internos y soluciones para múltiples clientes, combinando estrategia de producto, diseño UX/UI, desarrollo de software, inteligencia artificial, automatización y SaaS. Desde Porto Digital, el estudio co-crea productos digitales seguros y escalables —desde sitios web y landing pages hasta plataformas de comercio electrónico, sistemas web y aplicaciones— y acompaña a sus clientes desde la etapa de descubrimiento hasta la entrega.
 
 Key Responsibilities:
+- Como Aprendiz en Gestión de Productos enfocado en levantamiento de requisitos, combiné práctica y aprendizaje estructurado: al mismo tiempo que desarrollaba fluidez en Gestión Ágil de Productos, participé en product discovery y análisis de requisitos, transformando necesidades de stakeholders en artefactos de entrega documentados y accionables.
 - Apliqué metodologías ágiles Scrum, Kanban y Lean Thinking para facilitar procesos de descubrimiento de productos y análisis de requisitos en una software house, trabajando en proyectos internos y con clientes externos.
 - Apoyé el análisis de requisitos en proyectos de portafolio multi-cliente, contribuyendo a la definición de productos y funcionalidades.
 - Documenté información clave de producto, flujos de usuario y requisitos funcionales utilizando herramientas del ecosistema Atlassian (Jira y Confluence), así como FigJam.
@@ -46,9 +48,10 @@ Key Achievements:
 - **Tech Stack**: Figma, FigJam, Jira, Confluence
 
 ### Gestor de Products Practicante at TT&T Soluções em Informática (Sep 2024 – Feb 2025)
-**About TT&T Soluções em Informática**: TT&T Soluções em Informática LTDA desarrolla sistemas internos y externos, incluyendo la línea de productos HiApps. Como Pasante de Gestión de Productos, combiné la entrega práctica con el aprendizaje estructurado: profundizando mi dominio de las metodologías Ágiles, coordiné ceremonias y traduje requisitos a lo largo de los sprints.
+**About TT&T Soluções em Informática**: TT&T Soluções em Informática Ltda es una empresa de software con sede en São Paulo, fundada en 1996, que desarrolla sistemas internos y externos, incluida la línea de productos HiApps, y mantiene un marcado perfil académico y orientado a la formación de estudiantes en prácticas, brindándoles experiencia práctica en desarrollo de software, tecnologías de la información, metodologías ágiles y tecnologías emergentes.
 
 Key Responsibilities:
+- Como Pasante de Gestión de Productos, combiné la entrega práctica con el aprendizaje estructurado: profundizando mi dominio de las metodologías Ágiles, coordiné ceremonias y traduje requisitos a lo largo de los sprints.
 - Coordiné y participé en ceremonias Ágiles y otros artefactos de metodología Ágil a lo largo de los sprints, incluyendo dailies
 - Colaboré estrechamente con equipos de UX/UI en los sistemas internos y externos de la empresa, la línea de productos HiApps
 - Documenté requisitos funcionales y traduje requisitos de negocios para equipos técnicos
