@@ -2,14 +2,7 @@
   command = "python build_static.py"
   publish = "./"
 
-# ── Netlify Extension: Prerender.io (SPA bot/social rendering) ────
-# Automatically installed by Netlify integration. Declared here for
-# full GitOps declarativity — persists across all GitHub-triggered deploys.
-[integrations]
-  [integrations.prerenderio]
-    # Bot & social media crawler pre-rendering (free tier, no token required).
-    # Catches: Googlebot, GPTBot, ClaudeBot, PerplexityBot, Twitterbot,
-    #          LinkedInBot, WhatsApp, Telegram, Slackbot, facebookexternalhit, etc.
+
 
 # ── HTTP Headers ─────────────────────────────────────────────────
 [[headers]]
