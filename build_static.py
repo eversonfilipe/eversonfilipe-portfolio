@@ -561,8 +561,9 @@ with open(os.path.join(okf_dir, 'blog.md'), 'w', encoding='utf-8') as f:
 
 print("[OK] Generated 100% data-driven Open Knowledge Format (OKF) bundle in ./okf/")
 
-# Compile the clean text summary of Everson's CV
+# Compile the clean text summary of Everson's CV (per language for noscript generation)
 noscript_cv_markdown = ""
+noscript_by_lang = {}
 for lang in ["en", "pt", "es"]:
     lang_markdown = ""
     hero = cv_data[lang]["hero"]
@@ -737,8 +738,14 @@ for lang in ["en", "pt", "es"]:
         rf.write(lang_markdown)
     print(f"[OK] Written {resume_file_path}")
 
+    noscript_by_lang[lang] = lang_markdown
     if lang == "en":
         noscript_cv_markdown = lang_markdown
+
+# Ensure noscript_by_lang is always populated (fallback to EN if a language is missing)
+for _lang in ['pt', 'en', 'es']:
+    if _lang not in noscript_by_lang:
+        noscript_by_lang[_lang] = noscript_by_lang.get('en', '')
 
 # --- 3. Update index.html noscript block & JSON-LD ---
 print("--- 3. Updating index.html noscript block & Schema.org JSON-LD ---")
@@ -1344,6 +1351,96 @@ with open(llms_path, 'w', encoding='utf-8') as f:
     f.write(llms_txt_content)
 print("[OK] Overwritten llms.txt with correct RAG index formatting.")
 
+# --- 3b. Generate per-language index.html files (Fix: unique noscript per lang for Google) ---
+# This eliminates the duplicate-content issue where PT/ES pages appeared identical to EN to crawlers.
+# Each language gets its own index.html with: <html lang=XX>, og:locale, noscript in that language.
+LANG_META = {
+    'en': {
+        'lang_attr': 'en',
+        'locale': 'en_US',
+        'noscript_intro': 'This page requires JavaScript to render the interactive portfolio. Here is the full text summary for screen readers and search crawlers:',
+        'canonical_suffix': '/en/',
+    },
+    'pt': {
+        'lang_attr': 'pt-BR',
+        'locale': 'pt_BR',
+        'noscript_intro': 'Esta página requer JavaScript para exibir o portfólio interativo. Aqui está o resumo completo para leitores de tela e rastreadores de busca:',
+        'canonical_suffix': '/pt/',
+    },
+    'es': {
+        'lang_attr': 'es',
+        'locale': 'es_ES',
+        'noscript_intro': 'Esta página requiere JavaScript para mostrar el portafolio interactivo. Aquí está el resumen completo para lectores de pantalla y rastreadores de búsqueda:',
+        'canonical_suffix': '/es/',
+    },
+}
+
+if os.path.exists(index_html_path):
+    with open(index_html_path, 'r', encoding='utf-8') as _f:
+        _base_html = _f.read()
+
+    for _lang, _meta in LANG_META.items():
+        _lang_html = _base_html
+
+        # 1. Update <html lang="..."> attribute
+        _lang_html = re.sub(r'<html lang="[^"]*"', f'<html lang="{_meta["lang_attr"]}"', _lang_html)
+
+        # 2. Inject/update og:locale after og:site_name (or before twitter:card)
+        _locale_tag = f'<meta property="og:locale" content="{_meta["locale"]}" />'
+        if 'og:locale' not in _lang_html:
+            _lang_html = _lang_html.replace('<meta name="twitter:card"', f'{_locale_tag}\n  <meta name="twitter:card"')
+        else:
+            _lang_html = re.sub(r'<meta property="og:locale"[^/]*/>', _locale_tag, _lang_html)
+
+        # 3. Add static hreflang <link> tags to <head> for bots that read HTML before JS runs
+        _hreflang_block = f"""  <link rel="alternate" hreflang="pt" href="{base_url}/pt/" />
+  <link rel="alternate" hreflang="en" href="{base_url}/en/" />
+  <link rel="alternate" hreflang="es" href="{base_url}/es/" />
+  <link rel="alternate" hreflang="x-default" href="{base_url}/pt/" />"""
+        if 'hreflang="pt"' not in _lang_html:
+            _lang_html = _lang_html.replace('<link rel="canonical"', f'{_hreflang_block}\n  <link rel="canonical"')
+
+        # 4. Replace noscript block with language-specific content
+        _ns_content = noscript_by_lang.get(_lang, noscript_by_lang.get('en', ''))
+        _new_noscript = f"""  <noscript>
+    <div style="padding: 20px; background: #374f5b; color: #ffffff;">
+      <p>{_meta['noscript_intro']}</p>
+      {_ns_content}
+    </div>
+  </noscript>"""
+        _ns_start = _lang_html.find('<noscript>')
+        _ns_end = _lang_html.find('</noscript>')
+        if _ns_start != -1 and _ns_end != -1:
+            _line_start = _lang_html.rfind('\n', 0, _ns_start)
+            if _line_start != -1 and _lang_html[_line_start + 1:_ns_start].strip() == '':
+                _ns_start = _line_start + 1
+            _lang_html = _lang_html[:_ns_start] + _new_noscript + _lang_html[_ns_end + len('</noscript>'):]
+
+        # 5. Write to lang/index.html
+        _out_dir = os.path.join('.', _lang)
+        os.makedirs(_out_dir, exist_ok=True)
+        _out_path = os.path.join(_out_dir, 'index.html')
+        with open(_out_path, 'w', encoding='utf-8') as _lf:
+            _lf.write(_lang_html)
+        print(f'[OK] Generated {_out_path} (lang={_meta["lang_attr"]}, locale={_meta["locale"]})')
+
+# Also inject hreflang + og:locale into root index.html (EN defaults)
+if os.path.exists(index_html_path):
+    with open(index_html_path, 'r', encoding='utf-8') as _f:
+        _root_html = _f.read()
+    _locale_tag = '<meta property="og:locale" content="en_US" />'
+    if 'og:locale' not in _root_html:
+        _root_html = _root_html.replace('<meta name="twitter:card"', f'{_locale_tag}\n  <meta name="twitter:card"')
+    _hreflang_block = f"""  <link rel="alternate" hreflang="pt" href="{base_url}/pt/" />
+  <link rel="alternate" hreflang="en" href="{base_url}/en/" />
+  <link rel="alternate" hreflang="es" href="{base_url}/es/" />
+  <link rel="alternate" hreflang="x-default" href="{base_url}/pt/" />"""
+    if 'hreflang="pt"' not in _root_html:
+        _root_html = _root_html.replace('<link rel="canonical"', f'{_hreflang_block}\n  <link rel="canonical"')
+    with open(index_html_path, 'w', encoding='utf-8') as _f:
+        _f.write(_root_html)
+    print('[OK] Updated root index.html with og:locale + static hreflang tags')
+
 print("--- 4b. Generating 100% Dynamic, Bidirectional & Audited sitemap.xml ---")
 today_str = datetime.now().strftime("%Y-%m-%d")
 
@@ -1374,12 +1471,18 @@ def slugify_segment(text):
     s = re.sub(r'[^a-z0-9]+', '-', s).strip('-')
     return s
 
-def parse_item_lastmod(date_str, fallback_str=today_str):
+# Portfolio launch date — used as fallback lastmod for items without explicit dates.
+# This ensures Google sees stable, realistic dates instead of today_str (which changes every build
+# and degrades the freshness signal by making everything appear to change constantly).
+PORTFOLIO_LAUNCH_DATE = "2026-07-01"
+
+def parse_item_lastmod(date_str, fallback_str=PORTFOLIO_LAUNCH_DATE):
     if not date_str or not isinstance(date_str, str):
         return fallback_str
     s = date_str.strip()
+    # Items with 'Present/Atual/Presente' use today's date (actively updated content)
     if "present" in s.lower() or "atual" in s.lower() or "presente" in s.lower():
-        return fallback_str
+        return today_str
     if re.match(r'^\d{4}-\d{2}-\d{2}$', s):
         return s
     years = re.findall(r'\b(20\d{2}|19\d{2})\b', s)
@@ -1492,17 +1595,17 @@ sitemap_xml = f"""<?xml version="1.0" encoding="UTF-8"?>
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- Language Homes (1.00) -->
-{make_cluster_url_entries("", today_str, priority="1.00", changefreq="weekly", img_url="assets/images/profile.webp")}
+  <!-- Language Homes (1.00 / monthly — stable entry points) -->
+{make_cluster_url_entries("", today_str, priority="1.00", changefreq="monthly", img_url="assets/images/profile.webp")}
 
-  <!-- Main Section Routes (0.90) -->
-{make_cluster_url_entries("/experience", today_str, priority="0.90", changefreq="weekly")}
-{make_cluster_url_entries("/education", today_str, priority="0.90", changefreq="weekly")}
-{make_cluster_url_entries("/community", today_str, priority="0.90", changefreq="weekly")}
+  <!-- Main Section Routes (0.80 / monthly — structural hubs, content loaded via JS) -->
+{make_cluster_url_entries("/experience", today_str, priority="0.80", changefreq="monthly")}
+{make_cluster_url_entries("/education", today_str, priority="0.80", changefreq="monthly")}
+{make_cluster_url_entries("/community", today_str, priority="0.80", changefreq="monthly")}
 
-  <!-- Utility Routes (0.30) -->
-{make_cluster_url_entries("/experience/experiences-select", today_str, priority="0.30", changefreq="monthly")}
-{make_cluster_url_entries("/education/courses-select", today_str, priority="0.30", changefreq="monthly")}
+  <!-- Utility Routes (0.10 / yearly — selector/filter UX routes, low crawl-budget value) -->
+{make_cluster_url_entries("/experience/experiences-select", PORTFOLIO_LAUNCH_DATE, priority="0.10", changefreq="yearly")}
+{make_cluster_url_entries("/education/courses-select", PORTFOLIO_LAUNCH_DATE, priority="0.10", changefreq="yearly")}
 """
 
 projects_list = get_unique_objects('projects')
@@ -1559,8 +1662,8 @@ else:
 """
 
 # Experience Hubs & Objects (Hub 0.80, Item 0.60)
-sitemap_xml += "\n  <!-- Experience Hub: endorsements -->\n"
-sitemap_xml += make_cluster_url_entries("/experience/endorsements", today_str, priority="0.80", changefreq="monthly")
+sitemap_xml += "\n  <!-- Experience Hub: endorsements (0.70 / monthly) -->\n"
+sitemap_xml += make_cluster_url_entries("/experience/endorsements", today_str, priority="0.70", changefreq="monthly")
 
 for job in get_unique_objects('experience'):
     j_id = job.get('id')
@@ -1575,66 +1678,66 @@ for job in get_unique_objects('experience'):
             slide_src = slide.get('src')
             if slide_src:
                 carousel_images.append(slide_src)
-    sitemap_xml += f"  <!-- Experience Route: {comp_id}/{j_id} -->\n"
-    sitemap_xml += make_cluster_url_entries(f"/experience/{comp_id}/{j_id}", job_lastmod, priority="0.60", img_url=job_logo, extra_images=carousel_images if carousel_images else None)
+    sitemap_xml += f"  <!-- Experience Route: {comp_id}/{j_id} (0.80/weekly — real unique content) -->\n"
+    sitemap_xml += make_cluster_url_entries(f"/experience/{comp_id}/{j_id}", job_lastmod, priority="0.80", changefreq="weekly", img_url=job_logo, extra_images=carousel_images if carousel_images else None)
 
 # Education Hubs & Objects (Hub 0.80, Item 0.60)
-sitemap_xml += "\n  <!-- Education Hubs -->\n"
+sitemap_xml += "\n  <!-- Education Hubs (0.70 / monthly) -->\n"
 for sub in ["academic", "courses", "publications"]:
-    sitemap_xml += make_cluster_url_entries(f"/education/{sub}", today_str, priority="0.80", changefreq="monthly")
+    sitemap_xml += make_cluster_url_entries(f"/education/{sub}", today_str, priority="0.70", changefreq="monthly")
 
 for edu in get_unique_objects('education'):
     e_id = edu.get('id')
     if not e_id: continue
     edu_lastmod = parse_item_lastmod(edu.get('date'))
     edu_logo = edu.get('logo')
-    sitemap_xml += f"  <!-- Academic Formation Route: {e_id} -->\n"
-    sitemap_xml += make_cluster_url_entries(f"/education/academic/{e_id}", edu_lastmod, priority="0.60", img_url=edu_logo)
+    sitemap_xml += f"  <!-- Academic Formation Route: {e_id} (0.80/weekly) -->\n"
+    sitemap_xml += make_cluster_url_entries(f"/education/academic/{e_id}", edu_lastmod, priority="0.80", changefreq="weekly", img_url=edu_logo)
 
 for course in get_unique_objects('courses'):
     c_id = course.get('id')
     if not c_id: continue
     course_lastmod = parse_item_lastmod(course.get('date'))
     course_logo = course.get('logo')
-    sitemap_xml += f"  <!-- Course Route: {c_id} -->\n"
-    sitemap_xml += make_cluster_url_entries(f"/education/courses/{c_id}", course_lastmod, priority="0.60", img_url=course_logo)
+    sitemap_xml += f"  <!-- Course Route: {c_id} (0.75/weekly) -->\n"
+    sitemap_xml += make_cluster_url_entries(f"/education/courses/{c_id}", course_lastmod, priority="0.75", changefreq="weekly", img_url=course_logo)
 
 for pub in get_unique_objects('publications'):
     p_id = pub.get('id')
     if not p_id: continue
     pub_lastmod = parse_item_lastmod(pub.get('date'))
     pub_logo = pub.get('logo') or pub.get('coverImage')
-    sitemap_xml += f"  <!-- Publication Route: {p_id} -->\n"
-    sitemap_xml += make_cluster_url_entries(f"/education/publications/{p_id}", pub_lastmod, priority="0.60", img_url=pub_logo)
+    sitemap_xml += f"  <!-- Publication Route: {p_id} (0.75/weekly) -->\n"
+    sitemap_xml += make_cluster_url_entries(f"/education/publications/{p_id}", pub_lastmod, priority="0.75", changefreq="weekly", img_url=pub_logo)
 
 # Community Hubs & Objects (Hub 0.80, Item 0.60)
-sitemap_xml += "\n  <!-- Community Hubs -->\n"
+sitemap_xml += "\n  <!-- Community Hubs (0.70 / monthly) -->\n"
 for sub in ["volunteering", "hackathons", "events", "achievements", "blog"]:
-    sitemap_xml += make_cluster_url_entries(f"/community/{sub}", today_str, priority="0.80", changefreq="monthly")
+    sitemap_xml += make_cluster_url_entries(f"/community/{sub}", today_str, priority="0.70", changefreq="monthly")
 
 for post in blog_data:
     p_id = post.get('id')
     if not p_id: continue
     post_lastmod = parse_item_lastmod(post.get('date') or post.get('publishedAt'))
     post_cover = post.get('coverImage') or post.get('image')
-    sitemap_xml += f"  <!-- Blog Post Route: {p_id} -->\n"
-    sitemap_xml += make_cluster_url_entries(f"/community/blog/{p_id}", post_lastmod, priority="0.60", img_url=post_cover)
+    sitemap_xml += f"  <!-- Blog Post Route: {p_id} (0.85/weekly — highest value content) -->\n"
+    sitemap_xml += make_cluster_url_entries(f"/community/blog/{p_id}", post_lastmod, priority="0.85", changefreq="weekly", img_url=post_cover)
 
 for vol in get_unique_objects('volunteering'):
     v_id = vol.get('id')
     if not v_id: continue
     vol_lastmod = parse_item_lastmod(vol.get('date'))
     vol_logo = vol.get('logo')
-    sitemap_xml += f"  <!-- Volunteering Route: {v_id} -->\n"
-    sitemap_xml += make_cluster_url_entries(f"/community/volunteering/{v_id}", vol_lastmod, priority="0.60", img_url=vol_logo)
+    sitemap_xml += f"  <!-- Volunteering Route: {v_id} (0.75/weekly) -->\n"
+    sitemap_xml += make_cluster_url_entries(f"/community/volunteering/{v_id}", vol_lastmod, priority="0.75", changefreq="weekly", img_url=vol_logo)
 
 for hack in get_unique_objects('hackathons'):
     h_id = hack.get('id')
     if not h_id: continue
     hack_lastmod = parse_item_lastmod(hack.get('date'))
     hack_logo = hack.get('logo') or hack.get('image')
-    sitemap_xml += f"  <!-- Hackathon Route: {h_id} -->\n"
-    sitemap_xml += make_cluster_url_entries(f"/community/hackathons/{h_id}", hack_lastmod, priority="0.60", img_url=hack_logo)
+    sitemap_xml += f"  <!-- Hackathon Route: {h_id} (0.75/weekly) -->\n"
+    sitemap_xml += make_cluster_url_entries(f"/community/hackathons/{h_id}", hack_lastmod, priority="0.75", changefreq="weekly", img_url=hack_logo)
 
 for ev in get_unique_objects('events'):
     e_id = ev.get('id')
@@ -1642,36 +1745,36 @@ for ev in get_unique_objects('events'):
         continue
     ev_lastmod = parse_item_lastmod(ev.get('date'))
     ev_logo = ev.get('logo') or ev.get('image')
-    sitemap_xml += f"  <!-- Event Route: {e_id} -->\n"
-    sitemap_xml += make_cluster_url_entries(f"/community/events/{e_id}", ev_lastmod, priority="0.60", img_url=ev_logo)
+    sitemap_xml += f"  <!-- Event Route: {e_id} (0.75/weekly) -->\n"
+    sitemap_xml += make_cluster_url_entries(f"/community/events/{e_id}", ev_lastmod, priority="0.75", changefreq="weekly", img_url=ev_logo)
 
 for ach in get_unique_objects('achievements'):
     a_id = ach.get('id')
     if not a_id: continue
     ach_lastmod = parse_item_lastmod(ach.get('date'))
     ach_logo = ach.get('logo') or ach.get('image')
-    sitemap_xml += f"  <!-- Achievement Route: {a_id} -->\n"
-    sitemap_xml += make_cluster_url_entries(f"/community/achievements/{a_id}", ach_lastmod, priority="0.60", img_url=ach_logo)
+    sitemap_xml += f"  <!-- Achievement Route: {a_id} (0.75/weekly) -->\n"
+    sitemap_xml += make_cluster_url_entries(f"/community/achievements/{a_id}", ach_lastmod, priority="0.75", changefreq="weekly", img_url=ach_logo)
 
-# Machine-Readable Data & OKF Endpoints (0.10)
-sitemap_xml += f"""  <!-- Machine-Readable Data & OKF Endpoints -->
+# Machine-Readable Data & OKF Endpoints (0.05/yearly — for LLMs/agents, not crawl-budget priority)
+sitemap_xml += f"""  <!-- Machine-Readable Data & OKF Endpoints (0.05/yearly) -->
   <url>
     <loc>{base_url}/okf/manifest.json</loc>
     <lastmod>{today_str}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.10</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.05</priority>
   </url>
   <url>
     <loc>{base_url}/api/portfolio-data.json</loc>
     <lastmod>{today_str}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.10</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.05</priority>
   </url>
   <url>
     <loc>{base_url}/llms.txt</loc>
     <lastmod>{today_str}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.10</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.05</priority>
   </url>
 </urlset>
 """

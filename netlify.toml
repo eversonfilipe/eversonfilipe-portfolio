@@ -70,6 +70,41 @@
     Access-Control-Allow-Origin = "*"
 
 # ── SPA Dynamic Router Redirects ─────────────────────────────────
+# Language-specific redirects MUST come before the catch-all /*
+# Each language gets its own index.html (unique noscript content per lang)
+# which eliminates the duplicate-content signal for PT and ES pages.
+
+[[redirects]]
+  from = "/pt"
+  to = "/pt/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/pt/*"
+  to = "/pt/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/en"
+  to = "/en/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/en/*"
+  to = "/en/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/es"
+  to = "/es/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/es/*"
+  to = "/es/index.html"
+  status = 200
+
+# Catch-all: root and any other routes fall back to the EN root index.html
 [[redirects]]
   from = "/*"
   to = "/index.html"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Sitemap - eversonfilipe-portfolio.netlify.app
-  Revisao: 2026-08-17
+  Revisao: 2026-08-19
 
   CONVENCOES APLICADAS
   1. Ordem canonica dentro de <url> (sitemaps.org XSD, xsd:sequence):
@@ -19,11 +19,11 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- Language Homes (1.00) -->
+  <!-- Language Homes (1.00 / monthly — stable entry points) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.00</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en"/>
@@ -36,8 +36,8 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.00</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en"/>
@@ -50,8 +50,8 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.00</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en"/>
@@ -64,12 +64,12 @@
   </url>
 
 
-  <!-- Main Section Routes (0.90) -->
+  <!-- Main Section Routes (0.80 / monthly — structural hubs, content loaded via JS) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/experience</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience"/>
@@ -77,9 +77,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/experience</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience"/>
@@ -87,9 +87,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/experience</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience"/>
@@ -98,9 +98,9 @@
 
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/education</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education"/>
@@ -108,9 +108,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/education</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education"/>
@@ -118,9 +118,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/education</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education"/>
@@ -129,9 +129,9 @@
 
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community"/>
@@ -139,9 +139,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community"/>
@@ -149,9 +149,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community"/>
@@ -159,12 +159,12 @@
   </url>
 
 
-  <!-- Utility Routes (0.30) -->
+  <!-- Utility Routes (0.10 / yearly — selector/filter UX routes, low crawl-budget value) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/experience/experiences-select</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.30</priority>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.10</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/experiences-select"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience/experiences-select"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience/experiences-select"/>
@@ -172,9 +172,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/experience/experiences-select</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.30</priority>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.10</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/experiences-select"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience/experiences-select"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience/experiences-select"/>
@@ -182,9 +182,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/experience/experiences-select</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.30</priority>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.10</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/experiences-select"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience/experiences-select"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience/experiences-select"/>
@@ -193,9 +193,9 @@
 
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/courses-select</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.30</priority>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.10</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses-select"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses-select"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses-select"/>
@@ -203,9 +203,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/education/courses-select</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.30</priority>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.10</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses-select"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses-select"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses-select"/>
@@ -213,9 +213,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/education/courses-select</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.30</priority>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.10</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses-select"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses-select"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses-select"/>
@@ -232,7 +232,7 @@
        houver ao menos 1 item em /projects.
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/projects</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.60</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/projects"/>
@@ -242,7 +242,7 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/projects</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.60</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/projects"/>
@@ -252,7 +252,7 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/projects</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.60</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/projects"/>
@@ -262,12 +262,12 @@
   </url>
        =================================================================== -->
 
-  <!-- Experience Hub: endorsements -->
+  <!-- Experience Hub: endorsements (0.70 / monthly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/experience/endorsements</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/endorsements"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience/endorsements"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience/endorsements"/>
@@ -275,9 +275,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/experience/endorsements</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/endorsements"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience/endorsements"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience/endorsements"/>
@@ -285,20 +285,20 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/experience/endorsements</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/endorsements"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience/endorsements"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience/endorsements"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/endorsements"/>
   </url>
-  <!-- Experience Route: kartado/kartado-systems-implementation-intern -->
+  <!-- Experience Route: kartado/kartado-systems-implementation-intern (0.80/weekly — real unique content) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/experience/kartado/kartado-systems-implementation-intern</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/kartado/kartado-systems-implementation-intern"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience/kartado/kartado-systems-implementation-intern"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience/kartado/kartado-systems-implementation-intern"/>
@@ -326,9 +326,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/experience/kartado/kartado-systems-implementation-intern</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/kartado/kartado-systems-implementation-intern"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience/kartado/kartado-systems-implementation-intern"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience/kartado/kartado-systems-implementation-intern"/>
@@ -356,9 +356,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/experience/kartado/kartado-systems-implementation-intern</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/kartado/kartado-systems-implementation-intern"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience/kartado/kartado-systems-implementation-intern"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience/kartado/kartado-systems-implementation-intern"/>
@@ -384,12 +384,12 @@
       <image:caption>Entrega de implementación del 1er semestre de 2026 (100% de puntualidad personal)</image:caption>
     </image:image>
   </url>
-  <!-- Experience Route: daus/daus-agile-product-management-learner -->
+  <!-- Experience Route: daus/daus-agile-product-management-learner (0.80/weekly — real unique content) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/experience/daus/daus-agile-product-management-learner</loc>
     <lastmod>2025-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/daus/daus-agile-product-management-learner"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience/daus/daus-agile-product-management-learner"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience/daus/daus-agile-product-management-learner"/>
@@ -406,8 +406,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/experience/daus/daus-agile-product-management-learner</loc>
     <lastmod>2025-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/daus/daus-agile-product-management-learner"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience/daus/daus-agile-product-management-learner"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience/daus/daus-agile-product-management-learner"/>
@@ -424,8 +424,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/experience/daus/daus-agile-product-management-learner</loc>
     <lastmod>2025-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/daus/daus-agile-product-management-learner"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience/daus/daus-agile-product-management-learner"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience/daus/daus-agile-product-management-learner"/>
@@ -439,12 +439,12 @@
       <image:caption>Captura de pantalla de la Landing Page de Daus, donde Éverson Filipe fue aprendiz de Product Manager/Agilista.</image:caption>
     </image:image>
   </url>
-  <!-- Experience Route: tt-t-solucoes-em-informatica/product-manager-intern-ttet -->
+  <!-- Experience Route: tt-t-solucoes-em-informatica/product-manager-intern-ttet (0.80/weekly — real unique content) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/experience/tt-t-solucoes-em-informatica/product-manager-intern-ttet</loc>
     <lastmod>2025-02-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/tt-t-solucoes-em-informatica/product-manager-intern-ttet"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience/tt-t-solucoes-em-informatica/product-manager-intern-ttet"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience/tt-t-solucoes-em-informatica/product-manager-intern-ttet"/>
@@ -457,8 +457,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/experience/tt-t-solucoes-em-informatica/product-manager-intern-ttet</loc>
     <lastmod>2025-02-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/tt-t-solucoes-em-informatica/product-manager-intern-ttet"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience/tt-t-solucoes-em-informatica/product-manager-intern-ttet"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience/tt-t-solucoes-em-informatica/product-manager-intern-ttet"/>
@@ -471,8 +471,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/experience/tt-t-solucoes-em-informatica/product-manager-intern-ttet</loc>
     <lastmod>2025-02-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/experience/tt-t-solucoes-em-informatica/product-manager-intern-ttet"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/experience/tt-t-solucoes-em-informatica/product-manager-intern-ttet"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/experience/tt-t-solucoes-em-informatica/product-manager-intern-ttet"/>
@@ -483,12 +483,12 @@
     </image:image>
   </url>
 
-  <!-- Education Hubs -->
+  <!-- Education Hubs (0.70 / monthly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/academic</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/academic"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/academic"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/academic"/>
@@ -496,9 +496,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/education/academic</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/academic"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/academic"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/academic"/>
@@ -506,9 +506,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/education/academic</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/academic"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/academic"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/academic"/>
@@ -516,9 +516,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/courses</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses"/>
@@ -526,9 +526,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/education/courses</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses"/>
@@ -536,9 +536,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/education/courses</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses"/>
@@ -546,9 +546,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/publications</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications"/>
@@ -556,9 +556,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/education/publications</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications"/>
@@ -566,20 +566,20 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/education/publications</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications"/>
   </url>
-  <!-- Academic Formation Route: inoveai-ufpe-innovation2025 -->
+  <!-- Academic Formation Route: inoveai-ufpe-innovation2025 (0.80/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/academic/inoveai-ufpe-innovation2025</loc>
     <lastmod>2025-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/academic/inoveai-ufpe-innovation2025"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/academic/inoveai-ufpe-innovation2025"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/academic/inoveai-ufpe-innovation2025"/>
@@ -591,8 +591,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/education/academic/inoveai-ufpe-innovation2025</loc>
     <lastmod>2025-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/academic/inoveai-ufpe-innovation2025"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/academic/inoveai-ufpe-innovation2025"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/academic/inoveai-ufpe-innovation2025"/>
@@ -604,8 +604,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/education/academic/inoveai-ufpe-innovation2025</loc>
     <lastmod>2025-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/academic/inoveai-ufpe-innovation2025"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/academic/inoveai-ufpe-innovation2025"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/academic/inoveai-ufpe-innovation2025"/>
@@ -614,12 +614,12 @@
       <image:loc>https://eversonfilipe-portfolio.netlify.app/assets/images/aigenerated_illustrative_image_facepesecti_x_ufpe_2025.webp</image:loc>
     </image:image>
   </url>
-  <!-- Academic Formation Route: mentoria-labai-institutojoule-ia2025 -->
+  <!-- Academic Formation Route: mentoria-labai-institutojoule-ia2025 (0.80/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/academic/mentoria-labai-institutojoule-ia2025</loc>
     <lastmod>2025-08-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/academic/mentoria-labai-institutojoule-ia2025"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/academic/mentoria-labai-institutojoule-ia2025"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/academic/mentoria-labai-institutojoule-ia2025"/>
@@ -632,8 +632,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/education/academic/mentoria-labai-institutojoule-ia2025</loc>
     <lastmod>2025-08-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/academic/mentoria-labai-institutojoule-ia2025"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/academic/mentoria-labai-institutojoule-ia2025"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/academic/mentoria-labai-institutojoule-ia2025"/>
@@ -646,8 +646,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/education/academic/mentoria-labai-institutojoule-ia2025</loc>
     <lastmod>2025-08-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/academic/mentoria-labai-institutojoule-ia2025"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/academic/mentoria-labai-institutojoule-ia2025"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/academic/mentoria-labai-institutojoule-ia2025"/>
@@ -657,12 +657,12 @@
       <image:caption>Logo del Instituto Joule — Programa Lab.AI de Mentoría en IA</image:caption>
     </image:image>
   </url>
-  <!-- Academic Formation Route: graduacao-ciencia-computacao-unifavipwyden -->
+  <!-- Academic Formation Route: graduacao-ciencia-computacao-unifavipwyden (0.80/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/academic/graduacao-ciencia-computacao-unifavipwyden</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/academic/graduacao-ciencia-computacao-unifavipwyden"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/academic/graduacao-ciencia-computacao-unifavipwyden"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/academic/graduacao-ciencia-computacao-unifavipwyden"/>
@@ -674,9 +674,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/education/academic/graduacao-ciencia-computacao-unifavipwyden</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/academic/graduacao-ciencia-computacao-unifavipwyden"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/academic/graduacao-ciencia-computacao-unifavipwyden"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/academic/graduacao-ciencia-computacao-unifavipwyden"/>
@@ -688,9 +688,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/education/academic/graduacao-ciencia-computacao-unifavipwyden</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/academic/graduacao-ciencia-computacao-unifavipwyden"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/academic/graduacao-ciencia-computacao-unifavipwyden"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/academic/graduacao-ciencia-computacao-unifavipwyden"/>
@@ -700,12 +700,12 @@
       <image:caption>Logo de UniFavip Wyden — Licenciatura en Ciencias de la Computación</image:caption>
     </image:image>
   </url>
-  <!-- Course Route: introduction-to-safe -->
+  <!-- Course Route: introduction-to-safe (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/courses/introduction-to-safe</loc>
     <lastmod>2026-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/introduction-to-safe"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/introduction-to-safe"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/introduction-to-safe"/>
@@ -718,8 +718,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/education/courses/introduction-to-safe</loc>
     <lastmod>2026-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/introduction-to-safe"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/introduction-to-safe"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/introduction-to-safe"/>
@@ -732,8 +732,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/education/courses/introduction-to-safe</loc>
     <lastmod>2026-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/introduction-to-safe"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/introduction-to-safe"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/introduction-to-safe"/>
@@ -743,12 +743,12 @@
       <image:caption>Logo de Simplilearn — Curso Introducción a SAFe</image:caption>
     </image:image>
   </url>
-  <!-- Course Route: curso-postman-zeroaoavancado -->
+  <!-- Course Route: curso-postman-zeroaoavancado (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-postman-zeroaoavancado</loc>
     <lastmod>2025-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-postman-zeroaoavancado"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-postman-zeroaoavancado"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-postman-zeroaoavancado"/>
@@ -761,8 +761,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-postman-zeroaoavancado</loc>
     <lastmod>2025-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-postman-zeroaoavancado"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-postman-zeroaoavancado"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-postman-zeroaoavancado"/>
@@ -775,8 +775,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-postman-zeroaoavancado</loc>
     <lastmod>2025-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-postman-zeroaoavancado"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-postman-zeroaoavancado"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-postman-zeroaoavancado"/>
@@ -786,12 +786,12 @@
       <image:caption>Logo de Udemy — Plataforma de cursos en línea</image:caption>
     </image:image>
   </url>
-  <!-- Course Route: curso-applicationprogramminginterfaces-api -->
+  <!-- Course Route: curso-applicationprogramminginterfaces-api (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-applicationprogramminginterfaces-api</loc>
     <lastmod>2025-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-applicationprogramminginterfaces-api"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-applicationprogramminginterfaces-api"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-applicationprogramminginterfaces-api"/>
@@ -804,8 +804,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-applicationprogramminginterfaces-api</loc>
     <lastmod>2025-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-applicationprogramminginterfaces-api"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-applicationprogramminginterfaces-api"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-applicationprogramminginterfaces-api"/>
@@ -818,8 +818,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-applicationprogramminginterfaces-api</loc>
     <lastmod>2025-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-applicationprogramminginterfaces-api"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-applicationprogramminginterfaces-api"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-applicationprogramminginterfaces-api"/>
@@ -829,12 +829,12 @@
       <image:caption>Logo de Udemy — Plataforma de cursos en línea</image:caption>
     </image:image>
   </url>
-  <!-- Course Route: curso-aspireleaders-2025 -->
+  <!-- Course Route: curso-aspireleaders-2025 (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-aspireleaders-2025</loc>
     <lastmod>2025-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-aspireleaders-2025"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-aspireleaders-2025"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-aspireleaders-2025"/>
@@ -847,8 +847,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-aspireleaders-2025</loc>
     <lastmod>2025-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-aspireleaders-2025"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-aspireleaders-2025"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-aspireleaders-2025"/>
@@ -861,8 +861,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-aspireleaders-2025</loc>
     <lastmod>2025-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-aspireleaders-2025"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-aspireleaders-2025"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-aspireleaders-2025"/>
@@ -872,12 +872,12 @@
       <image:caption>Logo del Aspire Institute — Programa Aspire Leaders 2025</image:caption>
     </image:image>
   </url>
-  <!-- Course Route: curso-labai-mentoria2025 -->
+  <!-- Course Route: curso-labai-mentoria2025 (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-labai-mentoria2025</loc>
     <lastmod>2025-09-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-labai-mentoria2025"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-labai-mentoria2025"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-labai-mentoria2025"/>
@@ -890,8 +890,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-labai-mentoria2025</loc>
     <lastmod>2025-09-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-labai-mentoria2025"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-labai-mentoria2025"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-labai-mentoria2025"/>
@@ -904,8 +904,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-labai-mentoria2025</loc>
     <lastmod>2025-09-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-labai-mentoria2025"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-labai-mentoria2025"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-labai-mentoria2025"/>
@@ -915,12 +915,12 @@
       <image:caption>Logo del Instituto Joule — Programa Lab.AI de Mentoría en IA</image:caption>
     </image:image>
   </url>
-  <!-- Course Route: curso-empreendedorismo-ignite -->
+  <!-- Course Route: curso-empreendedorismo-ignite (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-empreendedorismo-ignite</loc>
     <lastmod>2025-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-empreendedorismo-ignite"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-empreendedorismo-ignite"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-empreendedorismo-ignite"/>
@@ -933,8 +933,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-empreendedorismo-ignite</loc>
     <lastmod>2025-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-empreendedorismo-ignite"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-empreendedorismo-ignite"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-empreendedorismo-ignite"/>
@@ -947,8 +947,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-empreendedorismo-ignite</loc>
     <lastmod>2025-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-empreendedorismo-ignite"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-empreendedorismo-ignite"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-empreendedorismo-ignite"/>
@@ -958,12 +958,12 @@
       <image:caption>Logo de la Wadhwani Foundation — Programa de Emprendimiento Ignite</image:caption>
     </image:image>
   </url>
-  <!-- Course Route: curso-skillsbuild-customerengagement -->
+  <!-- Course Route: curso-skillsbuild-customerengagement (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-skillsbuild-customerengagement</loc>
     <lastmod>2025-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-skillsbuild-customerengagement"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-skillsbuild-customerengagement"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-skillsbuild-customerengagement"/>
@@ -976,8 +976,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-skillsbuild-customerengagement</loc>
     <lastmod>2025-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-skillsbuild-customerengagement"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-skillsbuild-customerengagement"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-skillsbuild-customerengagement"/>
@@ -990,8 +990,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-skillsbuild-customerengagement</loc>
     <lastmod>2025-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-skillsbuild-customerengagement"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-skillsbuild-customerengagement"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-skillsbuild-customerengagement"/>
@@ -1001,12 +1001,12 @@
       <image:caption>Logo de IBM — Curso SkillsBuild de Compromiso del Cliente</image:caption>
     </image:image>
   </url>
-  <!-- Course Route: curso-efset-2025 -->
+  <!-- Course Route: curso-efset-2025 (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-efset-2025</loc>
     <lastmod>2025-02-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-efset-2025"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-efset-2025"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-efset-2025"/>
@@ -1019,8 +1019,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-efset-2025</loc>
     <lastmod>2025-02-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-efset-2025"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-efset-2025"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-efset-2025"/>
@@ -1033,8 +1033,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-efset-2025</loc>
     <lastmod>2025-02-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-efset-2025"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-efset-2025"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-efset-2025"/>
@@ -1044,12 +1044,12 @@
       <image:caption>Logo de EF Education First — Certificado de Inglés EF SET C1 Avanzado</image:caption>
     </image:image>
   </url>
-  <!-- Course Route: curso-campusb-intercambio-2024 -->
+  <!-- Course Route: curso-campusb-intercambio-2024 (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-campusb-intercambio-2024</loc>
     <lastmod>2024-10-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-campusb-intercambio-2024"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-campusb-intercambio-2024"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-campusb-intercambio-2024"/>
@@ -1062,8 +1062,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-campusb-intercambio-2024</loc>
     <lastmod>2024-10-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-campusb-intercambio-2024"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-campusb-intercambio-2024"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-campusb-intercambio-2024"/>
@@ -1076,8 +1076,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-campusb-intercambio-2024</loc>
     <lastmod>2024-10-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-campusb-intercambio-2024"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-campusb-intercambio-2024"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-campusb-intercambio-2024"/>
@@ -1087,12 +1087,12 @@
       <image:caption>Logo de Campus B — Programa Comunicación Intercultural</image:caption>
     </image:image>
   </url>
-  <!-- Course Route: curso-competenciatransversal-2023 -->
+  <!-- Course Route: curso-competenciatransversal-2023 (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-competenciatransversal-2023</loc>
     <lastmod>2023-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-competenciatransversal-2023"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-competenciatransversal-2023"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-competenciatransversal-2023"/>
@@ -1105,8 +1105,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-competenciatransversal-2023</loc>
     <lastmod>2023-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-competenciatransversal-2023"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-competenciatransversal-2023"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-competenciatransversal-2023"/>
@@ -1119,8 +1119,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-competenciatransversal-2023</loc>
     <lastmod>2023-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/courses/curso-competenciatransversal-2023"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/courses/curso-competenciatransversal-2023"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/courses/curso-competenciatransversal-2023"/>
@@ -1130,12 +1130,12 @@
       <image:caption>Logo del SENAI — Curso Competencia Transversal en TIC</image:caption>
     </image:image>
   </url>
-  <!-- Publication Route: pub-some-trends-doesnt-stay-trend-2024 -->
+  <!-- Publication Route: pub-some-trends-doesnt-stay-trend-2024 (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-some-trends-doesnt-stay-trend-2024</loc>
     <lastmod>2024-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-some-trends-doesnt-stay-trend-2024"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-some-trends-doesnt-stay-trend-2024"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-some-trends-doesnt-stay-trend-2024"/>
@@ -1144,8 +1144,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-some-trends-doesnt-stay-trend-2024</loc>
     <lastmod>2024-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-some-trends-doesnt-stay-trend-2024"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-some-trends-doesnt-stay-trend-2024"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-some-trends-doesnt-stay-trend-2024"/>
@@ -1154,19 +1154,19 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-some-trends-doesnt-stay-trend-2024</loc>
     <lastmod>2024-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-some-trends-doesnt-stay-trend-2024"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-some-trends-doesnt-stay-trend-2024"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-some-trends-doesnt-stay-trend-2024"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-some-trends-doesnt-stay-trend-2024"/>
   </url>
-  <!-- Publication Route: pub-fishes-and-cars -->
+  <!-- Publication Route: pub-fishes-and-cars (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-fishes-and-cars</loc>
     <lastmod>2024-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-fishes-and-cars"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-fishes-and-cars"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-fishes-and-cars"/>
@@ -1175,8 +1175,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-fishes-and-cars</loc>
     <lastmod>2024-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-fishes-and-cars"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-fishes-and-cars"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-fishes-and-cars"/>
@@ -1185,19 +1185,19 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-fishes-and-cars</loc>
     <lastmod>2024-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-fishes-and-cars"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-fishes-and-cars"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-fishes-and-cars"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-fishes-and-cars"/>
   </url>
-  <!-- Publication Route: pub-using-ai-for-cx -->
+  <!-- Publication Route: pub-using-ai-for-cx (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-using-ai-for-cx</loc>
     <lastmod>2024-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-using-ai-for-cx"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-using-ai-for-cx"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-using-ai-for-cx"/>
@@ -1206,8 +1206,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-using-ai-for-cx</loc>
     <lastmod>2024-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-using-ai-for-cx"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-using-ai-for-cx"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-using-ai-for-cx"/>
@@ -1216,19 +1216,19 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-using-ai-for-cx</loc>
     <lastmod>2024-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-using-ai-for-cx"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-using-ai-for-cx"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-using-ai-for-cx"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-using-ai-for-cx"/>
   </url>
-  <!-- Publication Route: pub-creative-economy-northeast-brazil -->
+  <!-- Publication Route: pub-creative-economy-northeast-brazil (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-creative-economy-northeast-brazil</loc>
     <lastmod>2024-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-creative-economy-northeast-brazil"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-creative-economy-northeast-brazil"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-creative-economy-northeast-brazil"/>
@@ -1237,8 +1237,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-creative-economy-northeast-brazil</loc>
     <lastmod>2024-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-creative-economy-northeast-brazil"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-creative-economy-northeast-brazil"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-creative-economy-northeast-brazil"/>
@@ -1247,19 +1247,19 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-creative-economy-northeast-brazil</loc>
     <lastmod>2024-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-creative-economy-northeast-brazil"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-creative-economy-northeast-brazil"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-creative-economy-northeast-brazil"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-creative-economy-northeast-brazil"/>
   </url>
-  <!-- Publication Route: pub-alive-architecture-future-esg -->
+  <!-- Publication Route: pub-alive-architecture-future-esg (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-alive-architecture-future-esg</loc>
     <lastmod>2024-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-alive-architecture-future-esg"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-alive-architecture-future-esg"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-alive-architecture-future-esg"/>
@@ -1268,8 +1268,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-alive-architecture-future-esg</loc>
     <lastmod>2024-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-alive-architecture-future-esg"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-alive-architecture-future-esg"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-alive-architecture-future-esg"/>
@@ -1278,19 +1278,19 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-alive-architecture-future-esg</loc>
     <lastmod>2024-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-alive-architecture-future-esg"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-alive-architecture-future-esg"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-alive-architecture-future-esg"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-alive-architecture-future-esg"/>
   </url>
-  <!-- Publication Route: pub-design-thinking-medium -->
+  <!-- Publication Route: pub-design-thinking-medium (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-design-thinking-medium</loc>
     <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-design-thinking-medium"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-design-thinking-medium"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-design-thinking-medium"/>
@@ -1299,8 +1299,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-design-thinking-medium</loc>
     <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-design-thinking-medium"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-design-thinking-medium"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-design-thinking-medium"/>
@@ -1309,19 +1309,19 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-design-thinking-medium</loc>
     <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-design-thinking-medium"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-design-thinking-medium"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-design-thinking-medium"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-design-thinking-medium"/>
   </url>
-  <!-- Publication Route: pub-from-problem-to-product -->
+  <!-- Publication Route: pub-from-problem-to-product (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-from-problem-to-product</loc>
     <lastmod>2025-02-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-from-problem-to-product"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-from-problem-to-product"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-from-problem-to-product"/>
@@ -1330,8 +1330,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-from-problem-to-product</loc>
     <lastmod>2025-02-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-from-problem-to-product"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-from-problem-to-product"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-from-problem-to-product"/>
@@ -1340,19 +1340,19 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-from-problem-to-product</loc>
     <lastmod>2025-02-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-from-problem-to-product"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-from-problem-to-product"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-from-problem-to-product"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-from-problem-to-product"/>
   </url>
-  <!-- Publication Route: pub-too-much-ui-can-break-ux -->
+  <!-- Publication Route: pub-too-much-ui-can-break-ux (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-too-much-ui-can-break-ux</loc>
     <lastmod>2025-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-too-much-ui-can-break-ux"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-too-much-ui-can-break-ux"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-too-much-ui-can-break-ux"/>
@@ -1361,8 +1361,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-too-much-ui-can-break-ux</loc>
     <lastmod>2025-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-too-much-ui-can-break-ux"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-too-much-ui-can-break-ux"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-too-much-ui-can-break-ux"/>
@@ -1371,19 +1371,19 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-too-much-ui-can-break-ux</loc>
     <lastmod>2025-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-too-much-ui-can-break-ux"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-too-much-ui-can-break-ux"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-too-much-ui-can-break-ux"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-too-much-ui-can-break-ux"/>
   </url>
-  <!-- Publication Route: pub-communication-and-its-paradigms -->
+  <!-- Publication Route: pub-communication-and-its-paradigms (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-communication-and-its-paradigms</loc>
     <lastmod>2025-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-communication-and-its-paradigms"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-communication-and-its-paradigms"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-communication-and-its-paradigms"/>
@@ -1392,8 +1392,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-communication-and-its-paradigms</loc>
     <lastmod>2025-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-communication-and-its-paradigms"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-communication-and-its-paradigms"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-communication-and-its-paradigms"/>
@@ -1402,19 +1402,19 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-communication-and-its-paradigms</loc>
     <lastmod>2025-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-communication-and-its-paradigms"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-communication-and-its-paradigms"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-communication-and-its-paradigms"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-communication-and-its-paradigms"/>
   </url>
-  <!-- Publication Route: pub-from-chaos-to-clarity -->
+  <!-- Publication Route: pub-from-chaos-to-clarity (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-from-chaos-to-clarity</loc>
     <lastmod>2025-10-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-from-chaos-to-clarity"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-from-chaos-to-clarity"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-from-chaos-to-clarity"/>
@@ -1423,8 +1423,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-from-chaos-to-clarity</loc>
     <lastmod>2025-10-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-from-chaos-to-clarity"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-from-chaos-to-clarity"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-from-chaos-to-clarity"/>
@@ -1433,19 +1433,19 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-from-chaos-to-clarity</loc>
     <lastmod>2025-10-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-from-chaos-to-clarity"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-from-chaos-to-clarity"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-from-chaos-to-clarity"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-from-chaos-to-clarity"/>
   </url>
-  <!-- Publication Route: pub-the-fallacy-of-plural-mvp -->
+  <!-- Publication Route: pub-the-fallacy-of-plural-mvp (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-the-fallacy-of-plural-mvp</loc>
     <lastmod>2025-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-the-fallacy-of-plural-mvp"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-the-fallacy-of-plural-mvp"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-the-fallacy-of-plural-mvp"/>
@@ -1454,8 +1454,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-the-fallacy-of-plural-mvp</loc>
     <lastmod>2025-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-the-fallacy-of-plural-mvp"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-the-fallacy-of-plural-mvp"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-the-fallacy-of-plural-mvp"/>
@@ -1464,19 +1464,19 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-the-fallacy-of-plural-mvp</loc>
     <lastmod>2025-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-the-fallacy-of-plural-mvp"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-the-fallacy-of-plural-mvp"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-the-fallacy-of-plural-mvp"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-the-fallacy-of-plural-mvp"/>
   </url>
-  <!-- Publication Route: pub-gestao-agil-simplificada -->
+  <!-- Publication Route: pub-gestao-agil-simplificada (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-gestao-agil-simplificada</loc>
     <lastmod>2024-10-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-gestao-agil-simplificada"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-gestao-agil-simplificada"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-gestao-agil-simplificada"/>
@@ -1485,8 +1485,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-gestao-agil-simplificada</loc>
     <lastmod>2024-10-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-gestao-agil-simplificada"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-gestao-agil-simplificada"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-gestao-agil-simplificada"/>
@@ -1495,20 +1495,20 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-gestao-agil-simplificada</loc>
     <lastmod>2024-10-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-gestao-agil-simplificada"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/education/publications/pub-gestao-agil-simplificada"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/education/publications/pub-gestao-agil-simplificada"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/education/publications/pub-gestao-agil-simplificada"/>
   </url>
 
-  <!-- Community Hubs -->
+  <!-- Community Hubs (0.70 / monthly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/volunteering"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/volunteering"/>
@@ -1516,9 +1516,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community/volunteering</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/volunteering"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/volunteering"/>
@@ -1526,9 +1526,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community/volunteering</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/volunteering"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/volunteering"/>
@@ -1536,9 +1536,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons"/>
@@ -1546,9 +1546,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community/hackathons</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons"/>
@@ -1556,9 +1556,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community/hackathons</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons"/>
@@ -1566,9 +1566,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/events</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events"/>
@@ -1576,9 +1576,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community/events</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events"/>
@@ -1586,9 +1586,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community/events</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events"/>
@@ -1596,9 +1596,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/achievements</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/achievements"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/achievements"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/achievements"/>
@@ -1606,9 +1606,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community/achievements</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/achievements"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/achievements"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/achievements"/>
@@ -1616,9 +1616,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community/achievements</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/achievements"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/achievements"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/achievements"/>
@@ -1626,9 +1626,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/blog</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/blog"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/blog"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/blog"/>
@@ -1636,9 +1636,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community/blog</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/blog"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/blog"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/blog"/>
@@ -1646,20 +1646,20 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community/blog</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/blog"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/blog"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/blog"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/blog"/>
   </url>
-  <!-- Blog Post Route: post-implementation-engineering-vs-software-engineering -->
+  <!-- Blog Post Route: post-implementation-engineering-vs-software-engineering (0.85/weekly — highest value content) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/blog/post-implementation-engineering-vs-software-engineering</loc>
     <lastmod>2026-07-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/blog/post-implementation-engineering-vs-software-engineering"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/blog/post-implementation-engineering-vs-software-engineering"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/blog/post-implementation-engineering-vs-software-engineering"/>
@@ -1668,8 +1668,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community/blog/post-implementation-engineering-vs-software-engineering</loc>
     <lastmod>2026-07-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/blog/post-implementation-engineering-vs-software-engineering"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/blog/post-implementation-engineering-vs-software-engineering"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/blog/post-implementation-engineering-vs-software-engineering"/>
@@ -1678,19 +1678,19 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community/blog/post-implementation-engineering-vs-software-engineering</loc>
     <lastmod>2026-07-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/blog/post-implementation-engineering-vs-software-engineering"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/blog/post-implementation-engineering-vs-software-engineering"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/blog/post-implementation-engineering-vs-software-engineering"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/blog/post-implementation-engineering-vs-software-engineering"/>
   </url>
-  <!-- Volunteering Route: co-organizer-gdgbarueri -->
+  <!-- Volunteering Route: co-organizer-gdgbarueri (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/co-organizer-gdgbarueri</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/co-organizer-gdgbarueri"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/co-organizer-gdgbarueri"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/co-organizer-gdgbarueri"/>
@@ -1702,9 +1702,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/co-organizer-gdgbarueri</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/co-organizer-gdgbarueri"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/co-organizer-gdgbarueri"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/co-organizer-gdgbarueri"/>
@@ -1716,9 +1716,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/co-organizer-gdgbarueri</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/co-organizer-gdgbarueri"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/co-organizer-gdgbarueri"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/co-organizer-gdgbarueri"/>
@@ -1728,12 +1728,12 @@
       <image:caption>Logo del Google Developers Group (GDG) Barueri — Tecnología, IA e Innovación</image:caption>
     </image:image>
   </url>
-  <!-- Volunteering Route: ambassador-facilitator-politize -->
+  <!-- Volunteering Route: ambassador-facilitator-politize (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/ambassador-facilitator-politize</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/ambassador-facilitator-politize"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/ambassador-facilitator-politize"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/ambassador-facilitator-politize"/>
@@ -1745,9 +1745,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/ambassador-facilitator-politize</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/ambassador-facilitator-politize"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/ambassador-facilitator-politize"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/ambassador-facilitator-politize"/>
@@ -1759,9 +1759,9 @@
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/ambassador-facilitator-politize</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/ambassador-facilitator-politize"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/ambassador-facilitator-politize"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/ambassador-facilitator-politize"/>
@@ -1771,12 +1771,12 @@
       <image:caption>Logo de Politize! — Educación política y ciudadanía</image:caption>
     </image:image>
   </url>
-  <!-- Volunteering Route: aiesecmackenzie-volunteer -->
+  <!-- Volunteering Route: aiesecmackenzie-volunteer (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/aiesecmackenzie-volunteer</loc>
     <lastmod>2025-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/aiesecmackenzie-volunteer"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/aiesecmackenzie-volunteer"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/aiesecmackenzie-volunteer"/>
@@ -1789,8 +1789,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/aiesecmackenzie-volunteer</loc>
     <lastmod>2025-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/aiesecmackenzie-volunteer"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/aiesecmackenzie-volunteer"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/aiesecmackenzie-volunteer"/>
@@ -1803,8 +1803,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/aiesecmackenzie-volunteer</loc>
     <lastmod>2025-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/aiesecmackenzie-volunteer"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/aiesecmackenzie-volunteer"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/aiesecmackenzie-volunteer"/>
@@ -1814,12 +1814,12 @@
       <image:caption>Logo de AIESEC en Mackenzie — OGT y Marketing</image:caption>
     </image:image>
   </url>
-  <!-- Volunteering Route: vainaweb-volunteering -->
+  <!-- Volunteering Route: vainaweb-volunteering (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/vainaweb-volunteering</loc>
     <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/vainaweb-volunteering"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/vainaweb-volunteering"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/vainaweb-volunteering"/>
@@ -1832,8 +1832,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/vainaweb-volunteering</loc>
     <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/vainaweb-volunteering"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/vainaweb-volunteering"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/vainaweb-volunteering"/>
@@ -1846,8 +1846,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/vainaweb-volunteering</loc>
     <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/volunteering/vainaweb-volunteering"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/volunteering/vainaweb-volunteering"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/volunteering/vainaweb-volunteering"/>
@@ -1857,12 +1857,12 @@
       <image:caption>Logo de Vai Na Web — Instructor de Soft Skills</image:caption>
     </image:image>
   </url>
-  <!-- Hackathon Route: hackathon-havk-hacking-the-desert -->
+  <!-- Hackathon Route: hackathon-havk-hacking-the-desert (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-havk-hacking-the-desert</loc>
     <lastmod>2025-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-havk-hacking-the-desert"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-havk-hacking-the-desert"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-havk-hacking-the-desert"/>
@@ -1871,8 +1871,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-havk-hacking-the-desert</loc>
     <lastmod>2025-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-havk-hacking-the-desert"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-havk-hacking-the-desert"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-havk-hacking-the-desert"/>
@@ -1881,19 +1881,19 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-havk-hacking-the-desert</loc>
     <lastmod>2025-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-havk-hacking-the-desert"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-havk-hacking-the-desert"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-havk-hacking-the-desert"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-havk-hacking-the-desert"/>
   </url>
-  <!-- Hackathon Route: vox-astra-hackathon -->
+  <!-- Hackathon Route: vox-astra-hackathon (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/vox-astra-hackathon</loc>
     <lastmod>2025-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/vox-astra-hackathon"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/vox-astra-hackathon"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/vox-astra-hackathon"/>
@@ -1902,8 +1902,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/vox-astra-hackathon</loc>
     <lastmod>2025-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/vox-astra-hackathon"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/vox-astra-hackathon"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/vox-astra-hackathon"/>
@@ -1912,19 +1912,19 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/vox-astra-hackathon</loc>
     <lastmod>2025-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/vox-astra-hackathon"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/vox-astra-hackathon"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/vox-astra-hackathon"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/vox-astra-hackathon"/>
   </url>
-  <!-- Hackathon Route: 2025-hackatopia-hackathon -->
+  <!-- Hackathon Route: 2025-hackatopia-hackathon (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/2025-hackatopia-hackathon</loc>
     <lastmod>2025-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/2025-hackatopia-hackathon"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/2025-hackatopia-hackathon"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/2025-hackatopia-hackathon"/>
@@ -1933,8 +1933,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/2025-hackatopia-hackathon</loc>
     <lastmod>2025-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/2025-hackatopia-hackathon"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/2025-hackatopia-hackathon"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/2025-hackatopia-hackathon"/>
@@ -1943,19 +1943,19 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/2025-hackatopia-hackathon</loc>
     <lastmod>2025-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/2025-hackatopia-hackathon"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/2025-hackatopia-hackathon"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/2025-hackatopia-hackathon"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/2025-hackatopia-hackathon"/>
   </url>
-  <!-- Hackathon Route: hackathon-fenearte -->
+  <!-- Hackathon Route: hackathon-fenearte (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-fenearte</loc>
     <lastmod>2025-02-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-fenearte"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-fenearte"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-fenearte"/>
@@ -1964,8 +1964,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-fenearte</loc>
     <lastmod>2025-02-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-fenearte"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-fenearte"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-fenearte"/>
@@ -1974,19 +1974,19 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-fenearte</loc>
     <lastmod>2025-02-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-fenearte"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-fenearte"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-fenearte"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-fenearte"/>
   </url>
-  <!-- Hackathon Route: ideathon-ac -->
+  <!-- Hackathon Route: ideathon-ac (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/ideathon-ac</loc>
     <lastmod>2025-02-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/ideathon-ac"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/ideathon-ac"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/ideathon-ac"/>
@@ -1995,8 +1995,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/ideathon-ac</loc>
     <lastmod>2025-02-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/ideathon-ac"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/ideathon-ac"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/ideathon-ac"/>
@@ -2005,19 +2005,19 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/ideathon-ac</loc>
     <lastmod>2025-02-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/ideathon-ac"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/ideathon-ac"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/ideathon-ac"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/ideathon-ac"/>
   </url>
-  <!-- Hackathon Route: hackathon-impulso-regional -->
+  <!-- Hackathon Route: hackathon-impulso-regional (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-impulso-regional</loc>
     <lastmod>2024-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-impulso-regional"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-impulso-regional"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-impulso-regional"/>
@@ -2026,8 +2026,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-impulso-regional</loc>
     <lastmod>2024-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-impulso-regional"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-impulso-regional"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-impulso-regional"/>
@@ -2036,19 +2036,19 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-impulso-regional</loc>
     <lastmod>2024-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-impulso-regional"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-impulso-regional"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-impulso-regional"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-impulso-regional"/>
   </url>
-  <!-- Hackathon Route: hackathon-luminahub -->
+  <!-- Hackathon Route: hackathon-luminahub (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-luminahub</loc>
     <lastmod>2024-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-luminahub"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-luminahub"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-luminahub"/>
@@ -2057,8 +2057,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-luminahub</loc>
     <lastmod>2024-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-luminahub"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-luminahub"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-luminahub"/>
@@ -2067,19 +2067,19 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-luminahub</loc>
     <lastmod>2024-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-luminahub"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-luminahub"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-luminahub"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-luminahub"/>
   </url>
-  <!-- Hackathon Route: hackathon-dataflow -->
+  <!-- Hackathon Route: hackathon-dataflow (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-dataflow</loc>
     <lastmod>2024-08-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-dataflow"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-dataflow"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-dataflow"/>
@@ -2088,8 +2088,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-dataflow</loc>
     <lastmod>2024-08-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-dataflow"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-dataflow"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-dataflow"/>
@@ -2098,19 +2098,19 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-dataflow</loc>
     <lastmod>2024-08-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-dataflow"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/hackathon-dataflow"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/hackathon-dataflow"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/hackathon-dataflow"/>
   </url>
-  <!-- Hackathon Route: ideathon-caruaru-campusparty-day -->
+  <!-- Hackathon Route: ideathon-caruaru-campusparty-day (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/ideathon-caruaru-campusparty-day</loc>
     <lastmod>2024-08-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/ideathon-caruaru-campusparty-day"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/ideathon-caruaru-campusparty-day"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/ideathon-caruaru-campusparty-day"/>
@@ -2119,8 +2119,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/ideathon-caruaru-campusparty-day</loc>
     <lastmod>2024-08-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/ideathon-caruaru-campusparty-day"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/ideathon-caruaru-campusparty-day"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/ideathon-caruaru-campusparty-day"/>
@@ -2129,19 +2129,19 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/ideathon-caruaru-campusparty-day</loc>
     <lastmod>2024-08-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/ideathon-caruaru-campusparty-day"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/ideathon-caruaru-campusparty-day"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/ideathon-caruaru-campusparty-day"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/ideathon-caruaru-campusparty-day"/>
   </url>
-  <!-- Hackathon Route: olimpiadas-jovens-impacto -->
+  <!-- Hackathon Route: olimpiadas-jovens-impacto (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/olimpiadas-jovens-impacto</loc>
     <lastmod>2021-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/olimpiadas-jovens-impacto"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/olimpiadas-jovens-impacto"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/olimpiadas-jovens-impacto"/>
@@ -2150,8 +2150,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/olimpiadas-jovens-impacto</loc>
     <lastmod>2021-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/olimpiadas-jovens-impacto"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/olimpiadas-jovens-impacto"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/olimpiadas-jovens-impacto"/>
@@ -2160,19 +2160,19 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/olimpiadas-jovens-impacto</loc>
     <lastmod>2021-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/olimpiadas-jovens-impacto"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/hackathons/olimpiadas-jovens-impacto"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/hackathons/olimpiadas-jovens-impacto"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eversonfilipe-portfolio.netlify.app/pt/community/hackathons/olimpiadas-jovens-impacto"/>
   </url>
-  <!-- Event Route: flisol-palmares-2026 -->
+  <!-- Event Route: flisol-palmares-2026 (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/events/flisol-palmares-2026</loc>
     <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/flisol-palmares-2026"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/flisol-palmares-2026"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/flisol-palmares-2026"/>
@@ -2185,8 +2185,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community/events/flisol-palmares-2026</loc>
     <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/flisol-palmares-2026"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/flisol-palmares-2026"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/flisol-palmares-2026"/>
@@ -2199,8 +2199,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community/events/flisol-palmares-2026</loc>
     <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/flisol-palmares-2026"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/flisol-palmares-2026"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/flisol-palmares-2026"/>
@@ -2210,12 +2210,12 @@
       <image:caption>Logo del FLISoL 2026 — Ponente en IFPE Palmares</image:caption>
     </image:image>
   </url>
-  <!-- Event Route: expotech-2025-2 -->
+  <!-- Event Route: expotech-2025-2 (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2025-2</loc>
     <lastmod>2025-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2025-2"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/expotech-2025-2"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/expotech-2025-2"/>
@@ -2228,8 +2228,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community/events/expotech-2025-2</loc>
     <lastmod>2025-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2025-2"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/expotech-2025-2"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/expotech-2025-2"/>
@@ -2242,8 +2242,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community/events/expotech-2025-2</loc>
     <lastmod>2025-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2025-2"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/expotech-2025-2"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/expotech-2025-2"/>
@@ -2253,12 +2253,12 @@
       <image:caption>Logo de UniFavip Wyden — Licenciatura en Ciencias de la Computación</image:caption>
     </image:image>
   </url>
-  <!-- Event Route: festival-agile-trends-2025 -->
+  <!-- Event Route: festival-agile-trends-2025 (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/events/festival-agile-trends-2025</loc>
     <lastmod>2025-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/festival-agile-trends-2025"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/festival-agile-trends-2025"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/festival-agile-trends-2025"/>
@@ -2271,8 +2271,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community/events/festival-agile-trends-2025</loc>
     <lastmod>2025-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/festival-agile-trends-2025"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/festival-agile-trends-2025"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/festival-agile-trends-2025"/>
@@ -2285,8 +2285,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community/events/festival-agile-trends-2025</loc>
     <lastmod>2025-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/festival-agile-trends-2025"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/festival-agile-trends-2025"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/festival-agile-trends-2025"/>
@@ -2296,12 +2296,12 @@
       <image:caption>Logo del Festival Agile Trends 2025</image:caption>
     </image:image>
   </url>
-  <!-- Event Route: expotech-2025-1 -->
+  <!-- Event Route: expotech-2025-1 (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2025-1</loc>
     <lastmod>2025-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2025-1"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/expotech-2025-1"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/expotech-2025-1"/>
@@ -2314,8 +2314,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community/events/expotech-2025-1</loc>
     <lastmod>2025-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2025-1"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/expotech-2025-1"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/expotech-2025-1"/>
@@ -2328,8 +2328,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community/events/expotech-2025-1</loc>
     <lastmod>2025-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2025-1"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/expotech-2025-1"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/expotech-2025-1"/>
@@ -2339,12 +2339,12 @@
       <image:caption>Logo de UniFavip Wyden — Licenciatura en Ciencias de la Computación</image:caption>
     </image:image>
   </url>
-  <!-- Event Route: brics-youth-2025 -->
+  <!-- Event Route: brics-youth-2025 (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/events/brics-youth-2025</loc>
     <lastmod>2025-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/brics-youth-2025"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/brics-youth-2025"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/brics-youth-2025"/>
@@ -2357,8 +2357,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community/events/brics-youth-2025</loc>
     <lastmod>2025-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/brics-youth-2025"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/brics-youth-2025"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/brics-youth-2025"/>
@@ -2371,8 +2371,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community/events/brics-youth-2025</loc>
     <lastmod>2025-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/brics-youth-2025"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/brics-youth-2025"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/brics-youth-2025"/>
@@ -2382,12 +2382,12 @@
       <image:caption>Logo de la Alianza Juvenil BRICS 2025</image:caption>
     </image:image>
   </url>
-  <!-- Event Route: as-tendencias-para-novasgeracoes-2025-1 -->
+  <!-- Event Route: as-tendencias-para-novasgeracoes-2025-1 (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/events/as-tendencias-para-novasgeracoes-2025-1</loc>
     <lastmod>2025-02-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/as-tendencias-para-novasgeracoes-2025-1"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/as-tendencias-para-novasgeracoes-2025-1"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/as-tendencias-para-novasgeracoes-2025-1"/>
@@ -2400,8 +2400,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community/events/as-tendencias-para-novasgeracoes-2025-1</loc>
     <lastmod>2025-02-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/as-tendencias-para-novasgeracoes-2025-1"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/as-tendencias-para-novasgeracoes-2025-1"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/as-tendencias-para-novasgeracoes-2025-1"/>
@@ -2414,8 +2414,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community/events/as-tendencias-para-novasgeracoes-2025-1</loc>
     <lastmod>2025-02-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/as-tendencias-para-novasgeracoes-2025-1"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/as-tendencias-para-novasgeracoes-2025-1"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/as-tendencias-para-novasgeracoes-2025-1"/>
@@ -2425,12 +2425,12 @@
       <image:caption>Logo de Recife Front-End Community — Ponente sobre tendencias para nuevas generaciones</image:caption>
     </image:image>
   </url>
-  <!-- Event Route: expotech-2024-2 -->
+  <!-- Event Route: expotech-2024-2 (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2024-2</loc>
     <lastmod>2024-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2024-2"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/expotech-2024-2"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/expotech-2024-2"/>
@@ -2443,8 +2443,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community/events/expotech-2024-2</loc>
     <lastmod>2024-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2024-2"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/expotech-2024-2"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/expotech-2024-2"/>
@@ -2457,8 +2457,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community/events/expotech-2024-2</loc>
     <lastmod>2024-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/expotech-2024-2"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/expotech-2024-2"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/expotech-2024-2"/>
@@ -2468,12 +2468,12 @@
       <image:caption>Logo de UniFavip Wyden — Licenciatura en Ciencias de la Computación</image:caption>
     </image:image>
   </url>
-  <!-- Event Route: campus-party-nordeste-2024 -->
+  <!-- Event Route: campus-party-nordeste-2024 (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/events/campus-party-nordeste-2024</loc>
     <lastmod>2024-09-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/campus-party-nordeste-2024"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/campus-party-nordeste-2024"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/campus-party-nordeste-2024"/>
@@ -2486,8 +2486,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community/events/campus-party-nordeste-2024</loc>
     <lastmod>2024-09-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/campus-party-nordeste-2024"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/campus-party-nordeste-2024"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/campus-party-nordeste-2024"/>
@@ -2500,8 +2500,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community/events/campus-party-nordeste-2024</loc>
     <lastmod>2024-09-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/events/campus-party-nordeste-2024"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/events/campus-party-nordeste-2024"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/events/campus-party-nordeste-2024"/>
@@ -2511,12 +2511,12 @@
       <image:caption>Logo de Campus Party — Evento de tecnología</image:caption>
     </image:image>
   </url>
-  <!-- Achievement Route: award-kartado-agility-2026 -->
+  <!-- Achievement Route: award-kartado-agility-2026 (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/achievements/award-kartado-agility-2026</loc>
     <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/achievements/award-kartado-agility-2026"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/achievements/award-kartado-agility-2026"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/achievements/award-kartado-agility-2026"/>
@@ -2529,8 +2529,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community/achievements/award-kartado-agility-2026</loc>
     <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/achievements/award-kartado-agility-2026"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/achievements/award-kartado-agility-2026"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/achievements/award-kartado-agility-2026"/>
@@ -2543,8 +2543,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community/achievements/award-kartado-agility-2026</loc>
     <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/achievements/award-kartado-agility-2026"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/achievements/award-kartado-agility-2026"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/achievements/award-kartado-agility-2026"/>
@@ -2554,12 +2554,12 @@
       <image:caption>Logo de Kartado — Empresa B2B SaaS de concesiones viales</image:caption>
     </image:image>
   </url>
-  <!-- Achievement Route: accepted-mentee-alp-2025-2 -->
+  <!-- Achievement Route: accepted-mentee-alp-2025-2 (0.75/weekly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/pt/community/achievements/accepted-mentee-alp-2025-2</loc>
     <lastmod>2025-10-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/achievements/accepted-mentee-alp-2025-2"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/achievements/accepted-mentee-alp-2025-2"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/achievements/accepted-mentee-alp-2025-2"/>
@@ -2572,8 +2572,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/en/community/achievements/accepted-mentee-alp-2025-2</loc>
     <lastmod>2025-10-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/achievements/accepted-mentee-alp-2025-2"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/achievements/accepted-mentee-alp-2025-2"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/achievements/accepted-mentee-alp-2025-2"/>
@@ -2586,8 +2586,8 @@
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/es/community/achievements/accepted-mentee-alp-2025-2</loc>
     <lastmod>2025-10-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://eversonfilipe-portfolio.netlify.app/pt/community/achievements/accepted-mentee-alp-2025-2"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eversonfilipe-portfolio.netlify.app/en/community/achievements/accepted-mentee-alp-2025-2"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://eversonfilipe-portfolio.netlify.app/es/community/achievements/accepted-mentee-alp-2025-2"/>
@@ -2597,23 +2597,23 @@
       <image:caption>Logo del Aspire Institute — Programa Aspire Leaders 2025</image:caption>
     </image:image>
   </url>
-  <!-- Machine-Readable Data & OKF Endpoints -->
+  <!-- Machine-Readable Data & OKF Endpoints (0.05/yearly) -->
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/okf/manifest.json</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.10</priority>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.05</priority>
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/api/portfolio-data.json</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.10</priority>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.05</priority>
   </url>
   <url>
     <loc>https://eversonfilipe-portfolio.netlify.app/llms.txt</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.10</priority>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.05</priority>
   </url>
 </urlset>
