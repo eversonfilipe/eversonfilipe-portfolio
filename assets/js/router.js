@@ -647,6 +647,10 @@
    * Initializes router on DOM load
    */
   function init() {
+    const staticContent = document.getElementById('static-route-content');
+    if (staticContent) {
+      staticContent.remove();
+    }
     setupEventListeners();
     const initialRoute = parseRoute();
     applyRouteToUI(initialRoute, { isInitial: true });

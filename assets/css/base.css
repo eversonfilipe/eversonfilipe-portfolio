@@ -164,3 +164,8 @@ button {
 .reveal-delay-2 { transition-delay: 200ms; }
 .reveal-delay-3 { transition-delay: 300ms; }
 .reveal-delay-4 { transition-delay: 400ms; }
+
+/* ── Static Route SSG Content (Progressive Enhancement) ── */
+html.js .static-route-content {
+  display: none !important;
+}
