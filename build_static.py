@@ -1351,9 +1351,12 @@ with open(llms_path, 'w', encoding='utf-8') as f:
     f.write(llms_txt_content)
 print("[OK] Overwritten llms.txt with correct RAG index formatting.")
 
-# --- 3b. Generate per-language index.html files (Fix: unique noscript per lang for Google) ---
-# This eliminates the duplicate-content issue where PT/ES pages appeared identical to EN to crawlers.
-# Each language gets its own index.html with: <html lang=XX>, og:locale, noscript in that language.
+# --- 3b. Generate 100% Static HTML Pages for ALL Sitemap Routes (SSG Progressive Enhancement) ---
+# This generates pre-rendered physical index.html files for every URL in the sitemap.
+# Netlify CDN serves these static files directly (HTTP 200 OK) to crawlers, search engines (Googlebot/Bingbot),
+# and AI chatbots (GPTBot/ClaudeBot/Perplexity) with semantic HTML (h1, h2, breadcrumbs, structured metadata),
+# while maintaining smooth client-side SPA functionality via progressive enhancement.
+
 LANG_META = {
     'en': {
         'lang_attr': 'en',
@@ -1375,54 +1378,764 @@ LANG_META = {
     },
 }
 
+SECTION_LABELS = {
+    'pt': {
+        'home': 'Início',
+        'experience': 'Experiência Profissional',
+        'education': 'Educação e Formação',
+        'projects': 'Projetos Técnicos',
+        'community': 'Comunidade e Artigos',
+        'endorsements': 'Recomendações e Depoimentos',
+        'experiences-select': 'Experiências por Empresa',
+        'academic': 'Formação Acadêmica',
+        'courses': 'Cursos e Certificações',
+        'courses-select': 'Cursos por Provedor',
+        'publications': 'Publicações e Artigos',
+        'volunteering': 'Voluntariado e Liderança',
+        'hackathons': 'Hackathons e Desafios',
+        'events': 'Eventos e Conferências',
+        'achievements': 'Conquistas e Prêmios',
+        'blog': 'Blog Técnico',
+        'back_to_section': '← Voltar para {section}',
+        'full_portfolio': 'Ver Portfólio Completo',
+        'skills': 'Competências & Tecnologias',
+        'period': 'Período',
+        'institution': 'Instituição / Provedor',
+        'publisher': 'Veículo / Publicação',
+        'role': 'Função / Cargo',
+        'read_more': 'Ler mais',
+        'view_credential': 'Ver credencial oficial',
+        'view_original': 'Acessar publicação original',
+        'about_company': 'Sobre a organização / contexto',
+    },
+    'en': {
+        'home': 'Home',
+        'experience': 'Professional Experience',
+        'education': 'Education & Certifications',
+        'projects': 'Technical Projects',
+        'community': 'Community & Articles',
+        'endorsements': 'Recommendations & Endorsements',
+        'experiences-select': 'Experiences by Company',
+        'academic': 'Academic Background',
+        'courses': 'Courses & Certifications',
+        'courses-select': 'Courses by Provider',
+        'publications': 'Publications & Articles',
+        'volunteering': 'Volunteering & Leadership',
+        'hackathons': 'Hackathons & Challenges',
+        'events': 'Events & Conferences',
+        'achievements': 'Achievements & Awards',
+        'blog': 'Technical Blog',
+        'back_to_section': '← Back to {section}',
+        'full_portfolio': 'View Full Portfolio',
+        'skills': 'Skills & Technologies',
+        'period': 'Period',
+        'institution': 'Institution / Provider',
+        'publisher': 'Publisher / Venue',
+        'role': 'Role / Position',
+        'read_more': 'Read more',
+        'view_credential': 'View official credential',
+        'view_original': 'Access original publication',
+        'about_company': 'About organization / context',
+    },
+    'es': {
+        'home': 'Inicio',
+        'experience': 'Experiencia Profesional',
+        'education': 'Educación y Certificaciones',
+        'projects': 'Proyectos Técnicos',
+        'community': 'Comunidad y Artículos',
+        'endorsements': 'Recomendaciones y Testimonios',
+        'experiences-select': 'Experiencias por Empresa',
+        'academic': 'Formación Académica',
+        'courses': 'Cursos y Certificaciones',
+        'courses-select': 'Cursos por Proveedor',
+        'publications': 'Publicaciones y Artículos',
+        'volunteering': 'Voluntariado y Liderazgo',
+        'hackathons': 'Hackathons y Desafíos',
+        'events': 'Eventos y Conferencias',
+        'achievements': 'Logros y Premios',
+        'blog': 'Blog Técnico',
+        'back_to_section': '← Volver a {section}',
+        'full_portfolio': 'Ver Portafolio Completo',
+        'skills': 'Habilidades y Tecnologías',
+        'period': 'Período',
+        'institution': 'Institución / Proveedor',
+        'publisher': 'Editorial / Medio',
+        'role': 'Rol / Puesto',
+        'read_more': 'Leer más',
+        'view_credential': 'Ver credencial oficial',
+        'view_original': 'Acceder a publicación original',
+        'about_company': 'Sobre la organización / contexto',
+    },
+}
+
+def xml_escape(text):
+    """Escape special XML/HTML characters in text content."""
+    if not text:
+        return ''
+    return str(text).replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;').replace("'", '&apos;')
+
+def slugify_segment(text):
+    """Convert string to clean URL-safe ASCII slug."""
+    if not text:
+        return ''
+    import unicodedata
+    s = unicodedata.normalize('NFD', str(text)).encode('ascii', 'ignore').decode('utf-8').lower()
+    s = re.sub(r'[^a-z0-9]+', '-', s).strip('-')
+    return s
+
+generated_static_pages_count = 0
+
 if os.path.exists(index_html_path):
     with open(index_html_path, 'r', encoding='utf-8') as _f:
         _base_html = _f.read()
 
-    for _lang, _meta in LANG_META.items():
-        _lang_html = _base_html
+    def create_static_route_page(lang, path_suffix, title, description, breadcrumbs, content_html):
+        """
+        Generates a physical HTML file at .{lang}{path_suffix}/index.html
+        """
+        global generated_static_pages_count
+        meta = LANG_META[lang]
+        labels = SECTION_LABELS[lang]
+        page_html = _base_html
 
-        # 1. Update <html lang="..."> attribute
-        _lang_html = re.sub(r'<html lang="[^"]*"', f'<html lang="{_meta["lang_attr"]}"', _lang_html)
+        # 1. Update <html lang="...">
+        page_html = re.sub(r'<html lang="[^"]*"', f'<html lang="{meta["lang_attr"]}"', page_html)
 
-        # 2. Inject/update og:locale after og:site_name (or before twitter:card)
-        _locale_tag = f'<meta property="og:locale" content="{_meta["locale"]}" />'
-        if 'og:locale' not in _lang_html:
-            _lang_html = _lang_html.replace('<meta name="twitter:card"', f'{_locale_tag}\n  <meta name="twitter:card"')
+        # 2. Update <title>
+        person_name = strip_html(cv_data.get(lang, {}).get('hero', {}).get('name', 'Everson Filipe'))
+        full_title = f"{title} | {person_name}" if title else f"{person_name} | Implementation Engineer & AI Developer"
+        page_html = re.sub(r'<title>.*?</title>', f'<title>{xml_escape(full_title)}</title>', page_html)
+
+        # 3. Update <meta name="description">
+        clean_desc = xml_escape(strip_html(description)[:250]) if description else f"Interactive developer portfolio and technical profile of {person_name}."
+        page_html = re.sub(r'<meta\s+[^>]*name="description"[^>]*>', f'<meta name="description" content="{clean_desc}" />', page_html, flags=re.DOTALL)
+        page_html = re.sub(r'<meta\s+[^>]*content="[^"]*"\s+name="description"\s*/>', f'<meta name="description" content="{clean_desc}" />', page_html, flags=re.DOTALL)
+
+        # 4. Update canonical link
+        clean_suffix = path_suffix if path_suffix else ""
+        full_url = f"{base_url}/{lang}{clean_suffix}"
+        page_html = re.sub(r'<link\s+[^>]*rel="canonical"[^>]*>', f'<link rel="canonical" href="{full_url}" />', page_html, flags=re.DOTALL)
+
+        # 5. Update OpenGraph & Twitter
+        page_html = re.sub(r'<meta\s+[^>]*property="og:title"[^>]*>', f'<meta property="og:title" content="{xml_escape(full_title)}" />', page_html, flags=re.DOTALL)
+        page_html = re.sub(r'<meta\s+[^>]*content="[^"]*"\s+property="og:title"\s*/>', f'<meta property="og:title" content="{xml_escape(full_title)}" />', page_html, flags=re.DOTALL)
+
+        page_html = re.sub(r'<meta\s+[^>]*property="og:description"[^>]*>', f'<meta property="og:description" content="{clean_desc}" />', page_html, flags=re.DOTALL)
+        page_html = re.sub(r'<meta\s+[^>]*content="[^"]*"\s+property="og:description"\s*/>', f'<meta property="og:description" content="{clean_desc}" />', page_html, flags=re.DOTALL)
+
+        page_html = re.sub(r'<meta\s+[^>]*property="og:url"[^>]*>', f'<meta property="og:url" content="{full_url}" />', page_html, flags=re.DOTALL)
+        page_html = re.sub(r'<meta\s+[^>]*content="[^"]*"\s+property="og:url"\s*/>', f'<meta property="og:url" content="{full_url}" />', page_html, flags=re.DOTALL)
+
+        page_html = re.sub(r'<meta\s+[^>]*name="twitter:title"[^>]*>', f'<meta name="twitter:title" content="{xml_escape(full_title)}" />', page_html, flags=re.DOTALL)
+        page_html = re.sub(r'<meta\s+[^>]*content="[^"]*"\s+name="twitter:title"\s*/>', f'<meta name="twitter:title" content="{xml_escape(full_title)}" />', page_html, flags=re.DOTALL)
+
+        page_html = re.sub(r'<meta\s+[^>]*name="twitter:description"[^>]*>', f'<meta name="twitter:description" content="{clean_desc}" />', page_html, flags=re.DOTALL)
+        page_html = re.sub(r'<meta\s+[^>]*content="[^"]*"\s+name="twitter:description"\s*/>', f'<meta name="twitter:description" content="{clean_desc}" />', page_html, flags=re.DOTALL)
+
+        # 6. Inject og:locale
+        _locale_tag = f'<meta property="og:locale" content="{meta["locale"]}" />'
+        if 'og:locale' not in page_html:
+            page_html = page_html.replace('<meta name="twitter:card"', f'{_locale_tag}\n  <meta name="twitter:card"')
         else:
-            _lang_html = re.sub(r'<meta property="og:locale"[^/]*/>', _locale_tag, _lang_html)
+            page_html = re.sub(r'<meta property="og:locale"[^/]*/>', _locale_tag, page_html)
 
-        # 3. Add static hreflang <link> tags to <head> for bots that read HTML before JS runs
-        _hreflang_block = f"""  <link rel="alternate" hreflang="pt" href="{base_url}/pt/" />
-  <link rel="alternate" hreflang="en" href="{base_url}/en/" />
-  <link rel="alternate" hreflang="es" href="{base_url}/es/" />
-  <link rel="alternate" hreflang="x-default" href="{base_url}/pt/" />"""
-        if 'hreflang="pt"' not in _lang_html:
-            _lang_html = _lang_html.replace('<link rel="canonical"', f'{_hreflang_block}\n  <link rel="canonical"')
+        # 7. Inject Hreflang links
+        hreflang_suffix = clean_suffix if clean_suffix else ""
+        _hreflang_block = f"""  <link rel="alternate" hreflang="pt" href="{base_url}/pt{hreflang_suffix}" />
+  <link rel="alternate" hreflang="en" href="{base_url}/en{hreflang_suffix}" />
+  <link rel="alternate" hreflang="es" href="{base_url}/es{hreflang_suffix}" />
+  <link rel="alternate" hreflang="x-default" href="{base_url}/pt{hreflang_suffix}" />"""
+        if 'hreflang="pt"' not in page_html:
+            page_html = page_html.replace('<link rel="canonical"', f'{_hreflang_block}\n  <link rel="canonical"')
+        else:
+            page_html = re.sub(r'<link[^>]*hreflang="pt"[^>]*>.*?<link[^>]*hreflang="x-default"[^>]*>', _hreflang_block, page_html, flags=re.DOTALL)
 
-        # 4. Replace noscript block with language-specific content
-        _ns_content = noscript_by_lang.get(_lang, noscript_by_lang.get('en', ''))
+        # 8. Localized noscript block
+        _ns_content = noscript_by_lang.get(lang, noscript_by_lang.get('en', ''))
         _new_noscript = f"""  <noscript>
     <div style="padding: 20px; background: #374f5b; color: #ffffff;">
-      <p>{_meta['noscript_intro']}</p>
+      <p>{meta['noscript_intro']}</p>
       {_ns_content}
     </div>
   </noscript>"""
-        _ns_start = _lang_html.find('<noscript>')
-        _ns_end = _lang_html.find('</noscript>')
+        _ns_start = page_html.find('<noscript>')
+        _ns_end = page_html.find('</noscript>')
         if _ns_start != -1 and _ns_end != -1:
-            _line_start = _lang_html.rfind('\n', 0, _ns_start)
-            if _line_start != -1 and _lang_html[_line_start + 1:_ns_start].strip() == '':
+            _line_start = page_html.rfind('\n', 0, _ns_start)
+            if _line_start != -1 and page_html[_line_start + 1:_ns_start].strip() == '':
                 _ns_start = _line_start + 1
-            _lang_html = _lang_html[:_ns_start] + _new_noscript + _lang_html[_ns_end + len('</noscript>'):]
+            page_html = page_html[:_ns_start] + _new_noscript + page_html[_ns_end + len('</noscript>'):]
 
-        # 5. Write to lang/index.html
-        _out_dir = os.path.join('.', _lang)
-        os.makedirs(_out_dir, exist_ok=True)
-        _out_path = os.path.join(_out_dir, 'index.html')
-        with open(_out_path, 'w', encoding='utf-8') as _lf:
-            _lf.write(_lang_html)
-        print(f'[OK] Generated {_out_path} (lang={_meta["lang_attr"]}, locale={_meta["locale"]})')
+        # 9. Build Breadcrumb navigation HTML & JSON-LD
+        breadcrumb_items_html = []
+        breadcrumb_schema_elements = []
+        for idx, (b_label, b_url) in enumerate(breadcrumbs, start=1):
+            is_last = (idx == len(breadcrumbs)) or not b_url
+            if is_last:
+                breadcrumb_items_html.append(f'<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name" aria-current="page">{xml_escape(b_label)}</span><meta itemprop="position" content="{idx}" /></li>')
+            else:
+                breadcrumb_items_html.append(f'<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="{b_url}"><span itemprop="name">{xml_escape(b_label)}</span></a><meta itemprop="position" content="{idx}" /></li>')
+            
+            breadcrumb_schema_elements.append({
+                "@type": "ListItem",
+                "position": idx,
+                "name": b_label,
+                **({"item": f"{base_url}{b_url}" if b_url.startswith("/") else f"{base_url}/{b_url}"} if b_url else {"item": full_url})
+            })
+
+        breadcrumb_html = f"""    <nav aria-label="Breadcrumb" class="static-breadcrumb" style="padding: 1.5rem 1rem 0; max-width: 1100px; margin: 0 auto;">
+      <ol itemscope itemtype="https://schema.org/BreadcrumbList" style="display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; padding: 0; margin: 0; font-size: 0.875rem; color: #8892b0;">
+        {' <li aria-hidden="true" style="opacity: 0.5;">/</li> '.join(breadcrumb_items_html)}
+      </ol>
+    </nav>"""
+
+        # 10. Construct #static-route-content block inside <main id="main">
+        static_container = f"""  <!-- SSG Static Content for Crawlers & LLM Agents (Progressive Enhancement) -->
+  <div id="static-route-content" class="static-route-content" data-route="{lang}{clean_suffix}" style="max-width: 1100px; margin: 0 auto; padding: 1rem 1.5rem 2rem;">
+{breadcrumb_html}
+    <div class="static-route-body" style="margin-top: 1.5rem;">
+{content_html}
+    </div>
+  </div>"""
+
+        # Injetar após <main id="main">
+        main_marker = '<main id="main">'
+        main_idx = page_html.find(main_marker)
+        if main_idx != -1:
+            page_html = page_html[:main_idx + len(main_marker)] + '\n' + static_container + page_html[main_idx + len(main_marker):]
+
+        # Injetar BreadcrumbList schema no JSON-LD
+        if breadcrumb_schema_elements:
+            bc_json = json.dumps({
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": breadcrumb_schema_elements
+            }, ensure_ascii=False, indent=2)
+            page_html = page_html.replace('</head>', f'  <script type="application/ld+json">\n{bc_json}\n  </script>\n</head>')
+
+        # 11. Write file to disk
+        if not path_suffix or path_suffix == '/':
+            out_dir = os.path.join('.', lang)
+        else:
+            out_dir = os.path.join('.', lang, path_suffix.strip('/'))
+        
+        os.makedirs(out_dir, exist_ok=True)
+        out_file = os.path.join(out_dir, 'index.html')
+        with open(out_file, 'w', encoding='utf-8') as pf:
+            pf.write(page_html)
+        
+        generated_static_pages_count += 1
+        return out_file
+
+    # --- Generate All SSG Route Pages for all languages ---
+    for lang in ['pt', 'en', 'es']:
+        labels = SECTION_LABELS[lang]
+        cdata = cv_data.get(lang, {})
+        hero = cdata.get('hero', {})
+        about = cdata.get('about', {})
+        person_name = strip_html(hero.get('name', 'Everson Filipe'))
+        person_title = strip_html(hero.get('title', 'Implementation Engineer & AI Automation Analyst'))
+        person_tagline = strip_html(hero.get('tagline', ''))
+
+        # 1. Language Home (/{lang}/)
+        home_content = f"""      <header class="static-page-header">
+        <h1>{person_name}</h1>
+        <p class="static-subtitle"><strong>{person_title}</strong> — {person_tagline}</p>
+      </header>
+      <section class="static-section" style="margin-top: 1.5rem;">
+        <h2>{labels['home']} — {person_name}</h2>
+        <p>{strip_html(about.get('p1', ''))}</p>
+        <p>{strip_html(about.get('p2', ''))}</p>
+        <p>{strip_html(about.get('p3', ''))}</p>
+        <nav class="static-nav-links" style="margin-top: 1.5rem; font-weight: bold;">
+          <a href="/{lang}/experience">{labels['experience']} →</a> &nbsp;|&nbsp;
+          <a href="/{lang}/education">{labels['education']} →</a> &nbsp;|&nbsp;
+          <a href="/{lang}/projects">{labels['projects']} →</a> &nbsp;|&nbsp;
+          <a href="/{lang}/community">{labels['community']} →</a>
+        </nav>
+      </section>"""
+        create_static_route_page(lang, "", f"{person_name} — {person_title}", person_tagline, [(labels['home'], "")], home_content)
+
+        # 2. Experience Section (/{lang}/experience)
+        exp_list = cdata.get('experience', [])
+        exp_cards = []
+        for exp in exp_list:
+            role = strip_html(exp.get('role', ''))
+            comp = strip_html(exp.get('company', ''))
+            date_s = strip_html(exp.get('date', ''))
+            about_c = strip_html(exp.get('optional_more_about_company', ''))
+            tags = exp.get('tags', [])
+            comp_slug = slugify_segment(comp)
+            j_id = exp.get('id', '')
+            exp_cards.append(f"""        <article class="static-card" style="margin-bottom: 1.5rem; padding: 1.25rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;">
+          <h2>{role}</h2>
+          <h3 style="color: #64ffda; font-size: 1.1rem;">{comp} &bull; <time>{date_s}</time></h3>
+          {f"<p>{about_c}</p>" if about_c else ""}
+          {f"<p><strong>{labels['skills']}:</strong> {', '.join(tags)}</p>" if tags else ""}
+          <p><a href="/{lang}/experience/{comp_slug}/{j_id}">{labels['read_more']} ({role}) →</a></p>
+        </article>""")
+
+        exp_content = f"""      <header class="static-page-header">
+        <h1>{labels['experience']}</h1>
+        <p class="static-subtitle">{person_name} — {person_title}</p>
+      </header>
+      <div class="static-items-list" style="margin-top: 1.5rem;">
+        {''.join(exp_cards)}
+      </div>
+      <nav style="margin-top: 2rem;">
+        <p><a href="/{lang}/experience/endorsements">{labels['endorsements']} →</a> &nbsp;|&nbsp; <a href="/{lang}/experience/experiences-select">{labels['experiences-select']} →</a></p>
+      </nav>"""
+        create_static_route_page(lang, "/experience", labels['experience'], f"Professional experience of {person_name} in systems implementation and AI automation.", [(labels['home'], f"/{lang}"), (labels['experience'], "")], exp_content)
+
+        # 3. Experience Leaf Pages (/{lang}/experience/{comp_slug}/{j_id})
+        for exp in exp_list:
+            role = strip_html(exp.get('role', ''))
+            comp = strip_html(exp.get('company', ''))
+            date_s = strip_html(exp.get('date', ''))
+            about_c = strip_html(exp.get('optional_more_about_company', ''))
+            tags = exp.get('tags', [])
+            comp_slug = slugify_segment(comp)
+            j_id = exp.get('id', '')
+            if not comp_slug or not j_id: continue
+
+            job_content = f"""      <article class="static-card" itemscope itemtype="https://schema.org/WorkExperience">
+        <header>
+          <h1 itemprop="roleName">{role}</h1>
+          <h2 itemprop="worksFor" style="color: #64ffda;">{comp}</h2>
+          <p><strong>{labels['period']}:</strong> <time>{date_s}</time></p>
+        </header>
+        {f"<p style='margin-top: 1rem;'><strong>{labels['about_company']}:</strong> {about_c}</p>" if about_c else ""}
+        {f"<p style='margin-top: 1rem;'><strong>{labels['skills']}:</strong> {', '.join(tags)}</p>" if tags else ""}
+        <nav style="margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem;">
+          <a href="/{lang}/experience">{labels['back_to_section'].format(section=labels['experience'])}</a> &nbsp;|&nbsp;
+          <a href="/{lang}">{labels['full_portfolio']}</a>
+        </nav>
+      </article>"""
+            create_static_route_page(lang, f"/experience/{comp_slug}/{j_id}", f"{role} at {comp}", f"{role} at {comp} ({date_s}). {about_c[:150]}", [(labels['home'], f"/{lang}"), (labels['experience'], f"/{lang}/experience"), (comp, "")], job_content)
+
+        # 4. Endorsements Hub (/{lang}/experience/endorsements)
+        endorsements_list = cdata.get('endorsements', [])
+        end_cards = []
+        for end in endorsements_list:
+            author = strip_html(end.get('author', ''))
+            e_role = strip_html(end.get('role', ''))
+            e_comp = strip_html(end.get('company', ''))
+            e_date = strip_html(end.get('date', ''))
+            e_text = strip_html(end.get('textHtml', end.get('text', '')))
+            end_cards.append(f"""        <article class="static-card" style="margin-bottom: 1.5rem; padding: 1.25rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;">
+          <h2>{author}</h2>
+          <h3 style="color: #64ffda; font-size: 1rem;">{e_role} {f'at {e_comp}' if e_comp and e_comp != 'null' else ''} &bull; <time>{e_date}</time></h3>
+          <blockquote style="margin-top: 1rem; border-left: 3px solid #64ffda; padding-left: 1rem; font-style: italic;">{e_text}</blockquote>
+        </article>""")
+
+        end_content = f"""      <header class="static-page-header">
+        <h1>{labels['endorsements']}</h1>
+        <p class="static-subtitle">Peer recommendations and professional endorsements for {person_name}</p>
+      </header>
+      <div class="static-items-list" style="margin-top: 1.5rem;">
+        {''.join(end_cards)}
+      </div>
+      <nav style="margin-top: 2rem;">
+        <a href="/{lang}/experience">{labels['back_to_section'].format(section=labels['experience'])}</a>
+      </nav>"""
+        create_static_route_page(lang, "/experience/endorsements", labels['endorsements'], f"Professional recommendations and peer validations for {person_name}.", [(labels['home'], f"/{lang}"), (labels['experience'], f"/{lang}/experience"), (labels['endorsements'], "")], end_content)
+
+        # 5. Experience Select (/{lang}/experience/experiences-select)
+        create_static_route_page(lang, "/experience/experiences-select", labels['experiences-select'], f"Filter and select professional experiences by company for {person_name}.", [(labels['home'], f"/{lang}"), (labels['experience'], f"/{lang}/experience"), (labels['experiences-select'], "")], exp_content)
+
+        # 6. Education Section (/{lang}/education)
+        edu_content = f"""      <header class="static-page-header">
+        <h1>{labels['education']}</h1>
+        <p class="static-subtitle">Academic background, technical certifications, and publications of {person_name}</p>
+      </header>
+      <section style="margin-top: 2rem;">
+        <h2><a href="/{lang}/education/academic">{labels['academic']} →</a></h2>
+        <h2><a href="/{lang}/education/courses">{labels['courses']} →</a></h2>
+        <h2><a href="/{lang}/education/publications">{labels['publications']} →</a></h2>
+      </section>"""
+        create_static_route_page(lang, "/education", labels['education'], f"Education, degrees, certifications, and technical publications of {person_name}.", [(labels['home'], f"/{lang}"), (labels['education'], "")], edu_content)
+
+        # 7. Education Academic Hub & Leaves (/{lang}/education/academic & /{lang}/education/academic/{id})
+        academic_list = cdata.get('education', [])
+        acad_cards = []
+        for acad in academic_list:
+            degree = strip_html(acad.get('degree', acad.get('name', '')))
+            inst = strip_html(acad.get('institution', ''))
+            date_s = strip_html(acad.get('date', acad.get('period', '')))
+            desc = strip_html(acad.get('descriptionHtml', acad.get('description', '')))
+            e_id = acad.get('id', '')
+            acad_cards.append(f"""        <article class="static-card" style="margin-bottom: 1.5rem; padding: 1.25rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;">
+          <h2>{degree}</h2>
+          <h3 style="color: #64ffda;">{inst} &bull; <time>{date_s}</time></h3>
+          {f"<p>{desc}</p>" if desc else ""}
+          {f"<p><a href='/{lang}/education/academic/{e_id}'>{labels['read_more']} →</a></p>" if e_id else ""}
+        </article>""")
+
+            if e_id:
+                acad_leaf_content = f"""      <article class="static-card" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
+        <header>
+          <h1 itemprop="name">{degree}</h1>
+          <h2 itemprop="recognizedBy" style="color: #64ffda;">{inst}</h2>
+          <p><strong>{labels['period']}:</strong> <time>{date_s}</time></p>
+        </header>
+        {f"<p style='margin-top: 1rem;'>{desc}</p>" if desc else ""}
+        <nav style="margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem;">
+          <a href="/{lang}/education/academic">{labels['back_to_section'].format(section=labels['academic'])}</a> &nbsp;|&nbsp;
+          <a href="/{lang}/education">{labels['education']}</a>
+        </nav>
+      </article>"""
+                create_static_route_page(lang, f"/education/academic/{e_id}", f"{degree} - {inst}", f"{degree} at {inst} ({date_s}).", [(labels['home'], f"/{lang}"), (labels['education'], f"/{lang}/education"), (labels['academic'], f"/{lang}/education/academic"), (degree, "")], acad_leaf_content)
+
+        acad_hub_content = f"""      <header class="static-page-header">
+        <h1>{labels['academic']}</h1>
+        <p class="static-subtitle">Formal university education and degrees of {person_name}</p>
+      </header>
+      <div class="static-items-list" style="margin-top: 1.5rem;">
+        {''.join(acad_cards)}
+      </div>"""
+        create_static_route_page(lang, "/education/academic", labels['academic'], f"Academic degrees and formal university education of {person_name}.", [(labels['home'], f"/{lang}"), (labels['education'], f"/{lang}/education"), (labels['academic'], "")], acad_hub_content)
+
+        # 8. Courses Hub & Leaves (/{lang}/education/courses & /{lang}/education/courses/{id})
+        courses_list = cdata.get('courses', [])
+        course_cards = []
+        for course in courses_list:
+            c_name = strip_html(course.get('name', course.get('title', '')))
+            provider = strip_html(course.get('provider', course.get('institution', '')))
+            c_date = strip_html(course.get('date', ''))
+            c_url = course.get('credentialUrl', course.get('url', ''))
+            c_id = course.get('id', '')
+            course_cards.append(f"""        <article class="static-card" style="margin-bottom: 1.25rem; padding: 1rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px;">
+          <h2>{c_name}</h2>
+          <h3 style="color: #64ffda; font-size: 1rem;">{provider} &bull; <time>{c_date}</time></h3>
+          {f"<p><a href='{c_url}' target='_blank' rel='noopener'>{labels['view_credential']} ↗</a></p>" if c_url else ""}
+          {f"<p><a href='/{lang}/education/courses/{c_id}'>{labels['read_more']} →</a></p>" if c_id else ""}
+        </article>""")
+
+            if c_id:
+                course_leaf_content = f"""      <article class="static-card" itemscope itemtype="https://schema.org/Course">
+        <header>
+          <h1 itemprop="name">{c_name}</h1>
+          <h2 itemprop="provider" style="color: #64ffda;">{provider}</h2>
+          <p><strong>{labels['period']}:</strong> <time>{c_date}</time></p>
+        </header>
+        {f"<p style='margin-top: 1rem;'><a href='{c_url}' target='_blank' rel='noopener'>{labels['view_credential']} ↗</a></p>" if c_url else ""}
+        <nav style="margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem;">
+          <a href="/{lang}/education/courses">{labels['back_to_section'].format(section=labels['courses'])}</a> &nbsp;|&nbsp;
+          <a href="/{lang}/education">{labels['education']}</a>
+        </nav>
+      </article>"""
+                create_static_route_page(lang, f"/education/courses/{c_id}", f"{c_name} - {provider}", f"Technical certificate: {c_name} by {provider} ({c_date}).", [(labels['home'], f"/{lang}"), (labels['education'], f"/{lang}/education"), (labels['courses'], f"/{lang}/education/courses"), (c_name, "")], course_leaf_content)
+
+        courses_hub_content = f"""      <header class="static-page-header">
+        <h1>{labels['courses']}</h1>
+        <p class="static-subtitle">Technical courses, certifications, and licenses earned by {person_name}</p>
+      </header>
+      <div class="static-items-list" style="margin-top: 1.5rem;">
+        {''.join(course_cards)}
+      </div>"""
+        create_static_route_page(lang, "/education/courses", labels['courses'], f"Technical certifications and course completions of {person_name}.", [(labels['home'], f"/{lang}"), (labels['education'], f"/{lang}/education"), (labels['courses'], "")], courses_hub_content)
+        create_static_route_page(lang, "/education/courses-select", labels['courses-select'], f"Filter technical certifications and courses by provider for {person_name}.", [(labels['home'], f"/{lang}"), (labels['education'], f"/{lang}/education"), (labels['courses-select'], "")], courses_hub_content)
+
+        # 9. Publications Hub & Leaves (/{lang}/education/publications & /{lang}/education/publications/{id})
+        pubs_list = cdata.get('publications', [])
+        pub_cards = []
+        for pub in pubs_list:
+            p_title = strip_html(pub.get('name', pub.get('title', '')))
+            p_venue = strip_html(pub.get('institution', pub.get('publisher', '')))
+            p_date = strip_html(pub.get('date', ''))
+            p_desc = strip_html(pub.get('descriptionHtml', pub.get('description', '')))
+            p_url = pub.get('url', '')
+            p_id = pub.get('id', '')
+            pub_cards.append(f"""        <article class="static-card" style="margin-bottom: 1.5rem; padding: 1.25rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;">
+          <h2>{p_title}</h2>
+          <h3 style="color: #64ffda;">{p_venue} &bull; <time>{p_date}</time></h3>
+          {f"<p>{p_desc}</p>" if p_desc else ""}
+          {f"<p><a href='{p_url}' target='_blank' rel='noopener'>{labels['view_original']} ↗</a></p>" if p_url else ""}
+          {f"<p><a href='/{lang}/education/publications/{p_id}'>{labels['read_more']} →</a></p>" if p_id else ""}
+        </article>""")
+
+            if p_id:
+                pub_leaf_content = f"""      <article class="static-card" itemscope itemtype="https://schema.org/ScholarlyArticle">
+        <header>
+          <h1 itemprop="headline">{p_title}</h1>
+          <h2 itemprop="publisher" style="color: #64ffda;">{p_venue}</h2>
+          <p><strong>{labels['period']}:</strong> <time>{p_date}</time></p>
+        </header>
+        {f"<p style='margin-top: 1rem;' itemprop='description'>{p_desc}</p>" if p_desc else ""}
+        {f"<p style='margin-top: 1rem;'><a href='{p_url}' target='_blank' rel='noopener'>{labels['view_original']} ↗</a></p>" if p_url else ""}
+        <nav style="margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem;">
+          <a href="/{lang}/education/publications">{labels['back_to_section'].format(section=labels['publications'])}</a> &nbsp;|&nbsp;
+          <a href="/{lang}/education">{labels['education']}</a>
+        </nav>
+      </article>"""
+                create_static_route_page(lang, f"/education/publications/{p_id}", f"{p_title} - {p_venue}", f"Technical publication: {p_title} ({p_date}). {p_desc[:150]}", [(labels['home'], f"/{lang}"), (labels['education'], f"/{lang}/education"), (labels['publications'], f"/{lang}/education/publications"), (p_title, "")], pub_leaf_content)
+
+        pubs_hub_content = f"""      <header class="static-page-header">
+        <h1>{labels['publications']}</h1>
+        <p class="static-subtitle">Articles, essays, and technical publications authored by {person_name}</p>
+      </header>
+      <div class="static-items-list" style="margin-top: 1.5rem;">
+        {''.join(pub_cards)}
+      </div>"""
+        create_static_route_page(lang, "/education/publications", labels['publications'], f"Technical publications, articles, and research by {person_name}.", [(labels['home'], f"/{lang}"), (labels['education'], f"/{lang}/education"), (labels['publications'], "")], pubs_hub_content)
+
+        # 10. Community Section (/{lang}/community)
+        comm_content = f"""      <header class="static-page-header">
+        <h1>{labels['community']}</h1>
+        <p class="static-subtitle">Volunteering, technical conferences, hackathons, and tech blog articles by {person_name}</p>
+      </header>
+      <section style="margin-top: 2rem;">
+        <h2><a href="/{lang}/community/blog">{labels['blog']} →</a></h2>
+        <h2><a href="/{lang}/community/volunteering">{labels['volunteering']} →</a></h2>
+        <h2><a href="/{lang}/community/hackathons">{labels['hackathons']} →</a></h2>
+        <h2><a href="/{lang}/community/events">{labels['events']} →</a></h2>
+        <h2><a href="/{lang}/community/achievements">{labels['achievements']} →</a></h2>
+      </section>"""
+        create_static_route_page(lang, "/community", labels['community'], f"Community initiatives, volunteering, hackathons, and blog of {person_name}.", [(labels['home'], f"/{lang}"), (labels['community'], "")], comm_content)
+
+        # 11. Blog Hub & Leaves (/{lang}/community/blog & /{lang}/community/blog/{id})
+        blog_cards = []
+        for post in blog_data:
+            p_id = post.get('id', '')
+            post_loc = post.get(lang, post.get('en', {}))
+            post_title = strip_html(post_loc.get('title', ''))
+            post_summary = strip_html(post_loc.get('summary', ''))
+            post_date = post.get('publishedAt', post.get('date', ''))
+            blog_cards.append(f"""        <article class="static-card" style="margin-bottom: 1.5rem; padding: 1.25rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;">
+          <h2>{post_title}</h2>
+          <h3 style="color: #64ffda; font-size: 1rem;"><time datetime="{post_date}">{post_date}</time></h3>
+          <p>{post_summary}</p>
+          <p><a href="/{lang}/community/blog/{p_id}">{labels['read_more']} →</a></p>
+        </article>""")
+
+            if p_id:
+                post_leaf_content = f"""      <article class="static-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <header>
+          <h1 itemprop="headline">{post_title}</h1>
+          <p><strong>Published:</strong> <time itemprop="datePublished" datetime="{post_date}">{post_date}</time></p>
+        </header>
+        <div style="margin-top: 1.5rem;" itemprop="description">
+          <p class="static-blog-summary"><strong>Summary:</strong> {post_summary}</p>
+        </div>
+        <nav style="margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem;">
+          <a href="/{lang}/community/blog">{labels['back_to_section'].format(section=labels['blog'])}</a> &nbsp;|&nbsp;
+          <a href="/{lang}">{labels['full_portfolio']}</a>
+        </nav>
+      </article>"""
+                create_static_route_page(lang, f"/community/blog/{p_id}", post_title, f"{post_title} ({post_date}). {post_summary[:150]}", [(labels['home'], f"/{lang}"), (labels['community'], f"/{lang}/community"), (labels['blog'], f"/{lang}/community/blog"), (post_title, "")], post_leaf_content)
+
+        blog_hub_content = f"""      <header class="static-page-header">
+        <h1>{labels['blog']}</h1>
+        <p class="static-subtitle">Technical articles and engineering insights by {person_name}</p>
+      </header>
+      <div class="static-items-list" style="margin-top: 1.5rem;">
+        {''.join(blog_cards)}
+      </div>"""
+        create_static_route_page(lang, "/community/blog", labels['blog'], f"Technical blog articles and engineering insights by {person_name}.", [(labels['home'], f"/{lang}"), (labels['community'], f"/{lang}/community"), (labels['blog'], "")], blog_hub_content)
+
+        # 12. Volunteering Hub & Leaves
+        vol_list = cdata.get('volunteering', [])
+        vol_cards = []
+        for vol in vol_list:
+            v_role = strip_html(vol.get('role', ''))
+            v_org = strip_html(vol.get('org', vol.get('organization', '')))
+            v_date = strip_html(vol.get('period', vol.get('date', '')))
+            v_desc = strip_html(vol.get('descriptionHtml', vol.get('description', '')))
+            v_id = vol.get('id', '')
+            vol_cards.append(f"""        <article class="static-card" style="margin-bottom: 1.5rem; padding: 1.25rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;">
+          <h2>{v_role}</h2>
+          <h3 style="color: #64ffda;">{v_org} &bull; <time>{v_date}</time></h3>
+          {f"<p>{v_desc}</p>" if v_desc else ""}
+          {f"<p><a href='/{lang}/community/volunteering/{v_id}'>{labels['read_more']} →</a></p>" if v_id else ""}
+        </article>""")
+
+            if v_id:
+                vol_leaf_content = f"""      <article class="static-card">
+        <header>
+          <h1>{v_role}</h1>
+          <h2 style="color: #64ffda;">{v_org}</h2>
+          <p><strong>{labels['period']}:</strong> <time>{v_date}</time></p>
+        </header>
+        {f"<p style='margin-top: 1rem;'>{v_desc}</p>" if v_desc else ""}
+        <nav style="margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem;">
+          <a href="/{lang}/community/volunteering">{labels['back_to_section'].format(section=labels['volunteering'])}</a> &nbsp;|&nbsp;
+          <a href="/{lang}/community">{labels['community']}</a>
+        </nav>
+      </article>"""
+                create_static_route_page(lang, f"/community/volunteering/{v_id}", f"{v_role} - {v_org}", f"Volunteering: {v_role} at {v_org} ({v_date}).", [(labels['home'], f"/{lang}"), (labels['community'], f"/{lang}/community"), (labels['volunteering'], f"/{lang}/community/volunteering"), (v_role, "")], vol_leaf_content)
+
+        vol_hub_content = f"""      <header class="static-page-header">
+        <h1>{labels['volunteering']}</h1>
+        <p class="static-subtitle">Community leadership, voluntary projects, and civic education by {person_name}</p>
+      </header>
+      <div class="static-items-list" style="margin-top: 1.5rem;">
+        {''.join(vol_cards)}
+      </div>"""
+        create_static_route_page(lang, "/community/volunteering", labels['volunteering'], f"Volunteering and community leadership initiatives by {person_name}.", [(labels['home'], f"/{lang}"), (labels['community'], f"/{lang}/community"), (labels['volunteering'], "")], vol_hub_content)
+
+        # 13. Hackathons Hub & Leaves
+        hack_list = cdata.get('hackathons', [])
+        hack_cards = []
+        for hack in hack_list:
+            h_name = strip_html(hack.get('name', hack.get('title', '')))
+            h_role = strip_html(hack.get('role', ''))
+            h_date = strip_html(hack.get('period', hack.get('date', '')))
+            h_desc = strip_html(hack.get('descriptionHtml', hack.get('description', '')))
+            h_id = hack.get('id', '')
+            hack_cards.append(f"""        <article class="static-card" style="margin-bottom: 1.5rem; padding: 1.25rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;">
+          <h2>{h_name}</h2>
+          <h3 style="color: #64ffda;">{h_role} &bull; <time>{h_date}</time></h3>
+          {f"<p>{h_desc}</p>" if h_desc else ""}
+          {f"<p><a href='/{lang}/community/hackathons/{h_id}'>{labels['read_more']} →</a></p>" if h_id else ""}
+        </article>""")
+
+            if h_id:
+                hack_leaf_content = f"""      <article class="static-card">
+        <header>
+          <h1>{h_name}</h1>
+          <h2 style="color: #64ffda;">{h_role}</h2>
+          <p><strong>{labels['period']}:</strong> <time>{h_date}</time></p>
+        </header>
+        {f"<p style='margin-top: 1rem;'>{h_desc}</p>" if h_desc else ""}
+        <nav style="margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem;">
+          <a href="/{lang}/community/hackathons">{labels['back_to_section'].format(section=labels['hackathons'])}</a> &nbsp;|&nbsp;
+          <a href="/{lang}/community">{labels['community']}</a>
+        </nav>
+      </article>"""
+                create_static_route_page(lang, f"/community/hackathons/{h_id}", f"{h_name} - Hackathon", f"Hackathon participation: {h_name} ({h_date}).", [(labels['home'], f"/{lang}"), (labels['community'], f"/{lang}/community"), (labels['hackathons'], f"/{lang}/community/hackathons"), (h_name, "")], hack_leaf_content)
+
+        hack_hub_content = f"""      <header class="static-page-header">
+        <h1>{labels['hackathons']}</h1>
+        <p class="static-subtitle">Hackathons, ideathons, and innovation challenges participated in by {person_name}</p>
+      </header>
+      <div class="static-items-list" style="margin-top: 1.5rem;">
+        {''.join(hack_cards)}
+      </div>"""
+        create_static_route_page(lang, "/community/hackathons", labels['hackathons'], f"Hackathons, technical competitions, and ideathons of {person_name}.", [(labels['home'], f"/{lang}"), (labels['community'], f"/{lang}/community"), (labels['hackathons'], "")], hack_hub_content)
+
+        # 14. Events Hub & Leaves
+        events_list = cdata.get('events', [])
+        ev_cards = []
+        for ev in events_list:
+            e_name = strip_html(ev.get('name', ev.get('title', '')))
+            e_role = strip_html(ev.get('role', ''))
+            e_date = strip_html(ev.get('period', ev.get('date', '')))
+            e_desc = strip_html(ev.get('descriptionHtml', ev.get('description', '')))
+            e_id = ev.get('id', '')
+            if not e_id or e_id == 'ideathon-caruaru-campusparty-day-event':
+                continue
+            ev_cards.append(f"""        <article class="static-card" style="margin-bottom: 1.5rem; padding: 1.25rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;">
+          <h2>{e_name}</h2>
+          <h3 style="color: #64ffda;">{e_role} &bull; <time>{e_date}</time></h3>
+          {f"<p>{e_desc}</p>" if e_desc else ""}
+          {f"<p><a href='/{lang}/community/events/{e_id}'>{labels['read_more']} →</a></p>" if e_id else ""}
+        </article>""")
+
+            ev_leaf_content = f"""      <article class="static-card">
+        <header>
+          <h1>{e_name}</h1>
+          <h2 style="color: #64ffda;">{e_role}</h2>
+          <p><strong>{labels['period']}:</strong> <time>{e_date}</time></p>
+        </header>
+        {f"<p style='margin-top: 1rem;'>{e_desc}</p>" if e_desc else ""}
+        <nav style="margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem;">
+          <a href="/{lang}/community/events">{labels['back_to_section'].format(section=labels['events'])}</a> &nbsp;|&nbsp;
+          <a href="/{lang}/community">{labels['community']}</a>
+        </nav>
+      </article>"""
+            create_static_route_page(lang, f"/community/events/{e_id}", f"{e_name} - Tech Event", f"Technical event: {e_name} ({e_date}).", [(labels['home'], f"/{lang}"), (labels['community'], f"/{lang}/community"), (labels['events'], f"/{lang}/community/events"), (e_name, "")], ev_leaf_content)
+
+        events_hub_content = f"""      <header class="static-page-header">
+        <h1>{labels['events']}</h1>
+        <p class="static-subtitle">Tech meetups, academic conferences, and technology events attended by {person_name}</p>
+      </header>
+      <div class="static-items-list" style="margin-top: 1.5rem;">
+        {''.join(ev_cards)}
+      </div>"""
+        create_static_route_page(lang, "/community/events", labels['events'], f"Technology events and community conferences attended by {person_name}.", [(labels['home'], f"/{lang}"), (labels['community'], f"/{lang}/community"), (labels['events'], "")], events_hub_content)
+
+        # 15. Achievements Hub & Leaves
+        ach_list = cdata.get('achievements', [])
+        ach_cards = []
+        for ach in ach_list:
+            a_title = strip_html(ach.get('title', ach.get('name', '')))
+            a_issuer = strip_html(ach.get('issuer', ''))
+            a_date = strip_html(ach.get('date', ''))
+            a_desc = strip_html(ach.get('descriptionHtml', ach.get('description', '')))
+            a_id = ach.get('id', '')
+            ach_cards.append(f"""        <article class="static-card" style="margin-bottom: 1.5rem; padding: 1.25rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;">
+          <h2>{a_title}</h2>
+          <h3 style="color: #64ffda;">{a_issuer} &bull; <time>{a_date}</time></h3>
+          {f"<p>{a_desc}</p>" if a_desc else ""}
+          {f"<p><a href='/{lang}/community/achievements/{a_id}'>{labels['read_more']} →</a></p>" if a_id else ""}
+        </article>""")
+
+            if a_id:
+                ach_leaf_content = f"""      <article class="static-card">
+        <header>
+          <h1>{a_title}</h1>
+          <h2 style="color: #64ffda;">{a_issuer}</h2>
+          <p><strong>{labels['period']}:</strong> <time>{a_date}</time></p>
+        </header>
+        {f"<p style='margin-top: 1rem;'>{a_desc}</p>" if a_desc else ""}
+        <nav style="margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem;">
+          <a href="/{lang}/community/achievements">{labels['back_to_section'].format(section=labels['achievements'])}</a> &nbsp;|&nbsp;
+          <a href="/{lang}/community">{labels['community']}</a>
+        </nav>
+      </article>"""
+                create_static_route_page(lang, f"/community/achievements/{a_id}", f"{a_title} - Award", f"Achievement & award: {a_title} ({a_date}).", [(labels['home'], f"/{lang}"), (labels['community'], f"/{lang}/community"), (labels['achievements'], f"/{lang}/community/achievements"), (a_title, "")], ach_leaf_content)
+
+        ach_hub_content = f"""      <header class="static-page-header">
+        <h1>{labels['achievements']}</h1>
+        <p class="static-subtitle">Awards, competition recognitions, and professional milestones of {person_name}</p>
+      </header>
+      <div class="static-items-list" style="margin-top: 1.5rem;">
+        {''.join(ach_cards)}
+      </div>"""
+        create_static_route_page(lang, "/community/achievements", labels['achievements'], f"Awards, technical competition milestones, and achievements of {person_name}.", [(labels['home'], f"/{lang}"), (labels['community'], f"/{lang}/community"), (labels['achievements'], "")], ach_hub_content)
+
+        # 16. Projects Section & Leaves
+        prj_list = cdata.get('projects', [])
+        prj_cards = []
+        for prj in prj_list:
+            p_name = strip_html(prj.get('title', prj.get('name', '')))
+            p_date = strip_html(prj.get('date', ''))
+            p_desc = strip_html(prj.get('description', ''))
+            p_tags = prj.get('tags', [])
+            p_id = prj.get('id', '')
+            prj_cards.append(f"""        <article class="static-card" style="margin-bottom: 1.5rem; padding: 1.25rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;">
+          <h2>{p_name}</h2>
+          <h3 style="color: #64ffda;"><time>{p_date}</time></h3>
+          <p>{p_desc}</p>
+          {f"<p><strong>{labels['skills']}:</strong> {', '.join(p_tags)}</p>" if p_tags else ""}
+          {f"<p><a href='/{lang}/projects/{p_id}'>{labels['read_more']} →</a></p>" if p_id else ""}
+        </article>""")
+
+            if p_id:
+                prj_leaf_content = f"""      <article class="static-card">
+        <header>
+          <h1>{p_name}</h1>
+          <p><strong>{labels['period']}:</strong> <time>{p_date}</time></p>
+        </header>
+        <p style="margin-top: 1rem;">{p_desc}</p>
+        {f"<p style='margin-top: 1rem;'><strong>{labels['skills']}:</strong> {', '.join(p_tags)}</p>" if p_tags else ""}
+        <nav style="margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem;">
+          <a href="/{lang}/projects">{labels['back_to_section'].format(section=labels['projects'])}</a> &nbsp;|&nbsp;
+          <a href="/{lang}">{labels['full_portfolio']}</a>
+        </nav>
+      </article>"""
+                create_static_route_page(lang, f"/projects/{p_id}", f"{p_name} - Project", f"Technical project: {p_name} ({p_date}).", [(labels['home'], f"/{lang}"), (labels['projects'], f"/{lang}/projects"), (p_name, "")], prj_leaf_content)
+
+        prj_hub_content = f"""      <header class="static-page-header">
+        <h1>{labels['projects']}</h1>
+        <p class="static-subtitle">Technical automation pipelines, software architectures, and developer tooling by {person_name}</p>
+      </header>
+      <div class="static-items-list" style="margin-top: 1.5rem;">
+        {''.join(prj_cards) if prj_cards else f'<p>Featured technical projects and AI automation architectures developed by {person_name}.</p>'}
+      </div>"""
+        create_static_route_page(lang, "/projects", labels['projects'], f"Technical projects and automation engineering portfolio of {person_name}.", [(labels['home'], f"/{lang}"), (labels['projects'], "")], prj_hub_content)
+
+    print(f"[OK] Generated {generated_static_pages_count} static route HTML files across PT, EN, and ES!")
 
 # Also inject hreflang + og:locale into root index.html (EN defaults)
 if os.path.exists(index_html_path):
@@ -1440,6 +2153,7 @@ if os.path.exists(index_html_path):
     with open(index_html_path, 'w', encoding='utf-8') as _f:
         _f.write(_root_html)
     print('[OK] Updated root index.html with og:locale + static hreflang tags')
+
 
 print("--- 4b. Generating 100% Dynamic, Bidirectional & Audited sitemap.xml ---")
 today_str = datetime.now().strftime("%Y-%m-%d")

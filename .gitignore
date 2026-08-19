@@ -27,6 +27,7 @@ yarn-error.log*
 # Python scripts and local compilation tools
 *.py
 !build_static.py
+!audit_seo.py
 *.pyc
 __pycache__/
 
